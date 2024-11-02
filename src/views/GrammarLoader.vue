@@ -31,5 +31,6 @@
 
 <template>
   <NotFound v-if="notFound" />
-  <component v-else :is="grammarPoint?.component" />
+  <component v-else-if="grammarPoint" :is="grammarPoint.component" />
+  <ProgressSpinner v-else style="display: flex" />
 </template>

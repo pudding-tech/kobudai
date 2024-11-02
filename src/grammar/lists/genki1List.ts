@@ -5,6 +5,8 @@ import {
   godanNegative,
   godanNonPast,
   ha,
+  ichidan,
+  ichidanNonPast,
   janai,
   ka,
   koko,
@@ -30,6 +32,6 @@ export const genki1List: Chapter[] = [
   {
     title: "CHAPTER 3",
     value: 3,
-    grammarPoints: [godan, godanNonPast, godanNegative]
+    grammarPoints: [godan, ichidan, godanNonPast, ichidanNonPast, godanNegative]
   },
 ];

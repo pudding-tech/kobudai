@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { koko as meta } from "./metadataN5";
+  import { koko as meta, kore, kono } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -18,11 +18,19 @@
       <span class="grammar-highlight">あそこ</span> (away from both speaker and listener)<br>
       <span class="grammar-highlight">どこ</span>
     </template>
-    <template #details>
-      
+    <template #related>
+      <div class="related-mb">
+        Other "ko-so-a-do" groups:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: kore.slug } }" class="link">{{ kore.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: kono.slug } }" class="link">{{ kono.title }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
-      <span class="g">ここ</span>, そこ, あそこ, and <span class="g">どこ</span> are used to indicate where something is located relative to the people in conversation.
+      <span class="g">ここ</span>, <span class="g">そこ</span>, <span class="g">あそこ</span>, and <span class="g">どこ</span> are used to indicate where something is located relative to the people in conversation.
       <br><br>
       <span class="g">ここ</span> means "here" and refers to a place near the speaker.
       <GrammarExample>

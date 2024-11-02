@@ -1,0 +1,118 @@
+<script setup lang="ts">
+  import GrammarStructure from "@/components/GrammarStructure.vue";
+  import IchidanChart from "@/components/IchidanChart.vue";
+  import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
+  import IrregularVerbs from "../common/IrregularVerbs.vue";
+  import { ichidan as meta, godan } from "./metadataN5";
+</script>
+
+<script lang="ts">
+  export const title = meta.title;
+</script>
+
+<template>
+  <GrammarStructure>
+    <template #title>{{ meta.title }}</template>
+    <template #subtitle>{{ meta.subtitle }}</template>
+    <template #structure>
+      ～<span class="g">る</span>（～<span class="g">iru/eru</span>）
+    </template>
+    <template #related>
+      <div class="related-mb">See the other verb type:</div>
+      - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink>
+    </template>
+    <template #explanation>
+      <div class="title-container">
+        <div class="eng-title">
+          <div>Ichidan Conjugation</div>
+          <div class="subtitle">"One step" conjugation</div>
+        </div>
+        <div class="line"></div>
+        <div class="ichidan-title">
+          <ruby>一段<rt>いちだん</rt>活用<rt>かつよう</rt></ruby>
+        </div>
+      </div>
+      Ichidan verbs, often called る-verbs or <i>iru/eru</i>-verbs, are one of the two main types of Japanese verbs.
+      The term "ichidan"（<span class="k">一段</span>）- meaning "one step" or "one level" - reflects the fact that unlike godan verbs, which undergo five possible changes in their final syllable during conjugation, ichidan verbs do not alter their final syllable.
+      <br><br>
+      In their dictionary form, all ichidan verbs end in <span class="g">る</span>. Additionally, the sound before the <span class="g">る</span> is always either <i>i</i> or <i>e</i>, so ichidan verbs consistently end in either <i>iru</i> or <i>eru</i>.
+      Using romaji can be particularly helpful here; for example, both 始め<span class="g">る</span> and 食べ<span class="g">る</span> end with the <i>eru</i> sound,
+      indicating their (potential) classification as ichidan verbs, even if the hiragana the <i>e</i> sound comes from differ between them (め and べ respectively).
+      <br><br><div class="note">Note:</div>
+      Just because a verb ends in <i>iru</i> or <i>eru</i> does not definitely mean it is an ichidan verb; see the section below for details.
+      <br><br>
+      Conjugating ichidan verbs is straightforward. Instead of changing the final syllable, you simply remove the <span class="g">る</span> from the dictionary form to find the verb stem, then add the appropriate conjugation ending.
+      The simplicity of ichidan conjugation stands in contrast to godan verbs, which move through different syllable endings.
+      Study the chart below to see how ichidan verbs maintain their form without shifting on the hiragana chart — hence, the term "one step".
+      <div class="chart">
+        <IchidanChart :show-word-selection="true" :show-links="true" />
+      </div>
+      Here's a short breakdown of the various forms:
+      <ul>
+        <li class="list"><b>Plain Negative Form:</b> Verb stem (drop the <span class="g">る</span>), then add ない (e.g. 食べない).</li>
+        <li class="list"><b>Polite Form:</b> Verb stem (drop the <span class="g">る</span>), then add ます (e.g. 食べます).</li>
+        <ul>
+          <li class="list">The polite form is used in formal situations, such as speaking with strangers or people of higher social status.</li>
+          <li class="list">Within the polite form the are multiple conjugations that correspond to the plain forms, just with a polite tone, such as polite negative, polite past, and polite volitional.</li>
+        </ul>
+        <li class="list"><b>Continuative Form:</b> Verb stem (drop the <span class="g">る</span>).</li>
+        <ul>
+          <li class="list">The continuative form is often used to chain actions together or combine with helper verbs like ～たい.</li>
+          <li class="list">
+            This form is also the basis for the plain past and te-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
+            For more information about this, see <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'ichidan-past' } }" class="link">Ichidan verb (past)</RouterLink> or <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'て' } }" class="link">て-form</RouterLink>.
+          </li>
+        </ul>
+        <li class="list"><b>Dictionary/Plain Form:</b> The base form of the verb, ending in an <i>iru/eru</i> sound.</li>
+        <li class="list"><b>Imperative, Potential, Conditional Form:</b> Verb stem (drop the <span class="g">る</span>), then a suffix can be added to create the different forms (e.g. 食べ, 食べられる, 食べれば).</li>
+        <li class="list"><b>Volitional Form:</b> Verb stem (drop the <span class="g">る</span>) sound, then add よう (e.g. 食べよう).</li>
+      </ul>
+      <br>
+      Understanding the five step chart is essential for mastering Japanese verb conjugation, as it provides a clear and systematic way to predict how verbs will change in different grammatical contexts.
+      <div class="section">
+        <DistinguishVerbTypes type="ichidan" />
+      </div>
+      <div class="section">
+        <IrregularVerbs />
+      </div>
+    </template>
+  </GrammarStructure>
+</template>
+
+<style scoped>
+.title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .line {
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    height: 44px;
+    margin-right: 20px;
+  }
+}
+
+.ichidan-title {
+  font-size: 1.5rem;
+}
+
+.eng-title {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin-right: 20px;
+
+  .subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: -4px;
+  }
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.list {
+  margin-bottom: 6px;
+}
+</style>

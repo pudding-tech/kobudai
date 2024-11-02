@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { kore as meta } from "./metadataN5";
+  import { kore as meta, kono, koko } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -19,11 +19,19 @@
       <span class="grammar-highlight">どれ</span> (+ が)<br>
       <span class="grammar-highlight">どっち</span> (+ が)
     </template>
-    <template #details>
-      
+    <template #related>
+      <div class="related-mb">
+        Other "ko-so-a-do" groups:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: kono.slug } }" class="link">{{ kono.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: koko.slug } }" class="link">{{ koko.title }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
-      <span class="g">これ, それ, あれ</span>, and <span class="g">どれ</span> are demonstrative pronouns used to point out things based on their location relative to the speaker and listener.
+      <span class="g">これ</span>, <span class="g">それ</span>, <span class="g">あれ</span>, and <span class="g">どれ</span> are demonstrative pronouns used to point out things based on their location relative to the speaker and listener.
       <br><br>
       <span class="g">これ</span> means "this" and is used for something near the speaker.
       <GrammarExample>

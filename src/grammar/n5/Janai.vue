@@ -27,8 +27,8 @@
         [ な ] adjective + <span class="grammar-highlight">じゃない</span>
       </div>
     </template>
-    <template #details>
-      
+    <template #related>
+      Negated form of <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'です' } }" class="link">です</RouterLink>
     </template>
     <template #explanation>
       <span class="g">じゃない</span> is used to express negation in informal speech, meaning "is not" or "am not." It is the casual form of <span class="g">ではありません</span> or <span class="g">ではない</span>, which are more formal ways to negate.

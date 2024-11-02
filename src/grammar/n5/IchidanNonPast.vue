@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GodanChart from "@/components/GodanChart.vue";
-  import { godanNonPast as meta, ichidanNonPast, godan, godanNegative } from "./metadataN5";
+  import { ichidanNonPast as meta, ichidan, godanNonPast, godanNegative } from "./metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -19,31 +19,10 @@
     <template #structure>
       <div v-if="isPolite">
         <div class="kanji-mb">
-          <ruby>買<rt>か</rt><span class="grammar-highlight">う</span></ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight"><span class="h">い</span>ます</span></ruby>
+          <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">る</span> → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">ます</span>
         </div>
         <div class="kanji-mb">
-          <ruby>待<rt>ま</rt><span class="grammar-highlight">つ</span></ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight"><span class="h">ち</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>取<rt>と</rt><span class="grammar-highlight">る</span></ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight"><span class="h">り</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>読<rt>よ</rt><span class="grammar-highlight">む</span></ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight"><span class="h">み</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>遊<rt>あそ</rt><span class="grammar-highlight">ぶ</span></ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight"><span class="h">び</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>死<rt>し</rt><span class="grammar-highlight">ぬ</span></ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight"><span class="h">に</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>書<rt>か</rt><span class="grammar-highlight">く</span></ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight"><span class="h">き</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>泳<rt>およ</rt><span class="grammar-highlight">ぐ</span></ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight"><span class="h">ぎ</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>話<rt>はな</rt><span class="grammar-highlight">す</span></ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">し</span>ます</span></ruby>
+          <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">る</span> → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">ます</span>
         </div>
         <div class="irregular-verbs">
           Irregular verbs:
@@ -57,31 +36,10 @@
       </div>
       <div v-else>
         <div class="kanji-mb">
-          <ruby>買<rt>か</rt><span class="grammar-highlight">う</span></ruby>
+          <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">る</span>
         </div>
         <div class="kanji-mb">
-          <ruby>待<rt>ま</rt><span class="grammar-highlight">つ</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>取<rt>と</rt><span class="grammar-highlight">る</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>読<rt>よ</rt><span class="grammar-highlight">む</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>遊<rt>あそ</rt><span class="grammar-highlight">ぶ</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>死<rt>し</rt><span class="grammar-highlight">ぬ</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>書<rt>か</rt><span class="grammar-highlight">く</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>泳<rt>およ</rt><span class="grammar-highlight">ぐ</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>話<rt>はな</rt><span class="grammar-highlight">す</span></ruby>
+          <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">る</span>
         </div>
         <div class="irregular-verbs">
           Irregular verbs:
@@ -96,45 +54,45 @@
     </template>
     <template #related>
       <div class="related-mb">
-        Non-past form of ichidan verbs:
+        Non-past form of godan verbs:
       </div>
       <div style="margin-bottom: 20px">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNonPast.slug } }" class="link">{{ ichidanNonPast.title }}</RouterLink>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNonPast.slug } }" class="link">{{ godanNonPast.title }}</RouterLink>
       </div>
       <div class="related-mb">
-        Other godan conjugations:
+        Other ichidan conjugations:
       </div>
       <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidan.slug } }" class="link">{{ ichidan.title }}</RouterLink>
       </div>
       <div>
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink>
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Non-Past Form (Present/Future) of Godan Verbs</div>
+      <div class="title">Ichidan - Non-Past Form</div>
       Japanese verbs do not have distinct forms to indicate the difference between present and future tense. Instead, Japanese uses a single verb form, often referred to as the <i>non-past form</i>, to express both present and future actions.
       The present tense does not indicate that an action is happening right now - see <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'ている' } }" class="link">ている</RouterLink> for that - but rather that it is a general or habitual action.
       <br><br>
       Context and additional words are usually what indicate whether a non-past verb is referring to the present or the future.
-      For example, take the godan verb 読<span class="g">む</span> (よむ) which means “to read”. This form can indicate both present and future actions, depending on the context.
+      For example, take the ichidan verb 食べ<span class="g">る</span> (たべる) which means “to eat”. This form can indicate both present and future actions, depending on the context.
       <GrammarExample>
         <template #example>
-          <ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby><span class="g">む</span>
+          ラーメンを<ruby>食<rt>た</rt></ruby>べ<span class="g">る</span>
         </template>
         <template #translation>
-          I read books
+          I eat ramen
         </template>
         <template #note>
-          This suggests a general or habitual action, but depending on the context, it could also mean "I will read a book" (as in the future)
+          This suggests a general or habitual action, but depending on the context, it could also mean "I will eat ramen" (as in the future)
         </template>
       </GrammarExample>
       <GrammarExample>
         <template #example>
-          <ruby>明日<rt>あした</rt></ruby>、<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby><span class="g">む</span>
+          <ruby>明日<rt>あした</rt></ruby>ラーメンを<ruby>食<rt>た</rt></ruby>べ<span class="g">る</span>
         </template>
         <template #translation>
-          I will read a book tomorrow
+          I will eat ramen tomorrow
         </template>
         <template #note>
           Adding a time expression like <ruby>明日<rt>あした</rt></ruby> makes it clear that the action will happen in the future
@@ -163,7 +121,7 @@
       <div class="section">
         <div class="subtitle">Polite form</div>
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
-        To make a godan verb polite, you first move the verb on the godan five step chart to the い row.
+        To make a godan verb polite, you move the verb on the godan five step chart to the い row.
 
         <div class="chart">
           <GodanChart :selected-row="2" :show-word-selection="false" />
@@ -188,6 +146,12 @@
 <style scoped>
 .section {
   margin-top: 40px;
+}
+
+.title {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
 .subtitle {

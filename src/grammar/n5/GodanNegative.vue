@@ -18,31 +18,31 @@
     <template #structure>
       <div v-if="isPolite">
         <div class="kanji-mb">
-          <ruby>買<rt>か</rt><span class="grammar-highlight">う</span></ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight">いません</span></ruby>
+          <ruby>買<rt>か</rt><span class="grammar-highlight">う</span></ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight"><span class="h">い</span>ません</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>待<rt>ま</rt><span class="grammar-highlight">つ</span></ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight">ちません</span></ruby>
+          <ruby>待<rt>ま</rt><span class="grammar-highlight">つ</span></ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight"><span class="h">ち</span>ません</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>取<rt>と</rt><span class="grammar-highlight">る</span></ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight">りません</span></ruby>
+          <ruby>取<rt>と</rt><span class="grammar-highlight">る</span></ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight"><span class="h">り</span>ません</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>読<rt>よ</rt><span class="grammar-highlight">む</span></ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight">みません</span></ruby>
+          <ruby>読<rt>よ</rt><span class="grammar-highlight">む</span></ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight"><span class="h">み</span>ません</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>遊<rt>あそ</rt><span class="grammar-highlight">ぶ</span></ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight">びません</span></ruby>
+          <ruby>遊<rt>あそ</rt><span class="grammar-highlight">ぶ</span></ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight"><span class="h">び</span>ません</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>死<rt>し</rt><span class="grammar-highlight">ぬ</span></ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight">にません</span></ruby>
+          <ruby>死<rt>し</rt><span class="grammar-highlight">ぬ</span></ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight"><span class="h">に</span>ません</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>書<rt>か</rt><span class="grammar-highlight">く</span></ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight">きません</span></ruby>
+          <ruby>書<rt>か</rt><span class="grammar-highlight">く</span></ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight"><span class="h">き</span>ません</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>泳<rt>およ</rt><span class="grammar-highlight">ぐ</span></ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight">ぎません</span></ruby>
+          <ruby>泳<rt>およ</rt><span class="grammar-highlight">ぐ</span></ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight"><span class="h">ぎ</span>ません</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>話<rt>はな</rt><span class="grammar-highlight">す</span></ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight">しません</span></ruby>
+          <ruby>話<rt>はな</rt><span class="grammar-highlight">す</span></ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">し</span>ません</span></ruby>
         </div>
         <div class="irregular-verbs">
           Irregular verbs:
@@ -56,31 +56,31 @@
       </div>
       <div v-else>
         <div class="kanji-mb">
-          <ruby>買<rt>か</rt><span class="grammar-highlight">う</span></ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight">わない</span></ruby>
+          <ruby>買<rt>か</rt><span class="grammar-highlight">う</span></ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight"><span class="h">わ</span>ない</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>待<rt>ま</rt><span class="grammar-highlight">つ</span></ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight">たない</span></ruby>
+          <ruby>待<rt>ま</rt><span class="grammar-highlight">つ</span></ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight"><span class="h">た</span>ない</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>取<rt>と</rt><span class="grammar-highlight">る</span></ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight">らない</span></ruby>
+          <ruby>取<rt>と</rt><span class="grammar-highlight">る</span></ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight"><span class="h">ら</span>ない</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>読<rt>よ</rt><span class="grammar-highlight">む</span></ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight">まない</span></ruby>
+          <ruby>読<rt>よ</rt><span class="grammar-highlight">む</span></ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight"><span class="h">ま</span>ない</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>遊<rt>あそ</rt><span class="grammar-highlight">ぶ</span></ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight">ばない</span></ruby>
+          <ruby>遊<rt>あそ</rt><span class="grammar-highlight">ぶ</span></ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight"><span class="h">ば</span>ない</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>死<rt>し</rt><span class="grammar-highlight">ぬ</span></ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight">なない</span></ruby>
+          <ruby>死<rt>し</rt><span class="grammar-highlight">ぬ</span></ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight"><span class="h">な</span>ない</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>書<rt>か</rt><span class="grammar-highlight">く</span></ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight">かない</span></ruby>
+          <ruby>書<rt>か</rt><span class="grammar-highlight">く</span></ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight"><span class="h">か</span>ない</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>泳<rt>およ</rt><span class="grammar-highlight">ぐ</span></ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight">がない</span></ruby>
+          <ruby>泳<rt>およ</rt><span class="grammar-highlight">ぐ</span></ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight"><span class="h">が</span>ない</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>話<rt>はな</rt><span class="grammar-highlight">す</span></ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight">さない</span></ruby>
+          <ruby>話<rt>はな</rt><span class="grammar-highlight">す</span></ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">さ</span>ない</span></ruby>
         </div>
         <div class="irregular-verbs">
           Irregular verbs:
@@ -111,14 +111,14 @@
         <div class="title">Negative Forms</div>
         <div class="subtitle">Plain negative (informal)</div>
         To create the plain negative form of a godan verb, take the verb's stem (the part before the final <b>u</b>), and add <b>a</b> + <span class="g">ない</span>.
-        What is really happening here is that the final hiragana moves one row on the godan kana chart, from the う row to the あ row, changing the sound of the final syllable.
+        What is really happening here is that the final hiragana moves one row on the godan five step chart, from the う row to the あ row, changing the sound of the final syllable.
         For example, <span class="g">く</span> becomes <span class="g">か</span>, <span class="g">つ</span> becomes <span class="g">た</span>, and so on.
         <GrammarExample>
           <template #example>
-            <div><ruby>読<rt>よ</rt></ruby><span class="g">む</span> → <ruby>読<rt>よ</rt></ruby><span class="g">まない</span></div>
-            <div><ruby>話<rt>はな</rt></ruby><span class="g">す</span> → <ruby>話<rt>はな</rt></ruby><span class="g">さない</span></div>
-            <div><ruby>書<rt>か</rt></ruby><span class="g">く</span> → <ruby>書<rt>か</rt></ruby><span class="g">かない</span></div>
-            <div><ruby>買<rt>か</rt></ruby><span class="g">う</span> → <ruby>買<rt>か</rt></ruby><span class="g">わない</span></div>
+            <div><ruby>読<rt>よ</rt></ruby><span class="g">む</span> → <ruby>読<rt>よ</rt></ruby><span class="h">ま</span><span class="g">ない</span></div>
+            <div><ruby>話<rt>はな</rt></ruby><span class="g">す</span> → <ruby>話<rt>はな</rt></ruby><span class="h">さ</span><span class="g">ない</span></div>
+            <div><ruby>書<rt>か</rt></ruby><span class="g">く</span> → <ruby>書<rt>か</rt></ruby><span class="h">か</span><span class="g">ない</span></div>
+            <div><ruby>買<rt>か</rt></ruby><span class="g">う</span> → <ruby>買<rt>か</rt></ruby><span class="h">わ</span><span class="g">ない</span></div>
           </template>
         </GrammarExample>
         <div class="note">Note:</div>

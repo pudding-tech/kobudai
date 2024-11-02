@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { kono as meta } from "./metadataN5";
+  import { kono as meta, kore, koko } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -19,11 +19,19 @@
       <span class="grammar-highlight">どの</span> + Noun<br>
       <span class="grammar-highlight">どっち</span> + の + Noun
     </template>
-    <template #details>
-      
+    <template #related>
+      <div class="related-mb">
+        Other "ko-so-a-do" groups:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: kore.slug } }" class="link">{{ kore.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: koko.slug } }" class="link">{{ koko.title }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
-      <span class="g">この, その, あの</span>, and <span class="g">どの</span> are used to modify nouns, pointing out specific items based on location.
+      <span class="g">この</span>, <span class="g">その</span>, <span class="g">あの</span>, and <span class="g">どの</span> are used to modify nouns, pointing out specific items based on location.
       <br><br>
       <span class="g">この</span> means "this" and is used for something near the speaker.
       <GrammarExample>
@@ -38,7 +46,7 @@
       <span class="g">その</span> means "that" and is used for something near the listener.
       <GrammarExample>
         <template #example>
-          <span class="g">その</span><ruby>本<rt>ほん</rt></ruby>は<ruby>面白<rt>おもしろ</rt></ruby>いですか
+          <span class="g">その</span><ruby>本<rt>ほん</rt></ruby>は<ruby>面白<rt>おもしろ</rt></ruby>いですか？
         </template>
         <template #translation>
           Is that book interesting?

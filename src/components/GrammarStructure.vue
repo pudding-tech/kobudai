@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import { useRouter } from "vue-router";
+  import { lastRoute } from "@/router/router";
 
   const props = withDefaults(defineProps<{
     showPolite?: boolean,
@@ -29,8 +30,13 @@
     emit("politenessChange", isPolite.value);
   };
 
-  const goBack = () => {
-    router.back();
+  const goHome = () => {
+    if (lastRoute?.name === "home") {
+      router.back();
+    }
+    else {
+      router.push({ name: "home" });
+    }
   };
 </script>
 
@@ -38,14 +44,14 @@
   <div class="container">
     <div class="bg">
       <div class="corner">
-        <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" @click="goBack" />
+        <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" @click="goHome" />
       </div>
       <div class="header">
         <div class="title">
-          <slot name="title">Title</slot>
+          <slot name="title"></slot>
         </div>
         <div class="subtitle">
-          <slot name="subtitle">Subtitle</slot>
+          <slot name="subtitle"></slot>
         </div>
       </div>
       <div class="content">
@@ -64,7 +70,7 @@
             </template>
             <template #content>
               <div class="structure-content" :class="{ 'big-text': isZoom }">
-                <slot name="structure">Structure</slot>
+                <slot name="structure"></slot>
               </div>
             </template>
           </Card>
@@ -73,13 +79,17 @@
               <div class="info-title mg-bottom">Related</div>
             </template>
             <template #content>
-              <slot name="details">Details</slot>
+              <div class="related-content">
+                <slot name="related"></slot>
+              </div>
             </template>
           </Card>
         </div>
         <Card class="card bottom">
           <template #content>
-            <slot name="explanation">Explanation</slot>
+            <div class="explanation">
+              <slot name="explanation"></slot>
+            </div>
           </template>
         </Card>
       </div>
@@ -137,9 +147,12 @@
       margin-right: 1rem;
     }
   }
+
   &.top-right {
     margin-left: 0.5rem;
     transition: width 0.2s, margin 0.2s, visibility 0.2s, opacity 0.2s;
+    overflow: hidden;
+    white-space: nowrap;
 
     &.hidden {
       width: 0 !important;
@@ -150,6 +163,7 @@
       border: 0;
     }
   }
+
   &.bottom {
     margin-bottom: 1rem;
   }
@@ -171,11 +185,17 @@
 
 .structure-content {
   font-size: 1rem;
+  line-height: 1.6;
   transition: font-size 0.2s;
 
   &.big-text {
     font-size: 2rem;
   }
+}
+
+.related-content {
+  white-space: nowrap;
+  line-height: 1.6;
 }
 
 .corner {
@@ -186,5 +206,9 @@
 
 .zoom-button {
   margin-right: 10px;
+}
+
+.explanation {
+  line-height: 1.5;
 }
 </style>

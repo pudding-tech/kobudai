@@ -19,7 +19,7 @@
         </div>
       </div>
       <div v-if="slots.note" class="note">
-        <div>
+        <div class="note-inner">
           <slot name="note"></slot>
         </div>
       </div>
@@ -64,5 +64,11 @@
   margin-top: 8px;
   opacity: 0.8;
   color: var(--p-primary-250);
+
+  .note-inner {
+    max-width: 700px;
+    text-align: center;
+  }
 }
+
 </style>

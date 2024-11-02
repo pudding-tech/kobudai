@@ -1,8 +1,9 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, type RouteLocationNormalized } from "vue-router";
 import Home from "@/views/Home.vue";
 import GrammarLoader from "@/views/GrammarLoader.vue";
 import NotFound from "../views/NotFound.vue";
 
+let lastRoute: RouteLocationNormalized | null = null;
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -27,7 +28,8 @@ const router = createRouter({
   ]
 });
 
-router.beforeEach((to, _from, next) => {
+router.beforeEach((to, from, next) => {
+  lastRoute = from;
   if (to.meta.title) {
     document.title = to.meta.title;
   }
@@ -35,3 +37,4 @@ router.beforeEach((to, _from, next) => {
 });
 
 export default router;
+export { lastRoute };

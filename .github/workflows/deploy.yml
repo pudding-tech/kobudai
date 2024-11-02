@@ -14,7 +14,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: 'deploy'
   cancel-in-progress: true
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
       - name: Setup Node.js 22
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '22.x'
           cache: 'npm'
 
       - name: Install dependencies
@@ -48,6 +48,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - name: Download build artifact
@@ -55,9 +56,6 @@ jobs:
         with:
           name: build-artifact
           path: ./dist
-      
-      - name: List files in the current directory
-        run: ls -al
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -70,4 +68,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  

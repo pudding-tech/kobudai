@@ -19,6 +19,7 @@ import DataTable from "primevue/datatable";
 import IconField from "primevue/iconfield";
 import InputIcon from "primevue/inputicon";
 import InputText from "primevue/inputtext";
+import ProgressSpinner from "primevue/progressspinner";
 import Ripple from "primevue/ripple";
 import SelectButton from "primevue/selectbutton";
 import Tag from "primevue/tag";
@@ -87,6 +88,26 @@ const customTheme = definePreset(Aura, {
     },
     card: {
       background: "#202020"
+    },
+    progressspinner: {
+      colorScheme: {
+        light: {
+          root: {
+            "color.1": "{primary.300}",
+            "color.2": "{primary.300}",
+            "color.3": "{primary.300}",
+            "color.4": "{primary.300}"
+          }
+        },
+        dark: {
+          root: {
+            "color.1": "{primary.300}",
+            "color.2": "{primary.300}",
+            "color.3": "{primary.300}",
+            "color.4": "{primary.300}"
+          }
+        }
+      }
     }
   }
 });
@@ -112,6 +133,7 @@ app.component("DataTable", DataTable);
 app.component("IconField", IconField);
 app.component("InputIcon", InputIcon);
 app.component("InputText", InputText);
+app.component("ProgressSpinner", ProgressSpinner);
 app.component("SelectButton", SelectButton);
 app.component("Tag", Tag);
 app.component("ToggleSwitch", ToggleSwitch);

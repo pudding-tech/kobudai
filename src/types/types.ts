@@ -20,11 +20,21 @@ export type GrammarComponent = {
 };
 
 export type GodanChartExample = {
-  kana: string[],
+  kanaRow: string[],
+  kanji: string,
+  furigana: string,
   examples: {
-    furigana: string,
-    kanji: string,
     highlight: string,
+    suffix?: string
+  }[]
+};
+
+export type IchidanChartExample = {
+  kanaRow: string,
+  kanji: string,
+  furigana: string,
+  examples: {
+    highlight?: string,
     suffix?: string
   }[]
 };

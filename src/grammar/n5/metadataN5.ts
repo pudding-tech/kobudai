@@ -7,7 +7,7 @@ export const desu: GrammarPoint = {
 };
 
 export const godan: GrammarPoint = {
-  slug: "godan",
+  slug: "godan-verb",
   title: "Godan verb",
   subtitle: "う-verb",
 };
@@ -28,6 +28,18 @@ export const ha: GrammarPoint = {
   slug: "は",
   title: "は",
   subtitle: "Topic marking particle (As for...)",
+};
+
+export const ichidan: GrammarPoint = {
+  slug: "ichidan-verb",
+  title: "Ichidan verb",
+  subtitle: "る-verb (iru/eru verb)",
+};
+
+export const ichidanNonPast: GrammarPoint = {
+  slug: "ichidan-non-past",
+  title: "Ichidan verb (non-past)",
+  subtitle: "～る、～ます",
 };
 
 export const janai: GrammarPoint = {
