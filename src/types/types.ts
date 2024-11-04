@@ -33,6 +33,7 @@ export type IchidanChartExample = {
   kanaRow: string,
   kanji: string,
   furigana: string,
+  middle?: string,
   examples: {
     highlight?: string,
     suffix?: string

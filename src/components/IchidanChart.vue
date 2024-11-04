@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
-  import { ichidanNonPast, godanNegative } from "@/grammar/n5/metadataN5";
+  import { ichidanNegative, ichidanNonPast, ichidanPast } from "@/grammar/n5/metadataN5";
   import type { IchidanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -27,12 +27,13 @@
       kanaRow: "え",
       kanji: "食",
       furigana: "た",
+      middle: "べ",
       examples: [
-        { highlight: "べ", suffix: "（ない）" },
-        { highlight: "べ", suffix: "（ます）" },
-        { highlight: "べ", suffix: "る" },
-        { highlight: "べ", suffix: "（られる、れば）" },
-        { highlight: "べ", suffix: "（よう）" }
+        { suffix: "（ない）" },
+        { suffix: "（ます）" },
+        { highlight: "る" },
+        { suffix: "（られる、れば）" },
+        { suffix: "（よう）" }
       ]
     },
     {
@@ -42,7 +43,7 @@
       examples: [
         { suffix: "（ない）" },
         { suffix: "（ます）" },
-        { suffix: "る" },
+        { highlight: "る" },
         { suffix: "（られる、れば）" },
         { suffix: "（よう）" }
       ]
@@ -54,7 +55,7 @@
       examples: [
         { suffix: "（ない）" },
         { suffix: "（ます）" },
-        { suffix: "る" },
+        { highlight: "る" },
         { suffix: "（られる、れば）" },
         { suffix: "（よう）" }
       ]
@@ -63,12 +64,13 @@
       kanaRow: "い",
       kanji: "浴",
       furigana: "あ",
+      middle: "び",
       examples: [
-        { highlight: "び", suffix: "（ない）" },
-        { highlight: "び", suffix: "（ます）" },
-        { highlight: "び", suffix: "る" },
-        { highlight: "び", suffix: "（られる、れば）" },
-        { highlight: "び", suffix: "（よう）" }
+        { suffix: "（ない）" },
+        { suffix: "（ます）" },
+        { highlight: "る" },
+        { suffix: "（られる、れば）" },
+        { suffix: "（よう）" }
       ]
     }
   ]);
@@ -80,9 +82,10 @@
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[0]
+        okurigana: examples.value[word.value].middle,
+        suffix: examples.value[word.value].examples[0]
       },
-      grammarPoint: [godanNegative],
+      grammarPoint: [ichidanNegative, { slug: null, title: "Ichidan verb (negative past)" }],
       rowNr: 1
     },
     {
@@ -91,18 +94,20 @@
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[1]
+        okurigana: examples.value[word.value].middle,
+        suffix: examples.value[word.value].examples[1]
       },
-      grammarPoint: [ichidanNonPast, godanNegative, { slug: null, title: "Ichidan verb (past)" }, { slug: null, title: "Te-form" }],
+      grammarPoint: [ichidanNonPast, ichidanNegative, ichidanPast, { slug: null, title: "Te-form" }],
       rowNr: 2
     },
     {
       row: examples.value[word.value].kanaRow, 
-      name: "Dictionary/plain non-past",
+      name: "Dictionary, Plain non-past",
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[2]
+        okurigana: examples.value[word.value].middle,
+        suffix: examples.value[word.value].examples[2]
       },
       grammarPoint: [ichidanNonPast],
       rowNr: 3
@@ -113,7 +118,8 @@
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[3]
+        okurigana: examples.value[word.value].middle,
+        suffix: (examples.value[word.value].middle ?? "") + examples.value[word.value].examples[3]
       },
       grammarPoint: [{ slug: null, title: null }],
       rowNr: 4
@@ -124,12 +130,14 @@
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[4]
+        okurigana: examples.value[word.value].middle,
+        suffix: examples.value[word.value].examples[4]
       },
       grammarPoint: [{ slug: null, title: null }],
       rowNr: 5
     }
   ]);
+  console.log(examples.value[word.value].examples[0]);
 
   const selectedRow = computed(() => {
     return () => {
@@ -137,7 +145,6 @@
         return "";
       }
       return "table-highlight-row";
-      // return data.rowNr === props.selectedRow ? "table-highlight-row" : "table-non-highlight-row";
     };
   });
 </script>
@@ -172,7 +179,7 @@
       <Column field="example" header="Example">
         <template #body="slotProps">
           <div class="text">
-            <span class="g"><ruby>{{ slotProps.data.example.kanji }}<rt>{{ slotProps.data.example.furigana }}</rt></ruby>{{ slotProps.data.example.okurigana.highlight }}</span>{{ slotProps.data.example.okurigana.suffix }}
+            <ruby>{{ slotProps.data.example.kanji }}<rt>{{ slotProps.data.example.furigana }}</rt></ruby>{{ slotProps.data.example.okurigana }}<span class="g">{{ slotProps.data.example.suffix.highlight }}</span>{{ slotProps.data.example.suffix.suffix }}
           </div>
         </template>
       </Column>
@@ -193,7 +200,7 @@
 
 <style scoped>
 .table {
-  width: 880px;
+  width: 902px;
 }
 
 .text {

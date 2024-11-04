@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
-  import { godanNonPast, godanNegative } from "@/grammar/n5/metadataN5";
+  import { godanNegative, godanNonPast, godanPast } from "@/grammar/n5/metadataN5";
   import type { GodanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -69,7 +69,7 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].examples[0]
       },
-      grammarPoint: [godanNegative],
+      grammarPoint: [godanNegative, { slug: null, title: "Godan verb (negative past)" }],
       rowNr: 1
     },
     {
@@ -80,12 +80,12 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].examples[1]
       },
-      grammarPoint: [godanNonPast, godanNegative, { slug: null, title: "Godan verb (past)" }, { slug: null, title: "Te-form" }],
+      grammarPoint: [godanNonPast, godanNegative, godanPast, { slug: null, title: "Te-form" }],
       rowNr: 2
     },
     {
       row: examples.value[word.value].kanaRow[2], 
-      name: "Dictionary/plain non-past",
+      name: "Dictionary, Plain non-past",
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
@@ -179,7 +179,7 @@
 
 <style scoped>
 .table {
-  width: 880px;
+  width: 902px;
 }
 
 .text {

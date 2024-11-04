@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { ichidanNonPast as meta, ichidan, ichidanNegative, ichidanPast, godanNonPast } from "./metadataN5";
+  import { ichidanPast as meta, godanPast, ichidan, ichidanNegative, ichidanNonPast } from "./metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -18,45 +18,45 @@
     <template #structure>
       <div v-if="isPolite">
         <div class="kanji-mb">
-          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">ます</span>
+          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">ました</span>
         </div>
         <div class="kanji-mb">
-          <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">ます</span>
+          <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">ました</span>
         </div>
         <div class="exceptions">
           Exceptions
         </div>
         <div class="kanji-mb">
-          <span>する</span> → <span class="grammar-highlight">します</span>
+          <span>する</span> → <span class="grammar-highlight">しました</span>
         </div>
         <div>
-          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>ます</span>
+          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>ました</span>
         </div>
       </div>
       <div v-else>
         <div class="kanji-mb">
-          <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">る</span>
+          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">た</span>
         </div>
         <div class="kanji-mb">
-          <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">る</span>
+          <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">た</span>
         </div>
         <div class="exceptions">
-          Irregular verbs
+          Exceptions
         </div>
         <div class="kanji-mb">
-          <span class="grammar-highlight">する</span>
+          <span>する</span> → <span class="grammar-highlight">した</span>
         </div>
         <div>
-          <span class="grammar-highlight"><ruby>来<rt>く</rt>る</ruby></span>
+          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>た</span>
         </div>
       </div>
     </template>
     <template #related>
       <div class="related-mb">
-        Non-past form of godan verbs:
+        Past form of godan verbs:
       </div>
       <div style="margin-bottom: 20px">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNonPast.slug } }" class="link">{{ godanNonPast.title }}</RouterLink>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink>
       </div>
       <div class="related-mb">
         Other ichidan conjugations:
@@ -65,14 +65,14 @@
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidan.slug } }" class="link">{{ ichidan.title }}</RouterLink>
       </div>
       <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNegative.slug } }" class="link">{{ ichidanNegative.title }}</RouterLink>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNonPast.slug } }" class="link">{{ ichidanNonPast.title }}</RouterLink>
       </div>
       <div>
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPast.slug } }" class="link">{{ ichidanPast.title }}</RouterLink>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNegative.slug } }" class="link">{{ ichidanNegative.title }}</RouterLink>
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Non-Past Form (Present/Future) of Ichidan Verbs</div>
+      <div class="grammar-point-title">The Past Form of Ichidan Verbs</div>
       Japanese verbs do not have distinct forms to indicate the difference between present and future tense. Instead, Japanese uses a single verb form, often referred to as the <i>non-past form</i>, to express both present and future actions.
       The present tense does not indicate that an action is happening right now - see <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'ている' } }" class="link">ている</RouterLink> for that - but rather that it is a general or habitual action.
       <br><br>
@@ -100,25 +100,22 @@
           Adding a time expression like <ruby>明日<rt>あした</rt></ruby> makes it clear that the action will happen in the future
         </template>
       </GrammarExample>
-
-      <div class="section">
-        <div class="subtitle">Dictionary form (plain)</div>
-        The dictionary form (also called the plain form) of an ichidan verb is used in informal contexts, such as when speaking with friends or people of the same social rank.
-        <br><br>
-        This is the form you will find in dictionaries, and serves as the base form for many grammatical constructions.
-        It requires no further conjugation and can be used as-is.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>食<rt>た</rt></ruby>べ<span class="g">る</span> – to eat</div>
-            <div><ruby>落<rt>お</rt></ruby>ち<span class="g">る</span> – to fall down</div>
-            <div><ruby>見<rt>み</rt></ruby><span class="g">る</span> – to see</div>
-            <div style="padding-top: 8px">い<span class="g">る</span> – to exist (living things)</div>
-          </template>
-          <template #note>
-            Dictionary form
-          </template>
-        </GrammarExample>
-      </div>
+      <div class="subtitle">Dictionary form (informal)</div>
+      The dictionary form (also called the plain form) of an ichidan verb is used in informal contexts, such as when speaking with friends or people of the same social rank.
+      <br><br>
+      This is the form you will find in dictionaries, and serves as the base form for many grammatical constructions.
+      It requires no further conjugation and can be used as-is.
+      <GrammarExample>
+        <template #example>
+          <div><ruby>食<rt>た</rt></ruby>べ<span class="g">る</span> – to eat</div>
+          <div><ruby>落<rt>お</rt></ruby>ち<span class="g">る</span> – to fall down</div>
+          <div><ruby>見<rt>み</rt></ruby><span class="g">る</span> – to see</div>
+          <div style="padding-top: 8px">い<span class="g">る</span> – to exist (living things)</div>
+        </template>
+        <template #note>
+          Dictionary form
+        </template>
+      </GrammarExample>
 
       <div class="section">
         <div class="subtitle">Polite form</div>
@@ -145,11 +142,11 @@
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <GrammarExample>
           <template #example>
-            <div>する → <span class="g">します</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ます</span></div>
+            <div>する → <span class="g">しました</span></div>
+            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ました</span></div>
           </template>
           <template #note>
-            Polite non-past form of exceptions
+            Polite past form of irregular verbs
           </template>
         </GrammarExample>
       </div>

@@ -3,7 +3,7 @@
   import GodanChart from "@/components/GodanChart.vue";
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
-  import { godan as meta, godanNegative, ichidan } from "./metadataN5";
+  import { godan as meta, godanNegative, godanPast, ichidan } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -48,7 +48,7 @@
       </div>
       Here's a short breakdown of the various forms:
       <ul>
-        <li class="list"><b>Plain Negative Form:</b> The verb changes to end in a <span class="h">あ</span> sound before adding ない (e.g. 行かない).</li>
+        <li class="list"><b>Plain Negative (Past) Form:</b> The verb changes to end in a <span class="h">あ</span> sound before adding ない (e.g. 行かない) or なかった (e.g. 行かなかった).</li>
         <ul>
           <li class="list">Note that when the verb ends in <span class="h">う</span> it becomes <span class="h">わ</span>, not あ. See <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink> for more information.</li>
         </ul>
@@ -61,8 +61,10 @@
         <ul>
           <li class="list">The continuative form is often used to chain actions together or combine with helper verbs like ～たい.</li>
           <li class="list">
-            This form is also the basis for the plain past and te-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
-            For more information about this, see <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'godan-past' } }" class="link">Godan verb (past)</RouterLink> or <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'て' } }" class="link">て-form</RouterLink>.
+            This form is also the basis for the plain past and て-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
+            For more information about this, see
+            <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink> or
+            <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'て' } }" class="link">て-form</RouterLink>.
           </li>
         </ul>
         <li class="list"><b>Dictionary/Plain Form:</b> The base form of the verb, ending in a kana of the <span class="h">う</span> sound.</li>
@@ -70,7 +72,7 @@
         <li class="list"><b>Volitional Form:</b> The verb changes to end in a <span class="h">お</span> sound before adding う (e.g. 行こう).</li>
       </ul>
       <br>
-      Understanding the five step chart is essential for mastering godan verb conjugation, as it provides a clear and systematic way to predict how verbs will change in different grammatical contexts.
+      Understanding the five-step chart is essential for mastering godan verb conjugation, as it provides a clear and systematic way to predict how verbs will change in different grammatical contexts.
       <div class="section">
         <DistinguishVerbTypes type="godan" />
       </div>

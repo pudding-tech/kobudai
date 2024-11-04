@@ -14,15 +14,39 @@ export const godan: GrammarPoint = {
 
 export const godanNegative: GrammarPoint = {
   slug: "godan-negative",
-  title: "Godan verb (negative)",
+  title: "Negative verb (godan)",
   subtitle: "～ない、～ません",
 };
 
 export const godanNonPast: GrammarPoint = {
   slug: "godan-non-past",
-  title: "Godan verb (non-past)",
+  title: "Non-Past verb (godan)",
   subtitle: "～う、～ます",
 };
+
+export const godanPast: GrammarPoint = {
+  slug: "godan-past",
+  title: "Past verb (godan)",
+  subtitle: "～た、～ました",
+};
+
+// export const godanNegative: GrammarPoint = {
+//   slug: "godan-negative",
+//   title: "Godan verb (negative)",
+//   subtitle: "～ない、～ません",
+// };
+
+// export const godanNonPast: GrammarPoint = {
+//   slug: "godan-non-past",
+//   title: "Godan verb (non-past)",
+//   subtitle: "～う、～ます",
+// };
+
+// export const godanPast: GrammarPoint = {
+//   slug: "godan-past",
+//   title: "Godan verb (past)",
+//   subtitle: "～た、～ました",
+// };
 
 export const ha: GrammarPoint = {
   slug: "は",
@@ -36,11 +60,41 @@ export const ichidan: GrammarPoint = {
   subtitle: "る-verb (iru/eru verb)",
 };
 
+export const ichidanNegative: GrammarPoint = {
+  slug: "ichidan-negative",
+  title: "Negative verb (ichidan)",
+  subtitle: "～ない、～ません",
+};
+
 export const ichidanNonPast: GrammarPoint = {
   slug: "ichidan-non-past",
-  title: "Ichidan verb (non-past)",
+  title: "Non-past verb (ichidan)",
   subtitle: "～る、～ます",
 };
+
+export const ichidanPast: GrammarPoint = {
+  slug: "ichidan-past",
+  title: "Past verb (ichidan)",
+  subtitle: "～た、～ました",
+};
+
+// export const ichidanNegative: GrammarPoint = {
+//   slug: "ichidan-negative",
+//   title: "Ichidan verb (negative)",
+//   subtitle: "～ない、～ません",
+// };
+
+// export const ichidanNonPast: GrammarPoint = {
+//   slug: "ichidan-non-past",
+//   title: "Ichidan verb (non-past)",
+//   subtitle: "～る、～ます",
+// };
+
+// export const ichidanPast: GrammarPoint = {
+//   slug: "ichidan-past",
+//   title: "Ichidan verb (past)",
+//   subtitle: "～た、～ました",
+// };
 
 export const janai: GrammarPoint = {
   slug: "じゃない",

@@ -3,7 +3,7 @@
   import IchidanChart from "@/components/IchidanChart.vue";
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
-  import { ichidan as meta, godan } from "./metadataN5";
+  import { ichidan as meta, godan, ichidanNonPast } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -49,7 +49,7 @@
       </div>
       Here's a short breakdown of the various forms:
       <ul>
-        <li class="list"><b>Plain Negative Form:</b> Verb stem (drop the <span class="g">る</span>), then add ない (e.g. 食べない).</li>
+        <li class="list"><b>Plain Negative (Past) Form:</b> Verb stem (drop the <span class="g">る</span>), then add ない (e.g. 食べない) or なかった (e.g. 食べなかった).</li>
         <li class="list"><b>Polite Form:</b> Verb stem (drop the <span class="g">る</span>), then add ます (e.g. 食べます).</li>
         <ul>
           <li class="list">The polite form is used in formal situations, such as speaking with strangers or people of higher social status.</li>
@@ -60,7 +60,9 @@
           <li class="list">The continuative form is often used to chain actions together or combine with helper verbs like ～たい.</li>
           <li class="list">
             This form is also the basis for the plain past and te-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
-            For more information about this, see <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'ichidan-past' } }" class="link">Ichidan verb (past)</RouterLink> or <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'て' } }" class="link">て-form</RouterLink>.
+            For more information about this, see
+            <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNonPast.slug } }" class="link">{{ ichidanNonPast.title }}</RouterLink> or
+            <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'て' } }" class="link">て-form</RouterLink>.
           </li>
         </ul>
         <li class="list"><b>Dictionary/Plain Form:</b> The base form of the verb, ending in an <i>iru/eru</i> sound.</li>
@@ -68,7 +70,7 @@
         <li class="list"><b>Volitional Form:</b> Verb stem (drop the <span class="g">る</span>) sound, then add よう (e.g. 食べよう).</li>
       </ul>
       <br>
-      Understanding the five step chart is essential for mastering Japanese verb conjugation, as it provides a clear and systematic way to predict how verbs will change in different grammatical contexts.
+      Understanding the five-step chart is essential for mastering Japanese verb conjugation, as it provides a clear and systematic way to predict how verbs will change in different grammatical contexts.
       <div class="section">
         <DistinguishVerbTypes type="ichidan" />
       </div>

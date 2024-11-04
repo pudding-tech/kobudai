@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GodanChart from "@/components/GodanChart.vue";
-  import { godanNonPast as meta, ichidanNonPast, godan, godanNegative } from "./metadataN5";
+  import { godanNonPast as meta, ichidanNonPast, godan, godanNegative, godanPast } from "./metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -19,40 +19,40 @@
     <template #structure>
       <div v-if="isPolite">
         <div class="kanji-mb">
-          <ruby>買<rt>か</rt><span class="grammar-highlight">う</span></ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight"><span class="h">い</span>ます</span></ruby>
+          <ruby>買<rt>か</rt>う</ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight"><span class="h">い</span>ます</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>待<rt>ま</rt><span class="grammar-highlight">つ</span></ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight"><span class="h">ち</span>ます</span></ruby>
+          <ruby>待<rt>ま</rt>つ</ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight"><span class="h">ち</span>ます</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>取<rt>と</rt><span class="grammar-highlight">る</span></ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight"><span class="h">り</span>ます</span></ruby>
+          <ruby>取<rt>と</rt>る</ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight"><span class="h">り</span>ます</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>読<rt>よ</rt><span class="grammar-highlight">む</span></ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight"><span class="h">み</span>ます</span></ruby>
+          <ruby>読<rt>よ</rt>む</ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight"><span class="h">み</span>ます</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>遊<rt>あそ</rt><span class="grammar-highlight">ぶ</span></ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight"><span class="h">び</span>ます</span></ruby>
+          <ruby>遊<rt>あそ</rt>ぶ</ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight"><span class="h">び</span>ます</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>死<rt>し</rt><span class="grammar-highlight">ぬ</span></ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight"><span class="h">に</span>ます</span></ruby>
+          <ruby>死<rt>し</rt>ぬ</ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight"><span class="h">に</span>ます</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>書<rt>か</rt><span class="grammar-highlight">く</span></ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight"><span class="h">き</span>ます</span></ruby>
+          <ruby>書<rt>か</rt>く</ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight"><span class="h">き</span>ます</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>泳<rt>およ</rt><span class="grammar-highlight">ぐ</span></ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight"><span class="h">ぎ</span>ます</span></ruby>
+          <ruby>泳<rt>およ</rt>ぐ</ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight"><span class="h">ぎ</span>ます</span></ruby>
         </div>
         <div class="kanji-mb">
-          <ruby>話<rt>はな</rt><span class="grammar-highlight">す</span></ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">し</span>ます</span></ruby>
+          <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">し</span>ます</span></ruby>
         </div>
-        <div class="irregular-verbs">
-          Irregular verbs:
+        <div class="exceptions">
+          Exceptions
         </div>
         <div class="kanji-mb">
-          <span class="grammar-highlight">する</span> → <span class="grammar-highlight">します</span>
+          <span>する</span> → <span class="grammar-highlight">します</span>
         </div>
         <div>
-          <span class="grammar-highlight"><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>ます</span>
+          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>ます</span>
         </div>
       </div>
       <div v-else>
@@ -83,8 +83,8 @@
         <div class="kanji-mb">
           <ruby>話<rt>はな</rt><span class="grammar-highlight">す</span></ruby>
         </div>
-        <div class="irregular-verbs">
-          Irregular verbs:
+        <div class="exceptions">
+          Irregular verbs
         </div>
         <div class="kanji-mb">
           <span class="grammar-highlight">する</span>
@@ -107,8 +107,11 @@
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink>
       </div>
-      <div>
+      <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink>
       </div>
     </template>
     <template #explanation>
@@ -140,44 +143,64 @@
           Adding a time expression like <ruby>明日<rt>あした</rt></ruby> makes it clear that the action will happen in the future
         </template>
       </GrammarExample>
-      <div class="subtitle">Dictionary form (informal)</div>
-      The dictionary form (also called the plain form) of a godan verb is used in informal contexts, such as when speaking with friends or people of the same social rank.
-      In the godan five step chart the dictionary form is the form that ends in the <span class="g">う</span> sound.
 
-      <div class="chart">
-        <GodanChart :selected-row="3" :show-word-selection="false" />
+      <div class="section">
+        <div class="subtitle">Dictionary form (plain)</div>
+        The dictionary form (also called the plain form) of a godan verb is used in informal contexts, such as when speaking with friends or people of the same social rank.
+        In the godan five-step chart the dictionary form is the form that ends in the <span class="g">う</span> sound.
+
+        <div class="chart">
+          <GodanChart :selected-row="3" :show-word-selection="false" />
+        </div>
+        
+        This is the form you will find in dictionaries, and serves as the base form for many grammatical constructions.
+        It requires no further conjugation and can be used as-is.
+        <GrammarExample>
+          <template #example>
+            <div><ruby>読<rt>よ</rt></ruby><span class="g">む</span> – to read</div>
+            <div><ruby>話<rt>はな</rt></ruby><span class="g">す</span> – to speak</div>
+            <div><ruby>行<rt>い</rt></ruby><span class="g">く</span> – to go</div>
+            <div style="padding-top: 8px">あ<span class="g">る</span> – to exist (inanimate objects)</div>
+          </template>
+          <template #note>
+            Dictionary form
+          </template>
+        </GrammarExample>
       </div>
-      
-      This is the form you will find in dictionaries, and it is the base form used in many grammatical constructions.
-      <GrammarExample>
-        <template #example>
-          <div><ruby>読<rt>よ</rt></ruby> <span class="g">む</span> – to read</div>
-          <div><ruby>話<rt>はな</rt></ruby><span class="g">す</span> – to speak</div>
-          <div><ruby>書<rt>か</rt></ruby><span class="g">く</span> – to write</div>
-        </template>
-        <template #note>
-          Dictionary form
-        </template>
-      </GrammarExample>
 
       <div class="section">
         <div class="subtitle">Polite form</div>
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
-        To make a godan verb polite, you first move the verb on the godan five step chart to the い row.
+        To make a godan verb polite, you first move the verb on the godan five-step chart to the い row.
 
         <div class="chart">
           <GodanChart :selected-row="2" :show-word-selection="false" />
         </div>
-        From here the verb can be conjugated in various polite forms. For the non-past form (present/future tense), you take the verb stem in the polite form (now ending in a い sound), and then add <span class="g">ます</span>.
+        From here the verb can be conjugated in various polite forms. For the non-past form (present/future tense), you take the verb stem in the polite form (now ending in an い sound), and then add <span class="g">ます</span>.
 
         <GrammarExample>
           <template #example>
-            <div><ruby>読<rt>よ</rt></ruby><span class="g">む</span> → <ruby>読<rt>よ</rt></ruby><span class="g">みます</span></div>
-            <div><ruby>話<rt>はな</rt></ruby><span class="g">す</span> → <ruby>話<rt>はな</rt></ruby><span class="g">します</span></div>
-            <div><ruby>書<rt>か</rt></ruby><span class="g">く</span> → <ruby>書<rt>か</rt></ruby><span class="g">きます</span></div>
+            <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">み</span><span class="g">ます</span></div>
+            <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">し</span><span class="g">ます</span></div>
+            <div><ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">き</span><span class="g">ます</span></div>
+            <div style="padding-top: 8px">ある → あ<span class="h">り</span><span class="g">ます</span></div>
           </template>
           <template #note>
-            Polite form (final syllable's vowel to changed to <b>i</b>, then added <b>ます</b>)
+            Polite non-past form
+          </template>
+        </GrammarExample>
+      </div>
+
+      <div class="section">
+        <div class="subtitle">Exceptions</div>
+        The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
+        <GrammarExample>
+          <template #example>
+            <div>する → <span class="g">します</span></div>
+            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ます</span></div>
+          </template>
+          <template #note>
+            Polite non-past form of exceptions
           </template>
         </GrammarExample>
       </div>
@@ -194,7 +217,6 @@
   font-size: 1.1rem;
   font-weight: 500;
   opacity: 0.8;
-  margin-top: 40px;
   margin-bottom: 18px;
 }
 </style>
