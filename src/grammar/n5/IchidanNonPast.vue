@@ -103,7 +103,7 @@
 
       <div class="section">
         <div class="subtitle">Dictionary form (plain)</div>
-        The dictionary form (also called the plain form) of an ichidan verb is used in informal contexts, such as when speaking with friends or people of the same social rank.
+        The non-past form (also known as the dictionary or plain form) of an ichidan verb is used in informal contexts, such as when speaking with friends or people of the same social rank.
         <br><br>
         This is the form you will find in dictionaries, and serves as the base form for many grammatical constructions.
         It requires no further conjugation and can be used as-is.

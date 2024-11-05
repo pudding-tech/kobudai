@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
-  import GodanChart from "@/components/GodanChart.vue";
+  import GodanChart from "@/grammar/common/GodanChart.vue";
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { godan as meta, godanNegative, godanPast, ichidan } from "./metadataN5";

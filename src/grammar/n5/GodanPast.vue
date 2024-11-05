@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import GodanChart from "@/components/GodanChart.vue";
+  import GodanChart from "@/grammar/common/GodanChart.vue";
   import { godanPast as meta, godan, godanNonPast, godanNegative, ichidanPast } from "./metadataN5";
 
   const isPolite = ref(false);
@@ -164,7 +164,7 @@
         <div class="chart">
           <GodanChart :selected-row="2" :show-word-selection="false" />
         </div>
-        From here the verb can be conjugated in various polite forms. For the non-past form (present/future tense), you take the verb stem in the polite form (now ending in an い sound), and then add <span class="g">ます</span>.
+        From here the verb can be conjugated in various polite forms. For the past form, you take the verb stem in the polite form (now ending in an い sound), and then add <span class="g">ました</span>.
 
         <GrammarExample>
           <template #example>
@@ -174,7 +174,7 @@
             <div style="padding-top: 8px">ある → あ<span class="h">り</span><span class="g">ました</span></div>
           </template>
           <template #note>
-            Polite non-past form
+            Polite past form
           </template>
         </GrammarExample>
       </div>

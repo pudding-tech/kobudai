@@ -5,9 +5,8 @@
 </script>
 
 <template>
-  <Navbar class="navbar" />
+  <Navbar />
   <div class="main">
-    <!-- <RouterView :key="$route.fullPath" /> -->
     <RouterView v-slot="{ Component, route }">
       <component :is="Component" :key="route.path" />
     </RouterView>
@@ -18,10 +17,6 @@
 <style scoped>
 .main {
   flex: 1;
-  padding: 2rem;
-}
-
-.navbar {
   padding: 2rem;
 }
 </style>

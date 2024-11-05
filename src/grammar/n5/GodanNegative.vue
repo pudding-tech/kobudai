@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import GodanChart from "@/components/GodanChart.vue";
+  import GodanChart from "@/grammar/common/GodanChart.vue";
   import { godanNegative as meta, godan, godanNonPast, godanPast, ichidanNegative } from "./metadataN5";
 
   const isPolite = ref(false);

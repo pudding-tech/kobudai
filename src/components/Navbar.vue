@@ -2,6 +2,7 @@
   import { ref } from "vue";
   import { useRouter } from "vue-router";
   import { useDarkModeStore } from "@/stores/darkModeStore";
+  import { breakpointService } from "@/utils/breakpointService";
 
   const router = useRouter();
   const darkModeStore = useDarkModeStore();
@@ -23,33 +24,43 @@
 </script>
 
 <template>
-  <div class="toolbar">
-    <Toolbar>
-      <template #start>
-        <!-- <img src="../assets/logo.png" class="logo" /> -->
-        <div class="kobudai" @click="gotoHome()">
+  <Toolbar :class="breakpointService.isMobile() ? 'mobile-navbar' : 'navbar'">
+    <template #start>
+      <!-- <img src="../assets/logo.png" class="logo" /> -->
+      <div class="container">
+        <div v-ripple class="kobudai" @click="gotoHome()">
           KOBUDAI・コブダイ
         </div>
-      </template>
-      <template #end>
-        <Button :icon="darkModeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" class="theme-selector" @click="toggleDarkMode()" />
-        <!-- <ToggleSwitch v-model="darkModeStore.darkMode.value" class="theme-selector" @update:model-value="toggleDarkMode()">
-          <template #handle="{ checked }">
-            <i :class="['!text-xs pi', { 'pi-moon': checked, 'pi-sun': !checked }]" />
-          </template>
-        </ToggleSwitch> -->
-        <IconField>
-          <InputIcon>
-            <i class="pi pi-search" />
-          </InputIcon>
-          <InputText v-model="searchText" placeholder="Search" disabled />
-        </IconField>
-      </template>
-    </Toolbar>
-  </div>
+      </div>
+    </template>
+    <template #end>
+      <Button :icon="darkModeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" class="theme-selector" @click="toggleDarkMode()" />
+      <!-- <ToggleSwitch v-model="darkModeStore.darkMode.value" class="theme-selector" @update:model-value="toggleDarkMode()">
+        <template #handle="{ checked }">
+          <i :class="['!text-xs pi', { 'pi-moon': checked, 'pi-sun': !checked }]" />
+        </template>
+      </ToggleSwitch> -->
+      <IconField v-if="!breakpointService.isMobile()">
+        <InputIcon>
+          <i class="pi pi-search" />
+        </InputIcon>
+        <InputText v-model="searchText" placeholder="Search" disabled />
+      </IconField>
+      <Button v-else icon="pi pi-search" severity="secondary" style="width: 60px"/>
+    </template>
+  </Toolbar>
 </template>
 
 <style scoped>
+.navbar {
+  margin: 30px;
+}
+
+.mobile-navbar {
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+}
+
 .logo {
   position: relative;
   width: 32px;
@@ -61,23 +72,23 @@
   margin-right: 10px;
 }
 
+.container {
+  position: absolute;
+}
+
 .kobudai {
   font-weight: 500;
   cursor: pointer;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 174px;
+  border-radius: var(--p-content-border-radius);
+  transition: background-color 0.3s;
+  left: -6px;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -5px;
-    width: calc(100% + 10px);
-		height: calc(100% + 20px);
-    border-radius: var(--p-content-border-radius);
-    transition: background-color 0.3s;
-  }
-
-  &:hover::before {
+  &:hover {
     background-color: var(--navbar-hover-color);
   }
 }

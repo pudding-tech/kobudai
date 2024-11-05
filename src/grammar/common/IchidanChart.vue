@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
-  import { godanNegative, godanNonPast, godanPast } from "@/grammar/n5/metadataN5";
-  import type { GodanChartExample } from "@/types/types";
+  import { ichidanNegative, ichidanNonPast, ichidanPast } from "@/grammar/n5/metadataN5";
+  import type { IchidanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
     wordSelection?: number,
@@ -16,102 +16,132 @@
 
   const word = ref(props.wordSelection);
   const wordOptions = ref([
-    { label: "買う", value: 0, translation: "to buy" },
-    { label: "行く", value: 1, translation: "to go" },
-    { label: "話す", value: 2, translation: "to speak" }
+    { label: "食べる", value: 0, translation: "to eat" },
+    { label: "出る", value: 1, translation: "to leave" },
+    { label: "見る", value: 2, translation: "to see" },
+    { label: "浴びる", value: 3, translation: "to take a shower" }
   ]);
 
-  const examples = ref<GodanChartExample[]>([
+  const examples = ref<IchidanChartExample[]>([
     {
-      kanaRow: ["あ", "い", "う", "え", "お"],
-      kanji: "買",
-      furigana: "か",
-      examples: [
-        { highlight: "わ", suffix: "（ない）" },
-        { highlight: "い", suffix: "（ます）" },
-        { highlight: "う" },
-        { highlight: "え", suffix: "（る、ば）" },
-        { highlight: "お", suffix: "（う）" }
+      kanaRow: "え",
+      kanji: "食",
+      furigana: "た",
+      middle: "べ",
+      end: [
+        { suffix: "（ない）" },
+        { suffix: "（ます）" },
+        { highlight: "る" },
+        { suffix: "（られる、れば）" },
+        { suffix: "（よう）" }
       ]
     },
     {
-      kanaRow: ["あ（か）", "い（き）", "う（く）", "え（け）", "お（こ）"],
-      kanji: "行",
-      furigana: "い",
-      examples: [
-        { highlight: "か", suffix: "（ない）" },
-        { highlight: "き", suffix: "（ます）" },
-        { highlight: "く" },
-        { highlight: "け", suffix: "（る、ば）" },
-        { highlight: "こ", suffix: "（う）" }
+      kanaRow: "え",
+      kanji: "出",
+      furigana: "で",
+      end: [
+        { suffix: "（ない）" },
+        { suffix: "（ます）" },
+        { highlight: "る" },
+        { suffix: "（られる、れば）" },
+        { suffix: "（よう）" }
       ]
     },
     {
-      kanaRow: ["あ（さ）", "い（し）", "う（す）", "え（せ）", "お（そ）"],
-      kanji: "話",
-      furigana: "はな",
-      examples: [
-        { highlight: "さ", suffix: "（ない）" },
-        { highlight: "し", suffix: "（ます）" },
-        { highlight: "す" },
-        { highlight: "せ", suffix: "（る、ば）" },
-        { highlight: "そ", suffix: "（う）" }
+      kanaRow: "い",
+      kanji: "見",
+      furigana: "み",
+      end: [
+        { suffix: "（ない）" },
+        { suffix: "（ます）" },
+        { highlight: "る" },
+        { suffix: "（られる、れば）" },
+        { suffix: "（よう）" }
+      ]
+    },
+    {
+      kanaRow: "い",
+      kanji: "浴",
+      furigana: "あ",
+      middle: "び",
+      end: [
+        { suffix: "（ない）" },
+        { suffix: "（ます）" },
+        { highlight: "る" },
+        { suffix: "（られる、れば）" },
+        { suffix: "（よう）" }
       ]
     }
   ]);
 
   const data = computed(() => [
     {
-      row: examples.value[word.value].kanaRow[0],
+      row: examples.value[word.value].kanaRow,
       name: "Plain negative, Plain negative past",
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[0]
+        okurigana: {
+          middle: examples.value[word.value].middle,
+          end: examples.value[word.value].end[0]
+        }
       },
-      grammarPoint: [godanNegative, { slug: null, title: "Godan verb (negative past)" }],
+      grammarPoint: [ichidanNegative, { slug: null, title: "Ichidan verb (negative past)" }],
       rowNr: 1
     },
     {
-      row: examples.value[word.value].kanaRow[1],
+      row: examples.value[word.value].kanaRow,
       name: "Polite, Continuative",
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[1]
+        okurigana: {
+          middle: examples.value[word.value].middle,
+          end: examples.value[word.value].end[1]
+        }
       },
-      grammarPoint: [godanNonPast, godanNegative, godanPast, { slug: null, title: "Te-form" }],
+      grammarPoint: [ichidanNonPast, ichidanNegative, ichidanPast, { slug: null, title: "Te-form" }],
       rowNr: 2
     },
     {
-      row: examples.value[word.value].kanaRow[2], 
+      row: examples.value[word.value].kanaRow, 
       name: "Dictionary, Plain non-past",
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[2]
+        okurigana: {
+          middle: examples.value[word.value].middle,
+          end: examples.value[word.value].end[2]
+        }
       },
-      grammarPoint: [godanNonPast],
+      grammarPoint: [ichidanNonPast],
       rowNr: 3
     },
     {
-      row: examples.value[word.value].kanaRow[3],
+      row: examples.value[word.value].kanaRow,
       name: "Imperative, Potential, Conditional",
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[3]
+        okurigana: {
+          middle: examples.value[word.value].middle,
+          end: examples.value[word.value].end[3]
+        }
       },
       grammarPoint: [{ slug: null, title: null }],
       rowNr: 4
     },
     {
-      row: examples.value[word.value].kanaRow[4],
+      row: examples.value[word.value].kanaRow,
       name: "Volitional (let's...)",
       example: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].examples[4]
+        okurigana: {
+          middle: examples.value[word.value].middle,
+          end: examples.value[word.value].end[4]
+        }
       },
       grammarPoint: [{ slug: null, title: null }],
       rowNr: 5
@@ -119,11 +149,11 @@
   ]);
 
   const selectedRow = computed(() => {
-    return (data: { rowNr: number }) => {
+    return () => {
       if (!props.selectedRow) {
         return "";
       }
-      return data.rowNr === props.selectedRow ? "table-highlight-row" : "table-non-highlight-row";
+      return "table-highlight-row";
     };
   });
 </script>
@@ -140,7 +170,7 @@
       </SelectButton>
       <span style="margin-left: 10px; color: var(--p-primary-250)">Example words</span>
     </div>
-    <DataTable :value="data" :showHeaders="true" :show-gridlines="true" :row-class="selectedRow" class="table">
+    <DataTable :value="data" :showHeaders="true" :show-gridlines="true" :row-class="selectedRow" row-group-mode="rowspan" group-rows-by="row" class="table">
       <Column field="row" header="Kana Row">
         <template #body="slotProps">
           <div class="g text">
@@ -158,7 +188,7 @@
       <Column field="example" header="Example">
         <template #body="slotProps">
           <div class="text">
-            <ruby>{{ slotProps.data.example.kanji }}<rt>{{ slotProps.data.example.furigana }}</rt></ruby><span class="h">{{ slotProps.data.example.okurigana.highlight }}</span>{{ slotProps.data.example.okurigana.suffix }}
+            <ruby>{{ slotProps.data.example.kanji }}<rt>{{ slotProps.data.example.furigana }}</rt></ruby>{{ slotProps.data.example.okurigana.middle }}<span class="g">{{ slotProps.data.example.okurigana.end.highlight }}</span>{{ slotProps.data.example.okurigana.end.suffix }}
           </div>
         </template>
       </Column>

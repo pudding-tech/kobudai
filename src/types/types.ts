@@ -23,7 +23,7 @@ export type GodanChartExample = {
   kanaRow: string[],
   kanji: string,
   furigana: string,
-  examples: {
+  end: {
     highlight: string,
     suffix?: string
   }[]
@@ -34,7 +34,7 @@ export type IchidanChartExample = {
   kanji: string,
   furigana: string,
   middle?: string,
-  examples: {
+  end: {
     highlight?: string,
     suffix?: string
   }[]

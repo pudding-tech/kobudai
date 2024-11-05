@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
-  import IchidanChart from "@/components/IchidanChart.vue";
+  import IchidanChart from "@/grammar/common/IchidanChart.vue";
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { ichidan as meta, godan, ichidanNonPast } from "./metadataN5";
