@@ -73,66 +73,39 @@
     </template>
     <template #explanation>
       <div class="grammar-point-title">The Past Form of Ichidan Verbs</div>
-      Japanese verbs do not have distinct forms to indicate the difference between present and future tense. Instead, Japanese uses a single verb form, often referred to as the <i>non-past form</i>, to express both present and future actions.
-      The present tense does not indicate that an action is happening right now - see <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'ている' } }" class="link">ている</RouterLink> for that - but rather that it is a general or habitual action.
-      <br><br>
-      Context and additional words are usually what indicate whether a non-past verb is referring to the present or the future.
-      For example, take the ichidan verb 食べ<span class="g">る</span> (たべる) which means “to eat”. This form can indicate both present and future actions, depending on the context.
-      <GrammarExample>
-        <template #example>
-          ラーメンを<ruby>食<rt>た</rt></ruby>べ<span class="g">る</span>
-        </template>
-        <template #translation>
-          I eat ramen
-        </template>
-        <template #note>
-          This suggests a general or habitual action, but depending on the context, it could also mean "I will eat ramen" (as in the future)
-        </template>
-      </GrammarExample>
-      <GrammarExample>
-        <template #example>
-          <ruby>明日<rt>あした</rt></ruby>、ラーメンを<ruby>食<rt>た</rt></ruby>べ<span class="g">る</span>
-        </template>
-        <template #translation>
-          I will eat ramen tomorrow
-        </template>
-        <template #note>
-          Adding a time expression like <ruby>明日<rt>あした</rt></ruby> makes it clear that the action will happen in the future
-        </template>
-      </GrammarExample>
-      <div class="subtitle">Dictionary form (informal)</div>
-      The dictionary form (also called the plain form) of an ichidan verb is used in informal contexts, such as when speaking with friends or people of the same social rank.
-      <br><br>
-      This is the form you will find in dictionaries, and serves as the base form for many grammatical constructions.
-      It requires no further conjugation and can be used as-is.
-      <GrammarExample>
-        <template #example>
-          <div><ruby>食<rt>た</rt></ruby>べ<span class="g">る</span> – to eat</div>
-          <div><ruby>落<rt>お</rt></ruby>ち<span class="g">る</span> – to fall down</div>
-          <div><ruby>見<rt>み</rt></ruby><span class="g">る</span> – to see</div>
-          <div style="padding-top: 8px">い<span class="g">る</span> – to exist (living things)</div>
-        </template>
-        <template #note>
-          Dictionary form
-        </template>
-      </GrammarExample>
+      The past form of Japanese verbs is used to describe actions that have already been completed, or events that have already happened.
+
+      <div class="section">
+        <div class="subtitle">Plain form (informal)</div>
+        Since ichidan verbs have only one possible conjugation pattern, conjugating them is straightforward.
+        To change an ichidan verb into the past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">た</span>.
+        <GrammarExample>
+          <template #example>
+            <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">た</span></div>
+            <div><ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">た</span></div>
+            <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">た</span></div>
+            <div style="padding-top: 8px">いる → い<span class="g">た</span></div>
+          </template>
+          <template #note>
+            Plain past form
+          </template>
+        </GrammarExample>
+      </div>
 
       <div class="section">
         <div class="subtitle">Polite form</div>
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
-        Since ichidan verbs have only one possible conjugation pattern, conjugating them is straightforward.
-        <br><br>
-        To make an ichidan verb polite in the non-past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">ます</span>.
+        To make an ichidan verb polite in the past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">ました</span>.
 
         <GrammarExample>
           <template #example>
-            <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ます</span></div>
-            <div><ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">ます</span></div>
-            <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ます</span></div>
-            <div style="padding-top: 8px">いる → い<span class="g">ます</span></div>
+            <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ました</span></div>
+            <div><ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">ました</span></div>
+            <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ました</span></div>
+            <div style="padding-top: 8px">いる → い<span class="g">ました</span></div>
           </template>
           <template #note>
-            Polite non-past form
+            Polite past form
           </template>
         </GrammarExample>
       </div>

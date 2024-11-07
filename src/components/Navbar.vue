@@ -1,20 +1,20 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import { useRouter } from "vue-router";
-  import { useDarkModeStore } from "@/stores/darkModeStore";
+  import { useThemeStore } from "@/stores/themeStore";
   import { breakpointService } from "@/utils/breakpointService";
 
   const router = useRouter();
-  const darkModeStore = useDarkModeStore();
+  const themeStore = useThemeStore();
   const searchText = ref<string | null>(null);
 
   const toggleDarkMode = () => {
     const isDarkMode = document.documentElement.classList.contains("dark-mode");
     if (isDarkMode) {
-      darkModeStore.setDarkMode(false);
+      themeStore.setDarkMode(false);
     }
     else {
-      darkModeStore.setDarkMode(true);
+      themeStore.setDarkMode(true);
     }
   };
 
@@ -24,7 +24,7 @@
 </script>
 
 <template>
-  <Toolbar :class="breakpointService.isMobile() ? 'mobile-navbar' : 'navbar'">
+  <Toolbar :class="breakpointService.isMobile() ? 'mobile-navbar mobile-color' : 'navbar'">
     <template #start>
       <!-- <img src="../assets/logo.png" class="logo" /> -->
       <div class="container">
@@ -34,7 +34,9 @@
       </div>
     </template>
     <template #end>
-      <Button :icon="darkModeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" class="theme-selector" @click="toggleDarkMode()" />
+      <Button v-if="!breakpointService.isMobile()" :icon="themeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" class="theme-selector" @click="toggleDarkMode()" />
+      <Button v-else :icon="themeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" variant="text" severity="secondary" class="theme-selector" @click="toggleDarkMode()" />
+      <!-- <Button v-else icon="pi pi-cog" variant="text" severity="secondary" class="theme-selector" @click="toggleDarkMode()" /> -->
       <!-- <ToggleSwitch v-model="darkModeStore.darkMode.value" class="theme-selector" @update:model-value="toggleDarkMode()">
         <template #handle="{ checked }">
           <i :class="['!text-xs pi', { 'pi-moon': checked, 'pi-sun': !checked }]" />

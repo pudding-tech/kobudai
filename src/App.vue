@@ -2,11 +2,12 @@
   import { RouterView } from "vue-router";
   import Navbar from "@/components/Navbar.vue";
   import Footer from "@/components/Footer.vue";
+import { breakpointService } from "./utils/breakpointService";
 </script>
 
 <template>
   <Navbar />
-  <div class="main">
+  <div class="main" :class="{ 'full-view': !breakpointService.isMobile() }">
     <RouterView v-slot="{ Component, route }">
       <component :is="Component" :key="route.path" />
     </RouterView>
@@ -17,6 +18,9 @@
 <style scoped>
 .main {
   flex: 1;
-  padding: 2rem;
+
+  &.full-view {
+    padding: 34px;
+  }
 }
 </style>

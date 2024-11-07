@@ -1,7 +1,7 @@
 import "./assets/main.css";
 import "primeicons/primeicons.css";
 
-import { createApp } from "vue";
+import { createApp, type ObjectDirective } from "vue";
 import App from "./App.vue";
 import router from "./router/router";
 import PrimeVue from "primevue/config";
@@ -87,7 +87,14 @@ const customTheme = definePreset(Aura, {
       }
     },
     card: {
-      background: "#202020"
+      colorScheme: {
+        light: {
+          background: "{zinc.100}",
+        },
+        dark: {
+          background: "#202020"
+        }
+      }
     },
     progressspinner: {
       colorScheme: {
@@ -122,6 +129,22 @@ app.use(PrimeVue, {
   }
 });
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const CustomRipple: ObjectDirective = (Ripple as any).extend("ripple", {
+  methods: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    bindEvents(el: any) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      el.addEventListener("pointerdown", (this as any).onMouseDown.bind(this));
+    },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    unbindEvents(el: any) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      el.removeEventListener("pointerdown", (this as any).onMouseDown.bind(this));
+    }
+  }
+});
+
 app.component("Accordion", Accordion);
 app.component("AccordionContent", AccordionContent);
 app.component("AccordionHeader", AccordionHeader);
@@ -138,17 +161,17 @@ app.component("SelectButton", SelectButton);
 app.component("Tag", Tag);
 app.component("ToggleSwitch", ToggleSwitch);
 app.component("Toolbar", Toolbar);
-app.directive("ripple", Ripple);
+app.directive("ripple", CustomRipple);
 app.directive("tooltip", Tooltip);
 
 // Set default light/dark mode
-import { useDarkModeStore } from "@/stores/darkModeStore";
-const darkModeStore = useDarkModeStore();
+import { useThemeStore } from "@/stores/themeStore";
+const themeStore = useThemeStore();
 
 const savedTheme = localStorage.getItem("theme");
 const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 if (savedTheme === "dark" || (!savedTheme && prefersDarkMode)) {
-  darkModeStore.setDarkMode(true, false);
+  themeStore.setDarkMode(true, false);
 }
 
 app.mount("#app");

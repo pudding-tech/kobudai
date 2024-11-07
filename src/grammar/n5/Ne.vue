@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { ne as meta } from "./metadataN5";
+  import { ne as meta, ka, yo } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -15,8 +15,16 @@
     <template #structure>
       Phrase + <span class="grammar-highlight">ね</span>
     </template>
-    <template #details>
-      
+    <template #related>
+      <div class="related-mb">
+        Other sentence-ending particles:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ka.slug } }" class="link">{{ ka.title + " (question marking particle)" }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: yo.slug } }" class="link">{{ yo.title + " (emphasis)" }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
       The sentence-ending particle <span class="g">ね</span> is used to seek confirmation or agreement from the listener, similar to saying "right?" or "isn't it?" in English. It softens statements and can create a sense of shared understanding.

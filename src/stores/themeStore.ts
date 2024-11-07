@@ -2,7 +2,7 @@ import { ref } from "vue";
 
 const darkMode = ref(false);
 
-export const useDarkModeStore = () => {
+export const useThemeStore = () => {
 
   const setDarkMode = (dark: boolean, save: boolean = true) => {
     darkMode.value = dark;

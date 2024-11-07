@@ -3,6 +3,7 @@
   import GodanChart from "@/grammar/common/GodanChart.vue";
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
+  import { breakpointService } from "@/utils/breakpointService";
   import { godan as meta, godanNegative, godanPast, ichidan } from "./metadataN5";
 </script>
 
@@ -28,8 +29,8 @@
           <div>Godan Conjugation</div>
           <div class="subtitle">"Five steps" conjugation</div>
         </div>
-        <div class="line"></div>
-        <div class="godan-title">
+        <div v-if="!breakpointService.isMobile()" class="line"></div>
+        <div class="godan-title" :class="{ 'mobile': breakpointService.isMobile() }">
           <ruby>五段<rt>ごだん</rt>活用<rt>かつよう</rt></ruby>
         </div>
       </div>
@@ -88,6 +89,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  white-space: nowrap;
 
   .line {
     border-left: 2px solid rgba(255, 255, 255, 0.2);
@@ -98,6 +100,13 @@
 
 .godan-title {
   font-size: 1.5rem;
+  position: relative;
+  top: 2px;
+
+  &.mobile {
+    font-size: 1.2rem;
+    top: 4px;
+  }
 }
 
 .eng-title {

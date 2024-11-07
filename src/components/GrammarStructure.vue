@@ -2,6 +2,7 @@
   import { ref } from "vue";
   import { useRouter } from "vue-router";
   import { lastRoute } from "@/router/router";
+  import { breakpointService } from "@/utils/breakpointService";
 
   const props = withDefaults(defineProps<{
     showPolite?: boolean,
@@ -38,10 +39,29 @@
       router.push({ name: "home" });
     }
   };
+
+  const headerMobile = ref({
+    header: {
+      background: "#212121",
+      hoverBackground: "#212121",
+      activeBackground: "#212121",
+      activeHoverBackground: "#212121",
+      padding: "1.125rem",
+      first: {
+        topBorderRadius: "0",
+      },
+      last: {
+        bottomBorderRadius: "0",
+      }
+    },
+    content: {
+      // background: "#202020"
+    }
+  });
 </script>
 
 <template>
-  <div class="container">
+  <div v-if="!breakpointService.isMobile()" class="container">
     <div class="bg">
       <div class="corner">
         <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" @click="goHome" />
@@ -63,7 +83,7 @@
                   <div>Structure</div>
                   <div>
                     <Button :icon="isZoom ? 'pi pi-arrow-down-left-and-arrow-up-right-to-center' : 'pi pi-arrow-up-right-and-arrow-down-left-from-center'" severity="secondary" :class="{ 'zoom-button': showPolite }" @click="zoomChange()" />
-                    <SelectButton v-if="props.showPolite" v-model="isPolite" :options="options" option-label="label" option-value="value" :allowEmpty="false" @update:model-value="politenessChange()" />
+                    <SelectButton v-if="props.showPolite" v-model="isPolite" :options="options" option-label="label" option-value="value" :allow-empty="false" @update:model-value="politenessChange()" />
                   </div>
                 </div>
               </div>
@@ -95,6 +115,41 @@
       </div>
     </div>
   </div>
+  <div v-else class="mobile">
+    <div class="header-mobile">
+      <div class="title">
+        <slot name="title"></slot>
+      </div>
+      <div class="subtitle">
+        <slot name="subtitle"></slot>
+      </div>
+    </div>
+    <Accordion :value="['0']" multiple :dt="headerMobile">
+      <AccordionPanel value="0">
+        <AccordionHeader>Structure</AccordionHeader>
+        <AccordionContent>
+          <div class="structure" :class="{ 'big-text': isZoom }">
+            <div class="buttons">
+              <Button :icon="isZoom ? 'pi pi-arrow-down-left-and-arrow-up-right-to-center' : 'pi pi-arrow-up-right-and-arrow-down-left-from-center'" severity="secondary" @click="zoomChange()" />
+              <SelectButton v-if="props.showPolite" v-model="isPolite" :options="options" option-label="label" option-value="value" :allow-empty="false" @update:model-value="politenessChange()" />
+            </div>
+            <slot name="structure"></slot>
+          </div>
+        </AccordionContent>
+      </AccordionPanel>
+      <AccordionPanel value="1">
+        <AccordionHeader :pt="{ root: { class: 'accordion-header-mobile '}}">Related</AccordionHeader>
+        <AccordionContent>
+          <div class="related">
+            <slot name="related"></slot>
+          </div>
+        </AccordionContent>
+      </AccordionPanel>
+    </Accordion>
+    <div class="explanation mobile-explanation">
+      <slot name="explanation"></slot>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -104,7 +159,7 @@
 }
 
 .bg {
-  background-color: var(--grammar-card-bg);
+  background-color: var(--grammar-structure-bg);
   min-width: 1200px;
   max-width: 1200px;
   border-radius: var(--p-content-border-radius);
@@ -116,11 +171,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #393939;
+  background-color: var(--grammar-structure-header);
   height: 10rem;
 
   .title {
     font-size: 3rem;
+    word-break: keep-all;
   }
   .subtitle {
     font-size: 1.3rem;
@@ -138,7 +194,7 @@
 
 .card {
   margin: 1rem 1rem 0 1rem;
-  border: 1px solid rgba(73, 73, 73, 0.74);
+  border: 1px solid var(--grammar-card-border);
 
   &.top-left {
     margin-right: 0.5rem;
@@ -210,5 +266,59 @@
 
 .explanation {
   line-height: 1.5;
+}
+
+.mobile {
+  .header-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grammar-structure-header);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .title {
+      font-size: 2.4rem;
+      line-height: 1.3;
+      max-width: 80vw;
+      text-align: center;
+      word-break: keep-all;
+      /* font-family: "Yu Gothic", "Hiragino Sans", Meiryo, sans-serif; */
+    }
+    .subtitle {
+      font-size: 1.3rem;
+      opacity: 0.7;
+      max-width: 90vw;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .structure {
+    padding: 1.125rem 10px 0;
+    line-height: 1.28;
+    transition: font-size 0.1s;
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    &.big-text {
+      font-size: 1.7rem;
+    }
+  }
+
+  .related {
+    padding: 10px 10px 0;
+    line-height: 1.6;
+  }
+
+  .mobile-explanation {
+    background-color: #181818;
+    padding: 20px 16px;
+  }
 }
 </style>

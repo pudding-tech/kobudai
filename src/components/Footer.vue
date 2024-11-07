@@ -19,6 +19,7 @@
   justify-content: center;
   height: 80px;
   background-color: var(--footer-bg);
+  border-top: 1px solid var(--footer-border);
 }
 
 .text {

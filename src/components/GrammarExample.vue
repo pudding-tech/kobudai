@@ -32,7 +32,7 @@
   padding: 10px;
   margin: 20px 0;
   border-radius: var(--p-content-border-radius);
-  background-color: #2d2d2d;
+  background-color: var(--grammar-example-bg);
 }
 
 .title {

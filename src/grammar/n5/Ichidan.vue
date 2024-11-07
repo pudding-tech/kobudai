@@ -3,6 +3,7 @@
   import IchidanChart from "@/grammar/common/IchidanChart.vue";
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
+  import { breakpointService } from "@/utils/breakpointService";
   import { ichidan as meta, godan, ichidanNonPast } from "./metadataN5";
 </script>
 
@@ -27,8 +28,8 @@
           <div>Ichidan Conjugation</div>
           <div class="subtitle">"One step" conjugation</div>
         </div>
-        <div class="line"></div>
-        <div class="ichidan-title">
+        <div v-if="!breakpointService.isMobile()" class="line"></div>
+        <div class="ichidan-title" :class="{ 'mobile': breakpointService.isMobile() }">
           <ruby>一段<rt>いちだん</rt>活用<rt>かつよう</rt></ruby>
         </div>
       </div>
@@ -86,6 +87,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  white-space: nowrap;
 
   .line {
     border-left: 2px solid rgba(255, 255, 255, 0.2);
@@ -96,6 +98,13 @@
 
 .ichidan-title {
   font-size: 1.5rem;
+  position: relative;
+  top: 2px;
+
+  &.mobile {
+    font-size: 1.2rem;
+    top: 4px;
+  }
 }
 
 .eng-title {

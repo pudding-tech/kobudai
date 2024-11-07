@@ -15,7 +15,7 @@
     <template #structure>
       Noun + <span class="grammar-highlight">も</span>
     </template>
-    <template #details>
+    <template #related>
       
     </template>
     <template #explanation>
@@ -45,11 +45,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin: 10px 0;
-}
-</style>

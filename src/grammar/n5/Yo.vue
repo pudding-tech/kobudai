@@ -15,7 +15,7 @@
     <template #structure>
       Phrase + <span class="grammar-highlight">よ</span>
     </template>
-    <template #details>
+    <template #related>
       
     </template>
     <template #explanation>
