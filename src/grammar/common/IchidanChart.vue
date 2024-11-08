@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
+  import { breakpointService } from "@/utils/breakpointService";
   import { ichidanNegative, ichidanNonPast, ichidanPast } from "@/grammar/n5/metadataN5";
   import type { IchidanChartExample } from "@/types/types";
 
@@ -27,122 +28,84 @@
       kanaRow: "え",
       kanji: "食",
       furigana: "た",
-      middle: "べ",
-      end: [
-        { suffix: "（ない）" },
-        { suffix: "（ます）" },
-        { highlight: "る" },
-        { suffix: "（られる、れば）" },
-        { suffix: "（よう）" }
-      ]
+      okurigana: "べ"
     },
     {
       kanaRow: "え",
       kanji: "出",
-      furigana: "で",
-      end: [
-        { suffix: "（ない）" },
-        { suffix: "（ます）" },
-        { highlight: "る" },
-        { suffix: "（られる、れば）" },
-        { suffix: "（よう）" }
-      ]
+      furigana: "で"
     },
     {
       kanaRow: "い",
       kanji: "見",
-      furigana: "み",
-      end: [
-        { suffix: "（ない）" },
-        { suffix: "（ます）" },
-        { highlight: "る" },
-        { suffix: "（られる、れば）" },
-        { suffix: "（よう）" }
-      ]
+      furigana: "み"
     },
     {
       kanaRow: "い",
       kanji: "浴",
       furigana: "あ",
-      middle: "び",
-      end: [
-        { suffix: "（ない）" },
-        { suffix: "（ます）" },
-        { highlight: "る" },
-        { suffix: "（られる、れば）" },
-        { suffix: "（よう）" }
-      ]
+      okurigana: "び"
     }
   ]);
 
   const data = computed(() => [
     {
       row: examples.value[word.value].kanaRow,
-      name: "Plain negative, Plain negative past",
-      example: {
+      forms: "Plain negative, Plain negative past",
+      stem: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: {
-          middle: examples.value[word.value].middle,
-          end: examples.value[word.value].end[0]
-        }
+        okurigana: examples.value[word.value].okurigana
       },
+      suffix: "ない",
       grammarPoint: [ichidanNegative, { slug: null, title: "Ichidan verb (negative past)" }],
       rowNr: 1
     },
     {
       row: examples.value[word.value].kanaRow,
-      name: "Polite, Continuative",
-      example: {
+      forms: "Continuative, Polite",
+      stem: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: {
-          middle: examples.value[word.value].middle,
-          end: examples.value[word.value].end[1]
-        }
+        okurigana: examples.value[word.value].okurigana
       },
+      suffix: "ます",
       grammarPoint: [ichidanNonPast, ichidanNegative, ichidanPast, { slug: null, title: "Te-form" }],
       rowNr: 2
     },
     {
       row: examples.value[word.value].kanaRow, 
-      name: "Dictionary, Plain non-past",
-      example: {
+      forms: "Dictionary, Plain non-past",
+      stem: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: {
-          middle: examples.value[word.value].middle,
-          end: examples.value[word.value].end[2]
-        }
+        okurigana: examples.value[word.value].okurigana
       },
+      suffix: "る",
       grammarPoint: [ichidanNonPast],
       rowNr: 3
     },
     {
       row: examples.value[word.value].kanaRow,
-      name: "Imperative, Potential, Conditional",
-      example: {
+      forms: "Imperative, Potential, Conditional",
+      stem: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: {
-          middle: examples.value[word.value].middle,
-          end: examples.value[word.value].end[3]
-        }
+        okurigana: examples.value[word.value].okurigana
       },
+      suffix: "られる、れば",
       grammarPoint: [{ slug: null, title: null }],
       rowNr: 4
     },
     {
       row: examples.value[word.value].kanaRow,
-      name: "Volitional (let's...)",
-      example: {
+      forms: "Volitional (let's...)",
+      stem: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
-        okurigana: {
-          middle: examples.value[word.value].middle,
-          end: examples.value[word.value].end[4]
-        }
+        okurigana: examples.value[word.value].okurigana
       },
+      suffix: "よう",
       grammarPoint: [{ slug: null, title: null }],
       rowNr: 5
     }
@@ -168,31 +131,38 @@
           </div>
         </template>
       </SelectButton>
-      <span style="margin-left: 10px; color: var(--p-primary-250)">Example words</span>
+      <span v-if="!breakpointService.isMobile()" style="margin-left: 10px; color: var(--p-primary-250)">Example words</span>
     </div>
-    <DataTable :value="data" :showHeaders="true" :show-gridlines="true" :row-class="selectedRow" row-group-mode="rowspan" group-rows-by="row" class="table">
-      <Column field="row" header="Kana Row">
+    <DataTable :value="data" :showHeaders="true" :show-gridlines="true" :row-class="selectedRow" row-group-mode="rowspan" group-rows-by="row" :class="{ 'table': !breakpointService.isMobile() }">
+      <Column field="row" header="Kana Column">
         <template #body="slotProps">
           <div class="g text">
             <b>{{ slotProps.data.row }}</b>
           </div>
         </template>
       </Column>
-      <Column field="name" header="Name">
+      <Column field="forms" header="Forms">
         <template #body="slotProps">
           <div>
-            {{ slotProps.data.name }}
+            {{ slotProps.data.forms }}
           </div>
         </template>
       </Column>
-      <Column field="example" header="Example">
+      <Column field="stem" header="Stem">
+        <template #body="slotProps">
+          <div class="text kanji">
+            <ruby>{{ slotProps.data.stem.kanji }}<rt>{{ slotProps.data.stem.furigana }}</rt></ruby>{{ slotProps.data.stem.okurigana }}
+          </div>
+        </template>
+      </Column>
+      <Column v-if="!breakpointService.isMobile()" field="suffix" header="Conjugations">
         <template #body="slotProps">
           <div class="text">
-            <ruby>{{ slotProps.data.example.kanji }}<rt>{{ slotProps.data.example.furigana }}</rt></ruby>{{ slotProps.data.example.okurigana.middle }}<span class="g">{{ slotProps.data.example.okurigana.end.highlight }}</span>{{ slotProps.data.example.okurigana.end.suffix }}
+            {{ slotProps.data.suffix }}
           </div>
         </template>
       </Column>
-      <Column v-if="props.showLinks" field="grammarPoint" header="Grammar Points">
+      <Column v-if="props.showLinks && !breakpointService.isMobile()" field="grammarPoint" header="Grammar Points">
         <template #body="slotProps">
           <div v-for="(gp, index) in slotProps.data.grammarPoint" :key="index" :class="{ 'links': slotProps.data.grammarPoint.length > 1 }">
             <div :class="{ 'link-mt': slotProps.data.grammarPoint.length > 1 && index !== 0 }">
@@ -209,11 +179,16 @@
 
 <style scoped>
 .table {
-  width: 902px;
+  width: 924px;
 }
 
 .text {
   font-size: 1.2rem;
+
+  &.kanji {
+    position: relative;
+    bottom: 2px;
+  }
 }
 
 .link-mt {

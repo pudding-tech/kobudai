@@ -23,28 +23,28 @@
       - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink>
     </template>
     <template #explanation>
-      <div class="title-container">
+      <div class="title-container" :class="{ 'mobile': breakpointService.isMobile() }">
         <div class="eng-title">
           <div>Ichidan Conjugation</div>
           <div class="subtitle">"One step" conjugation</div>
         </div>
-        <div v-if="!breakpointService.isMobile()" class="line"></div>
+        <div class="line"></div>
         <div class="ichidan-title" :class="{ 'mobile': breakpointService.isMobile() }">
           <ruby>一段<rt>いちだん</rt>活用<rt>かつよう</rt></ruby>
         </div>
       </div>
-      Ichidan verbs, often called る-verbs or <i>iru/eru</i>-verbs, are one of the two main types of Japanese verbs.
-      The term "ichidan"（<span class="k">一段</span>）- meaning "one step" or "one level" - reflects the fact that unlike godan verbs, which undergo five possible changes in their final syllable during conjugation, ichidan verbs do not alter their final syllable.
+      Ichidan verbs, often called <span class="g">る</span>-verbs or <span class="g">iru/eru</span>-verbs, are one of the two main types of Japanese verbs.
+      The term "ichidan"（<span class="k">一段</span>）- meaning "one step" or "one level" - reflects the fact that unlike godan verbs, which have five possible verb stems, ichidan verbs only have one stem.
       <br><br>
-      In their dictionary form, all ichidan verbs end in <span class="g">る</span>. Additionally, the sound before the <span class="g">る</span> is always either <i>i</i> or <i>e</i>, so ichidan verbs consistently end in either <i>iru</i> or <i>eru</i>.
-      Using romaji can be particularly helpful here; for example, both 始め<span class="g">る</span> and 食べ<span class="g">る</span> end with the <i>eru</i> sound,
+      In their dictionary form, all ichidan verbs end in <span class="g">る</span>. Additionally, the sound before the <span class="g">る</span> is always either <i>i</i> or <i>e</i>, so ichidan verbs consistently end in either <span class="g">iru</span> or <span class="g">eru</span>.
+      Using romaji can be particularly helpful here; for example, both 始め<span class="g">る</span> and 食べ<span class="g">る</span> end with the <span class="g">eru</span> sound,
       indicating their (potential) classification as ichidan verbs, even if the hiragana the <i>e</i> sound comes from differ between them (め and べ respectively).
       <br><br><div class="note">Note:</div>
-      Just because a verb ends in <i>iru</i> or <i>eru</i> does not definitely mean it is an ichidan verb; see the section below for details.
+      Just because a verb ends in <span class="g">iru</span> or <span class="g">eru</span> does not definitely mean it is an ichidan verb; see the section below for details.
       <br><br>
       Conjugating ichidan verbs is straightforward. Instead of changing the final syllable, you simply remove the <span class="g">る</span> from the dictionary form to find the verb stem, then add the appropriate conjugation ending.
       The simplicity of ichidan conjugation stands in contrast to godan verbs, which move through different syllable endings.
-      Study the chart below to see how ichidan verbs maintain their form without shifting on the hiragana chart — hence, the term "one step".
+      Study the chart below to see how ichidan verbs use the same verb stem throughout all conjugations — hence, the term "one step".
       <div class="chart">
         <IchidanChart :show-word-selection="true" :show-links="true" />
       </div>
@@ -88,6 +88,10 @@
   align-items: center;
   margin-bottom: 20px;
   white-space: nowrap;
+
+  &.mobile {
+    justify-content: space-between;
+  }
 
   .line {
     border-left: 2px solid rgba(255, 255, 255, 0.2);

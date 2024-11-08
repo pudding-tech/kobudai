@@ -1,5 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
+  import HiraganaChart from "../common/HiraganaChart.vue";
+  import GodanMoveChart from "../common/GodanMoveChart.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
@@ -24,42 +26,53 @@
       - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidan.slug } }" class="link">{{ ichidan.title }}</RouterLink>
     </template>
     <template #explanation>
-      <div class="title-container">
+      <div class="title-container" :class="{ 'mobile': breakpointService.isMobile() }">
         <div class="eng-title">
           <div>Godan Conjugation</div>
           <div class="subtitle">"Five steps" conjugation</div>
         </div>
-        <div v-if="!breakpointService.isMobile()" class="line"></div>
+        <div class="line"></div>
         <div class="godan-title" :class="{ 'mobile': breakpointService.isMobile() }">
           <ruby>五段<rt>ごだん</rt>活用<rt>かつよう</rt></ruby>
         </div>
       </div>
-      Godan verbs, also commonly known as う-verbs, are one of the two main types of Japanese verbs.
-      The term "godan"（<span class="k">五段</span>）- meaning "five steps" or "five levels" - refers to the five possible changes in the verb's final syllable during conjugation, depending on its grammatical form.
+      Godan verbs, also commonly known as <span class="g">う</span>-verbs, are one of the two main types of Japanese verbs.
+      The term "godan"（<span class="k">五段</span>）- meaning "five steps" or "five levels" - refers to the five possible stem forms a godan verb can have.
       <br><br>
-      In their dictionary form, all verbs end with a kana from the <span class="g">う</span> row of a hiragana chart, meaning
+      In their "base" form (also known as the dictionary form), all verbs end with a kana from the <span class="g">う</span>-column of the hiragana chart:
       <span class="g">う</span>, <span class="g">つ</span>, <span class="g">る</span>, <span class="g">む</span>, <span class="g">ぶ</span>, <span class="g">ぬ</span>, <span class="g">く</span>, <span class="g">ぐ</span>, or <span class="g">す</span>.
-      Godan verbs can end in any of these hiraganas, unlike ichidan verbs which always end in an <i>iru</i> or <i>eru</i> sound.
+      Unlike ichidan verbs, which end only in an <i>-iru</i> or <i>-eru</i> sound, godan verbs can end in any of these kana.
       <br><br>
-      This name, "godan", reflects how these verbs change predictably to one of five vowel sounds in various conjugations.
-      The chart below shows these transformations: each row corresponds to a different syllable that a godan verb can take in its various forms.
-      For instance, a verb ending in <span class="h">く</span> in its dictionary form may change to <span class="h">か</span>, <span class="h">き</span>, <span class="h">け</span>, or <span class="h">こ</span> depending on the conjugation.
+      <Panel header="Hiragana chart" toggleable :collapsed="true">
+        <HiraganaChart :selected-column="'u'" />
+      </Panel>
+      <br>
+      Each conjugation form is built on a modified verb stem, where the final syllable of the stem shifts to a different vowel sound (あ, い, う, え, or お) depending on the conjugation.
+      This transformation is the basis for the "five steps" of godan verbs.
+
+      <div class="move-chart">
+        <GodanMoveChart />
+      </div>
+
+      As shown above, a verb ending in <span class="h">う</span> in its dictionary form might shift to <span class="h">あ</span>, <span class="h">い</span>, <span class="h">え</span>, or <span class="h">お</span> depending on the conjugation.
+      This pattern continues down the hiragana chart, so similarly, a verb ending in <span class="h">く</span> may change to <span class="h">か</span>, <span class="h">き</span>, <span class="h">け</span>, or <span class="h">こ</span> in different forms.
+      This systematic shift applies to all godan verbs, giving each verb five possible stems and allowing for a range of conjugations.
       <div class="chart">
         <GodanChart :show-word-selection="true" :show-links="true" />
       </div>
       Here's a short breakdown of the various forms:
       <ul>
-        <li class="list"><b>Plain Negative (Past) Form:</b> The verb changes to end in a <span class="h">あ</span> sound before adding ない (e.g. 行かない) or なかった (e.g. 行かなかった).</li>
+        <li class="list"><b>Plain negative, Plain negative past:</b> The verb stem changes to end in a <span class="h">あ</span> sound.</li>
         <ul>
+          <li class="list">For the plain negative form one adds ない to the stem (e.g. 行かない, to not go).</li>
+          <li class="list">For the plain negative past form one adds なかった to the stem (e.g. 行かなかった, did not go).</li>
           <li class="list">Note that when the verb ends in <span class="h">う</span> it becomes <span class="h">わ</span>, not あ. See <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink> for more information.</li>
         </ul>
-        <li class="list"><b>Polite Form:</b> The verb changes to end in a <span class="h">い</span> sound before adding ます (e.g. 行きます).</li>
+        <li class="list"><b>Continuative, Polite:</b> The verb stem changes to end in a <span class="h">い</span> sound.</li>
         <ul>
-          <li class="list">The polite form is used in formal situations, such as speaking with strangers or people of higher social status.</li>
+          <li class="list">The continuative form is often called "the stem form" as it's used for many different conjugations, perhaps most notably the polite form.</li>
+          <li class="list">The polite form is used in formal situations, such as speaking with strangers or people of higher social status. In polite conjugations one adds some variation of ます to the stem (e.g. 行きます, to go).</li>
           <li class="list">Within the polite form the are multiple conjugations that correspond to the plain forms, just with a polite tone, such as polite negative, polite past, and polite volitional.</li>
-        </ul>
-        <li class="list"><b>Continuative Form:</b> The verb changes to end in a <span class="h">い</span> sound.</li>
-        <ul>
           <li class="list">The continuative form is often used to chain actions together or combine with helper verbs like ～たい.</li>
           <li class="list">
             This form is also the basis for the plain past and て-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
@@ -90,6 +103,10 @@
   align-items: center;
   margin-bottom: 20px;
   white-space: nowrap;
+
+  &.mobile {
+    justify-content: space-between;
+  }
 
   .line {
     border-left: 2px solid rgba(255, 255, 255, 0.2);
@@ -127,5 +144,9 @@
 
 .list {
   margin-bottom: 6px;
+}
+
+.move-chart {
+  margin: 40px 0;
 }
 </style>

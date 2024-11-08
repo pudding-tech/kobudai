@@ -1,12 +1,13 @@
 <script setup lang="ts">
   import { useSlots } from "vue";
+  import { breakpointService } from "@/utils/breakpointService";
 
   const slots = useSlots();
 </script>
 
 <template>
   <div class="grammar-example">
-    <div class="title">Example</div>
+    <div v-if="!breakpointService.isMobile()" class="title">Example</div>
     <div class="container">
       <div class="example">
         <div>
@@ -49,6 +50,7 @@
   display: flex;
   justify-content: center;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .translation {
@@ -56,6 +58,7 @@
   justify-content: center;
   margin-top: 8px;
   opacity: 0.8;
+  text-align: center;
 }
 
 .note {

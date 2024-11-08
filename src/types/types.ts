@@ -23,19 +23,12 @@ export type GodanChartExample = {
   kanaRow: string[],
   kanji: string,
   furigana: string,
-  end: {
-    highlight: string,
-    suffix?: string
-  }[]
+  okurigana: string[]
 };
 
 export type IchidanChartExample = {
   kanaRow: string,
   kanji: string,
   furigana: string,
-  middle?: string,
-  end: {
-    highlight?: string,
-    suffix?: string
-  }[]
+  okurigana?: string
 };
