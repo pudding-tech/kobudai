@@ -42,10 +42,6 @@
 
   const headerMobile = ref({
     header: {
-      background: "#212121",
-      hoverBackground: "#212121",
-      activeBackground: "#212121",
-      activeHoverBackground: "#212121",
       padding: "1.125rem",
       first: {
         topBorderRadius: "0",
@@ -54,8 +50,26 @@
         bottomBorderRadius: "0",
       }
     },
-    content: {
-      // background: "#202020"
+    colorScheme: {
+      light: {
+        header: {
+          background: "{zinc.200}", //#f8f9fa
+          hoverBackground: "{zinc.200}",
+          activeBackground: "{zinc.200}",
+          activeHoverBackground: "{zinc.200}",
+        }
+      },
+      dark: {
+        header: {
+          background: "#212121",
+          hoverBackground: "#212121",
+          activeBackground: "#212121",
+          activeHoverBackground: "#212121",
+        },
+        content: {
+          // background: "#202020"
+        }
+      }
     }
   });
 </script>
@@ -317,7 +331,7 @@
   }
 
   .mobile-explanation {
-    background-color: #181818;
+    background-color: var(--grammar-structure-bg-mobile);
     padding: 20px 16px;
   }
 }

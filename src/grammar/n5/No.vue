@@ -25,7 +25,7 @@
       Indicates that something belongs to someone or something.
       <GrammarExample>
         <template #example>
-          田中さん<span class="g">の</span>本
+          <ruby>田中<rt>たなか</rt></ruby>さん<span class="g">の</span><ruby>本<rt>ほん</rt></ruby>
         </template>
         <template #translation>
           Tanaka's book
@@ -35,7 +35,7 @@
       Links two nouns, where the first noun describes or modifies the second.
       <GrammarExample>
         <template #example>
-          日本<span class="g">の</span>車
+          <ruby>日本<rt>にほん</rt></ruby><span class="g">の</span><ruby>車<rt>くるま</rt></ruby>
         </template>
         <template #translation>
           Japanese car (literally, "car of Japan")

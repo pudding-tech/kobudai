@@ -13,7 +13,7 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      X + <span class="grammar-highlight">は </span>+ Y
+      X + <span class="grammar-highlight">は</span> + Y
     </template>
     <template #related>
       Subject marking particle <router-link :to="{ name: 'grammarLoader', params: { slug: 'が' } }" class="link">が</router-link>
@@ -27,7 +27,7 @@
       A common structure is where <span class="g">は</span> marks the topic, and です or だ comes at the end to act like a "copula," connecting the topic with its description.<br>
       <GrammarExample>
         <template #example>
-          これ<span class="g">は</span>本です
+          これ<span class="g">は</span><ruby>本<rt>ほん</rt></ruby>です
         </template>
         <template #translation>
           This is a book (literally, "as for this, it is a book")
@@ -37,13 +37,12 @@
             <div>は marks "this" as the topic and "is a book" as information about "this".</div>
             <div>です completes the sentence politely.</div>
           </div>
-          <!-- X (これ) = "this," Y (本) = "a book," and です completes the sentence politely. -->
         </template>
       </GrammarExample>
 
       <GrammarExample>
         <template #example>
-          彼<span class="g">は</span>学生だ
+          <ruby>彼<rt>かれ</rt></ruby><span class="g">は</span><ruby>学生<rt>がくせい</rt></ruby>だ
         </template>
         <template #translation>
           He is a student (literally, "as for he, he is a student")

@@ -184,6 +184,7 @@
 
 .text {
   font-size: 1.2rem;
+  white-space: nowrap;
 
   &.kanji {
     position: relative;

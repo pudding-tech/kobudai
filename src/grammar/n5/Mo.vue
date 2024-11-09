@@ -24,7 +24,7 @@
       <b>Similar information:</b> Used to say "also" or "too" in affirmative sentences.
       <GrammarExample>
         <template #example>
-          私<span class="g">も</span>学生です
+          <ruby>私<rt>わたし</rt></ruby><span class="g">も</span><ruby>学生<rt>がくせい</rt></ruby>です
         </template>
         <template #translation>
           I am also a student
@@ -34,7 +34,7 @@
       <b>Similar negative information:</b> Used to say "neither" in negative sentences.
       <GrammarExample>
         <template #example>
-          猫<span class="g">も</span>犬<span class="g">も</span><span v-tooltip.top="'すき'">好き</span>じゃない
+          <ruby>猫<rt>ねこ</rt></ruby><span class="g">も</span><ruby>犬<rt>いぬ</rt></ruby><span class="g">も</span><ruby>好<rt>す</rt></ruby>きじゃない
         </template>
         <template #translation>
           I like neither cats nor dogs

@@ -30,13 +30,13 @@
       okurigana: ["わ", "い", "う", "え", "お"]
     },
     {
-      kanaRow: ["あ（か）", "い（き）", "う（く）", "え（け）", "お（こ）"],
+      kanaRow: ["か", "き", "く", "け", "こ"],
       kanji: "行",
       furigana: "い",
       okurigana: ["か", "き", "く", "け", "こ"]
     },
     {
-      kanaRow: ["あ（さ）", "い（し）", "う（す）", "え（せ）", "お（そ）"],
+      kanaRow: ["さ", "し", "す", "せ", "そ"],
       kanji: "話",
       furigana: "はな",
       okurigana: ["さ", "し", "す", "せ", "そ"]
@@ -179,6 +179,7 @@
 
 .text {
   font-size: 1.2rem;
+  white-space: nowrap;
 
   &.kanji {
     position: relative;

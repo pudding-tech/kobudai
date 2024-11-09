@@ -135,10 +135,8 @@
         </ul>
 
         Technically, the past form of a godan verb is based on the い-row of the godan five-step chart. However, this form has undergone a sound change
-        known as 音便 (おんびん, sound convenience), which explains why the final conjugations don’t align with what the chart might predict.
-        <div class="chart">
-          <GodanChart :selected-row="2" :show-word-selection="false" />
-        </div>
+        known as 音便 (おんびん, sound convenience), which explains why the final verb stems don’t look like what one might predict.
+        <br><br>
         "Sound convenience" refers to changes in pronunciation that make words easier to say, similar to how "want to" becomes "wanna" in English. In ancient Japanese, speakers modified verb roots
         to ease pronunciation with certain /t/-sound conjugations, leading to unique conjugation patterns still used today.
 

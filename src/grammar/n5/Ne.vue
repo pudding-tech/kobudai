@@ -30,7 +30,7 @@
       The sentence-ending particle <span class="g">ね</span> is used to seek confirmation or agreement from the listener, similar to saying "right?" or "isn't it?" in English. It softens statements and can create a sense of shared understanding.
       <GrammarExample>
         <template #example>
-          <span v-tooltip.top="'きょう'">今日</span>は<span v-tooltip.top="'さむい'">寒い</span>です<span class="g">ね</span>
+          <ruby>今日<rt>きょう</rt></ruby>は<ruby>寒<rt>さむ</rt></ruby>いです<span class="g">ね</span>
         </template>
         <template #translation>
           It's cold today, isn't it?

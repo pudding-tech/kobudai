@@ -89,8 +89,10 @@
   border-radius: var(--p-content-border-radius);
   transition: background-color 0.3s;
   left: -6px;
+}
 
-  &:hover {
+@media (hover: hover) and (pointer: fine) {
+  .kobudai:hover {
     background-color: var(--navbar-hover-color);
   }
 }

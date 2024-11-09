@@ -37,7 +37,7 @@
       Only nouns and な-adjectives can be used with <span class="g">じゃない</span>. For い-adjectives and verbs different forms of negation are used.
       <GrammarExample>
         <template #example>
-          <span v-tooltip.top="'せんせい'">先生</span><span class="g">じゃない</span>
+          <ruby>先生<rt>せんせい</rt></ruby><span class="g">じゃない</span>
         </template>
         <template #translation>
           (I am) not a teacher
@@ -46,7 +46,7 @@
 
       <GrammarExample>
         <template #example>
-          <span v-tooltip.top="'せんせい'">先生</span><span class="g">じゃないです</span>
+          <ruby>先生<rt>せんせい</rt></ruby><span class="g">じゃないです</span>
         </template>
         <template #translation>
           (I am) not a teacher

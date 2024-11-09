@@ -85,6 +85,30 @@ const customTheme = definePreset(Aura, {
       },
       content: {
         // padding: "1.125rem 1.125rem 1.125rem 1.125rem"
+      },
+      colorScheme: {
+        light: {
+          header: {
+            background: "#ebebeb",
+            hoverBackground: "#ebebeb",
+            activeBackground: "#ebebeb",
+            activeHoverBackground: "#ebebeb"
+          },
+          content: {
+            background: "#ebebeb"
+          }
+        },
+        dark: {
+          header: {
+            background: "{surface.900}",
+            hoverBackground: "{surface.900}",
+            activeBackground: "{surface.900}",
+            activeHoverBackground: "{surface.900}"
+          },
+          content: {
+            background: "{surface.900}"
+          }
+        }
       }
     },
     card: {
