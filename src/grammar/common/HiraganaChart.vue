@@ -21,8 +21,17 @@
   ]);
 
   const tableStyle = ref({
-    row: {
-      background: "#161616"
+    colorScheme: {
+      light: {
+        row: {
+          background: "#f9f9f9"
+        }
+      },
+      dark: {
+        row: {
+          background: "#161616"
+        }
+      }
     }
   });
 </script>

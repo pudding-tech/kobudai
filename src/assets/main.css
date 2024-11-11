@@ -22,6 +22,10 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   background-color: var(--body-bg);
   overflow-y: scroll;
+
+  &.mobile {
+    background-color: var(--body-bg-mobile);
+  }
 }
 
 #app {
@@ -125,8 +129,9 @@ rt {
 
 :root {
   --body-bg: var(--p-zinc-100);
+  --body-bg-mobile: var(--p-zinc-100);
   --footer-bg: var(--p-zinc-300);
-  --footer-border: rgba(255, 255, 255, 0);
+  --footer-border: rgba(199, 199, 199, 0.665);
   --grammar-highlight: var(--p-primary-500);
   --grammar-highlight-bg: var(--p-zinc-200);
   --grammar-highlight-bg-mobile: #dddddd;
@@ -136,6 +141,9 @@ rt {
   --link-border-color: rgba(0, 0, 0, 0.2);
   --note-text-color: rgb(165 63 63);
 
+  /* HOME */
+  --list-section-bg: #fbfbfb;
+
   /* GRAMMAR LIST */
   --list-item-bg: #f7f7f7;
   --list-item-bg-hover: white;
@@ -144,14 +152,18 @@ rt {
   --grammar-structure-bg: #e3e3e3;
   --grammar-structure-bg-mobile: #efefef;
   --grammar-structure-header: #d6d6d6;
+  --grammar-structure-header-mobile: #fbfbfb;
   --grammar-card-border: rgba(73, 73, 73, 0.27);
 
   /* GRAMMAR EXAMPLE */
-  --grammar-example-bg: #ffffff;
+  --grammar-example-bg: #fdfdfd;
   --grammar-exaple-note-color: #006337;
 
   /* NAVBAR */
   --navbar-hover-color: rgba(113, 113, 113, 0.1);
+
+  /* LIST SELECTOR */
+  --list-selector-text: rgba(0, 0, 0, 0.7);
 
   /* NOTFOUND */
   --back-to-home-color: var(--p-primary-500);
@@ -167,12 +179,12 @@ rt {
 
   .mobile-color {
     --p-toolbar-background: var(--p-zinc-200);
-    /* --p-accordion-content-background: var(--body-bg); */
   }
 }
 
 :root[class="dark-mode"] {
   --body-bg: #121212;
+  --body-bg-mobile: #0c0c0c;
   --footer-bg: var(--p-zinc-900);
   --footer-border: rgba(85, 85, 85, 0.28);
   --grammar-highlight: var(--p-primary-400);
@@ -186,6 +198,9 @@ rt {
   /* --note-text-color: rgb(174, 174, 38); */
   --note-text-color: rgb(213, 127, 127);
 
+  /* HOME */
+  --list-section-bg: #090909;
+
   /* GRAMMAR LIST */
   --list-item-bg: #212121;
   --list-item-bg-hover: #2f2f2f;
@@ -194,6 +209,7 @@ rt {
   --grammar-structure-bg: var(--p-zinc-900);
   --grammar-structure-bg-mobile: #181818;
   --grammar-structure-header: #393939;
+  --grammar-structure-header-mobile: #111111;
   --grammar-card-border: rgba(73, 73, 73, 0.74);
 
   /* GRAMMAR EXAMPLE */
@@ -202,6 +218,9 @@ rt {
 
   /* NAVBAR */
   --navbar-hover-color: rgba(191, 191, 191, 0.1);
+
+  /* LIST SELECTOR */
+  --list-selector-text: rgba(255, 255, 255, 0.7);
 
   /* NOTFOUND */
   --back-to-home-color: var(--p-primary-250);
@@ -218,7 +237,6 @@ rt {
 
   .mobile-color {
     --p-toolbar-background: #212121;
-    --p-accordion-content-background: var(--body-bg);
   }
 }
 

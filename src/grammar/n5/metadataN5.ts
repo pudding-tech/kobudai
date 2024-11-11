@@ -27,7 +27,7 @@ export const godanNonPast: GrammarPoint = {
 export const godanPast: GrammarPoint = {
   slug: "godan-past",
   title: "Past verb (godan)",
-  subtitle: "～た、～ました",
+  subtitle: "～った、～んだ、～いた、～いだ、～した、～ました",
 };
 
 // export const godanNegative: GrammarPoint = {
@@ -45,7 +45,7 @@ export const godanPast: GrammarPoint = {
 // export const godanPast: GrammarPoint = {
 //   slug: "godan-past",
 //   title: "Godan verb (past)",
-//   subtitle: "～た、～ました",
+//   subtitle: "～った、～んだ、～いた、～いだ、～した、～ました",
 // };
 
 export const ha: GrammarPoint = {

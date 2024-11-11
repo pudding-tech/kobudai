@@ -195,6 +195,7 @@
   .subtitle {
     font-size: 1.3rem;
     opacity: 0.7;
+    word-break: keep-all;
   }
 }
 
@@ -288,9 +289,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--grammar-structure-header);
+    background-color: var(--grammar-structure-header-mobile);
     padding-top: 20px;
     padding-bottom: 20px;
+    /* font-family: "Yu Gothic", "Hiragino Sans", Meiryo, sans-serif; */
 
     .title {
       font-size: 2.4rem;
@@ -298,7 +300,6 @@
       max-width: 80vw;
       text-align: center;
       word-break: keep-all;
-      /* font-family: "Yu Gothic", "Hiragino Sans", Meiryo, sans-serif; */
     }
     .subtitle {
       font-size: 1.3rem;
@@ -306,6 +307,7 @@
       max-width: 90vw;
       text-align: center;
       margin-top: 10px;
+      word-break: keep-all;
     }
   }
 

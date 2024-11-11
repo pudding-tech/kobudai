@@ -1,12 +1,30 @@
 <script setup lang="ts">
-  import { ref } from "vue";
+  import { ref, watch } from "vue";
   import { useRouter } from "vue-router";
+  import { useListStore } from "@/stores/listStore";
   import { useThemeStore } from "@/stores/themeStore";
   import { breakpointService } from "@/utils/breakpointService";
+  import { genkiList } from "@/grammar/lists/genkiList";
+  import { jlptList } from "@/grammar/lists/jlptList";
+  import MobileSettings from "./MobileSettings.vue";
+  import type { MainList } from "@/types/types";
 
   const router = useRouter();
+  const listStore = useListStore();
   const themeStore = useThemeStore();
   const searchText = ref<string | null>(null);
+  const settingsOpen = ref(false);
+
+  const mainLists = ref<MainList[]>([genkiList, jlptList]);
+  const mainListOptions = ref(mainLists.value.map(list => ({ label: list.name, value: list.value })));
+  const selectedMainListValue = ref<string>(listStore.getMainList().value);
+
+  watch(selectedMainListValue, (newValue) => {
+    const selected = mainLists.value.find(list => list.value === newValue);
+    if (selected) {
+      listStore.setMainList(newValue);
+    }
+  });
 
   const toggleDarkMode = () => {
     const isDarkMode = document.documentElement.classList.contains("dark-mode");
@@ -18,6 +36,10 @@
     }
   };
 
+  const openSettings = () => {
+    settingsOpen.value = true;
+  };
+
   const gotoHome = () => {
     router.push({ name: "home" });
   };
@@ -26,17 +48,16 @@
 <template>
   <Toolbar :class="breakpointService.isMobile() ? 'mobile-navbar mobile-color' : 'navbar'">
     <template #start>
-      <!-- <img src="../assets/logo.png" class="logo" /> -->
       <div class="container">
         <div v-ripple class="kobudai" @click="gotoHome()">
           KOBUDAI・コブダイ
         </div>
       </div>
+      <Select v-if="!breakpointService.isMobile()" v-model="selectedMainListValue" :options="mainListOptions" option-label="label" option-value="value" class="main-list-selector" />
     </template>
     <template #end>
-      <Button v-if="!breakpointService.isMobile()" :icon="themeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" class="theme-selector" @click="toggleDarkMode()" />
-      <Button v-else :icon="themeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" variant="text" severity="secondary" class="theme-selector" @click="toggleDarkMode()" />
-      <!-- <Button v-else icon="pi pi-cog" variant="text" severity="secondary" class="theme-selector" @click="toggleDarkMode()" /> -->
+      <Button v-if="!breakpointService.isMobile()" :icon="themeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" class="mr-10" @click="toggleDarkMode()" />
+      <Button v-else icon="pi pi-bars" variant="text" severity="secondary" class="mr-10" @click="openSettings()" />
       <!-- <ToggleSwitch v-model="darkModeStore.darkMode.value" class="theme-selector" @update:model-value="toggleDarkMode()">
         <template #handle="{ checked }">
           <i :class="['!text-xs pi', { 'pi-moon': checked, 'pi-sun': !checked }]" />
@@ -48,9 +69,10 @@
         </InputIcon>
         <InputText v-model="searchText" placeholder="Search" disabled />
       </IconField>
-      <Button v-else icon="pi pi-search" severity="secondary" style="width: 60px"/>
+      <Button v-else icon="pi pi-search" severity="secondary" style="width: 60px" disabled />
     </template>
   </Toolbar>
+  <MobileSettings v-model:open="settingsOpen" v-model:selected-list-value="selectedMainListValue" :list-options="mainListOptions" @change-theme="toggleDarkMode()" />
 </template>
 
 <style scoped>
@@ -70,7 +92,7 @@
   bottom: 2px;
 }
 
-.theme-selector {
+.mr-10 {
   margin-right: 10px;
 }
 
@@ -89,6 +111,11 @@
   border-radius: var(--p-content-border-radius);
   transition: background-color 0.3s;
   left: -6px;
+}
+
+.main-list-selector {
+  margin-left: 180px;
+  width: 116px;
 }
 
 @media (hover: hover) and (pointer: fine) {

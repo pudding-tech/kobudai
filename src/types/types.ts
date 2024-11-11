@@ -6,7 +6,19 @@ export type GrammarPoint = {
   subtitle: string
 };
 
-export type Chapter = {
+export type MainList = {
+  name: string,
+  value: string,
+  sublists: Sublist[]
+};
+
+export type Sublist = {
+  name: string,
+  value: string,
+  sections: Section[]
+};
+
+export type Section = {
   title: string,
   value: number,
   grammarPoints: GrammarPoint[]

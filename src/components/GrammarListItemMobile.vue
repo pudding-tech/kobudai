@@ -22,6 +22,7 @@
   border-radius: var(--p-content-border-radius);
   background-color: var(--list-item-bg);
   transition: background-color 0.08s ease-in;
+  line-height: 1.34;
 
   &:hover {
     background-color: var(--list-item-bg-hover);
@@ -30,11 +31,12 @@
 
 .title {
   font-size: 1.2rem;
+  word-break: keep-all;
 }
 
 .subtitle {
-  font-size: 16px;
   font-size: 1rem;
   opacity: 0.8;
+  word-break: keep-all;
 }
 </style>

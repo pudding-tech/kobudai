@@ -73,7 +73,6 @@
           <li class="list">The continuative form is often called "the stem form" as it's used for many different conjugations, perhaps most notably the polite form.</li>
           <li class="list">The polite form is used in formal situations, such as speaking with strangers or people of higher social status. In polite conjugations one adds some variation of ます to the stem (e.g. 行きます, to go).</li>
           <li class="list">Within the polite form the are multiple conjugations that correspond to the plain forms, just with a polite tone, such as polite negative, polite past, and polite volitional.</li>
-          <li class="list">The continuative form is often used to chain actions together or combine with helper verbs like ～たい.</li>
           <li class="list">
             This form is also the basis for the plain past and て-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
             For more information about this, see

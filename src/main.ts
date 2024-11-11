@@ -7,6 +7,8 @@ import router from "./router/router";
 import PrimeVue from "primevue/config";
 import Aura from "@primevue/themes/aura";
 import { definePreset } from "@primevue/themes";
+import { useThemeStore } from "@/stores/themeStore";
+import { useListStore } from "./stores/listStore";
 
 import Accordion from "primevue/accordion";
 import AccordionContent from "primevue/accordioncontent";
@@ -16,12 +18,14 @@ import Button from "primevue/button";
 import Card from "primevue/card";
 import Column from "primevue/column";
 import DataTable from "primevue/datatable";
+import Drawer from "primevue/drawer";
 import IconField from "primevue/iconfield";
 import InputIcon from "primevue/inputicon";
 import InputText from "primevue/inputtext";
 import Panel from "primevue/panel";
 import ProgressSpinner from "primevue/progressspinner";
 import Ripple from "primevue/ripple";
+import Select from "primevue/select";
 import SelectButton from "primevue/selectbutton";
 import Tag from "primevue/tag";
 import ToggleSwitch from "primevue/toggleswitch";
@@ -74,14 +78,11 @@ const customTheme = definePreset(Aura, {
     //   900: "#2e3c4c",
     //   950: "#1e2833"
     // },
-    colorScheme: {
-      dark: {}
-    }
   },
   components: {
     accordion: {
       header: {
-        padding: "2rem 1.4rem"
+        padding: "1.8rem 1.4rem"
       },
       content: {
         // padding: "1.125rem 1.125rem 1.125rem 1.125rem"
@@ -178,11 +179,13 @@ app.component("Button", Button);
 app.component("Card", Card);
 app.component("Column", Column);
 app.component("DataTable", DataTable);
+app.component("Drawer", Drawer);
 app.component("IconField", IconField);
 app.component("InputIcon", InputIcon);
 app.component("InputText", InputText);
 app.component("Panel", Panel);
 app.component("ProgressSpinner", ProgressSpinner);
+app.component("Select", Select);
 app.component("SelectButton", SelectButton);
 app.component("Tag", Tag);
 app.component("ToggleSwitch", ToggleSwitch);
@@ -191,7 +194,6 @@ app.directive("ripple", CustomRipple);
 app.directive("tooltip", Tooltip);
 
 // Set default light/dark mode
-import { useThemeStore } from "@/stores/themeStore";
 const themeStore = useThemeStore();
 
 const savedTheme = localStorage.getItem("theme");
@@ -199,5 +201,13 @@ const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matche
 if (savedTheme === "dark" || (!savedTheme && prefersDarkMode)) {
   themeStore.setDarkMode(true, false);
 }
+
+// Set chosen lists
+const listStore = useListStore();
+
+const mainList = localStorage.getItem("mainList");
+const sublist = localStorage.getItem("sublist");
+listStore.setMainList(mainList, false);
+listStore.setSublist(sublist, false);
 
 app.mount("#app");
