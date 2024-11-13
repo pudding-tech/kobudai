@@ -3,7 +3,8 @@ import type { Component } from "vue";
 export type GrammarPoint = {
   slug: string,
   title: string,
-  subtitle: string
+  subtitle: string,
+  tags?: string[],
 };
 
 export type MainList = {

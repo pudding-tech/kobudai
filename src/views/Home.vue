@@ -2,7 +2,6 @@
   import { computed, ref } from "vue";
   import { useRouter } from "vue-router";
   import { useListStore } from "@/stores/listStore";
-  // import { allList } from "@/grammar/lists/allList";
   import { breakpointService } from "@/utils/breakpointService";
   import ListSelector from "@/components/ListSelector.vue";
   import GrammarListItem from "@/components/GrammarListItem.vue";

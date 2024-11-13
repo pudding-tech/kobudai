@@ -18,6 +18,7 @@ import Button from "primevue/button";
 import Card from "primevue/card";
 import Column from "primevue/column";
 import DataTable from "primevue/datatable";
+import Dialog from "primevue/dialog";
 import Drawer from "primevue/drawer";
 import IconField from "primevue/iconfield";
 import InputIcon from "primevue/inputicon";
@@ -122,6 +123,11 @@ const customTheme = definePreset(Aura, {
         }
       }
     },
+    dialog: {
+      content: {
+        padding: 0
+      }
+    },
     progressspinner: {
       colorScheme: {
         light: {
@@ -179,6 +185,7 @@ app.component("Button", Button);
 app.component("Card", Card);
 app.component("Column", Column);
 app.component("DataTable", DataTable);
+app.component("Dialog", Dialog);
 app.component("Drawer", Drawer);
 app.component("IconField", IconField);
 app.component("InputIcon", InputIcon);

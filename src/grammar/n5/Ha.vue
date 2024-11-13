@@ -22,7 +22,7 @@
       The "X <span class="g">は</span> Y" grammar structure uses <span class="g">は</span> as the topic marker particle, which introduces the topic of the sentence. It indicates that "X" is what the sentence is about, and "Y" provides information about X.
       <br><br>
       <div class="note">Note:</div>
-      Even though the particle is written <span class="g">は</span> it is pronouced as <span class="g">わ</span>. This is one of the very few exceptions where a character is pronouced different than what is written.
+      Even though the particle is written <span class="g">は</span> it is pronouced as <span class="g">わ</span>. This is one of the very few exceptions where a character is pronouced differently than what is written.
       <br><br>
       A common structure is where <span class="g">は</span> marks the topic, and です or だ comes at the end to act like a "copula," connecting the topic with its description.<br>
       <GrammarExample>
