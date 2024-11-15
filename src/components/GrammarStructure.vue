@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import { useRouter } from "vue-router";
   import { lastRoute } from "@/router/router";
-  import { breakpointService } from "@/utils/breakpointService";
+  import { breakpointService } from "@/services/breakpointService";
 
   const props = withDefaults(defineProps<{
     showPolite?: boolean,
@@ -78,7 +78,7 @@
   <div v-if="!breakpointService.isMobile()" class="container">
     <div class="bg">
       <div class="corner">
-        <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" @click="goHome" />
+        <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" @click="goHome()" />
       </div>
       <div class="header">
         <div class="title">
@@ -152,7 +152,7 @@
         </AccordionContent>
       </AccordionPanel>
       <AccordionPanel value="1">
-        <AccordionHeader :pt="{ root: { class: 'accordion-header-mobile '}}">Related</AccordionHeader>
+        <AccordionHeader>Related</AccordionHeader>
         <AccordionContent>
           <div class="related">
             <slot name="related"></slot>

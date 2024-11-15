@@ -1,32 +1,30 @@
 <script setup lang="ts">
-  import { ref, watch } from "vue";
+  import { computed, ref, watch } from "vue";
   import { useRouter } from "vue-router";
   import { useListStore } from "@/stores/listStore";
   import { useThemeStore } from "@/stores/themeStore";
-  import { breakpointService } from "@/utils/breakpointService";
-  import { search } from "@/utils/searchService";
+  import { breakpointService } from "@/services/breakpointService";
+  import { search } from "@/services/searchService";
   import { genkiList } from "@/grammar/lists/genkiList";
   import { jlptList } from "@/grammar/lists/jlptList";
   import MobileSettings from "./MobileSettings.vue";
   import SearchResults from "./SearchResults.vue";
+  import CustomInputText from "./CustomInputText.vue";
   import type { MainList } from "@/types/types";
 
   const router = useRouter();
   const listStore = useListStore();
   const themeStore = useThemeStore();
-  const searchText = ref<string | null>(null);
+  const searchText = ref<string>("");
   const settingsOpen = ref(false);
   const searchMobileOpen = ref(false);
+  const searchComponent = ref();
 
   const mainLists = ref<MainList[]>([genkiList, jlptList]);
   const mainListOptions = ref(mainLists.value.map(list => ({ label: list.name, value: list.value })));
-  const selectedMainListValue = ref<string>(listStore.getMainList().value);
-
-  watch(selectedMainListValue, (newValue) => {
-    const selected = mainLists.value.find(list => list.value === newValue);
-    if (selected) {
-      listStore.setMainList(newValue);
-    }
+  const selectedMainListValue = computed({
+    get: () => listStore.getMainList.value,
+    set: (newValue: string) => listStore.setMainList(newValue)
   });
 
   watch(searchText, (query) => {
@@ -51,16 +49,25 @@
     settingsOpen.value = true;
   };
 
+  const openSearchComponent = (event: MouseEvent) => {
+    searchComponent.value.show(event);
+  };
+
+  const closeSearchComponent = () => {
+    searchComponent.value.hide();
+    resetSearch();
+  };
+
   const openMobileSearch = () => {
     searchMobileOpen.value = true;
   };
 
   const closeMobileSearch = () => {
     searchMobileOpen.value = false;
-    searchText.value = "";
+    resetSearch();
   };
 
-  const handleReset = () => {
+  const resetSearch = () => {
     searchText.value = "";
   };
 </script>
@@ -87,11 +94,14 @@
         <InputIcon>
           <i class="pi pi-search" />
         </InputIcon>
-        <InputText v-model="searchText" placeholder="Search" disabled />
+        <CustomInputText v-model="searchText" placeholder="Search" style="width: 250px" @click="openSearchComponent($event)" @reset="resetSearch()" />
       </IconField>
       <Button v-else icon="pi pi-search" severity="secondary" style="width: 60px" @click="openMobileSearch()" />
     </template>
   </Toolbar>
+  <Popover ref="searchComponent" :pt="{ root: { class: 'search-popover' }, content: { class: 'search-popover-content'} }">
+    <SearchResults :search-text="searchText" @goto-grammar="closeSearchComponent()" />
+  </Popover>
   <!-- Mobile -->
   <MobileSettings v-model:open="settingsOpen" v-model:selected-list-value="selectedMainListValue" :list-options="mainListOptions" @change-theme="toggleDarkMode()" />
   <Dialog v-model:visible="searchMobileOpen" modal :closable="false" dismissable-mask :showHeader="false" style="width: 90vw; height: 70vh" :pt="{ content: { style: { height: '100%' } } }">
@@ -101,13 +111,10 @@
           <InputIcon>
             <i class="pi pi-search" />
           </InputIcon>
-          <InputText v-model="searchText" autofocus placeholder="Search" class="search-bar" />
-          <div class="clear-icon" @click="handleReset()" :class="{ 'hidden': !searchText }">
-            <i class="pi pi-times" />
-          </div>
+          <CustomInputText v-model="searchText" autofocus placeholder="Search" @reset="resetSearch()" />
         </IconField>
       </div>
-      <SearchResults @close-dialog="closeMobileSearch()" />
+      <SearchResults :search-text="searchText" :mobile="true" @goto-grammar="closeMobileSearch()" />
     </div>
   </Dialog>
 </template>
@@ -170,21 +177,25 @@
     flex-shrink: 0;
     padding: 20px;
     border-bottom: 1px solid #2d2d2d;
-
-    .search-bar {
-      width: 100%;
-    }
-
-    .clear-icon {
-      position: absolute;
-      top: 11px;
-      right: 10px;
-      color: #5d5d5d;
-
-      &.hidden {
-        display: none;
-      }
-    }
   }
+}
+</style>
+
+<style>
+.search-popover {
+  width: 500px;
+  height: 600px;
+
+  &::before {
+    visibility: hidden;
+  }
+  &::after {
+    visibility: hidden;
+  }
+}
+
+.search-popover-content {
+  overflow: auto;
+  height: 598px;
 }
 </style>

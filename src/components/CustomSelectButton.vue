@@ -1,25 +1,22 @@
 <script setup lang="ts">
-  import { useListStore } from "@/stores/listStore";
-
   const model = defineModel<string>({ required: true });
   const props = defineProps<{
-    options: { label: string; value: string }[] | undefined;
+    options: { label: string; value: string }[];
   }>();
+  const emits = defineEmits(["selected"]);
 
-  const listStore = useListStore();
-
-  const changeSublist = (value: string) => {
+  const clicked = (value: string) => {
     model.value = value;
-    listStore.setSublist(value);
+    emits("selected", value);
   };
 </script>
 
 <template>
-  <div class="list-selector">
+  <div class="select-button">
     <template v-for="option in props.options" :key="option.value">
       <div
         v-ripple
-        @click="changeSublist(option.value)"
+        @click="clicked(option.value)"
         class="selection-element"
         :class="{ 'selected': model === option.value }"
       >
@@ -30,7 +27,7 @@
 </template>
 
 <style scoped>
-.list-selector {
+.select-button {
   display: flex;
   align-items: center;
 }
@@ -39,7 +36,7 @@
   padding: 10px 20px;
   border: 1px solid #52525b;
   cursor: pointer;
-  color: var(--list-selector-text);
+  color: var(--custom-select-button-text);
   transition: color 0.2s, background-color 0.2s;
 
   &:hover {

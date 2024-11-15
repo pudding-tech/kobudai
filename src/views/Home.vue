@@ -2,8 +2,8 @@
   import { computed, ref } from "vue";
   import { useRouter } from "vue-router";
   import { useListStore } from "@/stores/listStore";
-  import { breakpointService } from "@/utils/breakpointService";
-  import ListSelector from "@/components/ListSelector.vue";
+  import { breakpointService } from "@/services/breakpointService";
+  import CustomSelectButton from "@/components/CustomSelectButton.vue";
   import GrammarListItem from "@/components/GrammarListItem.vue";
   import GrammarListItemMobile from "@/components/GrammarListItemMobile.vue";
   import type { MainList, Section, Sublist } from "@/types/types";
@@ -11,8 +11,11 @@
   const router = useRouter();
   const listStore = useListStore();
 
-  const selectedMainListValue = listStore.getMainList();
-  const selectedSublistValue = listStore.getSublist();
+  const selectedMainListValue = listStore.getMainList;
+  const selectedSublistValue = computed({
+    get: () => listStore.getSublist.value,
+    set: (value: string) => listStore.setSublist(value)
+  });
 
   const selectedMainList = computed<MainList | undefined>(() => {
     return listStore.mainLists.find(list => list.value === selectedMainListValue.value);
@@ -30,7 +33,7 @@
     return selectedMainList.value?.sublists.map(sublist => ({
       label: sublist.name,
       value: sublist.value
-    }));
+    })) ?? [];
   });
 
   const gotoGrammar = (slug: string) => {
@@ -69,7 +72,7 @@
       <div class="list-section">
         <span v-if="selectedMainListValue === 'genki'" class="title">- GENKI -</span>
         <span v-else-if="selectedMainListValue === 'jlpt'" class="title">- JLPT- </span>
-        <ListSelector v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
+        <CustomSelectButton v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
       </div>
       <Accordion :value="sections.map(section => section.value)" multiple class="list">
         <AccordionPanel v-for="(section, index) in sections" :value="section.value" :key="index" :class="{ 'last-panel': index === sections.length - 1 }">
@@ -87,7 +90,7 @@
     <div class="list-section mobile">
       <span v-if="selectedMainListValue === 'genki'" class="title">- GENKI -</span>
       <span v-else-if="selectedMainListValue === 'jlpt'" class="title">- JLPT -</span>
-      <ListSelector v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
+      <CustomSelectButton v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
     </div>
     <Accordion :value="sections.map(section => section.value)" multiple :dt="accordionMobile">
       <AccordionPanel v-for="(section, index) in sections" :value="section.value" :key="index" :class="{ 'last-panel': index === sections.length - 1 }">

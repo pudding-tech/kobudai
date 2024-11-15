@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref } from "vue";
-  import { breakpointService } from "@/utils/breakpointService";
+  import { breakpointService } from "@/services/breakpointService";
 
   const props = defineProps<{
     selectedColumn?: "a" | "i" | "u" | "e" | "o"

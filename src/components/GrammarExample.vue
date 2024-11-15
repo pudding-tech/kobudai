@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { useSlots } from "vue";
-  import { breakpointService } from "@/utils/breakpointService";
+  import { breakpointService } from "@/services/breakpointService";
 
   const slots = useSlots();
 </script>

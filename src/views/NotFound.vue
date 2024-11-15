@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { breakpointService } from "@/utils/breakpointService";
+  import { breakpointService } from "@/services/breakpointService";
 </script>
 
 <template>

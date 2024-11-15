@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { genkiList } from "@/grammar/lists/genkiList";
 import { jlptList } from "@/grammar/lists/jlptList";
 import type { MainList } from "@/types/types";
@@ -19,8 +19,8 @@ const defaultSublist = validSublists[defaultMainList][0];
 
 export const useListStore = () => {
 
-  const getMainList = () => mainList;
-  const getSublist = () => sublist;
+  const getMainList = computed(() => mainList.value);
+  const getSublist = computed(() => sublist.value);
 
   const setMainList = (list: string | null, save: boolean = true) => {
     mainList.value = (list && mainListsValue.includes(list)) ? list : defaultMainList;

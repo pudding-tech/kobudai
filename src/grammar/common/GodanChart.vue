@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
-  import { breakpointService } from "@/utils/breakpointService";
+  import { breakpointService } from "@/services/breakpointService";
   import { godanNegative, godanNonPast, godanPast } from "@/grammar/n5/metadataN5";
   import type { GodanChartExample } from "@/types/types";
 

@@ -3,7 +3,7 @@
   import IchidanChart from "@/grammar/common/IchidanChart.vue";
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
-  import { breakpointService } from "@/utils/breakpointService";
+  import { breakpointService } from "@/services/breakpointService";
   import { ichidan as meta, godan, ichidanNonPast } from "./metadataN5";
 </script>
 

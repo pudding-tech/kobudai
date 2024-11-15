@@ -1,26 +1,36 @@
 <script setup lang="ts">
   import { useRouter } from "vue-router";
-  import { searchResults } from "@/utils/searchService";
+  import { searchResults } from "@/services/searchService";
+
+  const props = withDefaults(defineProps<{
+    searchText: string,
+    mobile?: boolean
+  }>(), {
+    mobile: false
+  });
+  const emit = defineEmits(["gotoGrammar"]);
 
   const router = useRouter();
-  const emit = defineEmits(["closeDialog"]);
 
   const gotoGrammar = (slug: string) => {
     router.push({ name: "grammarLoader", params: { slug: slug } });
-    emit("closeDialog");
+    emit("gotoGrammar");
   };
 </script>
 
 <template>
-  <div class="result-container">
+  <div class="result-container" :class="{ 'mobile': props.mobile }">
     <template v-if="searchResults.length">
-      <div v-ripple v-for="result in searchResults" :key="result.title" class="search-result" @click="gotoGrammar(result.slug)">
+      <div v-ripple v-for="result in searchResults" :key="result.title" class="search-result" :class="{ 'mobile': props.mobile }" @click="gotoGrammar(result.slug)">
         <div class="title">{{ result.title }}</div>
         <div class="subtitle">{{ result.subtitle }}</div>
       </div>
     </template>
+    <div v-else-if="!props.searchText" class="no-results">
+      Waiting for search...
+    </div>
     <div v-else class="no-results">
-      <div>No results found</div>
+      No results found
     </div>
   </div>
 </template>
@@ -29,16 +39,32 @@
 .result-container {
   overflow-y: auto;
   flex-grow: 1;
-  border-bottom-left-radius: var(--p-dialog-border-radius);
-  border-bottom-right-radius: var(--p-dialog-border-radius);
+
+  &.mobile {
+    border-bottom-left-radius: var(--p-dialog-border-radius);
+    border-bottom-right-radius: var(--p-dialog-border-radius);
+  }
 }
 
 .search-result {
   padding: 10px 16px;
-  background-color: #181818;
-  background-color: #1e1e1e;
-  border-bottom: 1px solid #434343;
+  background-color: var(--search-result-bg);
   line-height: 1.4;
+  word-break: keep-all;
+  cursor: pointer;
+  transition: background-color 0.08s ease-in;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--search-result-border-color);
+  }
+
+  &.mobile:last-child {
+    border-bottom: 1px solid var(--search-result-border-color);
+  }
+
+  &:hover {
+    background-color: var(--search-result-bg-hover);
+  }
 }
 
 .title {
@@ -48,13 +74,13 @@
 
 .subtitle {
   font-size: 1rem;
-  color: #b5b5b5;
+  color: var(--search-result-subtitle);
 }
 
 .no-results {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  color: #666;
+  color: var(--search-result-no-result-color);
 }
 </style>
