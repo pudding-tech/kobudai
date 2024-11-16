@@ -2,6 +2,7 @@
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
   import { ichidanNegative, ichidanNonPast, ichidanPast } from "@/grammar/n5/metadataN5";
+  import { potentialVerbs } from "../n4/metadataN4";
   import type { IchidanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -10,12 +11,12 @@
     showWordSelection?: boolean,
     showLinks?: boolean
   }>(), {
-    wordSelection: 0,
+    wordSelection: 1,
     showWordSelection: false,
     showLinks: false
   });
 
-  const word = ref(props.wordSelection);
+  const word = ref(props.wordSelection - 1);
   const wordOptions = ref([
     { label: "食べる", value: 0, translation: "to eat" },
     { label: "出る", value: 1, translation: "to leave" },
@@ -58,7 +59,7 @@
         okurigana: examples.value[word.value].okurigana
       },
       suffix: "ない",
-      grammarPoint: [ichidanNegative, { slug: null, title: "Ichidan verb (negative past)" }],
+      grammarPoint: [ichidanNegative, { slug: null, title: "Negative past verb (ichidan)" }],
       rowNr: 1
     },
     {
@@ -94,7 +95,7 @@
         okurigana: examples.value[word.value].okurigana
       },
       suffix: "られる、れば",
-      grammarPoint: [{ slug: null, title: null }],
+      grammarPoint: [potentialVerbs],
       rowNr: 4
     },
     {

@@ -176,7 +176,7 @@
   .search-section {
     flex-shrink: 0;
     padding: 20px;
-    border-bottom: 1px solid #2d2d2d;
+    border-bottom: 1px solid var(--mobile-search-section-border-color);
   }
 }
 </style>

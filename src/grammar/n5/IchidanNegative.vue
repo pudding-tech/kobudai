@@ -23,7 +23,7 @@
         <div class="kanji-mb">
           <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">ません</span>
         </div>
-        <div class="exceptions">
+        <div class="structure-title">
           Exceptions
         </div>
         <div class="kanji-mb">
@@ -40,7 +40,7 @@
         <div class="kanji-mb">
           <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt><span class="grammar-highlight">ない</span></ruby>
         </div>
-        <div class="exceptions">
+        <div class="structure-title">
           Exceptions
         </div>
         <div class="kanji-mb">

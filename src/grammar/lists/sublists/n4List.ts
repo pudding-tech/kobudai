@@ -1,5 +1,5 @@
 import type { Sublist } from "@/types/types";
-import * as n5 from "../../n5/metadataN5";
+import * as n4 from "../../n4/metadataN4";
 
 export const n4List: Sublist = {
   name: "N4",
@@ -9,9 +9,7 @@ export const n4List: Sublist = {
       title: "SECTION 1",
       value: 1,
       grammarPoints: [
-        n5.desu,
-        n5.ha,
-        n5.no
+        n4.potentialVerbs
       ]
     }
   ]

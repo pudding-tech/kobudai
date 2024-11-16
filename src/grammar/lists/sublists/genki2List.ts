@@ -1,5 +1,5 @@
 import type { Sublist } from "@/types/types";
-import * as n5 from "../../n5/metadataN5";
+import * as n4 from "../../n4/metadataN4";
 
 export const genki2List: Sublist = {
   name: "Genki II",
@@ -9,7 +9,7 @@ export const genki2List: Sublist = {
       title: "CHAPTER 13",
       value: 1,
       grammarPoints: [
-        n5.ka
+        n4.potentialVerbs
       ]
     }
   ]

@@ -2,6 +2,7 @@
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
   import { godanNegative, godanNonPast, godanPast } from "@/grammar/n5/metadataN5";
+  import { potentialVerbs } from "../n4/metadataN4";
   import type { GodanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -10,12 +11,12 @@
     showWordSelection?: boolean,
     showLinks?: boolean
   }>(), {
-    wordSelection: 0,
+    wordSelection: 1,
     showWordSelection: false,
     showLinks: false
   });
 
-  const word = ref(props.wordSelection);
+  const word = ref(props.wordSelection - 1);
   const wordOptions = ref([
     { label: "買う", value: 0, translation: "to buy" },
     { label: "行く", value: 1, translation: "to go" },
@@ -53,7 +54,7 @@
         okurigana: examples.value[word.value].okurigana[0]
       },
       suffix: "ない",
-      grammarPoint: [godanNegative, { slug: null, title: "Godan verb (negative past)" }],
+      grammarPoint: [godanNegative, { slug: null, title: "Negative past verb (godan)" }],
       rowNr: 1
     },
     {
@@ -89,7 +90,7 @@
         okurigana: examples.value[word.value].okurigana[3]
       },
       suffix: "る、ば",
-      grammarPoint: [{ slug: null, title: null }],
+      grammarPoint: [potentialVerbs],
       rowNr: 4
     },
     {

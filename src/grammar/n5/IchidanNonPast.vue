@@ -23,7 +23,7 @@
         <div class="kanji-mb">
           <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">ます</span>
         </div>
-        <div class="exceptions">
+        <div class="structure-title">
           Exceptions
         </div>
         <div class="kanji-mb">
@@ -40,7 +40,7 @@
         <div class="kanji-mb">
           <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">る</span>
         </div>
-        <div class="exceptions">
+        <div class="structure-title">
           Irregular verbs
         </div>
         <div class="kanji-mb">

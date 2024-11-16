@@ -93,13 +93,13 @@ const customTheme = definePreset(Aura, {
       colorScheme: {
         light: {
           header: {
-            background: "#ebebeb",
-            hoverBackground: "#ebebeb",
-            activeBackground: "#ebebeb",
-            activeHoverBackground: "#ebebeb"
+            background: "var(--accordion-color)",
+            hoverBackground: "var(--accordion-color)",
+            activeBackground: "var(--accordion-color)",
+            activeHoverBackground: "var(--accordion-color)"
           },
           content: {
-            background: "#ebebeb"
+            background: "var(--accordion-color)"
           }
         },
         dark: {

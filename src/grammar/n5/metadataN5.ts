@@ -24,9 +24,11 @@ export const godanNegative: GrammarPoint = {
 
 export const godanNonPast: GrammarPoint = {
   slug: "godan-non-past",
-  title: "Non-Past verb (godan)",
-  subtitle: "～う、～ます",
-  tags: ["u", "mas", "masu"]
+  title: "Non-past verb (godan)",
+  // subtitle: "～う、～ます",
+  subtitle: "～う、～つ、～る、～む、～ぶ、～ぬ、～く、～ぐ、～す、～ます",
+  // tags: ["u", "masu", "mas"]
+  tags: ["u", "tsu", "ru", "mu", "bu", "nu", "ku", "gu", "su", "masu", "mas"]
 };
 
 export const godanPast: GrammarPoint = {
@@ -47,7 +49,7 @@ export const godanPast: GrammarPoint = {
 //   slug: "godan-non-past",
 //   title: "Godan verb (non-past)",
 //   subtitle: "～う、～ます",
-//   tags: ["u", "mas", "masu"]
+//   tags: ["u", "masu", "mas"]
 // };
 
 // export const godanPast: GrammarPoint = {
@@ -82,7 +84,7 @@ export const ichidanNonPast: GrammarPoint = {
   slug: "ichidan-non-past",
   title: "Non-past verb (ichidan)",
   subtitle: "～る、～ます",
-  tags: ["ru", "mas", "masu"]
+  tags: ["ru", "masu", "mas"]
 };
 
 export const ichidanPast: GrammarPoint = {
@@ -103,7 +105,7 @@ export const ichidanPast: GrammarPoint = {
 //   slug: "ichidan-non-past",
 //   title: "Ichidan verb (non-past)",
 //   subtitle: "～る、～ます",
-//   tags: ["ru", "mas", "masu"]
+//   tags: ["ru", "masu", "mas"]
 // };
 
 // export const ichidanPast: GrammarPoint = {

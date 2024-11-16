@@ -14,7 +14,10 @@
   const selectedMainListValue = listStore.getMainList;
   const selectedSublistValue = computed({
     get: () => listStore.getSublist.value,
-    set: (value: string) => listStore.setSublist(value)
+    set: (value: string) => {
+      listStore.setSublist(value);
+      expandAll();
+    }
   });
 
   const selectedMainList = computed<MainList | undefined>(() => {
@@ -36,6 +39,24 @@
     })) ?? [];
   });
 
+  const activeSections = ref<number[]>(sections.value.map(section => section.value));
+  const isAllCollapsed = computed(() => !sections.value.some(section => activeSections.value.includes(section.value)));
+  const expandedIcon = computed(() => isAllCollapsed.value ? "pi pi-eye" : "pi pi-eye-slash");
+  const expandedText = computed(() => isAllCollapsed.value ? "Expand all" : "Collapse all");
+
+  const toggleCollapseAll = () => {
+    if (isAllCollapsed.value) {
+      expandAll();
+    }
+    else {
+      activeSections.value = [];
+    }
+  };
+
+  const expandAll = () => {
+    activeSections.value = sections.value.map(section => section.value);
+  };
+
   const gotoGrammar = (slug: string) => {
     router.push({ name: "grammarLoader", params: { slug: slug } });
   };
@@ -53,13 +74,13 @@
     colorScheme: {
       dark: {
         header: {
-          background: "#121212",
-          hoverBackground: "#121212",
-          activeBackground: "#121212",
-          activeHoverBackground: "#121212",
+          background: "var(--accordion-color)",
+          hoverBackground: "var(--accordion-color)",
+          activeBackground: "var(--accordion-color)",
+          activeHoverBackground: "var(--accordion-color)",
         },
         content: {
-          background: "#121212"
+          background: "var(--accordion-color)"
         }
       }
     }
@@ -69,12 +90,15 @@
 <template>
   <div v-if="!breakpointService.isMobile()" class="full">
     <div>
-      <div class="list-section">
-        <span v-if="selectedMainListValue === 'genki'" class="title">- GENKI -</span>
-        <span v-else-if="selectedMainListValue === 'jlpt'" class="title">- JLPT- </span>
-        <CustomSelectButton v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
+      <div class="top-section">
+        <div class="list-section">
+          <span v-if="selectedMainListValue === 'genki'" class="title">- GENKI -</span>
+          <span v-else-if="selectedMainListValue === 'jlpt'" class="title">- JLPT- </span>
+          <CustomSelectButton v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
+        </div>
+        <Button :label="expandedText" :icon="expandedIcon" variant="text" severity="secondary" @click="toggleCollapseAll()" />
       </div>
-      <Accordion :value="sections.map(section => section.value)" multiple class="list">
+      <Accordion v-model:value="activeSections" multiple class="list">
         <AccordionPanel v-for="(section, index) in sections" :value="section.value" :key="index" :class="{ 'last-panel': index === sections.length - 1 }">
           <AccordionHeader class="accordion-header">{{ section.title }}</AccordionHeader>
           <AccordionContent>
@@ -92,7 +116,10 @@
       <span v-else-if="selectedMainListValue === 'jlpt'" class="title">- JLPT -</span>
       <CustomSelectButton v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
     </div>
-    <Accordion :value="sections.map(section => section.value)" multiple :dt="accordionMobile">
+    <div class="mobile-expand-section">
+      <Button :label="expandedText" :icon="expandedIcon" variant="text" severity="secondary" size="small" class="expand-button" @click="toggleCollapseAll()" />
+    </div>
+    <Accordion v-model:value="activeSections" multiple :dt="accordionMobile">
       <AccordionPanel v-for="(section, index) in sections" :value="section.value" :key="index" :class="{ 'last-panel': index === sections.length - 1 }">
         <AccordionHeader class="accordion-header">{{ section.title }}</AccordionHeader>
         <AccordionContent>
@@ -113,6 +140,12 @@
 
 .list {
   width: 70rem;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .list-section {
@@ -141,6 +174,21 @@
   }
 }
 
+.mobile-expand-section {
+  display: flex;
+  /* justify-content: end;
+  padding: 0 12px 10px 0;
+  background-color: var(--list-section-bg); */
+  padding: 6px 8px;
+  background-color: var(--accordion-color);
+  border-bottom: 1px solid var(--line-color-soft);
+
+  .expand-button {
+    width: 100%;
+    justify-content: right;
+  }
+}
+
 .accordion-header {
   font-weight: 500;
 }
@@ -152,4 +200,10 @@
 .last-panel {
   border-bottom: none;
 }
+</style>
+
+<style>
+/* .mobile-expand-section .p-button:hover {
+  background-color: #27272a !important;
+} */
 </style>

@@ -45,7 +45,7 @@
         <div class="kanji-mb">
           <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">し</span>ません</span></ruby>
         </div>
-        <div class="exceptions">
+        <div class="structure-title">
           Exceptions
         </div>
         <div class="kanji-mb">
@@ -83,7 +83,7 @@
         <div class="kanji-mb">
           <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">さ</span>ない</span></ruby>
         </div>
-        <div class="exceptions">
+        <div class="structure-title">
           Exceptions
         </div>
         <div class="kanji-mb">
@@ -125,7 +125,7 @@
         <div class="subtitle">Plain negative (informal)</div>
         To create the plain negative form of a godan verb we can take a look at the godan five-step chart again. Move up on the chart, from the う row to the あ row, changing the sound of the final syllable.
         <div class="chart">
-          <GodanChart :selected-row="1" :word-selection="1" :show-word-selection="false" />
+          <GodanChart :selected-row="1" :word-selection="2" :show-word-selection="false" />
         </div>
         Once we have the plain negative stem, simply add <span class="g">ない</span> to the end.
 

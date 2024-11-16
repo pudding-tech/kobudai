@@ -94,7 +94,7 @@
   }
 
   .line {
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 2px solid var(--line-color);
     height: 44px;
     margin-right: 20px;
   }

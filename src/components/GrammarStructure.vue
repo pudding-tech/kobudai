@@ -281,6 +281,7 @@
 
 .explanation {
   line-height: 1.5;
+  word-break: keep-all;
 }
 
 .mobile {

@@ -59,6 +59,11 @@ body {
   color: var(--kanji-highlight);
 }
 
+.et {
+  color: #898989;
+  padding-left: 10px;
+}
+
 .note {
   color: var(--note-text-color);
   margin-bottom: 2px;
@@ -74,10 +79,17 @@ rt {
   padding-bottom: 2px;
 }
 
-.exceptions {
+.structure-title {
   padding-top: 10px;
   padding-bottom: 5px;
   opacity: 0.6;
+
+  &.top {
+    padding-top: 0;
+  }
+}
+.mobile .structure-title {
+  font-size: 0.9rem;
 }
 
 .link {
@@ -136,10 +148,13 @@ rt {
   --grammar-highlight-bg: var(--p-zinc-200);
   --grammar-highlight-bg-mobile: #dddddd;
   --kanji-highlight: #a43ca1;
-  --stem-change-highlight: #998d00;
+  --stem-change-highlight: #af6200; /* #998d00 */
   --grammar-point-title-highlight: #905f8f;
   --link-border-color: rgba(0, 0, 0, 0.2);
   --note-text-color: rgb(165 63 63);
+  --line-color: rgba(132, 132, 132, 0.4);
+  --line-color-soft: #d2d7db7a;
+  --accordion-color: #ebebeb;
 
   /* HOME */
   --list-section-bg: #fbfbfb;
@@ -161,10 +176,11 @@ rt {
 
   /* NAVBAR */
   --navbar-hover-color: rgba(113, 113, 113, 0.1);
+  --mobile-search-section-border-color: #d1d1d1;
 
   /* SEARCH RESULTS */
-  --search-result-bg: #ededed;
-  --search-result-bg-hover: #f5f5f5;
+  --search-result-bg: #f7f7f7;
+  --search-result-bg-hover: #fefefe;
   --search-result-subtitle: #818181;
   --search-result-border-color: #c4c4c4;
   --search-result-no-result-color: #a0a0a0;
@@ -202,8 +218,10 @@ rt {
   --stem-change-highlight: #c6c455;
   --grammar-point-title-highlight: #e4c4e3;
   --link-border-color: rgba(255, 255, 255, 0.2);
-  /* --note-text-color: rgb(174, 174, 38); */
   --note-text-color: rgb(213, 127, 127);
+  --line-color: rgba(255, 255, 255, 0.2);
+  --line-color-soft: #272727;
+  --accordion-color: #121212;
 
   /* HOME */
   --list-section-bg: #090909;
@@ -225,6 +243,7 @@ rt {
 
   /* NAVBAR */
   --navbar-hover-color: rgba(191, 191, 191, 0.1);
+  --mobile-search-section-border-color: #2d2d2d;
 
   /* SEARCH RESULTS */
   --search-result-bg: #1e1e1e;
@@ -257,6 +276,13 @@ rt {
 /*
 * Overrides
 */
+
+/* Turn off hover effect for mobile devices */
+@media (pointer: coarse) {
+  .p-button:hover {
+    background-color: transparent !important;
+  }
+}
 
 /* .p-accordioncontent.p-toggleable-content-enter-active {
   transition: max-height 0.7s ease-in-out !important;
