@@ -6,6 +6,7 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   /* -- */
   /* N5 */
   /* -- */
+  [n5.adjectivesI.slug]: () => import("./n5/AdjectivesI.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
   [n5.desu.slug]: () => import("./n5/Desu.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
   [n5.godan.slug]: () => import("./n5/Godan.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
   [n5.godanNegative.slug]: () => import("./n5/GodanNegative.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
@@ -24,9 +25,11 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n5.mo.slug]: () => import("./n5/Mo.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
   [n5.ne.slug]: () => import("./n5/Ne.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
   [n5.no.slug]: () => import("./n5/No.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
+  [n5.te.slug]: () => import("./n5/Te.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
   [n5.yo.slug]: () => import("./n5/Yo.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
   /* -- */
   /* N4 */
   /* -- */
-  [n4.potentialVerbs.slug]: () => import("./n4/PotentialVerbs.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }}))
+  [n4.potentialVerbs.slug]: () => import("./n4/PotentialVerbs.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }})),
+  [n4.shi.slug]: () => import("./n4/Shi.vue").then(mod => ({ component: mod.default, meta: { title: mod.title }}))
 };

@@ -43,12 +43,12 @@
       <span class="g">う</span>, <span class="g">つ</span>, <span class="g">る</span>, <span class="g">む</span>, <span class="g">ぶ</span>, <span class="g">ぬ</span>, <span class="g">く</span>, <span class="g">ぐ</span>, or <span class="g">す</span>.
       Unlike ichidan verbs, which end only in an <i>-iru</i> or <i>-eru</i> sound, godan verbs can end in any of these kana.
       <br><br>
-      <Fieldset legend="Hiragana chart" toggleable :collapsed="true">
+      <!-- <Fieldset legend="Hiragana chart" toggleable :collapsed="true">
         <HiraganaChart :selected-column="'u'" />
-      </Fieldset>
-      <!-- <Panel header="Hiragana chart" toggleable :collapsed="true">
+      </Fieldset> -->
+      <Panel header="Hiragana chart" toggleable :collapsed="true">
         <HiraganaChart :selected-column="'u'" />
-      </Panel> -->
+      </Panel>
       <br>
       Each conjugation form is built on a modified verb stem, where the final syllable of the stem shifts to a different vowel sound (あ, い, う, え, or お) depending on the conjugation.
       This transformation is the basis for the "five steps" of godan verbs.

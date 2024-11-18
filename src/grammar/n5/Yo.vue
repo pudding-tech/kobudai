@@ -13,7 +13,7 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      Phrase + <span class="grammar-highlight">よ</span>
+      Sentence + <span class="grammar-highlight">よ</span>
     </template>
     <template #related>
       

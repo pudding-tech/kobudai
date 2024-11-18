@@ -9,7 +9,8 @@ export const genki2List: Sublist = {
       title: "CHAPTER 13",
       value: 1,
       grammarPoints: [
-        n4.potentialVerbs
+        n4.potentialVerbs,
+        n4.shi
       ]
     }
   ]

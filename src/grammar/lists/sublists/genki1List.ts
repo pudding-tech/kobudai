@@ -38,8 +38,28 @@ export const genki1List: Sublist = {
         n5.ichidanNonPast,
         n5.godanNegative,
         n5.ichidanNegative,
+      ]
+    },
+    {
+      title: "CHAPTER 4",
+      value: 4,
+      grammarPoints: [
         n5.godanPast,
         n5.ichidanPast
+      ]
+    },
+    {
+      title: "CHAPTER 5",
+      value: 5,
+      grammarPoints: [
+        n5.adjectivesI
+      ]
+    },
+    {
+      title: "CHAPTER 6",
+      value: 6,
+      grammarPoints: [
+        n5.te
       ]
     }
   ]

@@ -22,18 +22,19 @@
       </div>
       <div v-else>
         Noun + <span class="grammar-highlight">だ</span><br>
-        [ な ] adjective + <span class="grammar-highlight">だ</span>
+        な-Adjective + <span class="grammar-highlight">だ</span>
       </div>
     </template>
     <template #related>
       Commonly used with&nbsp;<RouterLink :to="{ name: 'grammarLoader', params: { slug: ha.slug } }" class="link">は (topic marking particle)</RouterLink>
     </template>
     <template #explanation>
-      <span class="g">です</span> and <span class="g">だ</span> are both used to link nouns or adjectives to a subject, functioning like "is" or "am" in English. They serve as copulas, connecting the subject to a descriptor or identity.
-      Do note that <span class="g">です</span> and <span class="g">だ</span> only tells that something is something, but not what that something is.
-      For that another construction&nbsp;<RouterLink :to="{ name: 'grammarLoader', params: { slug: ha.slug } }" class="link">(X は Y)</RouterLink> is used together with the copula.
+      Both <span class="g">だ</span> and <span class="g">です</span> are auxiliary verbs and copulas, attaching themselves to other words to indicate assertion or determination.
+      Essentially, they state that something "is" or "exists" in a certain way.
+      However, their levels of formality and specific applications set them apart.
       <br><br>
-      <span class="g">です</span> is the polite form and is used in more formal or respectful settings. It is typically added after nouns or adjectives to form sentences like "X is Y."
+      Additionally, <span class="g">です</span> and <span class="g">だ</span> merely indicate that something is — they do not specify <i>what</i> that something is. This characteristic highlights a key feature of the Japanese language,
+      where even a minimal sentence, reduced to just a verb, can still be grammatically complete. For example, while a sentence like "is a pen" would be incomplete and nonsensical in English, it is perfectly natural in Japanese.
       <GrammarExample>
         <template #example>
           ペン<span class="g">です</span>
@@ -45,18 +46,78 @@
           What "it" is, is not specified, but inferred
         </template>
       </GrammarExample>
-      <span class="g">だ</span> is the plain, informal equivalent of <span class="g">です</span>. It’s used in casual conversation or among friends. The meaning stays the same, but feels less formal.
-      Note that <span class="g">だ</span> cannot be used after&nbsp;<RouterLink :to="{ name: 'grammarLoader', params: { slug: 'い-adjective' } }" class="link">[ い ] adjectives</RouterLink>.
-      <GrammarExample>
-        <template #example>
-          <ruby>車<rt>くるま</rt></ruby><span class="g">だ</span>
-        </template>
-        <template #translation>
-          (It) is a car
-        </template>
-      </GrammarExample>
-      <div class="note">Note:</div>
-      Writing <span class="g">です</span> after an い-adjective is technically not correct Japanese, yet it is extremely common to both hear and read in everyday situations.
+      When specifying what we are referring to, there are numerous ways to do so, but arguably the most common approach is using the
+      topic marking particle <RouterLink :to="{ name: 'grammarLoader', params: { slug: ha.slug } }" class="link">は</RouterLink>.
+
+      <div class="section">
+        <div class="subtitle">だ - A present, affirmative, casual copula</div>
+        <span class="g">だ</span> is a small but significant word in Japanese grammar, primarily used to assert that a noun or な-adjective is true and relevant in the present.
+        Essentially, it acts as a marker of present tense and affirmation, confirming that something is or exists in a certain way, here and now.
+        <span class="g">だ</span> itself can be said to be "plain", as it's used in casual conversation or among friends.
+        <GrammarExample>
+          <template #example>
+            <ruby>猫<rt>ねこ</rt></ruby><span class="g">だ</span>
+          </template>
+          <template #translation>
+            (It) is a cat
+          </template>
+        </GrammarExample>
+        Unlike verbs or い-adjectives, which have their own ways to express tense and positivity, nouns and な-adjectives rely on auxiliary words like <span class="g">だ</span> to convey this grammatical information.
+        <span class="g">だ</span> is exclusive to these types of words and cannot be attached to verbs or い-adjectives, which inherently express their own tense and affirmative or negative state.
+        <br><br>
+        In terms of politeness, <span class="g">だ</span> is firmly associated with the plain form, making it suitable for informal speech or casual writing.
+        However, when <span class="g">だ</span> is used at the end of a sentence in spoken Japanese or casual texts, it can take on additional nuances depending on the tone and context.
+        Notably, sentence-final <span class="g">だ</span> is optional in many cases, particularly in casual conversation.
+        <br><br>
+        For example, you might hear someone say 彼は学生 (かれはがくせい, “he is a student”) without explicitly adding <span class="g">だ</span>,
+        which can still be understood as the present tense and in the affirmative.
+        However, including <span class="g">だ</span> often gives the sentence a stronger sense of determination or clarity, emphasizing the truth of the statement.
+        For instance, saying それが答え<span class="g">だ</span> (それがこたえだ, “that’s the answer”) might sound neutral or assertive, but with a more emphatic tone, it could come across as firm or even confrontational.
+      </div>
+
+      <div class="section">
+        <div class="subtitle">です - A present, affirmative, polite copula - and politeness marker</div>
+        <span class="g">です</span> shares many characteristics with <span class="g">だ</span>, but also has additional functions. It is often described as the polite version of <span class="g">だ</span>,
+        though this isn't entirely accurate - である would be the true formal counterpart. Like <span class="g">だ</span>, <span class="g">です</span> attaches to words to form a present affirmative sentence, but its primary role is to mark politeness.
+        <GrammarExample>
+          <template #example>
+            <ruby>猫<rt>ねこ</rt></ruby><span class="g">です</span>
+          </template>
+          <template #translation>
+            (It) is a cat
+          </template>
+        </GrammarExample>
+        This means that unlike <span class="g">だ</span>, the copula <span class="g">です</span> also be used with い-adjectives. Since い-adjectives already have the ability to conjugate into different tenses,
+        <span class="g">です</span> functions here purely as a politeness marker.
+        As for verbs, since they can already conjugate into polite forms on their own, <span class="g">です</span> is not used with most verb conjugations.
+        <GrammarExample>
+          <template #example>
+            <ruby>寒<rt>さむ</rt></ruby>い<span class="g">です</span>
+          </template>
+          <template #translation>
+            It's cold
+          </template>
+          <template #note>
+            です can modifidy an い-adjective to be polite
+          </template>
+        </GrammarExample>
+        <div class="note">Note:</div>
+        While it is common to attach <span class="g">です</span> to い-adjectives, some might consider this incorrect in formal Japanese, and it is best avoided in highly formal writing.
+        However, in everyday spoken and written language, it is perfectly acceptable and widely used.
+      </div>
     </template>
   </GrammarStructure>
 </template>
+
+<style scoped>
+.section {
+  margin-top: 40px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 18px;
+}
+</style>

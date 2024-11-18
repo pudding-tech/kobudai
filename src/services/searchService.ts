@@ -43,9 +43,8 @@ export const search = (queryString: string) => {
       }
       return a.item.title.localeCompare(b.item.title);
     });
-  
-    // console.log(scores);
-    searchResults.value = scores.map(result => result.item).slice(0, 20);
+
+    searchResults.value = scores.map(result => result.item).slice(0, 30);
 };
 
 const calculateScore = (query: string, item: GrammarPoint, weightFactor: number): number => {

@@ -168,6 +168,7 @@ rt {
   --grammar-structure-bg-mobile: #efefef;
   --grammar-structure-header: #d6d6d6;
   --grammar-structure-header-mobile: #fbfbfb;
+  --grammar-structure-inner-color: #fdfdfd;
   --grammar-card-border: rgba(73, 73, 73, 0.27);
 
   /* GRAMMAR EXAMPLE */
@@ -235,6 +236,7 @@ rt {
   --grammar-structure-bg-mobile: #181818;
   --grammar-structure-header: #393939;
   --grammar-structure-header-mobile: #111111;
+  --grammar-structure-inner-color: #272727;
   --grammar-card-border: rgba(73, 73, 73, 0.74);
 
   /* GRAMMAR EXAMPLE */

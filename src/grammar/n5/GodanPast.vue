@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
-  import { godanPast as meta, godan, godanNonPast, godanNegative, ichidanPast } from "./metadataN5";
+  import { godanPast as meta, godan, godanNonPast, godanNegative, ichidanPast, te } from "./metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -153,7 +153,7 @@
         </GrammarExample>
 
         <span class="note">Note:</span>
-        This exact conjugation pattern is also used to construct the <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'て' } }" class="link">て-form</RouterLink> of all verbs.
+        This exact conjugation pattern is also used to construct the <RouterLink :to="{ name: 'grammarLoader', params: { slug: te.slug } }" class="link">て-form</RouterLink> of godan verbs.
       </div>
 
       <div class="section">
@@ -183,7 +183,7 @@
         <div class="subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <div class="note mt">Note:</div>
-        The verb 行く (to go) is irregular in its plain past form, transforming to <span class="g">行った</span> instead of following typical conjugation patterns.
+        The verb 行く (to go) is irregular in its plain past form, changing to <span class="g">行った</span> instead of following typical conjugation patterns.
         <GrammarExample>
           <template #example>
             <div>する → <span class="g">した</span></div>

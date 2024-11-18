@@ -146,7 +146,7 @@
 
       <div class="section">
         <div class="subtitle">Dictionary form (plain)</div>
-        The non-past form (also known as the dictionary or plain form) of a godan verb is used in informal contexts, such as when speaking with friends or people of the same social rank.
+        The plain non-past form (also known as the dictionary form) of a godan verb is used in informal contexts, such as when speaking with friends, family, or people of the same social rank.
         In the godan five-step chart the dictionary form is the form that ends in the <span class="g">う</span> sound.
 
         <div class="chart">

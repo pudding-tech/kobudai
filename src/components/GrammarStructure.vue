@@ -57,6 +57,9 @@
           hoverBackground: "{zinc.200}",
           activeBackground: "{zinc.200}",
           activeHoverBackground: "{zinc.200}",
+        },
+        content: {
+          background: "#f7f7f7"
         }
       },
       dark: {
@@ -67,7 +70,7 @@
           activeHoverBackground: "#212121",
         },
         content: {
-          // background: "#202020"
+          background: "var(--p-accordion-content-background)"
         }
       }
     }
@@ -170,6 +173,7 @@
 .container {
   display: flex;
   justify-content: center;
+  font-size: 18px;
 }
 
 .bg {
@@ -255,7 +259,7 @@
 }
 
 .structure-content {
-  font-size: 1rem;
+  font-size: 1em;
   line-height: 1.6;
   transition: font-size 0.2s;
 
@@ -314,7 +318,7 @@
 
   .structure {
     padding: 1.125rem 10px 0;
-    line-height: 1.28;
+    line-height: 1.4;
     transition: font-size 0.1s;
 
     .buttons {

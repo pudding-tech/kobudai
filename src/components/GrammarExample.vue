@@ -34,11 +34,12 @@
   margin: 20px 0;
   border-radius: var(--p-content-border-radius);
   background-color: var(--grammar-example-bg);
+  word-break: normal;
 }
 
 .title {
   position: absolute;
-  font-size: 0.9rem;
+  font-size: 0.9em;
   opacity: 0.7;
 }
 
@@ -49,7 +50,7 @@
 .example {
   display: flex;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.3em;
   text-align: center;
 }
 
