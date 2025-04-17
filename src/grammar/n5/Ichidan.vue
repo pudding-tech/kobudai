@@ -123,10 +123,6 @@
   }
 }
 
-.section {
-  margin-top: 40px;
-}
-
 .list {
   margin-bottom: 6px;
 }

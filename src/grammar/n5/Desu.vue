@@ -29,12 +29,12 @@
       Commonly used with&nbsp;<RouterLink :to="{ name: 'grammarLoader', params: { slug: ha.slug } }" class="link">は (topic marking particle)</RouterLink>
     </template>
     <template #explanation>
-      Both <span class="g">だ</span> and <span class="g">です</span> are auxiliary verbs and copulas, attaching themselves to other words to indicate assertion or determination.
-      Essentially, they state that something "is" or "exists" in a certain way.
-      However, their levels of formality and specific applications set them apart.
+      Both <span class="g">だ</span> and <span class="g">です</span> are auxiliary verbs that function as copulas - they attach to other words to indicate a state of being or identity.
+      Essentially, they express that something "is" or "exists in a certain way". Their role is to affirm that something is the case, but do not specify <i>what</i> the subject is.
       <br><br>
-      Additionally, <span class="g">です</span> and <span class="g">だ</span> merely indicate that something is — they do not specify <i>what</i> that something is. This characteristic highlights a key feature of the Japanese language,
-      where even a minimal sentence, reduced to just a verb, can still be grammatically complete. For example, while a sentence like "is a pen" would be incomplete and nonsensical in English, it is perfectly natural in Japanese.
+      <!-- Instead, <span class="g">だ</span> and <span class="g">です</span> merely indicate a state of being or identity.  -->
+      This leads to one of the defining features of the Japanese language:
+      Even a minimal sentence, reduced to just a verb, can still be grammatically complete. For example, while a sentence like "is a pen" would be incomplete and nonsensical in English, it is perfectly natural in Japanese.
       <GrammarExample>
         <template #example>
           ペン<span class="g">です</span>
@@ -46,13 +46,23 @@
           What "it" is, is not specified, but inferred
         </template>
       </GrammarExample>
+      It’s common to hear that <span class="g">だ</span> and <span class="g">です</span> mean "to be" in English, and while they serve a similar role,
+      that comparison is somewhat simplified. In English, “to be” is a full verb that can inflect for person and tense (is, am, are, was, were, etc.).
+      While <span class="g">だ</span> and <span class="g">です</span> do have past-tense forms (だった and でした), they don’t conjugate as fully as typical Japanese verbs,
+      and they mainly serve to link ideas and indicate politeness or assertion — not to express actions or a wide range of tenses like the English verb "to be".
+      <br><br>
+      <div class="note">Note:</div>
       When specifying what we are referring to, there are numerous ways to do so, but arguably the most common approach is using the
       topic marking particle <RouterLink :to="{ name: 'grammarLoader', params: { slug: ha.slug } }" class="link">は</RouterLink>.
+      This structure — [topic] は [statement] — is often how speakers set up their sentences.
+      <br><br>
+      You might be wondering why there are two different copulas, <span class="g">だ</span> and <span class="g">です</span>, when they appear to serve the same purpose.
+      Their levels of formality and specific applications set them apart, however.
 
       <div class="section">
-        <div class="subtitle">だ - A present, affirmative, casual copula</div>
+        <div class="subtitle">The だ copula: Casual present affirmative</div>
         <span class="g">だ</span> is a small but significant word in Japanese grammar, primarily used to assert that a noun or な-adjective is true and relevant in the present.
-        Essentially, it acts as a marker of present tense and affirmation, confirming that something is or exists in a certain way, here and now.
+        Essentially, it acts as a marker of present tense and affirmation, confirming that something "is" or "exists in a certain way", here and now.
         <span class="g">だ</span> itself can be said to be "plain", as it's used in casual conversation or among friends.
         <GrammarExample>
           <template #example>
@@ -76,15 +86,18 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">です - A present, affirmative, polite copula - and politeness marker</div>
+        <div class="subtitle">The です copula: Polite present affirmative - and politeness marker</div>
         <span class="g">です</span> shares many characteristics with <span class="g">だ</span>, but also has additional functions. It is often described as the polite version of <span class="g">だ</span>,
-        though this isn't entirely accurate - である would be the true formal counterpart. Like <span class="g">だ</span>, <span class="g">です</span> attaches to words to form a present affirmative sentence, but its primary role is to mark politeness.
+        though this isn't entirely accurate — である would be the true formal counterpart. Like <span class="g">だ</span>, <span class="g">です</span> attaches to words to form a present affirmative sentence, but its primary role is to mark politeness.
         <GrammarExample>
           <template #example>
             <ruby>猫<rt>ねこ</rt></ruby><span class="g">です</span>
           </template>
           <template #translation>
             (It) is a cat
+          </template>
+          <template #note>
+            The meaning is the same as the だ counterpart, just expressed in a polite way
           </template>
         </GrammarExample>
         This means that unlike <span class="g">だ</span>, the copula <span class="g">です</span> also be used with い-adjectives. Since い-adjectives already have the ability to conjugate into different tenses,
@@ -98,7 +111,7 @@
             It's cold
           </template>
           <template #note>
-            です can modifidy an い-adjective to be polite
+            です can modify an い-adjective to be polite
           </template>
         </GrammarExample>
         <div class="note">Note:</div>
@@ -110,10 +123,6 @@
 </template>
 
 <style scoped>
-.section {
-  margin-top: 40px;
-}
-
 .subtitle {
   font-size: 1.1rem;
   font-weight: 500;

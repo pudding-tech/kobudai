@@ -3,10 +3,13 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
+  import RelatedGrammarList from "@/components/RelatedGrammarList.vue";
   import { potentialVerbs as meta } from "./metadataN4";
   import { godan, godanNegative, godanNonPast, godanPast, ichidan, ichidanNegative, ichidanNonPast, ichidanPast } from "../n5/metadataN5";
+  import type { GrammarPoint } from "@/types/types";
 
   const isPolite = ref(false);
+  const related: GrammarPoint[] = [godan, ichidan, godanNonPast, ichidanNonPast, godanNegative, ichidanNegative, godanPast, ichidanPast];
 </script>
 
 <script lang="ts">
@@ -18,129 +21,57 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      <div v-if="isPolite">
-        <div class="structure-title top">
-          Godan
-        </div>
-        <div class="kanji-mb">
-          <ruby>買<rt>か</rt>う</ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight"><span class="h">え</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>待<rt>ま</rt>つ</ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight"><span class="h">て</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>取<rt>と</rt>る</ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight"><span class="h">れ</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>読<rt>よ</rt>む</ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight"><span class="h">め</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>遊<rt>あそ</rt>ぶ</ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight"><span class="h">べ</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>死<rt>し</rt>ぬ</ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight"><span class="h">ね</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>書<rt>か</rt>く</ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight"><span class="h">け</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>泳<rt>およ</rt>ぐ</ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight"><span class="h">げ</span>ます</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">せ</span>ます</span></ruby>
-        </div>
-        <div class="structure-title">
-          Ichidan
-        </div>
-        <div class="kanji-mb">
-          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt>べ<span class="grammar-highlight">られます</span></ruby>
-        </div>
-        <div class="structure-title">
-          Exceptions
-        </div>
-        <div class="kanji-mb">
-          <span>する</span> → <span class="grammar-highlight">できます</span>
-        </div>
-        <div>
-          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>こ</rt>られます</ruby></span>
-        </div>
+      <div class="structure-title top">
+        Godan
       </div>
-      <div v-else>
-        <div class="structure-title top">
-          Godan
-        </div>
-        <div class="kanji-mb">
-          <ruby>買<rt>か</rt>う</ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight"><span class="h">え</span>る</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>待<rt>ま</rt>つ</ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight"><span class="h">て</span>る</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>取<rt>と</rt>る</ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight"><span class="h">れ</span>る</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>読<rt>よ</rt>む</ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight"><span class="h">め</span>る</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>遊<rt>あそ</rt>ぶ</ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight"><span class="h">べ</span>る</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>死<rt>し</rt>ぬ</ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight"><span class="h">ね</span>る</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>書<rt>か</rt>く</ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight"><span class="h">け</span>る</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>泳<rt>およ</rt>ぐ</ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight"><span class="h">げ</span>る</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">せ</span>る</span></ruby>
-        </div>
-        <div class="structure-title">
-          Ichidan
-        </div>
-        <div class="kanji-mb">
-          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt>べ<span class="grammar-highlight">られる</span></ruby>
-        </div>
-        <div class="structure-title">
-          Exceptions
-        </div>
-        <div class="kanji-mb">
-          <span>する</span> → <span class="grammar-highlight">できる</span>
-        </div>
-        <div>
-          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>こ</rt>られる</ruby></span>
-        </div>
+      <div class="kanji-mb">
+        <ruby>買<rt>か</rt>う</ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight"><span class="h">え</span>{{ isPolite ? "ます" : "る"}}</span></ruby>
+      </div>
+      <div class="kanji-mb">
+        <ruby>待<rt>ま</rt>つ</ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight"><span class="h">て</span>{{ isPolite ? "ます" : "る"}}</span></ruby>
+      </div>
+      <div class="kanji-mb">
+        <ruby>取<rt>と</rt>る</ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight"><span class="h">れ</span>{{ isPolite ? "ます" : "る"}}</span></ruby>
+      </div>
+      <div class="kanji-mb">
+        <ruby>読<rt>よ</rt>む</ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight"><span class="h">め</span>{{ isPolite ? "ます" : "る"}}</span></ruby>
+      </div>
+      <div class="kanji-mb">
+        <ruby>遊<rt>あそ</rt>ぶ</ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight"><span class="h">べ</span>{{ isPolite ? "ます" : "る"}}</span></ruby>
+      </div>
+      <div class="kanji-mb">
+        <ruby>死<rt>し</rt>ぬ</ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight"><span class="h">ね</span>{{ isPolite ? "ます" : "る"}}</span></ruby>
+      </div>
+      <div class="kanji-mb">
+        <ruby>書<rt>か</rt>く</ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight"><span class="h">け</span>{{ isPolite ? "ます" : "る"}}</span></ruby>
+      </div>
+      <div class="kanji-mb">
+        <ruby>泳<rt>およ</rt>ぐ</ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight"><span class="h">げ</span>{{ isPolite ? "ます" : "る"}}</span></ruby>
+      </div>
+      <div class="kanji-mb">
+        <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">せ</span>{{ isPolite ? "ます" : "る"}}</span></ruby>
+      </div>
+      <div class="structure-title">
+        Ichidan
+      </div>
+      <div class="kanji-mb">
+        <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt>べ<span class="grammar-highlight">られ{{ isPolite ? "ます" : "る"}}</span> ( <span class="grammar-highlight">れ{{ isPolite ? "ます" : "る"}}</span> )</ruby>
+      </div>
+      <div class="structure-title">
+        Exceptions
+      </div>
+      <div class="kanji-mb">
+        <span>する</span> → <span class="grammar-highlight">でき{{ isPolite ? "ます" : "る"}}</span>
+      </div>
+      <div>
+        <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>こ</rt>られ{{ isPolite ? "ます" : "る"}}</ruby></span>
       </div>
     </template>
     <template #related>
       <div class="related-mb">
         Other verb conjugations:
       </div>
-      <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink>
-      </div>
-      <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidan.slug } }" class="link">{{ ichidan.title }}</RouterLink>
-      </div>
-      <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNonPast.slug } }" class="link">{{ godanNonPast.title }}</RouterLink>
-      </div>
-      <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNonPast.slug } }" class="link">{{ ichidanNonPast.title }}</RouterLink>
-      </div>
-      <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink>
-      </div>
-      <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNegative.slug } }" class="link">{{ ichidanNegative.title }}</RouterLink>
-      </div>
-      <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink>
-      </div>
-      <div>
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPast.slug } }" class="link">{{ ichidanPast.title }}</RouterLink>
-      </div>
+      <RelatedGrammarList :related="related" />
     </template>
     <template #explanation>
       <div class="grammar-point-title">The Potential Form of Verbs</div>
@@ -163,7 +94,7 @@
 
       <div class="section">
         <div class="subtitle">Potential godan verbs</div>
-        To create the portential form a godan verb we can take a look at the godan five-step chart again. Move down on the chart, from the う row to the え row, to find the stem for the potential form.
+        To create the potential form a godan verb we can take a look at the godan five-step chart again. Move down on the chart, from the う row to the え row, to find the stem for the potential form.
         <div class="chart">
           <GodanChart :selected-row="4" :show-word-selection="false" />
         </div>
@@ -259,10 +190,6 @@
 </template>
 
 <style scoped>
-.section {
-  margin-top: 40px;
-}
-
 .subtitle {
   font-size: 1.1rem;
   font-weight: 500;

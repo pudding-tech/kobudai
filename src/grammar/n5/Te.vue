@@ -202,10 +202,6 @@
 </template>
 
 <style scoped>
-.section {
-  margin-top: 40px;
-}
-
 .subtitle {
   font-size: 1.1rem;
   font-weight: 500;

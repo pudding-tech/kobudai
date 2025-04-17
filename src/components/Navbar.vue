@@ -77,7 +77,7 @@
     <template #start>
       <div class="container">
         <div v-ripple class="kobudai" @click="gotoHome()">
-          KOBUDAI・コブダイ
+          <div :class="{ 'move-up': breakpointService.isMobile() === false }">KOBUDAI・コブダイ</div>
         </div>
       </div>
       <Select v-if="!breakpointService.isMobile()" v-model="selectedMainListValue" :options="mainListOptions" option-label="label" option-value="value" class="main-list-selector" />
@@ -155,6 +155,11 @@
   border-radius: var(--p-content-border-radius);
   transition: background-color 0.3s;
   left: -6px;
+
+  .move-up {
+    position: relative;
+    bottom: 2px;
+  }
 }
 
 .main-list-selector {

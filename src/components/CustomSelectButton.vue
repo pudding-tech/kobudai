@@ -40,7 +40,7 @@
   transition: color 0.2s, background-color 0.2s;
 
   &:hover {
-    color: rgba(255, 255, 255, 1);
+    color: var(--custom-select-button-text-hover);
   }
 
   &.selected {

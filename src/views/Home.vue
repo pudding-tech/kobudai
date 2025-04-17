@@ -93,7 +93,7 @@
       <div class="top-section">
         <div class="list-section">
           <span v-if="selectedMainListValue === 'genki'" class="title">- GENKI -</span>
-          <span v-else-if="selectedMainListValue === 'jlpt'" class="title">- JLPT- </span>
+          <span v-else-if="selectedMainListValue === 'jlpt'" class="title">- JLPT -</span>
           <CustomSelectButton v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
         </div>
         <Button :label="expandedText" :icon="expandedIcon" variant="text" severity="secondary" @click="toggleCollapseAll()" />
