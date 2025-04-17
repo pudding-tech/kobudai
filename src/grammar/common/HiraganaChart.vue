@@ -42,7 +42,7 @@
       <Column v-for="(column, index) in ['a', 'i', 'u', 'e', 'o']" :field="column" :key="index">
         <template #body="{ field, data }">
           <div class="text" :class="{ 'g': field === props.selectedColumn }">
-            {{ data[field] }}
+            {{ data[field as keyof typeof data] }}
           </div>
         </template>
       </Column>
