@@ -16,7 +16,7 @@
       X + <span class="grammar-highlight">は</span> + Y
     </template>
     <template #related>
-      Subject marking particle <router-link :to="{ name: 'grammarLoader', params: { slug: 'が' } }" class="link">が</router-link>
+      Subject marking particle <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'が' } }" class="link">が</RouterLink>
     </template>
     <template #explanation>
       In Japanese, the basic sentence structure "X は Y" uses the particle <span class="g">は</span> (pronounced "wa") to mark the topic of the sentence. This structure is fundamental in Japanese and serves to introduce what the sentence is about.

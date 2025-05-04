@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import { computed, ref, watch } from "vue";
-  import { useRouter } from "vue-router";
   import { useListStore } from "@/stores/listStore";
   import { useThemeStore } from "@/stores/themeStore";
   import { breakpointService } from "@/services/breakpointService";
@@ -12,7 +11,6 @@
   import CustomInputText from "./CustomInputText.vue";
   import type { MainList } from "@/types/types";
 
-  const router = useRouter();
   const listStore = useListStore();
   const themeStore = useThemeStore();
   const searchText = ref<string>("");
@@ -39,10 +37,6 @@
     else {
       themeStore.setDarkMode(true);
     }
-  };
-
-  const gotoHome = () => {
-    router.push({ name: "home" });
   };
 
   const openSettings = () => {
@@ -76,9 +70,9 @@
   <Toolbar :class="breakpointService.isMobile() ? 'mobile-navbar mobile-color' : 'navbar'">
     <template #start>
       <div class="container">
-        <div v-ripple class="kobudai" @click="gotoHome()">
+        <RouterLink :to="{ name: 'home' }" v-ripple class="kobudai">
           <div :class="{ 'move-up': breakpointService.isMobile() === false }">KOBUDAI・コブダイ</div>
-        </div>
+        </RouterLink>
       </div>
       <Select v-if="!breakpointService.isMobile()" v-model="selectedMainListValue" :options="mainListOptions" option-label="label" option-value="value" class="main-list-selector" />
     </template>

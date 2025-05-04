@@ -1,17 +1,17 @@
 <script setup lang="ts">
   import type { GrammarPoint } from "@/types/types";
   const props = defineProps<{
-    grammarPoint: GrammarPoint
+    grammarPoint: GrammarPoint;
   }>();
 </script>
 
 <template>
-  <div v-ripple class="list-item">
+  <RouterLink :to="{ name: 'grammarLoader', params: { slug: props.grammarPoint.slug } }" v-ripple class="list-item">
     <div>
       <div class="title">{{ props.grammarPoint.title }}</div>
       <div class="subtitle">{{ props.grammarPoint.subtitle }}</div>
     </div>
-  </div>
+  </RouterLink>
 </template>
 
 <style scoped>

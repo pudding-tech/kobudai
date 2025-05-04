@@ -28,13 +28,46 @@
       </div>
     </template>
     <template #related>
-      Negated form of <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'です' } }" class="link">です</RouterLink>
+      Negative form of <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'です' } }" class="link">です</RouterLink>
     </template>
     <template #explanation>
-      <span class="g">じゃない</span> is used to express negation in informal speech, meaning "is not" or "am not." It is the casual form of <span class="g">ではありません</span> or <span class="g">ではない</span>, which are more formal ways to negate.
-      In modern Japanese it is however most common to just add the general politeness modifier です so it becomes <span class="g">じゃないです</span>.
-      <br><br>
-      Only nouns and な-adjectives can be used with <span class="g">じゃない</span>. For い-adjectives and verbs different forms of negation are used.
+      <span class="g">じゃない</span> is an informal way to express negation in Japanese. It means "is not" or "am not" and is used to negate nouns or adjectives in casual conversation. It is the casual counterpart of the more formal structure:
+      <ul>
+        <li><span class="g">ではありません</span> → the full, polite negation form</li>
+      </ul>
+      There are a few common variations of this structure that differ in formality:
+      <table class="janai-table">
+        <tr class="header">
+          <th>Form</th>
+          <th>Level of Formality</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td><span class="g">ではありません</span></td>
+          <td>Very formal</td>
+          <td>Standard polite form</td>
+        </tr>
+        <tr>
+          <td><span class="g">ではない</span></td>
+          <td>Plain/formal-ish</td>
+          <td>Often used in writing</td>
+        </tr>
+        <tr>
+          <td><span class="g">じゃありません</span></td>
+          <td>Polite</td>
+          <td>Spoken, softer than ではありません</td>
+        </tr>
+        <tr>
+          <td><span class="g">じゃない</span></td>
+          <td>Casual</td>
+          <td>Common in daily conversation</td>
+        </tr>
+      </table>
+      <br>
+      <span class="g">じゃない</span> is actually a contraction:
+      <ul>
+        <li><span class="g">ではありません</span> → <span class="g">ではない</span> → <span class="g">じゃない</span></li>
+      </ul>
       <GrammarExample>
         <template #example>
           <ruby>先生<rt>せんせい</rt></ruby><span class="g">じゃない</span>
@@ -43,7 +76,10 @@
           (I am) not a teacher
         </template>
       </GrammarExample>
-
+      Over time, a hybrid form became popular in modern Japanese: <span class="g">じゃないです</span>, where the general politeness marker です is added to the end of the casual <span class="g">じゃない</span>.
+      This form is widely used in speech because it softens the casual <span class="g">じゃない</span> by adding です, which makes it sound a bit more polite — even though it’s technically redundant.
+      After all, ない is already the plain negative form of ありません, so saying <span class="g">じゃないです</span> is like saying “not-is” and then tacking on “is” again.
+      Grammatically speaking, it’s not ideal — but socially, it’s accepted and very common in most everyday contexts. It should however be avoided in formal writing or speeches.
       <GrammarExample>
         <template #example>
           <ruby>先生<rt>せんせい</rt></ruby><span class="g">じゃないです</span>
@@ -55,6 +91,26 @@
           Polite form
         </template>
       </GrammarExample>
+      <div class="note">Note:</div>
+      Only nouns and な-adjectives can be used with <span class="g">じゃない</span>. That's because these do not conjugate on their own for negation, so they require an auxiliary form like <span class="g">じゃない</span> to express "is not."
+      In contrast, い-adjectives and verbs can conjugate directly to show negation (e.g. 行かない for "not go"), so using <span class="g">じゃない</span> with them would be grammatically incorrect.
     </template>
   </GrammarStructure>
 </template>
+
+<style scoped>
+.janai-table {
+  width: 100%;
+  border-collapse: collapse; 
+  margin-top: 1rem;
+  text-align: left;
+
+  tr:not(:last-child) {
+    border-bottom: 1px solid #cccccc24;
+  }
+
+  th, td {
+    padding: 8px 8px;
+  }
+}
+</style>

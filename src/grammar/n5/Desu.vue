@@ -32,7 +32,6 @@
       Both <span class="g">だ</span> and <span class="g">です</span> are auxiliary verbs that function as copulas - they attach to other words to indicate a state of being or identity.
       Essentially, they express that something "is" or "exists in a certain way". Their role is to affirm that something is the case, but do not specify <i>what</i> the subject is.
       <br><br>
-      <!-- Instead, <span class="g">だ</span> and <span class="g">です</span> merely indicate a state of being or identity.  -->
       This leads to one of the defining features of the Japanese language:
       Even a minimal sentence, reduced to just a verb, can still be grammatically complete. For example, while a sentence like "is a pen" would be incomplete and nonsensical in English, it is perfectly natural in Japanese.
       <GrammarExample>
@@ -88,7 +87,7 @@
       <div class="section">
         <div class="subtitle">The です copula: Polite present affirmative - and politeness marker</div>
         <span class="g">です</span> shares many characteristics with <span class="g">だ</span>, but also has additional functions. It is often described as the polite version of <span class="g">だ</span>,
-        though this isn't entirely accurate — である would be the true formal counterpart. Like <span class="g">だ</span>, <span class="g">です</span> attaches to words to form a present affirmative sentence, but its primary role is to mark politeness.
+        though this isn't entirely accurate — they don't derive from the same grammatical root, and operate differently gramatically. Like <span class="g">だ</span>, <span class="g">です</span> attaches to words to form a present affirmative sentence, but its primary role is to mark politeness.
         <GrammarExample>
           <template #example>
             <ruby>猫<rt>ねこ</rt></ruby><span class="g">です</span>
@@ -115,8 +114,7 @@
           </template>
         </GrammarExample>
         <div class="note">Note:</div>
-        While it is common to attach <span class="g">です</span> to い-adjectives, some might consider this incorrect in formal Japanese, and it is best avoided in highly formal writing.
-        However, in everyday spoken and written language, it is perfectly acceptable and widely used.
+        The copula <span class="g">です</span> is thought to a contracted version of であります or でございます, though the etymology of <span class="g">です</span> remains uncertain up to this day.
       </div>
     </template>
   </GrammarStructure>

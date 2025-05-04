@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
-  import { useRouter } from "vue-router";
   import { useListStore } from "@/stores/listStore";
   import { breakpointService } from "@/services/breakpointService";
   import CustomSelectButton from "@/components/CustomSelectButton.vue";
@@ -8,7 +7,6 @@
   import GrammarListItemMobile from "@/components/GrammarListItemMobile.vue";
   import type { MainList, Section, Sublist } from "@/types/types";
 
-  const router = useRouter();
   const listStore = useListStore();
 
   const selectedMainListValue = listStore.getMainList;
@@ -57,10 +55,6 @@
     activeSections.value = sections.value.map(section => section.value);
   };
 
-  const gotoGrammar = (slug: string) => {
-    router.push({ name: "grammarLoader", params: { slug: slug } });
-  };
-
   const accordionMobile = ref({
     header: {
       padding: "1.4rem 1.125rem",
@@ -103,7 +97,7 @@
           <AccordionHeader class="accordion-header">{{ section.title }}</AccordionHeader>
           <AccordionContent>
             <div v-for="(grammarPoint, index2) in section.grammarPoints" :key="index2">
-              <GrammarListItem :grammarPoint="grammarPoint" class="grammar-point" @click="gotoGrammar(grammarPoint.slug)" />
+              <GrammarListItem :grammarPoint="grammarPoint" class="grammar-point" />
             </div>
           </AccordionContent>
         </AccordionPanel>
@@ -124,7 +118,7 @@
         <AccordionHeader class="accordion-header">{{ section.title }}</AccordionHeader>
         <AccordionContent>
           <div v-for="(grammarPoint, index2) in section.grammarPoints" :key="index2">
-            <GrammarListItemMobile :grammarPoint="grammarPoint" class="grammar-point" @click="gotoGrammar(grammarPoint.slug)" />
+            <GrammarListItemMobile :grammarPoint="grammarPoint" class="grammar-point" />
           </div>
         </AccordionContent>
       </AccordionPanel>

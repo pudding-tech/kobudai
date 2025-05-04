@@ -26,6 +26,7 @@ export const godan: GrammarPoint = {
 export const godanNegative: GrammarPoint = {
   slug: "godan-negative",
   title: "Negative verb (godan)",
+  // title: "Godan verb (negative)",
   subtitle: "～ない、～ません",
   tags: ["nai", "masen", "verbs"]
 };
@@ -33,6 +34,7 @@ export const godanNegative: GrammarPoint = {
 export const godanNonPast: GrammarPoint = {
   slug: "godan-non-past",
   title: "Non-past verb (godan)",
+  // title: "Godan verb (non-past)",
   // subtitle: "～う、～ます",
   subtitle: "～う、～つ、～る、～む、～ぶ、～ぬ、～く、～ぐ、～す、～ます",
   // tags: ["u", "masu", "mas", "verbs"]
@@ -42,30 +44,10 @@ export const godanNonPast: GrammarPoint = {
 export const godanPast: GrammarPoint = {
   slug: "godan-past",
   title: "Past verb (godan)",
+  // title: "Godan verb (past)",
   subtitle: "～った、～んだ、～いた、～いだ、～した、～ました",
   tags: ["tta", "nda", "ita", "ida", "shita", "mashita", "verbs"]
 };
-
-// export const godanNegative: GrammarPoint = {
-//   slug: "godan-negative",
-//   title: "Godan verb (negative)",
-//   subtitle: "～ない、～ません",
-//   tags: ["nai", "masen", "verbs"]
-// };
-
-// export const godanNonPast: GrammarPoint = {
-//   slug: "godan-non-past",
-//   title: "Godan verb (non-past)",
-//   subtitle: "～う、～ます",
-//   tags: ["u", "masu", "mas", "verbs"]
-// };
-
-// export const godanPast: GrammarPoint = {
-//   slug: "godan-past",
-//   title: "Godan verb (past)",
-//   subtitle: "～った、～んだ、～いた、～いだ、～した、～ました",
-//   tags: ["tta", "nda", "ita", "ida", "shita", "mashita", "verbs"]
-// };
 
 export const ha: GrammarPoint = {
   slug: "は",
@@ -84,6 +66,7 @@ export const ichidan: GrammarPoint = {
 export const ichidanNegative: GrammarPoint = {
   slug: "ichidan-negative",
   title: "Negative verb (ichidan)",
+  // title: "Ichidan verb (negative)",
   subtitle: "～ない、～ません",
   tags: ["nai", "masen", "verbs"]
 };
@@ -91,6 +74,7 @@ export const ichidanNegative: GrammarPoint = {
 export const ichidanNonPast: GrammarPoint = {
   slug: "ichidan-non-past",
   title: "Non-past verb (ichidan)",
+  // title: "Ichidan verb (non-past)",
   subtitle: "～る、～ます",
   tags: ["ru", "masu", "mas", "verbs"]
 };
@@ -98,37 +82,17 @@ export const ichidanNonPast: GrammarPoint = {
 export const ichidanPast: GrammarPoint = {
   slug: "ichidan-past",
   title: "Past verb (ichidan)",
+  // title: "Ichidan verb (past)",
   subtitle: "～た、～ました",
   tags: ["ta", "mashita", "verbs"]
 };
-
-// export const ichidanNegative: GrammarPoint = {
-//   slug: "ichidan-negative",
-//   title: "Ichidan verb (negative)",
-//   subtitle: "～ない、～ません",
-//   tags: ["nai", "masen", "verbs"]
-// };
-
-// export const ichidanNonPast: GrammarPoint = {
-//   slug: "ichidan-non-past",
-//   title: "Ichidan verb (non-past)",
-//   subtitle: "～る、～ます",
-//   tags: ["ru", "masu", "mas", "verbs"]
-// };
-
-// export const ichidanPast: GrammarPoint = {
-//   slug: "ichidan-past",
-//   title: "Ichidan verb (past)",
-//   subtitle: "～た、～ました",
-//   tags: ["ta", "mashita", "verbs"]
-// };
 
 export const janai: GrammarPoint = {
   slug: "じゃない",
   title: "じゃない",
   subtitle: "Is not (negation)",
   titleRomaji: "janai",
-  tags: ["nai"]
+  tags: ["nai", "dehaarimasen", "dehanai", "jaarimasen", "negative", "ではありません", "ではない", "じゃありません"]
 };
 
 export const ka: GrammarPoint = {

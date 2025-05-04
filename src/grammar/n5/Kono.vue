@@ -66,7 +66,8 @@
       <span class="g">どの</span> means "which" and is used to ask about specific items.
       Note that this word can only be use when there are three or more items to choose from. When the choice is between two items another word <span class="g">どっち</span>(の) is used.
       <br><br>
-      Also note that like many question words <span class="g">どの</span> and <span class="g">どっち</span>(の) cannot be used with the particle は. Instead they must be followed by が when used in a question.
+      <div class="note">Note:</div>
+      Like many question words, <span class="g">どの</span> and <span class="g">どっち</span>(の) cannot be used with the particle は. Instead they must be followed by が when used in a question.
       <GrammarExample>
         <template #example>
           <span class="g">どの</span>かばんが<ruby>田中<rt>たなか</rt></ruby>さんのですか

@@ -28,6 +28,11 @@ body {
   }
 }
 
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
 #app {
   display: flex;
   flex-direction: column;
