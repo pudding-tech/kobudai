@@ -60,6 +60,10 @@ a {
   color: var(--stem-change-highlight);
 }
 
+.remove {
+  color: var(--remove-highlight);
+}
+
 .k {
   color: var(--kanji-highlight);
 }
@@ -121,6 +125,16 @@ ruby rt {
   margin-top: 40px;
 }
 
+.structure-inner {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: var(--p-content-border-radius);
+  border: 1px dashed var(--grammar-card-border);
+  border-width: 2px;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
 .table-highlight-row {
   background-color: var(--selected-row-color) !important;
 }
@@ -148,6 +162,10 @@ ruby rt {
   margin-bottom: 2px;
 }
 
+.mt {
+  margin-top: 20px;
+}
+
 /*
 * Variables
 */
@@ -162,6 +180,7 @@ ruby rt {
   --grammar-highlight-bg-mobile: #dddddd;
   --kanji-highlight: #a43ca1;
   --stem-change-highlight: #af6200; /* #998d00 */
+  --remove-highlight: #f65252;
   --grammar-point-title-highlight: #905f8f;
   --link-border-color: rgba(0, 0, 0, 0.2);
   --note-text-color: rgb(165 63 63);
@@ -181,7 +200,6 @@ ruby rt {
   --grammar-structure-bg-mobile: #efefef;
   --grammar-structure-header: #d6d6d6;
   --grammar-structure-header-mobile: #fbfbfb;
-  --grammar-structure-inner-color: var(--p-zinc-100);
   --grammar-card-border: rgba(73, 73, 73, 0.27);
 
   /* GRAMMAR EXAMPLE */
@@ -231,6 +249,7 @@ ruby rt {
   --grammar-highlight-bg-mobile: #101012;
   --kanji-highlight: #e4c4e3;
   --stem-change-highlight: #c6c455;
+  --remove-highlight: #ff7171;
   --grammar-point-title-highlight: #e4c4e3;
   --link-border-color: rgba(255, 255, 255, 0.2);
   --note-text-color: rgb(213, 127, 127);
@@ -250,7 +269,6 @@ ruby rt {
   --grammar-structure-bg-mobile: #181818;
   --grammar-structure-header: #393939;
   --grammar-structure-header-mobile: #111111;
-  --grammar-structure-inner-color: var(--p-card-background);
   --grammar-card-border: rgba(73, 73, 73, 0.74);
 
   /* GRAMMAR EXAMPLE */

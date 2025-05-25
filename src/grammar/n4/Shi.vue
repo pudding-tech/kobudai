@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { breakpointService } from "@/services/breakpointService";
   import { shi as meta } from "./metadataN4";
 </script>
 
@@ -15,7 +14,7 @@
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       <div>Reason + <span class="grammar-highlight">し</span> + reason + <span class="grammar-highlight">し</span> + situation</div>
-      <div class="structure-inner" :class="breakpointService.isMobile() ? 'mobile': 'color'">
+      <div class="structure-inner">
         <div>(Verb) + <span class="grammar-highlight">し</span></div>
         <div>(い-adjective) + <span class="grammar-highlight">し</span></div>
         <div>(な-adjective) + <span class="grammar-highlight">だし</span></div>
@@ -117,7 +116,7 @@
         This is very natural in Japanese, especially in conversation.
         <GrammarExample>
           <template #example>
-            <ruby>今日<rt>きょう</rt></ruby>は<ruby>行<rt>い</rt></ruby>かない。<ruby>疲<rt>つか</rt></ruby>れてる<span class="g">し</span>、<ruby>雨<rt>あめ</rt></ruby>も<ruby>降<rt>ふ</rt></ruby>ってる<span class="g">し</span>
+            <ruby>今日<rt>きょう</rt></ruby>は<ruby>行<rt>い</rt></ruby>かない。<ruby>疲<rt>つか</rt></ruby>れている<span class="g">し</span>、<ruby>雨<rt>あめ</rt></ruby>も<ruby>降<rt>ふ</rt></ruby>っている<span class="g">し</span>
           </template>
           <template #translation>
             I'm not going today. I'm tired, and it's raining too.
@@ -132,24 +131,6 @@
 </template>
 
 <style scoped>
-.structure-inner {
-  margin-top: 10px;
-  padding: 10px 12px;
-  border-radius: var(--p-content-border-radius);
-  border: 1px dashed var(--grammar-card-border);
-  border-width: 2px;
-  line-height: 1.7;
-  word-break: keep-all;
-
-  &.color {
-    background-color: var(--grammar-structure-inner-color);
-  }
-
-  &.mobile {
-    border: 1px solid var(--line-color);
-  }
-}
-
 .subtitle {
   font-size: 1.1rem;
   font-weight: 500;

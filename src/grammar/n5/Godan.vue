@@ -3,7 +3,7 @@
   import HiraganaChart from "../common/HiraganaChart.vue";
   import GodanMoveChart from "../common/GodanMoveChart.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
-  import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
+  // import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
   import { godan as meta, godanNegative, godanPast, ichidan } from "./metadataN5";
@@ -89,9 +89,9 @@
       </ul>
       <br>
       Understanding the five-step chart is essential for mastering godan verb conjugation, as it provides a clear and systematic way to predict how verbs will change in different grammatical contexts.
-      <div class="section">
+      <!-- <div class="section">
         <DistinguishVerbTypes type="godan" />
-      </div>
+      </div> -->
       <div class="section">
         <IrregularVerbs />
       </div>

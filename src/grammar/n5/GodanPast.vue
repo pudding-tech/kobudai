@@ -215,8 +215,4 @@
   opacity: 0.8;
   margin-bottom: 18px;
 }
-
-.mt {
-  margin-top: 20px;
-}
 </style>

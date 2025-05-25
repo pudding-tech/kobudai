@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { te as meta, godan, godanNonPast, godanNegative, godanPast } from "./metadataN5";
+  import { teAdjective as meta, godan, godanNonPast, godanNegative, godanPast } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -13,54 +13,7 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      <div class="structure-title top">
-        Godan
-      </div>
-      <div class="kanji-mb">
-        <ruby>買<rt>か</rt>う</ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight">って</span></ruby>
-      </div>
-      <div class="kanji-mb">
-        <ruby>待<rt>ま</rt>つ</ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight">って</span></ruby>
-      </div>
-      <div class="kanji-mb">
-        <ruby>取<rt>と</rt>る</ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight">って</span></ruby>
-      </div>
-      <div class="kanji-mb" style="margin-top: 15px">
-        <ruby>読<rt>よ</rt>む</ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight">んで</span></ruby>
-      </div>
-      <div class="kanji-mb">
-        <ruby>遊<rt>あそ</rt>ぶ</ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight">んで</span></ruby>
-      </div>
-      <div class="kanji-mb">
-        <ruby>死<rt>し</rt>ぬ</ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight">んで</span></ruby>
-      </div>
-      <div class="kanji-mb" style="margin-top: 15px">
-        <ruby>書<rt>か</rt>く</ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight">いて</span></ruby>
-      </div>
-      <div class="kanji-mb">
-        <ruby>泳<rt>およ</rt>ぐ</ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight">いで</span></ruby>
-      </div>
-      <div class="kanji-mb">
-        <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight">して</span></ruby>
-      </div>
-      <div class="structure-title">
-        Ichidan
-      </div>
-      <div class="kanji-mb">
-        <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt>べ<span class="grammar-highlight">て</span></ruby>
-      </div>
-      <div class="structure-title">
-        Exceptions
-      </div>
-      <div class="kanji-mb">
-        <span>する</span> → <span class="grammar-highlight">して</span>
-      </div>
-      <div class="kanji-mb">
-        <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>て</span>
-      </div>
-      <div>
-        <span><ruby>行<rt>い</rt>く</ruby></span> → <span class="grammar-highlight"><ruby>行<rt>い</rt></ruby>って</span>
-      </div>
+      
     </template>
     <template #related>
       <div class="related-mb">
@@ -86,7 +39,7 @@
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Te-Form of Verbs</div>
+      <div class="grammar-point-title">The Te-Form of Adjectives</div>
       The <span class="g">て</span>-form is one of the most versatile verb forms in Japanese, serving a wide range of grammatical purposes.
       It's essential for connecting clauses, giving commands, asking for permission, expressing continuous actions, and much more.
       <br><br>

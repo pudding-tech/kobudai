@@ -31,10 +31,16 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n5.ne.slug]: () => import("./n5/Ne.vue").then(processImport),
   [n5.no.slug]: () => import("./n5/No.vue").then(processImport),
   [n5.te.slug]: () => import("./n5/Te.vue").then(processImport),
+  [n5.teAdjective.slug]: () => import("./n5/TeAdjective.vue").then(processImport),
   [n5.yo.slug]: () => import("./n5/Yo.vue").then(processImport),
   /* -- */
   /* N4 */
   /* -- */
+  [n4.gahoshi.slug]: () => import("./n4/Gahoshi.vue").then(processImport),
+  [n4.kamoshirenai.slug]: () => import("./n4/Kamoshirenai.vue").then(processImport),
+  [n4.nara.slug]: () => import("./n4/Nara.vue").then(processImport),
   [n4.potentialVerbs.slug]: () => import("./n4/PotentialVerbs.vue").then(processImport),
-  [n4.shi.slug]: () => import("./n4/Shi.vue").then(processImport)
+  [n4.shi.slug]: () => import("./n4/Shi.vue").then(processImport),
+  [n4.sou.slug]: () => import("./n4/Sou.vue").then(processImport),
+  [n4.temiru.slug]: () => import("./n4/Temiru.vue").then(processImport),
 };

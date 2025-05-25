@@ -19,7 +19,7 @@
       
     </template>
     <template #explanation>
-      The sentence-ending particle <span class="g">か</span> in Japanese is used to form questions. It’s placed at the end of a sentence to indicate that the sentence is a question, similar to how a question mark works in English.
+      The sentence-ending particle <span class="g">か</span> in Japanese is used to form questions. It's placed at the end of a sentence to indicate that the sentence is a question, similar to how a question mark works in English.
       <GrammarExample>
         <template #example>
           これはペンです<span class="g">か</span>？
@@ -28,7 +28,11 @@
           Is this a pen?
         </template>
       </GrammarExample>
-      <span class="g">か</span> can be used with both polite (です) and plain forms (だ), but in informal conversation, it’s often dropped, and a rising intonation is used instead to indicate a question.
+      <div class="note">Note:</div>
+      In writing it is still common to include the question mark (?) at the end of a sentence, even when using <span class="g">か</span>.
+      <br><br>
+      The question particle <span class="g">か</span> is commonly used with polite forms like です, but it's not typically used after だ in casual speech.
+      In informal conversation, <span class="g">か</span> is often dropped entirely, and a rising intonation is used instead to indicate a question.
     </template>
   </GrammarStructure>
 </template>

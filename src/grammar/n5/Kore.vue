@@ -46,7 +46,7 @@
       <span class="g">それ</span> means "that" and is used for something near the listener.
       <GrammarExample>
         <template #example>
-          <span class="g">それ</span>は<ruby>本<rt>ほん</rt></ruby>ですか
+          <span class="g">それ</span>は<ruby>本<rt>ほん</rt></ruby>ですか？
         </template>
         <template #translation>
           Is that a book?
@@ -69,7 +69,7 @@
       Also note that like many question words <span class="g">どれ</span> and <span class="g">どっち</span> cannot be used with the particle は. Instead they must be followed by が when used in a question.
       <GrammarExample>
         <template #example>
-          <span class="g">どれ</span>が<ruby>田中<rt>たなか</rt></ruby>さんのかばんですか
+          <span class="g">どれ</span>が<ruby>田中<rt>たなか</rt></ruby>さんのかばんですか？
         </template>
         <template #translation>
           Which one is Tanaka's bag?
@@ -80,7 +80,7 @@
       </GrammarExample>
       <GrammarExample>
         <template #example>
-          <span class="g">どっち</span>が<ruby>田中<rt>たなか</rt></ruby>さんのかばんですか
+          <span class="g">どっち</span>が<ruby>田中<rt>たなか</rt></ruby>さんのかばんですか？
         </template>
         <template #translation>
           Which one is Tanaka's bag?

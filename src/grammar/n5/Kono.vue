@@ -17,7 +17,7 @@
       <span class="grammar-highlight">その</span> + Noun (near the listener)<br>
       <span class="grammar-highlight">あの</span> + Noun (away from both speaker and listener)<br>
       <span class="grammar-highlight">どの</span> + Noun<br>
-      <span class="grammar-highlight">どっち</span> + の + Noun
+      <span class="grammar-highlight">どっちの</span> + Noun
     </template>
     <template #related>
       <div class="related-mb">
@@ -64,13 +64,13 @@
       </GrammarExample>
 
       <span class="g">どの</span> means "which" and is used to ask about specific items.
-      Note that this word can only be use when there are three or more items to choose from. When the choice is between two items another word <span class="g">どっち</span>(の) is used.
+      Note that this word can only be use when there are three or more items to choose from. When the choice is between two items another word <span class="g">どっちの</span> is used.
       <br><br>
       <div class="note">Note:</div>
-      Like many question words, <span class="g">どの</span> and <span class="g">どっち</span>(の) cannot be used with the particle は. Instead they must be followed by が when used in a question.
+      Like many question words, <span class="g">どの</span> and <span class="g">どっちの</span> cannot be used with the particle は. Instead they must be followed by が when used in a question.
       <GrammarExample>
         <template #example>
-          <span class="g">どの</span>かばんが<ruby>田中<rt>たなか</rt></ruby>さんのですか
+          <span class="g">どの</span>かばんが<ruby>田中<rt>たなか</rt></ruby>さんのですか？
         </template>
         <template #translation>
           Which bag is Tanaka's?
@@ -81,7 +81,7 @@
       </GrammarExample>
       <GrammarExample>
         <template #example>
-          <span class="g">どっち</span>のかばんが<ruby>田中<rt>たなか</rt></ruby>さんのですか
+          <span class="g">どっちの</span>かばんが<ruby>田中<rt>たなか</rt></ruby>さんのですか？
         </template>
         <template #translation>
           Which bag is Tanaka's?

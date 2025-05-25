@@ -37,7 +37,6 @@ export const godanNonPast: GrammarPoint = {
   // title: "Godan verb (non-past)",
   // subtitle: "～う、～ます",
   subtitle: "～う、～つ、～る、～む、～ぶ、～ぬ、～く、～ぐ、～す、～ます",
-  // tags: ["u", "masu", "mas", "verbs"]
   tags: ["u", "tsu", "ru", "mu", "bu", "nu", "ku", "gu", "su", "masu", "mas", "verbs"]
 };
 
@@ -150,6 +149,14 @@ export const te: GrammarPoint = {
   subtitle: "～って、～んで、～いて、～いで、～して、～て",
   titleRomaji: "te form",
   tags: ["te", "te-form", "verbs", "conjunctive", "connecting", "clauses", "requests", "commands"]
+};
+
+export const teAdjective: GrammarPoint = {
+  slug: "て-adjective",
+  title: "て-form (adjective)",
+  subtitle: "～くて、～で",
+  titleRomaji: "te form (adjective)",
+  tags: ["te", "te-form", "adjective", "adjectives", "conjunctive", "connecting", "clauses"]
 };
 
 export const yo: GrammarPoint = {

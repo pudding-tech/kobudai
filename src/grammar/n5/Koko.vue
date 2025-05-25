@@ -45,7 +45,7 @@
       <span class="g">そこ</span> means "there" and refers to a place near the listener.
       <GrammarExample>
         <template #example>
-          <span class="g">そこ</span>はコンビニですか
+          <span class="g">そこ</span>はコンビニですか？
         </template>
         <template #translation>
           Is there a convenience store there?
@@ -65,7 +65,7 @@
       <span class="g">どこ</span> means "where" and is used to ask about locations.
       <GrammarExample>
         <template #example>
-          トイレは<span class="g">どこ</span>ですか
+          トイレは<span class="g">どこ</span>ですか？
         </template>
         <template #translation>
           Where is the bathroom?

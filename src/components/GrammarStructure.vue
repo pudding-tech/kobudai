@@ -5,11 +5,9 @@
   import { breakpointService } from "@/services/breakpointService";
 
   const props = withDefaults(defineProps<{
-    showPolite?: boolean,
-    polite?: boolean
+    showPolite?: boolean
   }>(), {
-    showPolite: false,
-    polite: false
+    showPolite: false
   });
 
   const emit = defineEmits(["politenessChange"]);
