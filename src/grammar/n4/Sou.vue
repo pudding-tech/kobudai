@@ -3,6 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { sou as meta } from "./metadataN4";
+  import { adverbs } from "@/grammar/n5/metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -21,7 +22,7 @@
       <div>Verb (ます stem) + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div class="structure-title">Negative</div>
       <div>い-adjective (negative) <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
-      <div>な-adjective + じゃない <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
+      <div>な-adjective (negative) <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div>Verb (negative) <s class="remove">[い]</s> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div class="structure-title">Exception</div>
       <div>いい → よい <s class="remove">[い]</s> + <span class="h">さ</span> + そう + <span v-if="isPolite">です</span><span v-else>だ</span></div>
@@ -88,7 +89,7 @@
         </template>
       </GrammarExample>
       <div class="note mt">Caution:</div>
-      A common mistake is using the word かわいそう, which one might think means "looks cute". However, かわいそう is a word in itself,
+      A common mistake is using the phrase かわいそう, which one might think means "looks cute". However, かわいそう is a word in itself,
       and actually means "pitiful" or "poor thing". It is used to express sympathy or compassion for someone or something that is in a difficult situation.
       可愛い (かわいい, "cute") is as discussed above based on appearence, and thus does not use <span class="g">～そう</span> in this context.
 
@@ -159,7 +160,11 @@
           <template #translation>
             Walk as if sleepy
           </template>
+          <template #note>
+            Literally: "Walk in a way that seems sleepy"
+          </template>
         </GrammarExample>
+        See <RouterLink :to="{ name: 'grammarLoader', params: { slug: adverbs.slug } }" class="link">{{ adverbs.title + " 「" + adverbs.subtitle }}」</RouterLink> for more details on adverbs.
       </div>
 
       <div class="note mt">Caution:</div>

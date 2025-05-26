@@ -1,6 +1,9 @@
 <script setup lang="ts">
-  import { computed, ref } from "vue";
+  import { computed, onMounted, ref, watch } from "vue";
+  import { useRoute, useRouter } from "vue-router";
+  import { getMainListByValue } from "@/lists";
   import { useListStore } from "@/stores/listStore";
+  import { isValidList } from "@/lists";
   import { breakpointService } from "@/services/breakpointService";
   import CustomSelectButton from "@/components/CustomSelectButton.vue";
   import GrammarListItem from "@/components/GrammarListItem.vue";
@@ -8,6 +11,8 @@
   import type { MainList, Section, Sublist } from "@/types/types";
 
   const listStore = useListStore();
+  const route = useRoute();
+  const router = useRouter();
 
   const selectedMainListValue = listStore.getMainList;
   const selectedSublistValue = computed({
@@ -19,7 +24,7 @@
   });
 
   const selectedMainList = computed<MainList | undefined>(() => {
-    return listStore.mainLists.find(list => list.value === selectedMainListValue.value);
+    return getMainListByValue(selectedMainListValue.value);
   });
 
   const selectedSublist = computed<Sublist | undefined>(() => {
@@ -41,6 +46,29 @@
   const isAllCollapsed = computed(() => !sections.value.some(section => activeSections.value.includes(section.value)));
   const expandedIcon = computed(() => isAllCollapsed.value ? "pi pi-eye" : "pi pi-eye-slash");
   const expandedText = computed(() => isAllCollapsed.value ? "Expand all" : "Collapse all");
+
+  onMounted(() => {
+    const mainList = route.params.mainlist as string | undefined;
+    const subList = route.params.sublist as string | undefined;
+
+    if (mainList && subList && isValidList(mainList, subList)) {
+      if (listStore.getMainList.value !== mainList) {
+        listStore.setMainList(mainList);
+      }
+      if (listStore.getSublist.value !== subList) {
+        listStore.setSublist(subList);
+      }
+    }
+    else {
+      router.replace({ name: "list", params: { mainlist: listStore.getMainList.value, sublist: listStore.getSublist.value } });
+    }
+  });
+
+  watch([selectedMainListValue, selectedSublistValue], ([main, sub]) => {
+    if (route.params.mainlist !== main || route.params.sublist !== sub) {
+      router.replace({ name: "list", params: { mainlist: main, sublist: sub } });
+    }
+  });
 
   const toggleCollapseAll = () => {
     if (isAllCollapsed.value) {
@@ -86,8 +114,9 @@
     <div>
       <div class="top-section">
         <div class="list-section">
-          <span v-if="selectedMainListValue === 'genki'" class="title">- GENKI -</span>
-          <span v-else-if="selectedMainListValue === 'jlpt'" class="title">- JLPT -</span>
+          <span class="title">
+            - {{ selectedMainList?.name.toUpperCase() }} -
+          </span>
           <CustomSelectButton v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
         </div>
         <Button :label="expandedText" :icon="expandedIcon" variant="text" severity="secondary" @click="toggleCollapseAll()" />
@@ -106,8 +135,9 @@
   </div>
   <div v-else>
     <div class="list-section mobile">
-      <span v-if="selectedMainListValue === 'genki'" class="title">- GENKI -</span>
-      <span v-else-if="selectedMainListValue === 'jlpt'" class="title">- JLPT -</span>
+      <span class="title">
+        - {{ selectedMainList?.name.toUpperCase() }} -
+      </span>
       <CustomSelectButton v-model="selectedSublistValue" :options="sublistOptions" class="sublist-selector" />
     </div>
     <div class="mobile-expand-section">

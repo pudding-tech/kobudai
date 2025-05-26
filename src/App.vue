@@ -9,7 +9,10 @@
   <Navbar />
   <div class="main" :class="{ 'full-view': !breakpointService.isMobile() }">
     <RouterView v-slot="{ Component, route }">
-      <component :is="Component" :key="route.path" />
+      <component
+        :is="Component"
+        :key="route.name === 'grammarLoader' ? route.params.slug : route.name"
+      />
     </RouterView>
   </div>
   <Footer />

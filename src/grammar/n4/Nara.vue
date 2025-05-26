@@ -32,7 +32,7 @@
       To use <span class="g">なら</span>, it should connect 2 sentences or clauses, where the first part is a condition or a topic that you accept as true,
       and the second part is your response or advice based on that condition.
       <ul>
-        <li>Clause 1 <span class="g">なら</span> clause 2 → Meaning, "If it's true that clause 1, then clause 2"</li>
+        <li>(Clause 1) <span class="g">なら</span> (clause 2) → Meaning, "If it's true that (clause 1), then (clause 2)"</li>
       </ul>
       <span class="g">なら</span> can attach to nouns, い-adjectives, な-adjectives, and verbs in their plain form. Technically speaking, when attaching to a verb or an い-adjective,
       <span class="g">なら</span> should be preceded by の, which is a nominalizer that turns the verb or adjective into a noun-like phrase. This is because, technically, <span class="g">なら</span>

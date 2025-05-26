@@ -25,6 +25,11 @@ body {
 
   &.mobile {
     background-color: var(--body-bg-mobile);
+
+    ul {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
   }
 }
 

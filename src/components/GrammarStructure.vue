@@ -1,7 +1,5 @@
 <script setup lang="ts">
   import { ref } from "vue";
-  import { useRouter } from "vue-router";
-  import { lastRoute } from "@/router/router";
   import { breakpointService } from "@/services/breakpointService";
 
   const props = withDefaults(defineProps<{
@@ -11,7 +9,6 @@
   });
 
   const emit = defineEmits(["politenessChange"]);
-  const router = useRouter();
 
   const isPolite = ref(false);
   const isZoom = ref(false);
@@ -27,15 +24,6 @@
 
   const politenessChange = () => {
     emit("politenessChange", isPolite.value);
-  };
-
-  const goHome = () => {
-    if (lastRoute?.name === "home") {
-      router.back();
-    }
-    else {
-      router.push({ name: "home" });
-    }
   };
 
   const headerMobile = ref({
@@ -79,7 +67,9 @@
   <div v-if="!breakpointService.isMobile()" class="container">
     <div class="bg">
       <div class="corner">
-        <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" @click="goHome()" />
+        <RouterLink :to="{ name: 'home' }">
+          <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" v-ripple />
+        </RouterLink>
       </div>
       <div class="header">
         <div class="title">

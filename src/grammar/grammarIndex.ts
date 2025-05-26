@@ -12,6 +12,7 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   /* N5 */
   /* -- */
   [n5.adjectivesI.slug]: () => import("./n5/AdjectivesI.vue").then(processImport),
+  [n5.adverbs.slug]: () => import("./n5/Adverbs.vue").then(processImport),
   [n5.desu.slug]: () => import("./n5/Desu.vue").then(processImport),
   [n5.godan.slug]: () => import("./n5/Godan.vue").then(processImport),
   [n5.godanNegative.slug]: () => import("./n5/GodanNegative.vue").then(processImport),

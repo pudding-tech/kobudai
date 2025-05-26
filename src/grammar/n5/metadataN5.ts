@@ -8,6 +8,14 @@ export const adjectivesI: GrammarPoint = {
   tags: ["i-adjectives", "adjective", "i"]
 };
 
+export const adverbs: GrammarPoint = {
+  slug: "adverbs",
+  title: "Adverbs",
+  subtitle: "～く、～に",
+  titleRomaji: "adverbs",
+  tags: ["adverbs", "adverb", "adverbial", "adverbials", "ku", "ni"]
+};
+
 export const desu: GrammarPoint = {
   slug: "です",
   title: "だ・です",

@@ -41,6 +41,13 @@ export const n5List: Sublist = {
         n5.godanPast,
         n5.ichidanPast
       ]
+    },
+    {
+      title: "SECTION 4",
+      value: 4,
+      grammarPoints: [
+        n5.adverbs
+      ]
     }
   ]
 };
