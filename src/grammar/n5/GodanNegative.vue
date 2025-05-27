@@ -118,11 +118,11 @@
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Negative Form of Godan Verbs</div>
+      <div class="grammar-title">The Negative Form of Godan Verbs</div>
       Negative forms of Japanese verbs indicate that an action is not taking place, or will not take place in the future.
 
       <div class="section">
-        <div class="subtitle">Plain negative (informal)</div>
+        <div class="grammar-subtitle">Plain negative (informal)</div>
         To create the plain negative form of a godan verb we can take a look at the godan five-step chart again. Move up on the chart, from the う row to the あ row, changing the sound of the final syllable.
         <div class="chart">
           <GodanChart :selected-row="1" :word-selection="2" :show-word-selection="false" />
@@ -149,7 +149,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Polite form</div>
+        <div class="grammar-subtitle">Polite form</div>
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
         To find the godan polite stem, first move the verb on the godan five-step chart to the い row.
 
@@ -172,7 +172,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Exceptions</div>
+        <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <div class="note mt">Note:</div>
         The verb ある (to exist, for inanimate objects) is irregular in its plain negative form, transforming to <span class="g">ない</span> instead of following typical conjugation patterns.
@@ -199,13 +199,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  /* color: #85ad9f; */
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

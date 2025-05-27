@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <div class="grammar-point-title">How to Distinguish Ichidan Verbs from Godan Verbs?</div>
+  <div class="grammar-title">How to Distinguish Ichidan Verbs from Godan Verbs?</div>
   While most verbs ending in <span :class="setStyle()">iru</span> or <span :class="setStyle()">eru</span> are ichidan verbs, there is no foolproof way to determine if a verb is ichidan solely based on its ending.
   However, there are a couple helpful pointers that can help suggest whether a verb is likely ichidan or godan.
   <br><br>

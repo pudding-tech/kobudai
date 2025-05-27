@@ -21,7 +21,7 @@
     <template #explanation>
       In Japanese, the basic sentence structure "X は Y" uses the particle <span class="g">は</span> (pronounced "wa") to mark the topic of the sentence. This structure is fundamental in Japanese and serves to introduce what the sentence is about.
       <div class="section">
-        <div class="subtitle">What does は do?</div>
+        <div class="grammar-subtitle">What does は do?</div>
         The <span class="g">は</span> particle tells the listener, “Hey, this is the thing we’re talking about.” Everything that follows provides some kind of comment, description, or information about that topic.
         In the sentence "X は Y", X is the topic, and Y is the information being shared about it.
         <br><br>
@@ -41,7 +41,7 @@
         </GrammarExample>
       </div>
       <div class="section">
-        <div class="subtitle">With copula: です and だ</div>
+        <div class="grammar-subtitle">With copula: です and だ</div>
         In many basic sentences, the topic marked by <span class="g">は</span> is followed by です or だ at the end.
         These words act as a copula, which is like the English verb “to be” — connecting the topic to its description or identity.
         <GrammarExample>
@@ -75,12 +75,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

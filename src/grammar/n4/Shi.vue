@@ -66,7 +66,7 @@
       While <span class="g">〜し</span> should technically be used with the plain form of the verb, adjective, or noun, it is not uncommon to see it used with the polite forms as well.
 
       <div class="section">
-        <div class="subtitle">Usage</div>
+        <div class="grammar-subtitle">Usage</div>
         This structure is particularly useful for expressing multiple reasons or adding a sense of "and also" to your statements. For example:
         <GrammarExample>
           <template #example>
@@ -129,13 +129,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  /* color: #85ad9f; */
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

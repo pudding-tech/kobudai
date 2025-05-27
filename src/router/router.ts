@@ -2,10 +2,8 @@ import { createRouter, createWebHistory, type RouteLocationNormalized } from "vu
 import Home from "@/views/Home.vue";
 import GrammarLoader from "@/views/GrammarLoader.vue";
 import NotFound from "../views/NotFound.vue";
-import { useListStore } from "@/stores/listStore";
 import { getMainListsValue } from "@/lists";
 
-const listStore = useListStore();
 const mainListRegex = getMainListsValue().join("|");
 let lastRoute: RouteLocationNormalized | null = null;
 
@@ -15,13 +13,13 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      redirect: () => {
-        return { name: "list", params: { mainlist: listStore.getMainList.value, sublist: listStore.getSublist.value } };
+      component: Home,
+      meta: {
+        title: "Kobudai"
       }
     },
     {
-      path: "/:mainlist?/:sublist?",
-      // path: `/:mainlist(${mainListRegex})/:sublist`,
+      path: `/:mainlist(${mainListRegex})/:sublist`,
       name: "list",
       component: Home,
       meta: {

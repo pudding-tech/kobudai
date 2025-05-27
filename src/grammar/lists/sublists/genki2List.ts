@@ -15,6 +15,7 @@ export const genki2List: Sublist = {
         n4.sou,
         n4.temiru,
         n4.nara,
+        n4.niFrequency,
         adverbs
       ]
     },

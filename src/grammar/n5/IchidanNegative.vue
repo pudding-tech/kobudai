@@ -72,11 +72,11 @@
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Negative Form of Ichidan Verbs</div>
+      <div class="grammar-title">The Negative Form of Ichidan Verbs</div>
       Negative forms of Japanese verbs indicate that an action is not taking place, or will not take place in the future.
 
       <div class="section">
-        <div class="subtitle">Plain negative (informal)</div>
+        <div class="grammar-subtitle">Plain negative (informal)</div>
         To create the plain negative form of an ichidan verb we drop the final syllable る to get the verb stem.
         Then, simply add <span class="g">ない</span> to the end.
 
@@ -94,7 +94,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Polite form</div>
+        <div class="grammar-subtitle">Polite form</div>
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
         The ichidan polite stem is the same stem as all the other conjugations use, which is found by dropping the final syllable る.
         For the polite negative form, add <span class="g">ません</span>.
@@ -113,7 +113,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Exceptions</div>
+        <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <GrammarExample>
           <template #example>
@@ -137,12 +137,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

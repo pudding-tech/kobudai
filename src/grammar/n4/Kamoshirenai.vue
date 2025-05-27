@@ -38,7 +38,7 @@
           (I) might eat
         </template>
         <template #note>
-          Using かもしれない with a verb
+          Use with a verb
         </template>
       </GrammarExample>
       <GrammarExample>
@@ -49,7 +49,7 @@
           Maybe it's expensive
         </template>
         <template #note>
-          Using かもしれない with an い-adjective
+          Use with an い-adjective
         </template>
       </GrammarExample>
       <GrammarExample>
@@ -60,7 +60,7 @@
           It might be quiet
         </template>
         <template #note>
-          Using かもしれない with a な-adjective
+          Use with a な-adjective
         </template>
       </GrammarExample>
       <GrammarExample>
@@ -71,7 +71,7 @@
           Maybe it's rain
         </template>
         <template #note>
-          Using かもしれない with a noun
+          Use with a noun
         </template>
       </GrammarExample>
       <!-- When using <span class="g">かもしれない</span> the level of certainty is low to moderate. This means you're not claiming something is true - you're speculating. -->
@@ -94,7 +94,7 @@
       </ul>
 
       <div class="section">
-        <div class="subtitle">Polite Form</div>
+        <div class="grammar-subtitle">Polite Form</div>
         In polite contexts, <span class="g">かもしれない</span> becomes <span class="g">かもしれません</span>. This is used in formal situations or when speaking to someone you don't know well.
         <GrammarExample>
           <template #example>
@@ -107,7 +107,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Expressing "maybe not"</div>
+        <div class="grammar-subtitle">Expressing "maybe not"</div>
         Even though <span class="g">かもしれない</span> has "not certain" in its meaning, it's not grammatically negative — so to say "maybe not,"
         you just negate the verb or adjective that comes before it.
         <GrammarExample>
@@ -130,12 +130,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

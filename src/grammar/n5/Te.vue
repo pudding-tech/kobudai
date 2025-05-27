@@ -86,11 +86,11 @@
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Te-Form of Verbs</div>
+      <div class="grammar-title">The Te-Form of Verbs</div>
       The <span class="g">て</span>-form is one of the most versatile verb forms in Japanese, serving a wide range of grammatical purposes.
       It's essential for connecting clauses, giving commands, asking for permission, expressing continuous actions, and much more.
       <br><br>
-      <div class="subtitle">Connecting clauses (conjunctive function)</div>
+      <div class="grammar-subtitle">Connecting clauses (conjunctive function)</div>
       The most basic and common use of the <span class="g">て</span>-form is its conjunctive function, which links sequential or simultaneous actions.
       <GrammarExample>
         <template #example>
@@ -110,7 +110,7 @@
           I met a friend and watched a movie
         </template>
       </GrammarExample>
-      <div class="subtitle">Making requests</div>
+      <div class="grammar-subtitle">Making requests</div>
       Another common use of the plain <span class="g">て</span>-form is for making casual requests.
       <GrammarExample>
         <template #example>
@@ -130,8 +130,8 @@
       See <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">て-form (adjective, noun)</RouterLink> for usage in adjectives and nouns.
 
       <div class="section">
-        <div class="grammar-point-title">How the て-Form is Created</div>
-        <div class="subtitle">Godan verbs</div>
+        <div class="grammar-title">How the て-Form is Created</div>
+        <div class="grammar-subtitle">Godan verbs</div>
         Godan verbs follow specific patterns based on their ending consonant in the dictionary form
         Here’s a breakdown of the changes:
 
@@ -166,7 +166,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Ichidan verbs</div>
+        <div class="grammar-subtitle">Ichidan verbs</div>
         For ichidan verbs, creating the <span class="g">て</span>-form is straightforward:
         Drop the final る and replace it with <span class="g">て</span>.
         <GrammarExample>
@@ -182,7 +182,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Exceptions</div>
+        <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <div class="note mt">Note:</div>
         The verb 行く (to go) is irregular in the <span class="g">て</span>-form, changing to <span class="g">行って</span> instead of following typical conjugation patterns.
@@ -200,12 +200,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

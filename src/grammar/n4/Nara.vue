@@ -57,9 +57,10 @@
       <div class="note mt">Note:</div>
       <span class="g">なら</span> comes from the more formal word <span class="g">ならば</span>, which is the hypothetical form of the old copula なり.
       In modern Japanese, <span class="g">ならば</span> is not very commonly used, but you might still see it in written texts or formal speeches.
+      The meaning remains the same, whichever version is used.
 
       <div class="section">
-        <div class="subtitle">なら Used to Contrast or Limit</div>
+        <div class="grammar-subtitle">なら Used to Contrast or Limit</div>
         One important way <span class="g">なら</span> is used in Japanese is to respond to a suggestion or condition and narrow down the situation.
         It often carries the nuance of "if it's that specific case, then..." — meaning the speaker is limiting what they're saying to only that case, or contrasting it with other possibilities.
         <GrammarExample>
@@ -86,12 +87,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

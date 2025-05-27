@@ -37,9 +37,10 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   /* -- */
   /* N4 */
   /* -- */
-  [n4.gahoshi.slug]: () => import("./n4/Gahoshi.vue").then(processImport),
+  [n4.gahoshi.slug]: () => import("./n4/GaHoshi.vue").then(processImport),
   [n4.kamoshirenai.slug]: () => import("./n4/Kamoshirenai.vue").then(processImport),
   [n4.nara.slug]: () => import("./n4/Nara.vue").then(processImport),
+  [n4.niFrequency.slug]: () => import("./n4/Ni-Frequency.vue").then(processImport),
   [n4.potentialVerbs.slug]: () => import("./n4/PotentialVerbs.vue").then(processImport),
   [n4.shi.slug]: () => import("./n4/Shi.vue").then(processImport),
   [n4.sou.slug]: () => import("./n4/Sou.vue").then(processImport),

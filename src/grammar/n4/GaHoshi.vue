@@ -50,7 +50,7 @@
       <!-- This construction is used to express the speaker's desire for something. It cannot be used to directly state the desire of someone else. -->
 
       <div class="section">
-        <div class="subtitle">Expressing what others want</div>
+        <div class="grammar-subtitle">Expressing what others want</div>
         Japanese has a subtle but important cultural rule: you generally cannot speak directly about someone else's internal emotional state, including what they "want".
         So, when talking about a third person's desire, you cannot use <span class="g">〜がほしい</span> directly. Instead you use the verb form:
         <ul>
@@ -69,7 +69,7 @@
             Literally, "My father appears to want a new TV"
           </template>
         </GrammarExample>
-        This way of speaking gives some emotional distance, which fits the Japanese tendency to avoid assuming others' feelings.
+        This way of speaking gives some emotional distance, which fits the Japanese tendency to avoid assuming the feelings of others.
 
         <div class="note mt">Note:</div>
         Note that <span class="g">欲しがる</span> is only used to describe the desires of someone else, not when speaking to the person or asking them directly.
@@ -87,7 +87,7 @@
       </div>
 
       <div class="section">
-        <!-- <div class="subtitle">Someone says they want</div> -->
+        <!-- <div class="grammar-subtitle">Someone says they want</div> -->
          If someone says they want something, it is also possible to say what they desire by using <span class="g">〜がほしい</span> together with と言っている.
          This is because you're reporting their own words, not assuming their feelings.
         <GrammarExample>
@@ -106,12 +106,5 @@
 <style scoped>
 .structure-title {
   font-size: 0.9em;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
 }
 </style>

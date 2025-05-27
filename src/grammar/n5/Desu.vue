@@ -59,7 +59,7 @@
       Their levels of formality and specific applications set them apart, however.
 
       <div class="section">
-        <div class="subtitle">The だ copula: Casual present affirmative</div>
+        <div class="grammar-subtitle">The だ copula: Casual present affirmative</div>
         <span class="g">だ</span> is a small but significant word in Japanese grammar, primarily used to assert that a noun or な-adjective is true and relevant in the present.
         Essentially, it acts as a marker of present tense and affirmation, confirming that something "is" or "exists in a certain way", here and now.
         <span class="g">だ</span> itself can be said to be "plain", as it's used in casual conversation or among friends.
@@ -85,7 +85,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">The です copula: Polite present affirmative - and politeness marker</div>
+        <div class="grammar-subtitle">The です copula: Polite present affirmative - and politeness marker</div>
         <span class="g">です</span> shares many characteristics with <span class="g">だ</span>, but also has additional functions. It is often described as the polite version of <span class="g">だ</span>,
         though this isn't entirely accurate — they don't derive from the same grammatical root, and operate differently gramatically. Like <span class="g">だ</span>, <span class="g">です</span> attaches to words to form a present affirmative sentence, but its primary role is to mark politeness.
         <GrammarExample>
@@ -119,12 +119,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

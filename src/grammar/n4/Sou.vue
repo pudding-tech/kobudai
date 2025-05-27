@@ -94,7 +94,7 @@
       可愛い (かわいい, "cute") is as discussed above based on appearence, and thus does not use <span class="g">～そう</span> in this context.
 
       <div class="section">
-        <div class="subtitle">Negative</div>
+        <div class="grammar-subtitle">Negative</div>
         <span class="g">～そう</span> can also be used with the negative forms, to express "doesn't look like" or "doesn't seem like".
         <ul style="padding-right: 40px;">
           <li>For negative い-adjectives: Remove the final い from くない, then add <span class="h">さ</span> and <span class="g">そう</span>.</li>
@@ -138,7 +138,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Modifying nouns and verbs</div>
+        <div class="grammar-subtitle">Modifying nouns and verbs</div>
         The adjective + <span class="g">～そう</span> combination can also be used to modify nouns and verbs.
         <span class="g">そう</span> is itself a な-adjective, so it can be used to modify nouns just like any other な-adjective.
         <GrammarExample>
@@ -189,13 +189,5 @@
 .structure-title {
   font-size: 0.9em;
   margin-top: 8px;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  /* color: #85ad9f; */
-  opacity: 0.8;
-  margin-bottom: 18px;
 }
 </style>

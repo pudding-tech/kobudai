@@ -149,11 +149,18 @@ ruby rt {
   filter: saturate(0.2);
 }
 
-.grammar-point-title {
+.grammar-title {
   font-size: 1.3rem;
-  color: var(--grammar-point-title-highlight);
+  color: var(--grammar-title-highlight);
   opacity: 0.9;
   margin-bottom: 20px;
+}
+
+.grammar-subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 18px;
 }
 
 .chart {
@@ -186,7 +193,7 @@ ruby rt {
   --kanji-highlight: #a43ca1;
   --stem-change-highlight: #af6200; /* #998d00 */
   --remove-highlight: #f65252;
-  --grammar-point-title-highlight: #905f8f;
+  --grammar-title-highlight: #905f8f;
   --link-border-color: rgba(0, 0, 0, 0.2);
   --note-text-color: rgb(165 63 63);
   --line-color: rgba(132, 132, 132, 0.4);
@@ -255,7 +262,7 @@ ruby rt {
   --kanji-highlight: #e4c4e3;
   --stem-change-highlight: #c6c455;
   --remove-highlight: #ff7171;
-  --grammar-point-title-highlight: #e4c4e3;
+  --grammar-title-highlight: #e4c4e3;
   --link-border-color: rgba(255, 255, 255, 0.2);
   --note-text-color: rgb(213, 127, 127);
   --line-color: rgba(255, 255, 255, 0.2);

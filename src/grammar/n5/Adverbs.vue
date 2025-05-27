@@ -79,8 +79,8 @@
         </template>
       </GrammarExample>
 
-      Note that there are also some adverbs that don't come from adjectives, often called "pure adverbs" or "independent adverbs".
-      These adverbs don't change form and are used directly in sentences without being derived from adjectives. Some examples include:
+      Note that there are also many adverbs that don't derive from adjectives, often called "pure adverbs" or "independent adverbs".
+      These adverbs don't change form and are used directly in sentences. Some examples include:
       <ul>
         <li>よく (often, well)</li>
         <li>たくさん (a lot, many)</li>
@@ -97,12 +97,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

@@ -24,6 +24,14 @@ export const nara: GrammarPoint = {
   tags: ["if", "in case", "nara", "conditional", "hypothetical", "ra"]
 };
 
+export const niFrequency: GrammarPoint = {
+  slug: "に-frequency",
+  title: "に (Frequency)",
+  subtitle: "Frequency of an action",
+  titleRomaji: "ni frequency",
+  tags: ["frequency", "ni", "how often", "how many times", "ni hindo"]
+};
+
 export const potentialVerbs: GrammarPoint = {
   slug: "potential-verb",
   title: "Potential verb",

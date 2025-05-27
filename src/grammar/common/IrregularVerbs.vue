@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="grammar-point-title">Irregular Verbs</div>
+  <div class="grammar-title">Irregular Verbs</div>
   In Japanese, most verbs follow regular conjugation patterns as either godan or ichidan verbs, but there are a few irregular verbs that don’t fit neatly into these categories.
   These are exceptions to standard conjugation rules and require special handling.
   Fortunately, there are only two truly irregular verbs in modern Japanese, <span class="g">する</span> (“to do”) and <span class="g">来る</span> (くる, “to come”),

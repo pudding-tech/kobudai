@@ -72,11 +72,11 @@
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Past Form of Ichidan Verbs</div>
+      <div class="grammar-title">The Past Form of Ichidan Verbs</div>
       The past form of Japanese verbs is used to describe actions that have already been completed, or events that have already happened.
 
       <div class="section">
-        <div class="subtitle">Plain form (informal)</div>
+        <div class="grammar-subtitle">Plain form (informal)</div>
         Since ichidan verbs have only one possible conjugation pattern, conjugating them is straightforward.
         To change an ichidan verb into the past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">た</span>.
         <GrammarExample>
@@ -93,7 +93,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Polite form</div>
+        <div class="grammar-subtitle">Polite form</div>
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
         To make an ichidan verb polite in the past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">ました</span>.
 
@@ -111,7 +111,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Exceptions</div>
+        <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <GrammarExample>
           <template #example>
@@ -126,12 +126,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

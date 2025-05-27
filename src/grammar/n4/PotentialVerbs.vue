@@ -74,7 +74,7 @@
       <RelatedGrammarList :related="related" />
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Potential Form of Verbs</div>
+      <div class="grammar-title">The Potential Form of Verbs</div>
       Potential verbs express the ability or possibility to perform an action. This is equivalent to saying "can" or "be able to" in English. For example, "I can eat" or "I am able to swim."
       The construction and use of potential verbs vary depending on whether the verb is godan or ichidan.
       <br><br>
@@ -188,13 +188,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  /* color: #85ad9f; */
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

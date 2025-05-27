@@ -118,11 +118,11 @@
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Past Form of Godan Verbs</div>
+      <div class="grammar-title">The Past Form of Godan Verbs</div>
       The past form of Japanese verbs is used to describe actions that have already been completed, or events that have already happened.
 
       <div class="section">
-        <div class="subtitle">Plain form (informal)</div>
+        <div class="grammar-subtitle">Plain form (informal)</div>
         The plain past tense form of godan verbs is created by changing the final syllable of the verb according to specific rules,
         depending on the ending sound of the verb in its dictionary form. Here’s a breakdown of the changes:
 
@@ -157,7 +157,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Polite form</div>
+        <div class="grammar-subtitle">Polite form</div>
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
         To make a godan verb polite, you first move the verb on the godan five-step chart to the い row.
 
@@ -180,7 +180,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Exceptions</div>
+        <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <div class="note mt">Note:</div>
         The verb 行く (to go) is irregular in its plain past form, changing to <span class="g">行った</span> instead of following typical conjugation patterns.
@@ -207,12 +207,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

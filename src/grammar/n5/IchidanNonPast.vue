@@ -72,7 +72,7 @@
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-point-title">The Non-Past Form (Present/Future) of Ichidan Verbs</div>
+      <div class="grammar-title">The Non-Past Form (Present/Future) of Ichidan Verbs</div>
       Japanese verbs do not have distinct forms to indicate the difference between present and future tense. Instead, Japanese uses a single verb form, often referred to as the <i>non-past form</i>, to express both present and future actions.
       The present tense does not indicate that an action is happening right now - see <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'ている' } }" class="link">ている</RouterLink> for that - but rather that it is a general or habitual action.
       <br><br>
@@ -102,7 +102,7 @@
       </GrammarExample>
 
       <div class="section">
-        <div class="subtitle">Dictionary form (plain)</div>
+        <div class="grammar-subtitle">Dictionary form (plain)</div>
         The non-past form (also known as the dictionary or plain form) of an ichidan verb is used in informal contexts, such as when speaking with friends or people of the same social rank.
         <br><br>
         This is the form you will find in dictionaries, and serves as the base form for many grammatical constructions.
@@ -121,7 +121,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Polite form</div>
+        <div class="grammar-subtitle">Polite form</div>
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
         Since ichidan verbs have only one possible conjugation pattern, conjugating them is straightforward.
         <br><br>
@@ -141,7 +141,7 @@
       </div>
 
       <div class="section">
-        <div class="subtitle">Exceptions</div>
+        <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <GrammarExample>
           <template #example>
@@ -156,12 +156,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin-bottom: 18px;
-}
-</style>

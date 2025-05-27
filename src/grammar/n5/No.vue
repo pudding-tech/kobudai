@@ -21,7 +21,7 @@
     <template #explanation>
       The particle <span class="g">の</span> in the pattern noun <span class="g">の</span> noun is used to show possession or describe the relationship between two nouns. It functions like the apostrophe (’s) in English or "of" in some contexts.
       <br><br>
-      <div class="subtitle">Possession</div>
+      <div class="grammar-subtitle">Possession</div>
       Indicates that something belongs to someone or something.
       <GrammarExample>
         <template #example>
@@ -31,7 +31,7 @@
           Tanaka's book
         </template>
       </GrammarExample>
-      <div class="subtitle">Description/Relation</div>
+      <div class="grammar-subtitle">Description/Relation</div>
       Links two nouns, where the first noun describes or modifies the second.
       <GrammarExample>
         <template #example>
@@ -45,12 +45,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.subtitle {
-  font-size: 1.1rem;
-  font-weight: 500;
-  opacity: 0.8;
-  margin: 6px 0;
-}
-</style>
