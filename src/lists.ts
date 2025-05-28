@@ -2,12 +2,12 @@ import { genkiList } from "@/grammar/lists/genkiList";
 import { jlptList } from "@/grammar/lists/jlptList";
 import type { MainList } from "@/types/types";
 
-const mainLists: MainList[] = [genkiList, jlptList];
+const mainLists: MainList[] = [jlptList, genkiList];
 const mainListsValue: string[] = mainLists.map(list => list.value);
 
 const sublists = {
-  [genkiList.value]: genkiList.sublists.map(sublist => sublist.value),
-  [jlptList.value]: jlptList.sublists.map(sublist => sublist.value)
+  [jlptList.value]: jlptList.sublists.map(sublist => sublist.value),
+  [genkiList.value]: genkiList.sublists.map(sublist => sublist.value)
 };
 
 const defaultMainList = genkiList.value;

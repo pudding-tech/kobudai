@@ -24,7 +24,8 @@ export const genki2List: Sublist = {
       value: 2,
       grammarPoints: [
         n4.gahoshi,
-        n4.kamoshirenai
+        n4.kamoshirenai,
+        n4.givingReceiving,
       ]
     }
   ]

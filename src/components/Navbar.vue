@@ -1,15 +1,13 @@
 <script setup lang="ts">
   import { computed, ref, watch } from "vue";
+  import { getMainLists } from "@/lists";
   import { useListStore } from "@/stores/listStore";
   import { useThemeStore } from "@/stores/themeStore";
   import { breakpointService } from "@/services/breakpointService";
   import { search } from "@/services/searchService";
-  import { genkiList } from "@/grammar/lists/genkiList";
-  import { jlptList } from "@/grammar/lists/jlptList";
   import MobileSettings from "./MobileSettings.vue";
   import SearchResults from "./SearchResults.vue";
   import CustomInputText from "./CustomInputText.vue";
-  import type { MainList } from "@/types/types";
 
   const listStore = useListStore();
   const themeStore = useThemeStore();
@@ -18,7 +16,7 @@
   const searchMobileOpen = ref(false);
   const searchComponent = ref();
 
-  const mainLists = ref<MainList[]>([genkiList, jlptList]);
+  const mainLists = ref(getMainLists());
   const mainListOptions = ref(mainLists.value.map(list => ({ label: list.name, value: list.value })));
   const selectedMainListValue = computed({
     get: () => listStore.getMainList.value,

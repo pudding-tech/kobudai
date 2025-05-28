@@ -38,6 +38,7 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   /* N4 */
   /* -- */
   [n4.gahoshi.slug]: () => import("./n4/GaHoshi.vue").then(processImport),
+  [n4.givingReceiving.slug]: () => import("./n4/GivingReceiving.vue").then(processImport),
   [n4.kamoshirenai.slug]: () => import("./n4/Kamoshirenai.vue").then(processImport),
   [n4.nara.slug]: () => import("./n4/Nara.vue").then(processImport),
   [n4.niFrequency.slug]: () => import("./n4/Ni-Frequency.vue").then(processImport),

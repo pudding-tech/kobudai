@@ -8,6 +8,14 @@ export const gahoshi: GrammarPoint = {
   tags: ["want", "want something", "gahoshi", "noun", "noun phrase"]
 };
 
+export const givingReceiving: GrammarPoint = {
+  slug: "あげる-くれる-もらう",
+  title: "あげる・くれる・もらう",
+  subtitle: "Giving and receiving",
+  titleRomaji: "ageru kureru morau",
+  tags: ["giving", "receiving", "ageru", "kureru", "morau", "give", "receive", "gift", "exchange"]
+};
+
 export const kamoshirenai: GrammarPoint = {
   slug: "かもしれない",
   title: "かもしれない",
