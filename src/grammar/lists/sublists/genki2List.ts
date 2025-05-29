@@ -27,6 +27,13 @@ export const genki2List: Sublist = {
         n4.kamoshirenai,
         n4.givingReceiving,
       ]
+    },
+    {
+      title: "CHAPTER 15",
+      value: 3,
+      grammarPoints: [
+        n4.volitionalVerbs
+      ]
     }
   ]
 };

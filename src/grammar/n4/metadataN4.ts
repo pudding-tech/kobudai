@@ -70,3 +70,10 @@ export const temiru: GrammarPoint = {
   titleRomaji: "temiru",
   tags: ["try to", "try doing", "temiru", "try something"]
 };
+
+export const volitionalVerbs: GrammarPoint = {
+  slug: "volitional-verb",
+  title: "Volitional verb",
+  subtitle: "～う、～よう、～ましょう (let's, shall we)",
+  tags: ["volitional", "let's", "shall we", "verb", "godan", "ichidan", "volitional form"]
+};

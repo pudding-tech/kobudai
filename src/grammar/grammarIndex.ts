@@ -46,4 +46,5 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n4.shi.slug]: () => import("./n4/Shi.vue").then(processImport),
   [n4.sou.slug]: () => import("./n4/Sou.vue").then(processImport),
   [n4.temiru.slug]: () => import("./n4/Temiru.vue").then(processImport),
+  [n4.volitionalVerbs.slug]: () => import("./n4/VolitionalVerbs.vue").then(processImport)
 };

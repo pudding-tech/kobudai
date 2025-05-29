@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { godanNegative, godanNonPast, godanPast } from "@/grammar/n5/metadataN5";
-  import { potentialVerbs } from "../n4/metadataN4";
+  import { godanNegative, godanNonPast, godanPast, te } from "@/grammar/n5/metadataN5";
+  import { potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { GodanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -18,18 +18,13 @@
 
   const word = ref(props.wordSelection - 1);
   const wordOptions = ref([
-    { label: "買う", value: 0, translation: "to buy" },
-    { label: "行く", value: 1, translation: "to go" },
-    { label: "話す", value: 2, translation: "to speak" }
+    { label: "行く", value: 0, translation: "to go" },
+    { label: "乗る", value: 1, translation: "to ride" },
+    { label: "話す", value: 2, translation: "to speak" },
+    { label: "買う", value: 3, translation: "to buy" }
   ]);
 
   const examples = ref<GodanChartExample[]>([
-    {
-      kanaRow: ["あ", "い", "う", "え", "お"],
-      kanji: "買",
-      furigana: "か",
-      okurigana: ["わ", "い", "う", "え", "お"]
-    },
     {
       kanaRow: ["か", "き", "く", "け", "こ"],
       kanji: "行",
@@ -37,10 +32,22 @@
       okurigana: ["か", "き", "く", "け", "こ"]
     },
     {
+      kanaRow: ["ら", "り", "る", "れ", "ろ"],
+      kanji: "乗",
+      furigana: "の",
+      okurigana: ["ら", "り", "る", "れ", "ろ"]
+    },
+    {
       kanaRow: ["さ", "し", "す", "せ", "そ"],
       kanji: "話",
       furigana: "はな",
       okurigana: ["さ", "し", "す", "せ", "そ"]
+    },
+    {
+      kanaRow: ["あ", "い", "う", "え", "お"],
+      kanji: "買",
+      furigana: "か",
+      okurigana: ["わ*", "い", "う", "え", "お"]
     }
   ]);
 
@@ -53,7 +60,7 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana[0]
       },
-      suffix: "ない",
+      suffix: "～ない、～なかった",
       grammarPoint: [godanNegative, { slug: null, title: "Negative past verb (godan)" }],
       rowNr: 1
     },
@@ -65,8 +72,8 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana[1]
       },
-      suffix: "ます",
-      grammarPoint: [godanNonPast, godanNegative, godanPast, { slug: null, title: "Te-form" }],
+      suffix: "～ます、（～た）、（～て）",
+      grammarPoint: [godanNonPast, godanNegative, godanPast, te],
       rowNr: 2
     },
     {
@@ -89,20 +96,20 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana[3]
       },
-      suffix: "る、ば",
+      suffix: "～る、～ば",
       grammarPoint: [potentialVerbs],
       rowNr: 4
     },
     {
       row: examples.value[word.value].kanaRow[4],
-      forms: "Volitional (let's...)",
+      forms: "Volitional",
       stem: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana[4]
       },
-      suffix: "う",
-      grammarPoint: [{ slug: null, title: null }],
+      suffix: "～う",
+      grammarPoint: [volitionalVerbs],
       rowNr: 5
     }
   ]);
@@ -151,7 +158,7 @@
           </div>
         </template>
       </Column>
-      <Column v-if="!breakpointService.isMobile()" field="suffix" header="Conjugations">
+      <Column v-if="!breakpointService.isMobile()" field="suffix" header="Endings">
         <template #body="slotProps">
           <div class="text">
             {{ slotProps.data.suffix }}

@@ -115,6 +115,15 @@
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <GrammarExample>
           <template #example>
+            <div>する → <span class="g">した</span></div>
+            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>た</span></div>
+          </template>
+          <template #note>
+            Plain past form of exceptions
+          </template>
+        </GrammarExample>
+        <GrammarExample>
+          <template #example>
             <div>する → <span class="g">しました</span></div>
             <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ました</span></div>
           </template>

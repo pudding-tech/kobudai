@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { ichidanNegative, ichidanNonPast, ichidanPast } from "@/grammar/n5/metadataN5";
-  import { potentialVerbs } from "../n4/metadataN4";
+  import { ichidanNegative, ichidanNonPast, ichidanPast, te } from "@/grammar/n5/metadataN5";
+  import { potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { IchidanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -58,7 +58,7 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana
       },
-      suffix: "ない",
+      suffix: "～ない、～なかった",
       grammarPoint: [ichidanNegative, { slug: null, title: "Negative past verb (ichidan)" }],
       rowNr: 1
     },
@@ -70,8 +70,8 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana
       },
-      suffix: "ます",
-      grammarPoint: [ichidanNonPast, ichidanNegative, ichidanPast, { slug: null, title: "Te-form" }],
+      suffix: "～ます、～た、～て",
+      grammarPoint: [ichidanNonPast, ichidanNegative, ichidanPast, te],
       rowNr: 2
     },
     {
@@ -82,7 +82,7 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana
       },
-      suffix: "る",
+      suffix: "～る",
       grammarPoint: [ichidanNonPast],
       rowNr: 3
     },
@@ -94,20 +94,20 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana
       },
-      suffix: "られる、れば",
+      suffix: "～られる、～れば",
       grammarPoint: [potentialVerbs],
       rowNr: 4
     },
     {
       row: examples.value[word.value].kanaRow,
-      forms: "Volitional (let's...)",
+      forms: "Volitional",
       stem: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana
       },
-      suffix: "よう",
-      grammarPoint: [{ slug: null, title: null }],
+      suffix: "～よう",
+      grammarPoint: [volitionalVerbs],
       rowNr: 5
     }
   ]);
@@ -156,7 +156,7 @@
           </div>
         </template>
       </Column>
-      <Column v-if="!breakpointService.isMobile()" field="suffix" header="Conjugations">
+      <Column v-if="!breakpointService.isMobile()" field="suffix" header="Endings">
         <template #body="slotProps">
           <div class="text">
             {{ slotProps.data.suffix }}

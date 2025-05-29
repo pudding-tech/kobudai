@@ -4,7 +4,7 @@
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { ichidan as meta, godan, ichidanNonPast } from "./metadataN5";
+  import { ichidan as meta, godan, ichidanPast, te } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -60,10 +60,9 @@
         <ul>
           <li class="list">The continuative form is often used to chain actions together or combine with helper verbs like ～たい.</li>
           <li class="list">
-            This form is also the basis for the plain past and te-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
-            For more information about this, see
-            <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNonPast.slug } }" class="link">{{ ichidanNonPast.title }}</RouterLink> or
-            <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'て' } }" class="link">て-form</RouterLink>.
+            This form is also the basis for the plain past and te-form conjugations, see
+            <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPast.slug } }" class="link">{{ ichidanPast.title }}</RouterLink> or
+            <RouterLink :to="{ name: 'grammarLoader', params: { slug: te.slug } }" class="link">て-form</RouterLink>.
           </li>
         </ul>
         <li class="list"><b>Dictionary/Plain Form:</b> The base form of the verb, ending in an <i>iru/eru</i> sound.</li>

@@ -6,7 +6,7 @@
   // import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { godan as meta, godanNegative, godanPast, ichidan } from "./metadataN5";
+  import { godan as meta, godanNegative, godanPast, ichidan, te } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -69,7 +69,7 @@
         <ul>
           <li class="list">For the plain negative form one adds ない to the stem (e.g. 行かない, to not go).</li>
           <li class="list">For the plain negative past form one adds なかった to the stem (e.g. 行かなかった, did not go).</li>
-          <li class="list">Note that when the verb ends in <span class="h">う</span> it becomes <span class="h">わ</span>, not あ. See <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink> for more information.</li>
+          <li class="list"><span class="h">*</span> Note that when the verb ends in <span class="h">う</span> it becomes <span class="h">わ</span>, not あ. See <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink> for more information.</li>
         </ul>
         <li class="list"><b>Continuative, Polite:</b> The verb stem changes to end in a <span class="h">い</span> sound.</li>
         <ul>
@@ -80,7 +80,7 @@
             This form is also the basis for the plain past and て-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
             For more information about this, see
             <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink> or
-            <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'て' } }" class="link">て-form</RouterLink>.
+            <RouterLink :to="{ name: 'grammarLoader', params: { slug: te.slug } }" class="link">て-form</RouterLink>.
           </li>
         </ul>
         <li class="list"><b>Dictionary/Plain Form:</b> The base form of the verb, ending in a kana of the <span class="h">う</span> sound.</li>

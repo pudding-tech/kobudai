@@ -61,7 +61,7 @@
       When using adverbs, they typically come before the verb they modify, just like in English.
       <GrammarExample>
         <template #example>
-          <div><ruby>今日<rt>きょう</rt></ruby>は<ruby>目覚<rt>めざ</rt></ruby>ましをセットし忘れて、遅<span class="g">く</span><ruby>起<rt>お</rt></ruby>きた</div>
+          <div><ruby>今日<rt>きょう</rt></ruby>は<ruby>目覚<rt>めざ</rt></ruby>ましをセットし<ruby>忘<rt>わす</rt></ruby>れて、<ruby>遅<rt>おそ</rt></ruby><span class="g">く</span><ruby>起<rt>お</rt></ruby>きた</div>
         </template>
         <template #translation>
           Today, I forgot to set my alarm and woke up late

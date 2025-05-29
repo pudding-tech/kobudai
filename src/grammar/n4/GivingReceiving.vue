@@ -21,10 +21,9 @@
 
     </template>
     <template #explanation>
-      The act of giving and receiving depends not only on who gives and who receives, but also on perspective —
-      that is, whether the speaker is looking at the situation from their own point of view or from someone else's.
-      <span class="g">あげる</span> and <span class="g">くれる</span> both mean "to give", but they are used in different contexts depending on the perspective of the speaker.
-      <span class="g">もらう</span> means "to receive", and is used when the speaker is the receiver.
+      The act of giving and receiving in Japanese depends not only on who gives and who receives, but also on the speaker's relationship to the people involved.
+      <span class="g">あげる</span> and <span class="g">くれる</span> both mean 'to give', but they are used in different contexts depending on the direction of the action relative to the speaker.
+      <span class="g">もらう</span> means 'to receive', and is used when the speaker (or someone close to them) is the receiver.
       <div class="note mt">Note:</div>
       <span class="g">もらう</span> is a godan verb. <span class="g">あげる</span> and <span class="g">くれる</span> are both ichidan verbs, and conjugate as such.
       <br><br>
@@ -34,7 +33,7 @@
       and whether you're speaking from your own perspective or considering someone else's.
 
       <div class="section">
-        <div class="grammar-subtitle">あげる — "to give" (from me/us to others)</div>
+        <div class="grammar-subtitle">あげる — 'To give' (from me/us to others)</div>
         <span class="g">あげる</span> is used when the giver is the speaker (or someone in the speaker's group), and the receiver is someone else.
         <ul>
           <li>[giver] は [receiver] に あげる</li>
@@ -61,7 +60,7 @@
       </div>
 
       <div class="section">
-        <div class="grammar-subtitle">くれる — "to give" (to me/us)</div>
+        <div class="grammar-subtitle">くれる — 'To give' (to me/us)</div>
         <span class="g">くれる</span> is used when someone gives something to the speaker or someone close to the speaker (in the speaker's "in-group").
         <ul>
           <li>[giver] は [receiver (me/someone close)] に くれる</li>
@@ -88,7 +87,7 @@
       </div>
 
       <div class="section">
-        <div class="grammar-subtitle">もらう — "to receive"</div>
+        <div class="grammar-subtitle">もらう — 'To receive'</div>
         <span class="g">もらう</span> is used when you (or someone close to you) receive something from someone.
         <ul>
           <li>[receiver] は [giver] に／から <span class="g">もらう</span></li>
@@ -118,6 +117,38 @@
             This is okay if the brother is considered "in-group" or the speaker is close to them
           </template>
         </GrammarExample>
+      </div>
+
+      <div class="section">
+        <div class="grammar-subtitle">くれる vs もらう — Different views of the same action</div>
+        At their core, <span class="g">もらう</span> and <span class="g">くれる</span> describe the same situation — you receiving something — but they highlight different
+        sides of it depending on what you want to emphasize.
+        The key difference is whether you focus on you, the receiver (<span class="g">もらう</span>), or the giver (<span class="g">くれる</span>) as the topic or subject of the sentence.
+        <br><br>
+        Take a look at these sentences, both describing the same event:
+        <GrammarExample>
+          <template #example>
+            <ruby>田中<rt>たなか</rt></ruby>さんから<ruby>本<rt>ほん</rt></ruby>を<span class="g">もらいました</span>
+          </template>
+          <template #translation>
+            (I) received a book from Tanaka-san
+          </template>
+          <template #note>
+            From your perspective — focusing on <b>yourself</b> as the receiver
+          </template>
+        </GrammarExample>
+        <GrammarExample>
+          <template #example>
+            <ruby>田中<rt>たなか</rt></ruby>さんが<ruby>本<rt>ほん</rt></ruby>を<span class="g">くれました</span>
+          </template>
+          <template #translation>
+            Tanaka-san gave (me) a book
+          </template>
+          <template #note>
+            From your perspective — focusing on <b>Tanaka-san</b> as the giver
+          </template>
+        </GrammarExample>
+        Remember, you don't generally speak from other people's perspectives in Japanese — so both of these are still describing the situation from <i>your</i> point of view.
       </div>
     </template>
   </GrammarStructure>
