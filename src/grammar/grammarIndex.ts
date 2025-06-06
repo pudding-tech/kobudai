@@ -37,6 +37,7 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   /* -- */
   /* N4 */
   /* -- */
+  [n4.ba.slug]: () => import("./n4/Ba.vue").then(processImport),
   [n4.gahoshi.slug]: () => import("./n4/GaHoshi.vue").then(processImport),
   [n4.givingReceiving.slug]: () => import("./n4/GivingReceiving.vue").then(processImport),
   [n4.kamoshirenai.slug]: () => import("./n4/Kamoshirenai.vue").then(processImport),
@@ -45,6 +46,7 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n4.potentialVerbs.slug]: () => import("./n4/PotentialVerbs.vue").then(processImport),
   [n4.shi.slug]: () => import("./n4/Shi.vue").then(processImport),
   [n4.sou.slug]: () => import("./n4/Sou.vue").then(processImport),
+  [n4.tara.slug]: () => import("./n4/Tara.vue").then(processImport),
   [n4.temiru.slug]: () => import("./n4/Temiru.vue").then(processImport),
   [n4.volitionalVerbs.slug]: () => import("./n4/VolitionalVerbs.vue").then(processImport)
 };

@@ -105,7 +105,13 @@ ruby rt {
   &.top {
     padding-top: 0;
   }
+
+  &.small {
+    font-size: 0.9em;
+    margin-top: 8px;
+  }
 }
+
 .mobile .structure-title {
   font-size: 0.9rem;
 }

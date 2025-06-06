@@ -15,10 +15,10 @@
     <template #structure>
       <div>Reason + <span class="grammar-highlight">し</span> + reason + <span class="grammar-highlight">し</span> + situation</div>
       <div class="structure-inner">
-        <div>(Verb) + <span class="grammar-highlight">し</span></div>
-        <div>(い-adjective) + <span class="grammar-highlight">し</span></div>
-        <div>(な-adjective) + <span class="grammar-highlight">だし</span></div>
-        <div>(Noun) + <span class="grammar-highlight">だし</span></div>
+        <div>Verb + <span class="grammar-highlight">し</span></div>
+        <div>い-adjective + <span class="grammar-highlight">し</span></div>
+        <div>な-adjective + <span class="grammar-highlight">だし</span></div>
+        <div>Noun + <span class="grammar-highlight">だし</span></div>
       </div>
     </template>
     <template #related>

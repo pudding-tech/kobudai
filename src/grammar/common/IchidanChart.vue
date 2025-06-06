@@ -2,7 +2,7 @@
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
   import { ichidanNegative, ichidanNonPast, ichidanPast, te } from "@/grammar/n5/metadataN5";
-  import { potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
+  import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { IchidanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -95,7 +95,7 @@
         okurigana: examples.value[word.value].okurigana
       },
       suffix: "～られる、～れば",
-      grammarPoint: [potentialVerbs],
+      grammarPoint: [potentialVerbs, { slug: ba.slug, title: "Conditional verb" }],
       rowNr: 4
     },
     {

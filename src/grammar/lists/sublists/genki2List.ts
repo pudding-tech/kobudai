@@ -34,6 +34,20 @@ export const genki2List: Sublist = {
       grammarPoints: [
         n4.volitionalVerbs
       ]
+    },
+    {
+      title: "CHAPTER 17",
+      value: 5,
+      grammarPoints: [
+        n4.tara
+      ]
+    },
+    {
+      title: "CHAPTER 22",
+      value: 10,
+      grammarPoints: [
+        n4.ba
+      ]
     }
   ]
 };

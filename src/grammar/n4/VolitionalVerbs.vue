@@ -4,12 +4,11 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
   import RelatedGrammarList from "@/components/RelatedGrammarList.vue";
-  import { volitionalVerbs as meta, potentialVerbs } from "./metadataN4";
+  import { volitionalVerbs as meta, ba, potentialVerbs } from "./metadataN4";
   import { godan, godanNegative, godanNonPast, godanPast, ichidan, ichidanNegative, ichidanNonPast, ichidanPast } from "../n5/metadataN5";
-  import type { GrammarPoint } from "@/types/types";
 
   const isPolite = ref(false);
-  const related: GrammarPoint[] = [godan, ichidan, godanNonPast, ichidanNonPast, godanNegative, ichidanNegative, godanPast, ichidanPast, potentialVerbs];
+  const related: { slug: string, title: string }[] = [godan, ichidan, godanNonPast, ichidanNonPast, godanNegative, ichidanNegative, godanPast, ichidanPast, potentialVerbs, { slug: ba.slug, title: "Conditional verb (～ば)" }];
 </script>
 
 <script lang="ts">

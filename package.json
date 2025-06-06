@@ -12,19 +12,19 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@primevue/themes": "^4.3.4",
+    "@primevue/themes": "^4.3.5",
     "primeicons": "^7.0.0",
-    "primevue": "^4.3.4",
-    "vue": "^3.5.14",
+    "primevue": "^4.3.5",
+    "vue": "^3.5.16",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@tsconfig/node24": "^24.0.0",
+    "@tsconfig/node24": "^24.0.1",
     "@types/node": "^22.15.20",
     "@vitejs/plugin-vue": "^5.2.4",
     "@vue/eslint-config-typescript": "^14.5.0",
     "@vue/tsconfig": "^0.7.0",
-    "eslint": "^9.24.0",
+    "eslint": "^9.27.0",
     "eslint-plugin-vue": "^9.33.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.8.3",

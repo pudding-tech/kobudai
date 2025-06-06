@@ -2,7 +2,7 @@
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
   import { godanNegative, godanNonPast, godanPast, te } from "@/grammar/n5/metadataN5";
-  import { potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
+  import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { GodanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -97,7 +97,7 @@
         okurigana: examples.value[word.value].okurigana[3]
       },
       suffix: "～る、～ば",
-      grammarPoint: [potentialVerbs],
+      grammarPoint: [potentialVerbs, { slug: ba.slug, title: "Conditional verb" }],
       rowNr: 4
     },
     {

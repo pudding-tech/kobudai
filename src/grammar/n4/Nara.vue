@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { nara as meta } from "./metadataN4";
+  import { nara as meta, ba, tara } from "./metadataN4";
 </script>
 
 <script lang="ts">
@@ -15,14 +15,16 @@
     <template #structure>
       <div>Sentence 1 + <span class="grammar-highlight">なら</span> + Sentence 2</div>
       <div class="structure-inner">
-        <div>Noun + <span class="grammar-highlight">なら</span> + S2</div>
-        <div>い-adjective + <span class="grammar-highlight">なら</span> + S2</div>
-        <div>な-adjective + <span class="grammar-highlight">なら</span> + S2</div>
-        <div>Verb (plain form) + <span class="grammar-highlight">なら</span> + S2</div>
+        <div>Verb (plain form) + <span class="grammar-highlight">なら</span></div>
+        <div>い-adjective + <span class="grammar-highlight">なら</span></div>
+        <div>な-adjective + <span class="grammar-highlight">なら</span></div>
+        <div>Noun + <span class="grammar-highlight">なら</span></div>
       </div>
     </template>
     <template #related>
-      
+      Other conditionals:
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink></div>
     </template>
     <template #explanation>
       The word <span class="g">なら</span> is used when you want to say something like "if that's the case…" or "if that's true…".
@@ -39,28 +41,32 @@
       should only be used with nouns. However, in modern Japanese, this の is mostly droppped, and <span class="g">なら</span> attaches to the word directly.
 
       <div class="note mt">Note:</div>
-      Even though it often gets translated as "if", it cannot be used exactly the same as other Japanese words for "if" like たら or ば.
+      Even though it often gets translated as "if", it cannot be used exactly the same as other Japanese words for "if" like
+      <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink> or <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink>.
       <span class="g">なら</span> feels more like "if it's true that X…" or "speaking of X…". This means the speaker must believe that the condition is true.
       <GrammarExample>
         <template #example>
-          <div>Aさん: <ruby>日本<rt>にほん</rt></ruby>に<ruby>行<rt>い</rt></ruby>くつもりだよ</div>
-          <div>Bさん: <ruby>日本<rt>にほん</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<span class="g">なら</span>、<ruby>上野公園<rt>うえのこうえん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったほうがいいよ</div>
+          <div>Aさん: <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くつもりだよ</div>
+          <div>Bさん: <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<span class="g">なら</span>、<ruby>上野<rt>うえの</rt></ruby><ruby>公園<rt>こうえん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったほうがいいよ</div>
         </template>
         <template #translation>
-          <div>A: I'm planning to go to Japan</div>
-          <div>B: If you're going to Japan, you should go to Ueno Park</div>
+          <div>A: I'm planning to go to Tokyo</div>
+          <div>B: If you're going to Tokyo, you should go to Ueno Park</div>
         </template>
       </GrammarExample>
-      <span class="g">なら</span> can not be used to express hypothetical situations without a clear reason to believe that the condition is true.
-      It also cannot be used with things that are always true or always happen. This means <span class="g">なら</span> should not be used with time.
+      <span class="g">なら</span> cannot be used to express purely hypothetical or imaginative situations without context.
+      It also isn't used to describe things that are always true or naturally happen, such as general facts or laws of nature — in those cases,
+      the <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink> form is more appropriate.
+      Additionally, <span class="g">なら</span> should not be used with time-based sequences, where one action follows another; instead,
+      <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink> is used to express temporal order, such as "when A happens, B will happen."
 
       <div class="note mt">Note:</div>
-      <span class="g">なら</span> comes from the more formal word <span class="g">ならば</span>, which is the hypothetical form of the old copula なり.
-      In modern Japanese, <span class="g">ならば</span> is not very commonly used, but you might still see it in written texts or formal speeches.
-      The meaning remains the same, whichever version is used.
+      <span class="g">なら</span> comes from the more formal conditional ならば, which is described more in detail in
+      <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink>.
+      In modern Japanese, ならば is rarely used in everyday conversation but may still appear in formal or literary contexts.
 
       <div class="section">
-        <div class="grammar-subtitle">なら Used to Contrast or Limit</div>
+        <div class="grammar-title">なら Used to Contrast or Limit</div>
         One important way <span class="g">なら</span> is used in Japanese is to respond to a suggestion or condition and narrow down the situation.
         It often carries the nuance of "if it's that specific case, then..." — meaning the speaker is limiting what they're saying to only that case, or contrasting it with other possibilities.
         <GrammarExample>
@@ -83,6 +89,54 @@
           <li>"Well, tomorrow works, at least" (limiting)</li>
           <li>"Only tomorrow works for me" (stronger contrast)</li>
         </ul>
+      </div>
+
+      <div class="section">
+        <div class="grammar-title">なら Compared to ～たら and ～ば</div>
+        <span class="g">なら</span> is mainly used to react to a known or assumed condition — often something just mentioned or something
+        the speaker believes to be true. It's like saying, "If that's the case…" or "Speaking of that…" and often implies a suggestion, advice, or comment based on that premise.
+        In contrast, <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink>
+        talks about what will (or might) happen when a condition becomes true, focusing on the sequence of events.
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink> expresses a more neutral
+        or logical "if", commonly used for general truths or cause-effect relationships.
+        <ul>
+          <li><span class="g">なら</span> = "If it's true that…" → Reacts to or comments on a situation</li>
+          <li>～たら = "If/when something happens…" → Describes what will (or might) happen next</li>
+          <li>～ば = "If something is (generally) true…" → States a natural or expected result</li>
+        </ul>
+        <GrammarExample>
+          <template #example>
+            <ruby>暇<rt>ひま</rt></ruby><span class="g">なら</span>、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>こう
+          </template>
+          <template #translation>
+            If (it's true that) you're free, let's go see a movie
+          </template>
+          <template #note>
+            Assumes or reacts to the idea of being free; offers a suggestion based on that.
+          </template>
+        </GrammarExample>
+        <GrammarExample>
+          <template #example>
+            <ruby>暇<rt>ひま</rt></ruby>だったら、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>こう
+          </template>
+          <template #translation>
+            If/when you're free, let's go see a movie
+          </template>
+          <template #note>
+            You become free → then we go see a movie; shows a time sequence.
+          </template>
+        </GrammarExample>
+        <GrammarExample>
+          <template #example>
+            <ruby>暇<rt>ひま</rt></ruby>ならば、<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby>こう
+          </template>
+          <template #translation>
+            If you are free, let's go see a movie
+          </template>
+          <template #note>
+            Sounds more formal or logical; expresses the condition and result more neutrally.
+          </template>
+        </GrammarExample>
       </div>
     </template>
   </GrammarStructure>

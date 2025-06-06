@@ -1,5 +1,13 @@
 import type { GrammarPoint } from "@/types/types";
 
+export const ba: GrammarPoint = {
+  slug: "ば",
+  title: "～ば",
+  subtitle: "If (Conditional)",
+  titleRomaji: "ba",
+  tags: ["if", "when", "conditional", "ba", "hypothetical", "verb"]
+};
+
 export const gahoshi: GrammarPoint = {
   slug: "がほしい",
   title: "～がほしい",
@@ -49,7 +57,7 @@ export const potentialVerbs: GrammarPoint = {
 
 export const shi: GrammarPoint = {
   slug: "し",
-  title: "～し",
+  title: "し",
   subtitle: "Giving multiple reasons",
   titleRomaji: "shi",
   tags: ["shi", "because", "reason", "reasons"]
@@ -61,6 +69,14 @@ export const sou: GrammarPoint = {
   subtitle: "Looks like, Seems like",
   titleRomaji: "sou",
   tags: ["looks like", "seems like", "appear", "seem", "sou"]
+};
+
+export const tara: GrammarPoint = {
+  slug: "たら",
+  title: "～たら",
+  subtitle: "If, When (Common conditional)",
+  titleRomaji: "tara",
+  tags: ["if", "when", "after", "tara", "conditional", "hypothetical"]
 };
 
 export const temiru: GrammarPoint = {

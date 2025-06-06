@@ -20,11 +20,11 @@
       <div>い-adjective <s class="remove">[い]</s> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div>な-adjective + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div>Verb (ます stem) + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
-      <div class="structure-title">Negative</div>
+      <div class="structure-title small">Negatives</div>
       <div>い-adjective (negative) <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div>な-adjective (negative) <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div>Verb (negative) <s class="remove">[い]</s> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
-      <div class="structure-title">Exception</div>
+      <div class="structure-title small">Exception</div>
       <div>いい → よい <s class="remove">[い]</s> + <span class="h">さ</span> + そう + <span v-if="isPolite">です</span><span v-else>だ</span></div>
     </template>
     <template #related>
@@ -184,10 +184,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.structure-title {
-  font-size: 0.9em;
-  margin-top: 8px;
-}
-</style>

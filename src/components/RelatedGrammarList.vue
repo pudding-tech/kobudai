@@ -2,7 +2,7 @@
   import type { GrammarPoint } from "@/types/types";
 
   const props = defineProps<{
-    related: GrammarPoint[];
+    related: (GrammarPoint | { slug: string; title: string })[];
   }>();
 </script>
 

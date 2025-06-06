@@ -3,6 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { janai as meta } from "./metadataN5";
+  import { breakpointService } from "@/services/breakpointService";
 
   const isPolite = ref(false);
 </script>
@@ -39,27 +40,27 @@
       <table class="janai-table">
         <tr class="header">
           <th>Form</th>
-          <th>Level of Formality</th>
+          <th v-if="!breakpointService.isMobile()">Level of Formality</th>
           <th>Notes</th>
         </tr>
         <tr>
           <td><span class="g">ではありません</span></td>
-          <td>Very formal</td>
+          <td v-if="!breakpointService.isMobile()">Very formal</td>
           <td>Standard polite form</td>
         </tr>
         <tr>
           <td><span class="g">ではない</span></td>
-          <td>Plain/formal-ish</td>
+          <td v-if="!breakpointService.isMobile()">Plain/formal-ish</td>
           <td>Often used in writing</td>
         </tr>
         <tr>
           <td><span class="g">じゃありません</span></td>
-          <td>Polite</td>
+          <td v-if="!breakpointService.isMobile()">Polite</td>
           <td>Spoken, softer than ではありません</td>
         </tr>
         <tr>
           <td><span class="g">じゃない</span></td>
-          <td>Casual</td>
+          <td v-if="!breakpointService.isMobile()">Casual</td>
           <td>Common in daily conversation</td>
         </tr>
       </table>
