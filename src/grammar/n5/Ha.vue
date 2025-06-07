@@ -22,12 +22,8 @@
       In Japanese, the basic sentence structure "X は Y" uses the particle <span class="g">は</span> (pronounced "wa") to mark the topic of the sentence. This structure is fundamental in Japanese and serves to introduce what the sentence is about.
       <div class="section">
         <div class="grammar-subtitle">What does は do?</div>
-        The <span class="g">は</span> particle tells the listener, “Hey, this is the thing we’re talking about.” Everything that follows provides some kind of comment, description, or information about that topic.
+        The <span class="g">は</span> particle tells the listener, “Hey, this is the thing we're talking about.” Everything that follows provides some kind of comment, description, or information about that topic.
         In the sentence "X は Y", X is the topic, and Y is the information being shared about it.
-        <br><br>
-        <div class="note">Note:</div>
-        Even though it's written using the hiragana <span class="g">は</span>, it is pronounced "wa" when used as a particle.
-        This is one of the very few cases in Japanese where the written character and the spoken sound don’t match — so it's worth memorizing early on.
         <GrammarExample>
           <template #example>
             これ<span class="g">は</span>ペンです
@@ -39,6 +35,11 @@
             これ (this) is the topic, marked by は. The sentence tells us what “this” is.
           </template>
         </GrammarExample>
+        <div class="note">
+          <div class="note-title">Note:</div>
+          Even though it's written using the hiragana <span class="g">は</span>, it is pronounced "wa" when used as a particle.
+          This is one of the very few cases in Japanese where the written character and the spoken sound don't match — so it's worth memorizing early on.
+        </div>
       </div>
       <div class="section">
         <div class="grammar-subtitle">With copula: です and だ</div>

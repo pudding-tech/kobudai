@@ -149,8 +149,10 @@
             Plain negative form
           </template>
         </GrammarExample>
-        <div class="note">Note:</div>
-        The negative plain forms of verbs that end with the hiragana う change into <span class="h">わ</span>, not あ, making the negative <span class="g">わない</span>, and not あない.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          The negative plain forms of verbs that end with the hiragana う change into <span class="h">わ</span>, not あ, making the negative <span class="h">わ</span><span class="g">ない</span>, and not あない.
+        </div>
         <GrammarExample>
           <template #example>
             <div><ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby><span class="h">わ</span><span class="g">ない</span></div>
@@ -184,8 +186,10 @@
       <div class="section">
         <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
-        <div class="note mt">Note:</div>
-        The verb ある (to exist, for inanimate objects) is irregular in its plain negative form, transforming to <span class="g">ない</span> instead of following typical conjugation patterns.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          The verb ある (to exist, for inanimate objects) is irregular in its plain negative form, transforming to <span class="g">ない</span> instead of following typical conjugation patterns.
+        </div>
         <GrammarExample>
           <template #example>
             <div>する → <span class="g">しない</span></div>

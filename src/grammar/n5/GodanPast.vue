@@ -162,8 +162,10 @@
           </template>
         </GrammarExample>
 
-        <span class="note">Note:</span>
-        This exact conjugation pattern is also used to construct the <RouterLink :to="{ name: 'grammarLoader', params: { slug: te.slug } }" class="link">て-form</RouterLink> of godan verbs.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          This exact conjugation pattern is also used to construct the <RouterLink :to="{ name: 'grammarLoader', params: { slug: te.slug } }" class="link">て-form</RouterLink> of godan verbs.
+        </div>
       </div>
 
       <div class="section">
@@ -192,8 +194,10 @@
       <div class="section">
         <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
-        <div class="note mt">Note:</div>
-        The verb 行く (to go) is irregular in its plain past form, changing to <span class="g">行った</span> instead of following typical conjugation patterns.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          The verb 行く (to go) is irregular in its plain past form, changing to <span class="g">行った</span> instead of following typical conjugation patterns.
+        </div>
         <GrammarExample>
           <template #example>
             <div>する → <span class="g">した</span></div>

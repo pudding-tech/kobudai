@@ -19,7 +19,9 @@
       
     </template>
     <template #explanation>
-      The particle <span class="g">の</span> in the pattern noun <span class="g">の</span> noun is used to show possession or describe the relationship between two nouns. It functions like the apostrophe (’s) in English or "of" in some contexts.
+      The particle <span class="g">の</span> in the pattern "noun <span class="g">の</span> noun" is used to show possession or describe the relationship between two nouns - much like 's or "of" in English.
+      Essentially, <span class="g">の</span> lets you build more complex noun phrases by linking multiple nouns together.
+      There's also no strict limit to how many <span class="g">の</span> you can use in a row, as long as the meaning remains clear.
       <br><br>
       <div class="grammar-subtitle">Possession</div>
       Indicates that something belongs to someone or something.
@@ -41,7 +43,6 @@
           Japanese car (literally, "car of Japan")
         </template>
       </GrammarExample>
-      In general, <span class="g">の</span> acts as a connector to show the relationship between two nouns.
     </template>
   </GrammarStructure>
 </template>

@@ -27,11 +27,11 @@
       <div>- ので</div>
     </template>
     <template #explanation>
-      The <span class="g">〜し</span> form in Japanese is a versatile grammatical structure used to list multiple reasons or justifications.
+      The <span class="g">し</span> form in Japanese is a versatile grammatical structure used to list multiple reasons or justifications.
       When a verb, adjective, or noun clause is followed by <span class="g">し</span>, the clause behaves grammatically as if it were a predicate on its own.
       This makes it possible to stack multiple reasons together seamlessly, unlike other common structures for giving a reason for something.
       <br><br>
-      To use <span class="g">〜し</span>, simply conjugate the verb, adjective, or noun clause as follows:
+      To use <span class="g">し</span>, simply conjugate the verb, adjective, or noun clause as follows:
       <ul style="padding-right: 40px;">
         <li>For verbs: Attach し after the plain form.</li>
         <GrammarExample>
@@ -62,8 +62,10 @@
           </template>
         </GrammarExample>
       </ul>
-      <div class="note mt">Note:</div>
-      While <span class="g">〜し</span> should technically be used with the plain form of the verb, adjective, or noun, it is not uncommon to see it used with the polite forms as well.
+      <div class="note">
+        <div class="note-title">Note:</div>
+        While <span class="g">し</span> should technically be used with the plain form of the verb, adjective, or noun, it is not uncommon to see it used with the polite forms as well.
+      </div>
 
       <div class="section">
         <div class="grammar-subtitle">Usage</div>
@@ -77,7 +79,7 @@
           </template>
         </GrammarExample>
         <br>
-        Furthermore, <span class="g">〜し</span> not only allows you to list reasons but also conveys a tone of justification or emphasis, making it a key tool for more nuanced expressions.
+        Furthermore, <span class="g">し</span> not only allows you to list reasons but also conveys a tone of justification or emphasis, making it a key tool for more nuanced expressions.
         Compare these two sentences:
         <GrammarExample>
           <template #example>
@@ -96,9 +98,9 @@
           </template>
         </GrammarExample>
         The first sentence, using the <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'くて' } }" class="link">くて</RouterLink> construction, feels more objective, presenting a straightforward list of qualities. The second sentence, which uses <span class="g">し</span>, carries a softer, more subjective tone — as if the speaker is gently justifying their recommendation.
-        In this way, <span class="g">〜し</span> goes beyond simply listing things; it opens a window into the speaker’s thoughts and emotions, adding nuance to what they say and why they feel that way.
+        In this way, <span class="g">し</span> goes beyond simply listing things; it opens a window into the speaker’s thoughts and emotions, adding nuance to what they say and why they feel that way.
         <br><br>
-        You can also use <span class="g">〜し</span> with only one stated 'reason'. Unlike other similar grammatical structures, this usage implies that the mentioned reason is just one of many possible reasons,
+        You can also use <span class="g">し</span> with only one stated 'reason'. Unlike other similar grammatical structures, this usage implies that the mentioned reason is just one of many possible reasons,
         even if the others are not explicitly stated. This gives the sentence an open-ended or suggestive nuance.
         <GrammarExample>
           <template #example>
@@ -112,7 +114,7 @@
           </template>
         </GrammarExample>
         <br>
-        The <span class="g">〜し</span> structure doesn't always have to follow the patterns we've seen so far. It's also possible to flip the sentence, presenting the situation first, followed by one or more reasons introduced with <span class="g">〜し</span>.
+        The <span class="g">し</span> structure doesn't always have to follow the patterns we've seen so far. It's also possible to flip the sentence, presenting the situation first, followed by one or more reasons introduced with <span class="g">し</span>.
         This is very natural in Japanese, especially in conversation.
         <GrammarExample>
           <template #example>

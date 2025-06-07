@@ -55,8 +55,10 @@
           ～たら could be used here to mean "if" here too, depending on the context
         </template>
       </GrammarExample>
-      <div class="note mt">Note:</div>
-      <span class="g">～たら</span> can be used for both real and hypothetical conditions, meaning the condition doesn't have to be known or believed to be true.
+      <div class="note">
+        <div class="note-title">Note:</div>
+        <span class="g">～たら</span> can be used for both real and hypothetical conditions, meaning the condition doesn't have to be known or believed to be true.
+      </div>
       <GrammarExample>
         <template #example>
           <ruby>私<rt>わたし</rt></ruby>が<ruby>先生<rt>せんせい</rt></ruby>だった<span class="g">ら</span>、もっとやさしく<ruby>教<rt>おし</rt></ruby>える

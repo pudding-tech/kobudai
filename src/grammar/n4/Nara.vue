@@ -40,10 +40,12 @@
       <span class="g">なら</span> should be preceded by の, which is a nominalizer that turns the verb or adjective into a noun-like phrase. This is because, technically, <span class="g">なら</span>
       should only be used with nouns. However, in modern Japanese, this の is mostly droppped, and <span class="g">なら</span> attaches to the word directly.
 
-      <div class="note mt">Note:</div>
-      Even though it often gets translated as "if", it cannot be used exactly the same as other Japanese words for "if" like
-      <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink> or <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink>.
-      <span class="g">なら</span> feels more like "if it's true that X…" or "speaking of X…". This means the speaker must believe that the condition is true.
+      <div class="note">
+        <div class="note-title">Note:</div>
+        Even though it often gets translated as "if", it cannot be used exactly the same as other Japanese words for "if" like
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink> or <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink>.
+        <span class="g">なら</span> feels more like "if it's true that X…" or "speaking of X…". This means the speaker must believe that the condition is true.
+      </div>
       <GrammarExample>
         <template #example>
           <div>Aさん: <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くつもりだよ</div>
@@ -60,10 +62,12 @@
       Additionally, <span class="g">なら</span> should not be used with time-based sequences, where one action follows another; instead,
       <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink> is used to express temporal order, such as "when A happens, B will happen."
 
-      <div class="note mt">Note:</div>
-      <span class="g">なら</span> comes from the more formal conditional ならば, which is described more in detail in
-      <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink>.
-      In modern Japanese, ならば is rarely used in everyday conversation but may still appear in formal or literary contexts.
+      <div class="note">
+        <div class="note-title">Note:</div>
+        <span class="g">なら</span> comes from the more formal conditional ならば, which is described more in detail in
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink>.
+        In modern Japanese, ならば is not commonly used in everyday conversation, but may still appear in formal or literary contexts.
+      </div>
 
       <div class="section">
         <div class="grammar-title">なら Used to Contrast or Limit</div>

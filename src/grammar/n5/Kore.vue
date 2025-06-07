@@ -65,8 +65,10 @@
 
       <span class="g">どれ</span> means "which one" and is used to ask about multiple items.
       Note that this word can only be used when there are three or more items to choose from. When the choice is between two items another word <span class="g">どっち</span> is used.
-      <br><br>
-      Also note that like many question words <span class="g">どれ</span> and <span class="g">どっち</span> cannot be used with the particle は. Instead they must be followed by が when used in a question.
+      <div class="note">  
+        <div class="note-title">Note:</div>
+        Also note that like many question words <span class="g">どれ</span> and <span class="g">どっち</span> cannot be used with the particle は. Instead they must be followed by が when used in a question.
+      </div>
       <GrammarExample>
         <template #example>
           <span class="g">どれ</span>が<ruby>田中<rt>たなか</rt></ruby>さんのかばんですか？

@@ -85,13 +85,15 @@
           Oh, I might have forgotten
         </template>
       </GrammarExample>
-      <div class="note mt">Note:</div>
-      Breaking down the meaning of <span class="g">かもしれない</span> we have かも — a casual particle that means "maybe" or "possibly", and しれない — the negative potential form of the verb 知る ("しる", to know).
-      So <span class="g">かもしれない</span> literally means something like:
-      <br>
-      <ul>
-        <li>"It's not knowable" → "There's no way to be sure" → "Maybe"</li>
-      </ul>
+      <div class="note">
+      <div class="note-title">Note:</div>
+        Breaking down the meaning of <span class="g">かもしれない</span> we have かも — a casual particle that means "maybe" or "possibly", and しれない — the negative potential form of the verb 知る ("しる", to know).
+        So <span class="g">かもしれない</span> literally means something like:
+        <br>
+        <ul>
+          <li>"It's not knowable" → "There's no way to be sure" → "Maybe"</li>
+        </ul>
+      </div>
 
       <div class="section">
         <div class="grammar-subtitle">Polite Form</div>

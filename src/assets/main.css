@@ -26,7 +26,7 @@ body {
   &.mobile {
     background-color: var(--body-bg-mobile);
 
-    ul {
+    .explanation ul {
       padding-left: 20px !important;
       padding-right: 20px !important;
     }
@@ -79,8 +79,15 @@ a {
 }
 
 .note {
-  color: var(--note-text-color);
-  margin-bottom: 2px;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: var(--note-bg-color);
+  border-radius: var(--p-content-border-radius);
+
+  .note-title {
+    color: var(--note-text-color);
+    margin-bottom: 2px;
+  }
 }
 
 ruby rt {
@@ -200,6 +207,7 @@ ruby rt {
   --stem-change-highlight: #af6200; /* #998d00 */
   --remove-highlight: #f65252;
   --grammar-title-highlight: #905f8f;
+  --note-bg-color: #ebd8d8;
   --link-border-color: rgba(0, 0, 0, 0.2);
   --note-text-color: rgb(165 63 63);
   --line-color: rgba(132, 132, 132, 0.4);
@@ -269,6 +277,7 @@ ruby rt {
   --stem-change-highlight: #c6c455;
   --remove-highlight: #ff7171;
   --grammar-title-highlight: #e4c4e3;
+  --note-bg-color: #2b1d1d;
   --link-border-color: rgba(255, 255, 255, 0.2);
   --note-text-color: rgb(213, 127, 127);
   --line-color: rgba(255, 255, 255, 0.2);

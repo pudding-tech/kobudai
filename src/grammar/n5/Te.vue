@@ -124,16 +124,17 @@
         </template>
       </GrammarExample>
       For a more polite way of using the <span class="g">て</span>-form for giving requests - see <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">～てください</RouterLink>
-      <br><br>
-      <div class="note">Note:</div>
-      While we called the <span class="g">て</span>-form a "verb form" earlier, it is really a grammatical form used across various word types, including verbs, adjectives, and even nouns.
-      See <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">て-form (adjective, noun)</RouterLink> for usage in adjectives and nouns.
+      <div class="note">
+        <div class="note-title">Note:</div>
+        While we called the <span class="g">て</span>-form a "verb form" earlier, it is really a grammatical form used across various word types, including verbs, adjectives, and even nouns.
+        See <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">て-form (adjective, noun)</RouterLink> for usage in adjectives and nouns.
+      </div>
 
       <div class="section">
         <div class="grammar-title">How the て-Form is Created</div>
         <div class="grammar-subtitle">Godan verbs</div>
         Godan verbs follow specific patterns based on their ending consonant in the dictionary form
-        Here’s a breakdown of the changes:
+        Here's a breakdown of the changes:
 
         <ul>
           <li>う, つ, る → <span class="g">って</span></li>
@@ -144,7 +145,7 @@
         </ul>
 
         Technically, the <span class="g">て</span>-form of a godan verb is based on the い-row of the godan five-step chart. However, this form has undergone a sound change
-        known as 音便 (おんびん, sound convenience), which explains why the final verb stems don’t look like what one might predict.
+        known as 音便 (おんびん, sound convenience), which explains why the final verb stems don't look like what one might predict.
         <br><br>
         "Sound convenience" refers to changes in pronunciation that make words easier to say, similar to how "want to" becomes "wanna" in English. In ancient Japanese, speakers modified verb roots
         to ease pronunciation with certain /t/-sound conjugations, leading to unique conjugation patterns still used today.
@@ -161,8 +162,10 @@
           </template>
         </GrammarExample>
 
-        <span class="note">Note:</span>
-        This exact conjugation pattern is also used to construct the <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">past form</RouterLink> of godan verbs.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          This exact conjugation pattern is also used to construct the <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">past form</RouterLink> of godan verbs.
+        </div>
       </div>
 
       <div class="section">
@@ -184,8 +187,10 @@
       <div class="section">
         <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
-        <div class="note mt">Note:</div>
-        The verb 行く (to go) is irregular in the <span class="g">て</span>-form, changing to <span class="g">行って</span> instead of following typical conjugation patterns.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          The verb 行く (to go) is irregular in the <span class="g">て</span>-form, changing to <span class="g">行って</span> instead of following typical conjugation patterns.
+        </div>
         <GrammarExample>
           <template #example>
             <div>する → <span class="g">して</span></div>

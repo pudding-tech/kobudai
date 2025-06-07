@@ -45,16 +45,16 @@
           What "it" is, is not specified, but inferred
         </template>
       </GrammarExample>
-      It’s common to hear that <span class="g">だ</span> and <span class="g">です</span> mean "to be" in English, and while they serve a similar role,
+      It's common to hear that <span class="g">だ</span> and <span class="g">です</span> mean "to be" in English, and while they serve a similar role,
       that comparison is somewhat simplified. In English, “to be” is a full verb that can inflect for person and tense (is, am, are, was, were, etc.).
-      While <span class="g">だ</span> and <span class="g">です</span> do have past-tense forms (だった and でした), they don’t conjugate as fully as typical Japanese verbs,
+      While <span class="g">だ</span> and <span class="g">です</span> do have past-tense forms (だった and でした), they don't conjugate as fully as typical Japanese verbs,
       and they mainly serve to link ideas and indicate politeness or assertion — not to express actions or a wide range of tenses like the English verb "to be".
-      <br><br>
-      <div class="note">Note:</div>
-      When specifying what we are referring to, there are numerous ways to do so, but arguably the most common approach is using the
-      topic marking particle <RouterLink :to="{ name: 'grammarLoader', params: { slug: ha.slug } }" class="link">は</RouterLink>.
-      This structure — [topic] は [statement] — is often how speakers set up their sentences.
-      <br><br>
+      <div class="note">
+        <div class="note-title">Note:</div>
+        When specifying what we are referring to, there are numerous ways to do so, but arguably the most common approach is using the
+        topic marking particle <RouterLink :to="{ name: 'grammarLoader', params: { slug: ha.slug } }" class="link">は</RouterLink>.
+        This structure — [topic] は [statement] — is often how speakers set up their sentences.
+      </div>
       You might be wondering why there are two different copulas, <span class="g">だ</span> and <span class="g">です</span>, when they appear to serve the same purpose.
       Their levels of formality and specific applications set them apart, however.
 
@@ -113,8 +113,10 @@
             です can modify an い-adjective to be polite
           </template>
         </GrammarExample>
-        <div class="note">Note:</div>
-        The copula <span class="g">です</span> is thought to a contracted version of であります or でございます, though the etymology of <span class="g">です</span> remains uncertain up to this day.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          The copula <span class="g">です</span> is thought to a contracted version of であります or でございます, though the etymology of <span class="g">です</span> remains uncertain up to this day.
+        </div>
       </div>
     </template>
   </GrammarStructure>

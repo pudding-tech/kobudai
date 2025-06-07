@@ -16,9 +16,8 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      <div class="structure-title">For self</div>
       <div>Noun + <span class="grammar-highlight">がほしい<span v-if="isPolite">です</span></span></div>
-      <div class="structure-title">For others</div>
+      <div class="structure-title small">Talking about someone else's desire (3rd person)</div>
       <div>Noun + <span class="grammar-highlight">をほしが<span v-if="isPolite">ります</span><span v-else>る</span></span></div>
     </template>
     <template #related>
@@ -71,8 +70,10 @@
         </GrammarExample>
         This way of speaking gives some emotional distance, which fits the Japanese tendency to avoid assuming the feelings of others.
 
-        <div class="note mt">Note:</div>
-        Note that <span class="g">欲しがる</span> is only used to describe the desires of someone else, not when speaking to the person or asking them directly.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          Note that <span class="g">欲しがる</span> is only used to describe the desires of someone else, not when speaking to the person or asking them directly.
+        </div>
         <GrammarExample>
           <template #example>
             この<ruby>店<rt>みせ</rt></ruby>で<ruby>何<rt>なに</rt></ruby>か<span class="g"><ruby>欲<rt>ほ</rt></ruby>しい</span>？
@@ -92,7 +93,7 @@
          This is because you're reporting their own words, not assuming their feelings.
         <GrammarExample>
           <template #example>
-            <ruby>友達<rt>ともだち</rt></ruby>はすてきな<ruby>自転車<rt>じてんしゃ</rt></ruby>が<ruby>欲<rt>ほ</rt></ruby>しいと<ruby>言<rt>い</rt></ruby>っている
+            <ruby>友達<rt>ともだち</rt></ruby>はすてきな<ruby>自転車<rt>じてんしゃ</rt></ruby><span class="g">が<ruby>欲<rt>ほ</rt></ruby>しい</span>と<ruby>言<rt>い</rt></ruby>っている
           </template>
           <template #translation>
             My friend says they want a nice bike
@@ -102,9 +103,3 @@
     </template>
   </GrammarStructure>
 </template>
-
-<style scoped>
-.structure-title {
-  font-size: 0.9em;
-}
-</style>

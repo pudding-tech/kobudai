@@ -24,9 +24,10 @@
       The act of giving and receiving in Japanese depends not only on who gives and who receives, but also on the speaker's relationship to the people involved.
       <span class="g">あげる</span> and <span class="g">くれる</span> both mean 'to give', but they are used in different contexts depending on the direction of the action relative to the speaker.
       <span class="g">もらう</span> means 'to receive', and is used when the speaker (or someone close to them) is the receiver.
-      <div class="note mt">Note:</div>
-      <span class="g">もらう</span> is a godan verb. <span class="g">あげる</span> and <span class="g">くれる</span> are both ichidan verbs, and conjugate as such.
-      <br><br>
+      <div class="note">
+        <div class="note-title">Note:</div>
+        <span class="g">もらう</span> is a godan verb. <span class="g">あげる</span> and <span class="g">くれる</span> are both ichidan verbs, and conjugate as such.
+      </div>
       These verbs are more than just vocabulary — they reflect how relationships and social awareness work in Japanese.
       Choosing the right verb shows not only who gave or received something, but also where the speaker stands in the interaction.
       This includes whether someone is part of your "in-group" (like family or coworkers) or an outsider,
@@ -47,8 +48,10 @@
             I give (something) to my friend.
           </template>
         </GrammarExample>
-        <div class="note">Note:</div>
-        <span class="g">あげる</span> is also used when two people you don't know well give something to each other.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          <span class="g">あげる</span> is also used when two people you don't know well give something to each other.
+        </div>
         <GrammarExample>
           <template #example>
             AさんはBさんにちょっと<ruby>食<rt>た</rt></ruby>べ<ruby>物<rt>もの</rt></ruby>を<span class="g">あげた</span>
@@ -74,8 +77,10 @@
             My friend will give (something) to me.
           </template>
         </GrammarExample>
-        <div class="note">Note:</div>
-        When the receiver is obviously "me", it's often left out:
+        <div class="note">
+          <div class="note-title">Note:</div>
+          When the receiver is obviously "me", it's often left out:
+        </div>
         <GrammarExample>
           <template #example>
             <ruby>友達<rt>ともだち</rt></ruby>がプレゼントを<span class="g">くれた</span>
@@ -102,10 +107,12 @@
             I receive (something) from my friend
           </template>
         </GrammarExample>
-        <div class="note mt">Note:</div>
-        <span class="g">もらう</span> is only used when the speaker is the one receiving something, or when the receiver is someone emotionally close to the speaker (like a family member or close friend).
-        It expresses the act of receiving from the receiver's perspective. For that reason, it's generally not used to describe a third person receiving something —
-        unless the speaker is deliberately adopting their point of view.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          <span class="g">もらう</span> is only used when the speaker is the one receiving something, or when the receiver is someone emotionally close to the speaker (like a family member or close friend).
+          It expresses the act of receiving from the receiver's perspective. For that reason, it's generally not used to describe a third person receiving something —
+          unless the speaker is deliberately adopting their point of view.
+        </div>
         <GrammarExample>
           <template #example>
             <ruby>弟<rt>おとうと</rt></ruby>は<ruby>友達<rt>ともだち</rt></ruby>からプレゼントを<span class="g">もらった</span>

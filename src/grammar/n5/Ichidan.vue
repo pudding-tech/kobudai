@@ -39,9 +39,10 @@
       In their dictionary form, all ichidan verbs end in <span class="g">る</span>. Additionally, the sound before the <span class="g">る</span> is always either <i>i</i> or <i>e</i>, so ichidan verbs consistently end in either <span class="g">iru</span> or <span class="g">eru</span>.
       Using romaji can be particularly helpful here; for example, both 始め<span class="g">る</span> and 食べ<span class="g">る</span> end with the <span class="g">eru</span> sound,
       indicating their (potential) classification as ichidan verbs, even if the hiragana the <i>e</i> sound comes from differ between them (め and べ respectively).
-      <br><br><div class="note">Note:</div>
-      Just because a verb ends in <span class="g">iru</span> or <span class="g">eru</span> does not definitely mean it is an ichidan verb; see the section below for details.
-      <br><br>
+      <div class="note">
+        <div class="note-title">Note:</div>
+        Just because a verb ends in <span class="g">iru</span> or <span class="g">eru</span> does not definitely mean it is an ichidan verb; see the section below for details.
+      </div>
       Conjugating ichidan verbs is straightforward. Instead of changing the final syllable, you simply remove the <span class="g">る</span> from the dictionary form to find the verb stem, then add the appropriate conjugation ending.
       The simplicity of ichidan conjugation stands in contrast to godan verbs, which move through different syllable endings.
       Study the chart below to see how ichidan verbs use the same verb stem throughout all conjugations — hence, the term "one step".

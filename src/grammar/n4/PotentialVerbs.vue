@@ -79,8 +79,10 @@
       <br><br>
       To indicate potentiality, the verb is conjugated into a specific form known as the potential form. This transformation alters the verb so it carries the meaning of ability or possibility.
 
-      <div class="note mt">Note:</div>
-      In sentences with potential verbs, the object of the action is typically marked with the particle が instead of を.
+      <div class="note">
+        <div class="note-title">Note:</div>
+        In sentences with potential verbs, the object of the action is typically marked with the particle が instead of を.
+      </div>
       <GrammarExample>
         <template #example>
           <ruby>魚<rt>さかな</rt></ruby>を<ruby>食<rt>た</rt></ruby>べる →
@@ -126,8 +128,10 @@
             Potential form (ichidan)
           </template>
         </GrammarExample>
-        <div class="note">Note:</div>
-        In modern Japanese, the <span class="g">ら</span> in <span class="g">られる</span> is often dropped for simplicity, especially in casual contexts.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          In modern Japanese, the <span class="g">ら</span> in <span class="g">られる</span> is often dropped for simplicity, especially in casual contexts.
+        </div>
         <GrammarExample>
           <template #example>
             <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">れる</span><span class="et">(can eat)</span></div>
@@ -158,9 +162,11 @@
             Polite potential form
           </template>
         </GrammarExample>
-        <div class="note">Note:</div>
-        Most polite verb forms in Japanese are made by taking the continuative (ます) stem and adding a polite ending. But the potential form works differently -
-        it becomes a new verb with full conjugation ability. This means it can be conjugated into the polite form by simply adding <span class="g">ます</span> to the end of the potential stem.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          Most polite verb forms in Japanese are made by taking the continuative (ます) stem and adding a polite ending. But the potential form works differently -
+          it becomes a new verb with full conjugation ability. This means it can be conjugated into the polite form by simply adding <span class="g">ます</span> to the end of the potential stem.
+        </div>
       </div>
 
       <div class="section">

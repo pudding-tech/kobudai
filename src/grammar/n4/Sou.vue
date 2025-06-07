@@ -78,8 +78,10 @@
       The key idea is that <span class="g">～そう</span> expresses a conclusion made without solid proof. For example, you might say a cookie is おいしそう ("looks delicious") before tasting it — you're making a guess based on how it appears.
       But after tasting it, you'd say おいしい, because you now have direct evidence. However, for adjectives where appearance is the deciding factor — like きれい ("pretty") — we don't typically use <span class="g">～そう</span>.
       If something looks pretty, we just say きれい, since the appearance alone is enough to make that judgment.
-      <div class="note mt">Note:</div>
-      いい is an exception from the general rule. It becomes よい when conjugated, then you remove the い and add <span class="h">さ</span> before <span class="g">そう</span>.
+      <div class="note">
+        <div class="note-title">Note:</div>
+        いい is an exception from the general rule. It becomes よい when conjugated, then you remove the い and add <span class="h">さ</span> before <span class="g">そう</span>.
+      </div>
       <GrammarExample>
         <template #example>
           いい → <ruby>良<rt>よ</rt></ruby>さ<span class="g">そう</span>
@@ -88,10 +90,12 @@
           Looks good
         </template>
       </GrammarExample>
-      <div class="note mt">Caution:</div>
-      A common mistake is using the phrase かわいそう, which one might think means "looks cute". However, かわいそう is a word in itself,
-      and actually means "pitiful" or "poor thing". It is used to express sympathy or compassion for someone or something that is in a difficult situation.
-      可愛い (かわいい, "cute") is as discussed above based on appearence, and thus does not use <span class="g">～そう</span> in this context.
+      <div class="note">
+        <div class="note-title">Caution:</div>
+        A common mistake is using the phrase かわいそう, which one might think means "looks cute". However, かわいそう is a word in itself,
+        and actually means "pitiful" or "poor thing". It is used to express sympathy or compassion for someone or something that is in a difficult situation.
+        可愛い (かわいい, "cute") is as discussed above based on appearence, and thus does not use <span class="g">～そう</span> in this context.
+      </div>
 
       <div class="section">
         <div class="grammar-subtitle">Negative</div>
@@ -167,8 +171,10 @@
         See <RouterLink :to="{ name: 'grammarLoader', params: { slug: adverbs.slug } }" class="link">{{ adverbs.title + " 「" + adverbs.subtitle }}」</RouterLink> for more details on adverbs.
       </div>
 
-      <div class="note mt">Caution:</div>
-      Be careful not to confuse <span class="g">～そう</span> with <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'そうだ' } }" class="link">～そうだ</RouterLink>, which is used to express hearsay or information received from someone else.
+      <div class="note">
+        <div class="note-title">Caution:</div>
+        Be careful not to confuse <span class="g">～そう</span> with <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'そうだ' } }" class="link">～そうだ</RouterLink>, which is used to express hearsay or information received from someone else.
+      </div>
       <GrammarExample>
         <template #example>
           <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るそう

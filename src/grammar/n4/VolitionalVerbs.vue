@@ -180,10 +180,11 @@
         This is a result of how politeness in Japanese is modular — rather than inventing a new volitional conjugation for polite speech,
         Japanese reuses the politeness system (the ます-form) and simply attaches it to the verb's continuative stem.
         In that way, <span class="g">～ましょう</span> is not a true volitional conjugation on its own — it's just the polite way of expressing volition using the same stem that powers the rest of polite speech.
-        <div class="note mt">Note:</div>
-        This differs from the polite form of the <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">potential conjugation</RouterLink>,
-        which is formed from the potential stem.
-        <br><br>
+        <div class="note">
+          <div class="note-title">Note:</div>
+          This differs from the polite form of the <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">potential conjugation</RouterLink>,
+          which is formed from the potential stem.
+        </div>
         To form the polite version, Attach <span class="g">～ましょう</span> to the ます-stem of a verb.
         <GrammarExample>
           <template #example>
@@ -241,11 +242,13 @@
             Shall we go eat?
           </template>
         </GrammarExample>
-        <div class="note mt">Note:</div>
-        In casual speech, か is often dropped, and the volitional form is used on its own to suggest an action. This gives it a slightly softer, more relaxed tone.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          In casual speech, か is often dropped, and the volitional form is used on its own to suggest an action. This gives it a slightly softer, more relaxed tone.
+        </div>
         <GrammarExample>
           <template #example>
-            <ruby>帰<rt>かえ</rt></ruby>ろう？
+            <ruby>帰<rt>かえ</rt></ruby><span class="h">ろ</span><span class="g">う</span>？
           </template>
           <template #translation>
             Wanna head home?

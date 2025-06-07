@@ -72,16 +72,18 @@
       Even conjugations like "want to" can be used with "try to", so it becomes "want to try to do something".
       <GrammarExample>
         <template #example>
-          <ruby>日本<rt>にほん</rt></ruby>の<ruby>映画<rt>えいが</rt></ruby>を見<span class="g">てみたい</span>？
+          <ruby>怖<rt>こわ</rt></ruby>い<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby><span class="g">てみたい</span>？
         </template>
         <template #translation>
-          Do you want to try watching a Japanese movie?
+          Do you want to try watching a scary movie?
         </template>
       </GrammarExample>
 
-      <div class="note mt">Note:</div>
-      Even though <span class="g">みる</span> comes from 見る (みる, "to see"), when used in this grammar pattern, it is never written in kanji.
-      Always write it as <span class="g">～てみる</span> in hiragana.
+      <div class="note">
+        <div class="note-title">Note:</div>
+        Even though <span class="g">みる</span> comes from 見る (みる, "to see"), when used in this grammar pattern, it is never written in kanji.
+        Always write it as <span class="g">～てみる</span>, in hiragana only.
+      </div>
     </template>
   </GrammarStructure>
 </template>
