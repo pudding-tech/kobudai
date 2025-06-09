@@ -48,6 +48,22 @@ export const niFrequency: GrammarPoint = {
   tags: ["frequency", "ni", "how often", "how many times", "ni hindo"]
 };
 
+export const numberMo: GrammarPoint = {
+  slug: "number-も",
+  title: "Number + も",
+  subtitle: "As many as (Emphasizing quantity)",
+  titleRomaji: "number + mo",
+  tags: ["number", "mo", "as many as", "as much as", "emphasis"]
+};
+
+export const numberShika: GrammarPoint = {
+  slug: "number-しか",
+  title: "Number + しか + ～ない",
+  subtitle: "Only, As few as (Emphasizing limitation)",
+  titleRomaji: "number + shika + nai",
+  tags: ["number", "shika", "only", "as few as", "just", "limitation", "emphasis"]
+};
+
 export const potentialVerbs: GrammarPoint = {
   slug: "potential-verb",
   title: "Potential verb",
@@ -79,6 +95,14 @@ export const tara: GrammarPoint = {
   tags: ["if", "when", "after", "tara", "conditional", "hypothetical"]
 };
 
+export const taradou: GrammarPoint = {
+  slug: "たらどう",
+  title: "～たらどう",
+  subtitle: "How about...? (Advice, Suggestion)",
+  titleRomaji: "taradou",
+  tags: ["how about", "suggestion", "advice", "taradou", "conditional", "taradoudesuka"]
+};
+
 export const temiru: GrammarPoint = {
   slug: "てみる",
   title: "～てみる",
@@ -87,9 +111,25 @@ export const temiru: GrammarPoint = {
   tags: ["try to", "try doing", "temiru", "try something"]
 };
 
+export const teoku: GrammarPoint = {
+  slug: "ておく",
+  title: "～ておく",
+  subtitle: "Do something in preparation, Do something in advance",
+  titleRomaji: "teoku",
+  tags: ["do in advance", "prepare", "advance", "future use", "teoku", "preparation"]
+};
+
 export const volitionalVerbs: GrammarPoint = {
   slug: "volitional-verb",
   title: "Volitional verb",
   subtitle: "～う、～よう、～ましょう (let's, shall we)",
   tags: ["volitional", "let's", "shall we", "verb", "godan", "ichidan", "volitional form"]
+};
+
+export const volitionalToOmou: GrammarPoint = {
+  slug: "volitional-と思う",
+  title: "Volitional + と思う",
+  subtitle: "I think I will...",
+  titleRomaji: "volitional toomou",
+  tags: ["think", "thinking", "will", "volitional", "omou", "intention", "decision"]
 };

@@ -43,10 +43,15 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n4.kamoshirenai.slug]: () => import("./n4/Kamoshirenai.vue").then(processImport),
   [n4.nara.slug]: () => import("./n4/Nara.vue").then(processImport),
   [n4.niFrequency.slug]: () => import("./n4/Ni-Frequency.vue").then(processImport),
+  [n4.numberMo.slug]: () => import("./n4/NumberMo.vue").then(processImport),
+  [n4.numberShika.slug]: () => import("./n4/NumberShika.vue").then(processImport),
   [n4.potentialVerbs.slug]: () => import("./n4/PotentialVerbs.vue").then(processImport),
   [n4.shi.slug]: () => import("./n4/Shi.vue").then(processImport),
   [n4.sou.slug]: () => import("./n4/Sou.vue").then(processImport),
   [n4.tara.slug]: () => import("./n4/Tara.vue").then(processImport),
+  [n4.taradou.slug]: () => import("./n4/TaraDou.vue").then(processImport),
   [n4.temiru.slug]: () => import("./n4/Temiru.vue").then(processImport),
-  [n4.volitionalVerbs.slug]: () => import("./n4/VolitionalVerbs.vue").then(processImport)
+  [n4.teoku.slug]: () => import("./n4/Teoku.vue").then(processImport),
+  [n4.volitionalVerbs.slug]: () => import("./n4/VolitionalVerbs.vue").then(processImport),
+  [n4.volitionalToOmou.slug]: () => import("./n4/VolitionalToOmou.vue").then(processImport)
 };
