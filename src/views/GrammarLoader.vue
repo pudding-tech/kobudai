@@ -1,7 +1,8 @@
 <script setup lang="ts">
-  import { onMounted, ref, shallowRef } from "vue";
+  import { nextTick, onMounted, ref, shallowRef } from "vue";
   import { useRoute } from "vue-router";
   import { grammarIndex } from "@/grammar/grammarIndex";
+  import { resolveScroll, setResolveScroll } from "@/router/scrollResolver";
   import type { GrammarComponent } from "@/types/types";
   import NotFound from "./NotFound.vue";
 
@@ -21,6 +22,13 @@
       const metaTitle = grammarPoint.value?.meta?.title;
       if (metaTitle) {
         document.title = `${metaTitle} - Kobudai`;
+      }
+
+      // Set the scroll position
+      await nextTick();
+      if (resolveScroll) {
+        resolveScroll();
+        setResolveScroll(null);
       }
     }
     catch (err) {

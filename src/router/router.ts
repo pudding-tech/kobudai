@@ -3,6 +3,7 @@ import Home from "@/views/Home.vue";
 import GrammarLoader from "@/views/GrammarLoader.vue";
 import NotFound from "../views/NotFound.vue";
 import { getMainListsValue } from "@/lists";
+import { setResolveScroll } from "@/router/scrollResolver";
 
 const mainListRegex = getMainListsValue().join("|");
 let lastRoute: RouteLocationNormalized | null = null;
@@ -36,7 +37,16 @@ const router = createRouter({
       name: "NotFound",
       component: NotFound
     }
-  ]
+  ],
+  scrollBehavior(to, _from, savedPosition) {
+    // If the route is "grammarLoader", resolve the scroll position after the grammar point is loaded
+    if (savedPosition && to.name === "grammarLoader") {
+      return new Promise((resolve) => {
+        setResolveScroll(() => resolve(savedPosition));
+      });
+    }
+    return savedPosition ?? { top: 0 };
+  }
 });
 
 router.beforeEach((to, from, next) => {
