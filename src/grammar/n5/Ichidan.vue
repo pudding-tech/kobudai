@@ -4,7 +4,8 @@
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { ichidan as meta, godan, ichidanNegative, ichidanNonPast, ichidanPast } from "./metadataN5";
+  import { ichidan as meta, godan, ichidanNegative, ichidanNonPast, ichidanPast, teVerb } from "./metadataN5";
+  import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
 </script>
 
 <script lang="ts">
@@ -65,20 +66,42 @@
       </div>
       Here's a short breakdown of the various forms:
       <ul>
-        <li class="list"><b>Plain Negative (Past) Form:</b> Verb stem (drop the <span class="g">る</span>), then add ない (e.g. 食べない) or なかった (e.g. 食べなかった).</li>
-        <li class="list"><b>Polite Form:</b> Verb stem (drop the <span class="g">る</span>), then add ます (e.g. 食べます).</li>
+        <li class="list"><b>Plain negative, Plain negative past:</b> Verb stem (drop the <span class="g">る</span>), then add ない (e.g. 食べない) or なかった (e.g. 食べなかった).</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNegative.slug } }" class="link">{{ ichidanNegative.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">Negative past verb (ichidan)</RouterLink></div>
+        </div>
+        <li class="list"><b>Polite form:</b> Verb stem (drop the <span class="g">る</span>), then add ます (e.g. 食べます).</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNonPast.slug } }" class="link">{{ ichidanNonPast.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNegative.slug } }" class="link">{{ ichidanNegative.title }}</RouterLink></div>
+        </div>
         <ul>
           <li class="list">The polite form is used in formal situations, such as speaking with strangers or people of higher social status.</li>
           <li class="list">Within the polite form the are multiple conjugations that correspond to the plain forms, just with a polite tone, such as polite negative, polite past, and polite volitional.</li>
         </ul>
-        <li class="list"><b>Continuative Form:</b> Verb stem (drop the <span class="g">る</span>).</li>
+        <li class="list"><b>Continuative form:</b> Verb stem (drop the <span class="g">る</span>).</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPast.slug } }" class="link">{{ ichidanPast.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink></div>
+        </div>
         <ul>
           <li class="list">The continuative form is often used to chain actions together or combine with helper verbs like ～たい.</li>
           <li class="list">This form is also the basis for the plain past and te-form conjugations.</li>
         </ul>
-        <li class="list"><b>Dictionary/Plain Form:</b> The base form of the verb, ending in an <i>iru/eru</i> sound.</li>
-        <li class="list"><b>Imperative, Potential, Conditional Form:</b> Verb stem (drop the <span class="g">る</span>), then a suffix can be added to create the different forms (e.g. 食べ, 食べられる, 食べれば).</li>
-        <li class="list"><b>Volitional Form:</b> Verb stem (drop the <span class="g">る</span>) sound, then add よう (e.g. 食べよう).</li>
+        <li class="list"><b>Dictionary/Plain form:</b> The base form of the verb, ending in an <i>iru/eru</i> sound.</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNonPast.slug } }" class="link">{{ ichidanNonPast.title }}</RouterLink></div>
+        </div>
+        <li class="list"><b>Imperative, Potential, Conditional form:</b> Verb stem (drop the <span class="g">る</span>), then a suffix can be added to create the different forms (e.g. 食べ, 食べられる, 食べれば).</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">Conditional verb</RouterLink></div>
+        </div>
+        <li class="list"><b>Volitional form:</b> Verb stem (drop the <span class="g">る</span>) sound, then add よう (e.g. 食べよう).</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: volitionalVerbs.slug } }" class="link">{{ volitionalVerbs.title }}</RouterLink></div>
+        </div>
       </ul>
       <br>
       Understanding the five-step chart is essential for mastering Japanese verb conjugation, as it provides a clear and systematic way to predict how verbs will change in different grammatical contexts.

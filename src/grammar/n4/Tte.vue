@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { tte as meta } from "./metadataN4";
 </script>
 
@@ -30,14 +31,17 @@
         on its own — standing in for the full <span class="g">って</span>言っていた — with the verb omitted and understood from context.
       </div>
 
-      <GrammarExample>
-        <template #example>
+      <GrammarExampleSentences>
+        <div class="example">
           <ruby>行<rt>い</rt></ruby>くと<ruby>言<rt>い</rt></ruby>っていた → <ruby>行<rt>い</rt></ruby>く<span class="g">って</span>
-        </template>
-        <template #translation>
+        </div>
+        <div class="translation">
           (Someone) said they're going
+        </div>
+        <template #note>
+          Both have the same meaning, but って is more casual
         </template>
-      </GrammarExample>
+      </GrammarExampleSentences>
 
       <GrammarExample>
         <template #example>
@@ -87,7 +91,7 @@
           <ruby>明日<rt>あした</rt></ruby>は<ruby>休<rt>やす</rt></ruby>み<span class="g">だって</span>
         </template>
         <template #translation>
-          They said tomorrow's a day off
+          I heard tomorrow's a day off
         </template>
       </GrammarExample>
 

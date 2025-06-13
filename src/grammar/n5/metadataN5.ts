@@ -138,6 +138,14 @@ export const kore: GrammarPoint = {
   titleRomaji: "kore sore are dore"
 };
 
+export const maeni: GrammarPoint = {
+  slug: "前に",
+  title: "前に",
+  subtitle: "Before, In front of",
+  titleRomaji: "mae ni",
+  tags: ["before", "prior to", "mae ni", "front", "preceding"]
+};
+
 export const mo: GrammarPoint = {
   slug: "も",
   title: "も",
@@ -165,6 +173,14 @@ export const qualifierSentences: GrammarPoint = {
   subtitle: "Using sentences to qualify nouns",
   titleRomaji: "Sentence plus noun",
   tags: ["qualifier", "sentences"]
+};
+
+export const tekara: GrammarPoint = {
+  slug: "てから",
+  title: "～てから",
+  subtitle: "After doing...",
+  titleRomaji: "te kara",
+  tags: ["after", "te kara", "doing", "verbing", "action", "sequence", "order"]
 };
 
 export const temoii: GrammarPoint = {

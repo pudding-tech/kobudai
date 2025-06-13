@@ -72,6 +72,14 @@ export const numberShika: GrammarPoint = {
   tags: ["number", "shika", "only", "as few as", "just", "limitation", "emphasis"]
 };
 
+export const mitai: GrammarPoint = {
+  slug: "みたい",
+  title: "みたい",
+  subtitle: "Similar to, Like, Resembling",
+  titleRomaji: "mitai",
+  tags: ["like", "similar to", "casual", "appearance", "resemblance"]
+};
+
 export const potentialVerbs: GrammarPoint = {
   slug: "potential-verb",
   title: "Potential verb",

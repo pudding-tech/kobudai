@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { sou as meta, souda } from "./metadataN4";
+  import { sou as meta, mitai, souda } from "./metadataN4";
   import { adverbs } from "@/grammar/n5/metadataN5";
 
   const isPolite = ref(false);
@@ -29,8 +29,10 @@
     </template>
     <template #related>
       <div>Other ways of expressing "looks like":</div>
-      <div>- みたい</div>
-      Do not confuse with <RouterLink :to="{ name: 'grammarLoader', params: { slug: souda.slug } }" class="link">{{ souda.slug }}</RouterLink>, which implies hearsay.
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: mitai.slug } }" class="link">{{ mitai.title }}</RouterLink></div>
+      <div>- ようだ</div>
+      <div style="margin-top: 20px;">Note:</div>
+      Do not confuse with <RouterLink :to="{ name: 'grammarLoader', params: { slug: souda.slug } }" class="link">{{ souda.title }}</RouterLink>, which implies hearsay.
     </template>
     <template #explanation>
       The grammar pattern <span class="g">～そう</span> is used to express what something looks like based on visual or immediate impressions.

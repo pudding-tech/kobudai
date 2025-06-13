@@ -1,6 +1,6 @@
 import type { Sublist } from "@/types/types";
 import * as n4 from "../../n4/metadataN4";
-import { adverbs, qualifierSentences } from "../../n5/metadataN5";
+import { adverbs, maeni, qualifierSentences, tekara } from "../../n5/metadataN5";
 
 export const genki2List: Sublist = {
   name: "Genki II",
@@ -55,7 +55,10 @@ export const genki2List: Sublist = {
         n4.souda,
         n4.tte,
         n4.tara,
-        n4.nakutemoii
+        n4.nakutemoii,
+        n4.mitai,
+        maeni,
+        tekara
       ]
     },
     {

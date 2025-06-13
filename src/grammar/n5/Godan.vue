@@ -7,6 +7,7 @@
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
   import { godan as meta, godanNegative, godanNonPast, godanPast, ichidan, teVerb } from "./metadataN5";
+  import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
 </script>
 
 <script lang="ts">
@@ -80,12 +81,22 @@
       Here's a short breakdown of the various forms:
       <ul>
         <li class="list"><b>Plain negative, Plain negative past:</b> The verb stem changes to end in a <span class="h">あ</span> sound.</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">Negative past verb (godan)</RouterLink></div>
+        </div>
         <ul>
           <li class="list">For the plain negative form one adds ない to the stem (e.g. 行かない, to not go).</li>
           <li class="list">For the plain negative past form one adds なかった to the stem (e.g. 行かなかった, did not go).</li>
           <li class="list"><span class="h">*</span> Note that when the verb ends in <span class="h">う</span> it becomes <span class="h">わ</span>, not あ. See <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink> for more information.</li>
         </ul>
-        <li class="list"><b>Continuative, Polite:</b> The verb stem changes to end in a <span class="h">い</span> sound.</li>
+        <li class="list"><b>Continuative, Polite form:</b> The verb stem changes to end in a <span class="h">い</span> sound.</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNonPast.slug } }" class="link">{{ godanNonPast.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink></div>
+        </div>
         <ul>
           <li class="list">The continuative form is often called "the stem form" as it's used for many different conjugations, perhaps most notably the polite form.</li>
           <li class="list">The polite form is used in formal situations, such as speaking with strangers or people of higher social status. In polite conjugations one adds some variation of ます to the stem (e.g. 行きます, to go).</li>
@@ -97,9 +108,19 @@
             <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">て-form</RouterLink>.
           </li>
         </ul>
-        <li class="list"><b>Dictionary/Plain Form:</b> The base form of the verb, ending in a kana of the <span class="h">う</span> sound.</li>
-        <li class="list"><b>Imperative, Potential, Conditional Form:</b> The verb changes to end in a <span class="h">え</span> sound, then a suffix can be added to create the different forms (e.g. 行け, 行ける, 行けば).</li>
-        <li class="list"><b>Volitional Form:</b> The verb changes to end in a <span class="h">お</span> sound before adding う (e.g. 行こう).</li>
+        <li class="list"><b>Dictionary/Plain form:</b> The base form of the verb, ending in a kana of the <span class="h">う</span> sound.</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNonPast.slug } }" class="link">{{ godanNonPast.title }}</RouterLink></div>
+        </div>
+        <li class="list"><b>Imperative, Potential, Conditional form:</b> The verb changes to end in a <span class="h">え</span> sound, then a suffix can be added to create the different forms (e.g. 行け, 行ける, 行けば).</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">Conditional verb</RouterLink></div>
+        </div>
+        <li class="list"><b>Volitional form:</b> The verb changes to end in a <span class="h">お</span> sound before adding う (e.g. 行こう).</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: volitionalVerbs.slug } }" class="link">{{ volitionalVerbs.title }}</RouterLink></div>
+        </div>
       </ul>
       <br>
       Understanding the five-step chart is essential for mastering godan verb conjugation, as it provides a clear and systematic way to predict how verbs will change in different grammatical contexts.
