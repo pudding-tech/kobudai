@@ -1,9 +1,9 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
-  import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
-  import { godanPast as meta, godan, godanNonPast, godanNegative, ichidanPast, te } from "./metadataN5";
+  import { godanPast as meta, godan, godanNonPast, godanNegative, ichidanPast, teVerb } from "./metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
 
   const isPolite = ref(false);
@@ -150,21 +150,39 @@
         "Sound convenience" refers to changes in pronunciation that make words easier to say, similar to how "want to" becomes "wanna" in English. In ancient Japanese, speakers modified verb roots
         to ease pronunciation with certain /t/-sound conjugations, leading to unique conjugation patterns still used today.
 
-        <GrammarExample>
-          <template #example>
-            <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="g">んだ</span></div>
-            <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="g">した</span></div>
-            <div><ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby><span class="g">いた</span></div>
-            <div style="padding-top: 8px">ある → あ<span class="g">った</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="g">んだ</span>
+          </div>
+          <div class="translation">
+            to read → read
+          </div>
+          <div class="example">
+            <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="g">した</span>
+          </div>
+          <div class="translation">
+            to speak → spoke
+          </div>
+          <div class="example">
+            <ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby><span class="g">いた</span>
+          </div>
+          <div class="translation">
+            to write → wrote
+          </div>
+          <div class="example">
+            ある → あ<span class="g">った</span>
+          </div>
+          <div class="translation">
+            to exist → existed (inanimate)
+          </div>
           <template #note>
             Plain past form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
 
         <div class="note">
           <div class="note-title">Note:</div>
-          This exact conjugation pattern is also used to construct the <RouterLink :to="{ name: 'grammarLoader', params: { slug: te.slug } }" class="link">て-form</RouterLink> of godan verbs.
+          This exact conjugation pattern is also used to construct the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">て-form</RouterLink> of godan verbs.
         </div>
       </div>
 
@@ -178,17 +196,35 @@
         </div>
         From here the verb can be conjugated in various polite forms. For the past form, you take the verb stem in the polite form (now ending in an い sound), and then add <span class="g">ました</span>.
 
-        <GrammarExample>
-          <template #example>
-            <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">み</span><span class="g">ました</span></div>
-            <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">し</span><span class="g">ました</span></div>
-            <div><ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby><span class="h">き</span><span class="g">ました</span></div>
-            <div style="padding-top: 8px">ある → あ<span class="h">り</span><span class="g">ました</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">み</span><span class="g">ました</span>
+          </div>
+          <div class="translation">
+            to read → read
+          </div>
+          <div class="example">
+            <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">し</span><span class="g">ました</span>
+          </div>
+          <div class="translation">
+            to speak → spoke
+          </div>
+          <div class="example">
+            <ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby><span class="h">き</span><span class="g">ました</span>
+          </div>
+          <div class="translation">
+            to write → wrote
+          </div>
+          <div class="example">
+            ある → あ<span class="h">り</span><span class="g">ました</span>
+          </div>
+          <div class="translation">
+            to exist → existed (inanimate)
+          </div>
           <template #note>
             Polite past form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
@@ -198,25 +234,46 @@
           <div class="note-title">Note:</div>
           The verb 行く (to go) is irregular in its plain past form, changing to <span class="g">行った</span> instead of following typical conjugation patterns.
         </div>
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">した</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>た</span></div>
-            <div><ruby>行<rt>い</rt></ruby>く → <span class="g"><ruby>行<rt>い</rt></ruby>った</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">した</span>
+          </div>
+          <div class="translation">
+            to do → did
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>た</span>
+          </div>
+          <div class="translation">
+            to come → came
+          </div>
+          <div class="example">
+            <ruby>行<rt>い</rt></ruby>く → <span class="g"><ruby>行<rt>い</rt></ruby>った</span>
+          </div>
+          <div class="translation">
+            to go → went
+          </div>
           <template #note>
             Plain past form of exceptions
           </template>
-        </GrammarExample>
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">しました</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ました</span></div>
-          </template>
+        </GrammarExampleSentences>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">しました</span>
+          </div>
+          <div class="translation">
+            to do → did
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ました</span>
+          </div>
+          <div class="translation">
+            to come → came
+          </div>
           <template #note>
             Polite past form of irregular verbs
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
     </template>
   </GrammarStructure>

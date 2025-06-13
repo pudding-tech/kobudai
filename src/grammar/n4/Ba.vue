@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
   import { ba as meta, nara, tara, potentialVerbs, volitionalVerbs } from "./metadataN4";
 </script>
@@ -99,64 +100,121 @@
           <GodanChart :selected-row="4" :word-selection="1" :show-word-selection="false" />
         </div>
         Once we have the conditional stem, simply add <span class="g">ば</span> to the end.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">め</span><span class="g">ば</span></div>
-            <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">せ</span><span class="g">ば</span></div>
-            <div><ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">け</span><span class="g">ば</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">め</span><span class="g">ば</span>
+          </div>
+          <div class="translation">
+            to read → if (...) read
+          </div>
+          <div class="example">
+            <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">せ</span><span class="g">ば</span>
+          </div>
+          <div class="translation">
+            to speak → if (...) speak
+          </div>
+          <div class="example">
+            <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">け</span><span class="g">ば</span>
+          </div>
+          <div class="translation">
+            to go → if (...) go
+          </div>
           <template #note>
             Conditional verbs (godan)
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
         <div class="grammar-subtitle">Ichidan verbs</div>
         For ichidan verbs, forming the conditional is done by replacing the final る of the verb with <span class="g">れば</span>.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">れば</span></div>
-            <div><ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">れば</span></div>
-            <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">れば</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">れば</span>
+          </div>
+          <div class="translation">
+            to eat → if (...) eat
+          </div>
+          <div class="example">
+            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">れば</span>
+          </div>
+          <div class="translation">
+            to fall → if (...) fall
+          </div>
+          <div class="example">
+            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">れば</span>
+          </div>
+          <div class="translation">
+            to see → if (...) see
+          </div>
           <template #note>
             Conditional verbs (ichidan)
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
         <div class="grammar-subtitle">い-adjectives</div>
         For い-adjectives, drop the final い and add <span class="g">ければ</span>.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>高<rt>たか</rt></ruby>い → <ruby>高<rt>たか</rt></ruby><span class="g">ければ</span></div>
-            <div><ruby>安<rt>やす</rt></ruby>い → <ruby>安<rt>やす</rt></ruby><span class="g">ければ</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>高<rt>たか</rt></ruby>い → <ruby>高<rt>たか</rt></ruby><span class="g">ければ</span>
+          </div>
+          <div class="translation">
+            expensive → if (...) expensive
+          </div>
+          <div class="example">
+            <ruby>安<rt>やす</rt></ruby>い → <ruby>安<rt>やす</rt></ruby><span class="g">ければ</span>
+          </div>
+          <div class="translation">
+            cheap → if (...) cheap
+          </div>
           <template #note>
             With い-adjectives
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
         <div class="grammar-subtitle">な-adjectives and nouns</div>
         For な-adjectives and nouns, use the plain form followed by <span class="g">ならば</span> or <span class="g">であれば</span>.
         <span class="g">であれば</span> is more formal and commonly used in writing or professional contexts,
         while <span class="g">ならば</span> also has a formal tone but sounds a bit more literary or old-fashioned. Both can feel somewhat stiff in casual conversation.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>便利<rt>べんり</rt></ruby> → <ruby>便利<rt>べんり</rt></ruby><span class="g">ならば</span></div>
-            <div><ruby>学生<rt>がくせい</rt></ruby> → <ruby>学生<rt>がくせい</rt></ruby><span class="g">であれば</span></div>
-          </template>
+        For な-adjectives and nouns specifically, だったら from <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink>
+        is more common than the <span class="g">～ば</span> form.
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>便利<rt>べんり</rt></ruby> → <ruby>便利<rt>べんり</rt></ruby><span class="g">ならば</span>
+          </div>
+          <div class="translation">
+            convenient → if (...) convenient
+          </div>
+          <div class="example">
+            <ruby>学生<rt>がくせい</rt></ruby> → <ruby>学生<rt>がくせい</rt></ruby><span class="g">であれば</span>
+          </div>
+          <div class="translation">
+            student → if (...) student
+          </div>
           <template #note>
             With な-adjectives and nouns
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
         <div class="grammar-subtitle">Using ～ば with negatives</div>
         To make the negative ～ば form of adjectives, verbs, and nouns, you use the negative form and drop the い from ない, then add <span class="g">ければ</span>.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>食<rt>た</rt></ruby>べない → <ruby>食<rt>た</rt></ruby>べな<span class="g">ければ</span></div>
-            <div><ruby>高<rt>たか</rt></ruby>くない → <ruby>高<rt>たか</rt></ruby>くな<span class="g">ければ</span></div>
-            <div><ruby>学生<rt>がくせい</rt></ruby>じゃない → <ruby>学生<rt>がくせい</rt></ruby>じゃな<span class="g">ければ</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>食<rt>た</rt></ruby>べない → <ruby>食<rt>た</rt></ruby>べな<span class="g">ければ</span>
+          </div>
+          <div class="translation">
+            to not eat → if (...) not eat
+          </div>
+          <div class="example">
+            <ruby>高<rt>たか</rt></ruby>くない → <ruby>高<rt>たか</rt></ruby>くな<span class="g">ければ</span>
+          </div>
+          <div class="translation">
+            not expensive → if (...) not expensive
+          </div>
+          <div class="example">
+            <ruby>学生<rt>がくせい</rt></ruby>じゃない → <ruby>学生<rt>がくせい</rt></ruby>じゃな<span class="g">ければ</span>
+          </div>
+          <div class="translation">
+            not a student → if (...) not a student
+          </div>
           <template #note>
             Negative conditionals
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">

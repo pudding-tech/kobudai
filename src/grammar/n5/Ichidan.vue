@@ -4,7 +4,7 @@
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { ichidan as meta, godan } from "./metadataN5";
+  import { ichidan as meta, godan, ichidanNegative, ichidanNonPast, ichidanPast } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -20,7 +20,21 @@
     </template>
     <template #related>
       <div class="related-mb">See the other verb type:</div>
-      - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        Basic ichidan conjugations:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNonPast.slug } }" class="link">{{ ichidanNonPast.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNegative.slug } }" class="link">{{ ichidanNegative.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPast.slug } }" class="link">{{ ichidanPast.title }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
       <div class="title-container" :class="{ 'mobile': breakpointService.isMobile() }">

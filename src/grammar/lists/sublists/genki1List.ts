@@ -52,21 +52,23 @@ export const genki1List: Sublist = {
       title: "CHAPTER 5",
       value: 5,
       grammarPoints: [
-        n5.adjectivesI
+        n5.adjectivesI,
+        n5.adjectivesNa
       ]
     },
     {
       title: "CHAPTER 6",
       value: 6,
       grammarPoints: [
-        n5.te
+        n5.teVerb,
+        n5.temoii
       ]
     },
     {
       title: "CHAPTER 7",
       value: 7,
       grammarPoints: [
-        n5.teAdjective
+        n5.teAdjectiveNoun
       ]
     }
   ]

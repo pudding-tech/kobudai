@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
-  import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { ichidanPast as meta, godanPast, ichidan, ichidanNegative, ichidanNonPast } from "./metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
 
@@ -89,17 +89,35 @@
         <div class="grammar-subtitle">Plain form (informal)</div>
         Since ichidan verbs have only one possible conjugation pattern, conjugating them is straightforward.
         To change an ichidan verb into the past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">た</span>.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">た</span></div>
-            <div><ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">た</span></div>
-            <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">た</span></div>
-            <div style="padding-top: 8px">いる → い<span class="g">た</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">た</span>
+          </div>
+          <div class="translation">
+            to eat → ate
+          </div>
+          <div class="example">
+            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">た</span>
+          </div>
+          <div class="translation">
+            to fall → fell
+          </div>
+          <div class="example">
+            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">た</span>
+          </div>
+          <div class="translation">
+            to see → saw
+          </div>
+          <div class="example">
+            いる → い<span class="g">た</span>
+          </div>
+          <div class="translation">
+            to exist → existed (animate)
+          </div>
           <template #note>
             Plain past form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
@@ -107,40 +125,74 @@
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
         To make an ichidan verb polite in the past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">ました</span>.
 
-        <GrammarExample>
-          <template #example>
-            <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ました</span></div>
-            <div><ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">ました</span></div>
-            <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ました</span></div>
-            <div style="padding-top: 8px">いる → い<span class="g">ました</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ました</span>
+          </div>
+          <div class="translation">
+            to eat → ate
+          </div>
+          <div class="example">
+            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">ました</span>
+          </div>
+          <div class="translation">
+            to fall → fell
+          </div>
+          <div class="example">
+            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ました</span>
+          </div>
+          <div class="translation">
+            to see → saw
+          </div>
+          <div class="example">
+            いる → い<span class="g">ました</span>
+          </div>
+          <div class="translation">
+            to exist → existed (animate)
+          </div>
           <template #note>
             Polite past form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
         <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">した</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>た</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">した</span>
+          </div>
+          <div class="translation">
+            to do → did
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>た</span>
+          </div>
+          <div class="translation">
+            to come → came
+          </div>
           <template #note>
             Plain past form of exceptions
           </template>
-        </GrammarExample>
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">しました</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ました</span></div>
-          </template>
+        </GrammarExampleSentences>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">しました</span>
+          </div>
+          <div class="translation">
+            to do → did
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ました</span>
+          </div>
+          <div class="translation">
+            to come → came
+          </div>
           <template #note>
             Polite past form of irregular verbs
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
     </template>
   </GrammarStructure>

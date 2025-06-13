@@ -73,11 +73,6 @@ a {
   color: var(--kanji-highlight);
 }
 
-.et {
-  color: #898989;
-  padding-left: 10px;
-}
-
 .note {
   padding: 10px;
   margin: 20px 0;
@@ -109,13 +104,15 @@ ruby rt {
   padding-bottom: 5px;
   opacity: 0.6;
 
-  &.top {
-    padding-top: 0;
-  }
 
   &.small {
     font-size: 0.9em;
     margin-top: 8px;
+  }
+
+  &.top {
+    padding-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -191,6 +188,28 @@ ruby rt {
   margin-top: 20px;
 }
 
+.grammar-example-sentences {
+  .example {
+    text-align: center;
+    font-size: 1.3em;
+  }
+
+  .translation {
+    text-align: center;
+    opacity: 0.8;
+    color: var(--grammar-example-sentences-color);
+
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+
+    &.strong {
+      color: var(--grammar-example-sentences-strong-color);
+      margin-top: 8px;
+    }
+  }
+}
+
 /*
 * Variables
 */
@@ -231,6 +250,8 @@ ruby rt {
   /* GRAMMAR EXAMPLE */
   --grammar-example-bg: #fdfdfd;
   --grammar-exaple-note-color: #006337;
+  --grammar-example-sentences-color: #797979;
+  --grammar-example-sentences-strong-color: var(--p-card-color);
 
   /* NAVBAR */
   --navbar-hover-color: rgba(113, 113, 113, 0.1);
@@ -301,6 +322,8 @@ ruby rt {
   /* GRAMMAR EXAMPLE */
   --grammar-example-bg: #2d2d2d;
   --grammar-exaple-note-color: var(--p-primary-250);
+  --grammar-example-sentences-color: #afafaf;
+  --grammar-example-sentences-strong-color: white;
 
   /* NAVBAR */
   --navbar-hover-color: rgba(191, 191, 191, 0.1);

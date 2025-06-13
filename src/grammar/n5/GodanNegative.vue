@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
-  import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
   import { godanNegative as meta, godan, godanNonPast, godanPast, ichidanNegative } from "./metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
@@ -139,25 +139,41 @@
         </div>
         Once we have the plain negative stem, simply add <span class="g">ない</span> to the end.
 
-        <GrammarExample>
-          <template #example>
-            <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">ま</span><span class="g">ない</span></div>
-            <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">さ</span><span class="g">ない</span></div>
-            <div><ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">か</span><span class="g">ない</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">ま</span><span class="g">ない</span>
+          </div>
+          <div class="translation">
+            to read → to not read
+          </div>
+          <div class="example">
+            <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">さ</span><span class="g">ない</span>
+          </div>
+          <div class="translation">
+            to speak → to not speak
+          </div>
+          <div class="example">
+            <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">か</span><span class="g">ない</span>
+          </div>
+          <div class="translation">
+            to go → to not go
+          </div>
           <template #note>
             Plain negative form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
         <div class="note">
           <div class="note-title">Note:</div>
           The negative plain forms of verbs that end with the hiragana う change into <span class="h">わ</span>, not あ, making the negative <span class="h">わ</span><span class="g">ない</span>, and not あない.
         </div>
-        <GrammarExample>
-          <template #example>
-            <div><ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby><span class="h">わ</span><span class="g">ない</span></div>
-          </template>
-        </GrammarExample>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>買<rt>か</rt></ruby>う → <ruby>買<rt>か</rt></ruby><span class="h">わ</span><span class="g">ない</span>
+          </div>
+          <div class="translation">
+            to buy → to not buy
+          </div>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
@@ -170,17 +186,35 @@
         </div>
         From here the verb can be conjugated in various polite forms. For the negative form, you take the verb stem in the polite form (now ending in an い sound), and then add <span class="g">ません</span>.
 
-        <GrammarExample>
-          <template #example>
-            <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">み</span><span class="g">ません</span></div>
-            <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">し</span><span class="g">ません</span></div>
-            <div><ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">き</span><span class="g">ません</span></div>
-            <div style="padding-top: 8px">ある → あ<span class="h">り</span><span class="g">ません</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">み</span><span class="g">ません</span>
+          </div>
+          <div class="translation">
+            to read → to not read
+          </div>
+          <div class="example">
+            <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">し</span><span class="g">ません</span>
+          </div>
+          <div class="translation">
+            to speak → to not speak
+          </div>
+          <div class="example">
+            <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">き</span><span class="g">ません</span>
+          </div>
+          <div class="translation">
+            to go → to not go
+          </div>
+          <div class="example">
+            ある → あ<span class="h">り</span><span class="g">ません</span>
+          </div>
+          <div class="translation">
+            to exist → to not exist (inanimate)
+          </div>
           <template #note>
             Polite negative form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
@@ -190,25 +224,46 @@
           <div class="note-title">Note:</div>
           The verb ある (to exist, for inanimate objects) is irregular in its plain negative form, transforming to <span class="g">ない</span> instead of following typical conjugation patterns.
         </div>
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">しない</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>こ</rt></ruby>ない</span></div>
-            <div style="padding-top: 10px">ある → <span class="g">ない</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">しない</span>
+          </div>
+          <div class="translation">
+            to do → to not do
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>こ</rt></ruby>ない</span>
+          </div>
+          <div class="translation">
+            to come → to not come
+          </div>
+          <div class="example">
+            ある → <span class="g">ない</span>
+          </div>
+          <div class="translation">
+            to exist → to not exist (inanimate)
+          </div>
           <template #note>
             Plain negative form of exceptions
           </template>
-        </GrammarExample>
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">しません</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ません</span></div>
-          </template>
+        </GrammarExampleSentences>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">しません</span>
+          </div>
+          <div class="translation">
+            to do → to not do
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ません</span>
+          </div>
+          <div class="translation">
+            to come → to not come
+          </div>
           <template #note>
             Polite negative form of exceptions
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
     </template>
   </GrammarStructure>

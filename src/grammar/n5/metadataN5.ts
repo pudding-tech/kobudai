@@ -5,7 +5,15 @@ export const adjectivesI: GrammarPoint = {
   title: "い-Adjective",
   subtitle: "Adjectives ending in い",
   titleRomaji: "i adjective",
-  tags: ["i-adjectives", "adjective", "i"]
+  tags: ["i-adjectives", "adjective", "i", "true adjective"]
+};
+
+export const adjectivesNa: GrammarPoint = {
+  slug: "な-adjective",
+  title: "な-Adjective",
+  subtitle: "Adjectives that are also nouns",
+  titleRomaji: "na adjective",
+  tags: ["na-adjectives", "adjective", "na", "noun", "noun adjective"]
 };
 
 export const adverbs: GrammarPoint = {
@@ -151,20 +159,36 @@ export const no: GrammarPoint = {
   titleRomaji: "no"
 };
 
-export const te: GrammarPoint = {
-  slug: "て",
+export const qualifierSentences: GrammarPoint = {
+  slug: "qualifier-sentences",
+  title: "Sentence + noun",
+  subtitle: "Using sentences to qualify nouns",
+  titleRomaji: "Sentence plus noun",
+  tags: ["qualifier", "sentences"]
+};
+
+export const temoii: GrammarPoint = {
+  slug: "てもいい",
+  title: "～てもいい",
+  subtitle: "It's okay to, You may (Permission)",
+  titleRomaji: "temoii",
+  tags: ["temoii", "permission", "allowance", "it's okay to", "you may"]
+};
+
+export const teVerb: GrammarPoint = {
+  slug: "て-verb",
   title: "て-form (verb)",
   subtitle: "～って、～んで、～いて、～いで、～して、～て",
-  titleRomaji: "te form",
+  titleRomaji: "te form (verb)",
   tags: ["te", "te-form", "verbs", "conjunctive", "connecting", "clauses", "requests", "commands"]
 };
 
-export const teAdjective: GrammarPoint = {
-  slug: "て-adjective",
-  title: "て-form (adjective)",
+export const teAdjectiveNoun: GrammarPoint = {
+  slug: "て-adjective-noun",
+  title: "て-form (adjective, noun)",
   subtitle: "～くて、～で",
-  titleRomaji: "te form (adjective)",
-  tags: ["te", "te-form", "adjective", "adjectives", "conjunctive", "connecting", "clauses"]
+  titleRomaji: "te form (adjective, noun)",
+  tags: ["te", "te-form", "adjective", "adjectives", "noun", "conjunctive", "connecting", "clauses"]
 };
 
 export const yo: GrammarPoint = {

@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { adverbs as meta } from "./metadataN5";
 </script>
 
@@ -25,31 +26,47 @@
       Since Japanese has two main types of adjectives — い-adjectives and な-adjectives — each follows its own rule when turning into an adverb.
       <br><br>
       To turn an い-adjective into an adverb, drop the final い and replace it with <span class="g">く</span>.
-      <GrammarExample>
-        <template #example>
-          <div><ruby>速<rt>はや</rt></ruby>い → <ruby>速<rt>はや</rt></ruby><span class="g">く</span></div>
-          <div><ruby>強<rt>つよ</rt></ruby>い → <ruby>強<rt>つよ</rt></ruby><span class="g">く</span></div>
-          <div><ruby>楽<rt>たの</rt></ruby>しい → <ruby>楽<rt>たの</rt></ruby>し<span class="g">く</span></div>
-        </template>
-        <template #translation>
-          <div>Fast → Quickly</div>
-          <div>Strong → Strongly</div>
-          <div>Fun → Enjoyably, Happily</div>
-        </template>
-      </GrammarExample>
+      <GrammarExampleSentences>
+        <div class="example">
+          <ruby>速<rt>はや</rt></ruby>い → <ruby>速<rt>はや</rt></ruby><span class="g">く</span>
+        </div>
+        <div class="translation">
+          Fast → Quickly
+        </div>
+        <div class="example">
+          <ruby>強<rt>つよ</rt></ruby>い → <ruby>強<rt>つよ</rt></ruby><span class="g">く</span>
+        </div>
+        <div class="translation">
+          Strong → Strongly
+        </div>
+        <div class="example">
+          <ruby>楽<rt>たの</rt></ruby>しい → <ruby>楽<rt>たの</rt></ruby>し<span class="g">く</span>
+        </div>
+        <div class="translation">
+          Fun → Enjoyably, Happily
+        </div>
+      </GrammarExampleSentences>
       For な-adjectives, just add <span class="g">に</span> (instead of な) to form the adverb.
-      <GrammarExample>
-        <template #example>
-          <div><ruby>静<rt>しず</rt></ruby>か → <ruby>静<rt>しず</rt></ruby>か<span class="g">に</span></div>
-          <div><ruby>簡単<rt>かんたん</rt></ruby> → <ruby>簡単<rt>かんたん</rt></ruby><span class="g">に</span></div>
-          <div><ruby>安全<rt>あんぜん</rt></ruby> → <ruby>安全<rt>あんぜん</rt></ruby><span class="g">に</span></div>
-        </template>
-        <template #translation>
-          <div>Quiet → Quietly</div>
-          <div>Easy → Easily</div>
-          <div>Safe → Safely</div>
-        </template>
-      </GrammarExample>
+      <GrammarExampleSentences>
+        <div class="example">
+          <ruby>静<rt>しず</rt></ruby>か → <ruby>静<rt>しず</rt></ruby>か<span class="g">に</span>
+        </div>
+        <div class="translation">
+          Quiet → Quietly
+        </div>
+        <div class="example">
+          <ruby>簡単<rt>かんたん</rt></ruby> → <ruby>簡単<rt>かんたん</rt></ruby><span class="g">に</span>
+        </div>
+        <div class="translation">
+          Easy → Easily
+        </div>
+        <div class="example">
+          <ruby>安全<rt>あんぜん</rt></ruby> → <ruby>安全<rt>あんぜん</rt></ruby><span class="g">に</span>
+        </div>
+        <div class="translation">
+          Safe → Safely
+        </div>
+      </GrammarExampleSentences>
       You're changing the adjective — which normally describes nouns — into an adverb that describes verbs instead.
       Compare:
       <ul>

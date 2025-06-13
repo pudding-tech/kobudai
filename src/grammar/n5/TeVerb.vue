@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { te as meta, godan, godanNonPast, godanNegative, godanPast } from "./metadataN5";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
+  import { teVerb as meta, godan, godanNonPast, godanNegative, godanPast, teAdjectiveNoun } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -64,10 +65,16 @@
     </template>
     <template #related>
       <div class="related-mb">
+        Also see て-form of adjectives and nouns:
+      </div>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAdjectiveNoun.slug } }" class="link">{{ teAdjectiveNoun.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
         Further usage of the て-form:
       </div>
       <div style="margin-bottom: 20px">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">～ている</RouterLink>
       </div>
       <div class="related-mb">
         Other verb conjugations:
@@ -86,7 +93,7 @@
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-title">The Te-Form of Verbs</div>
+      <div class="grammar-title">The て-Form of Verbs</div>
       The <span class="g">て</span>-form is one of the most versatile verb forms in Japanese, serving a wide range of grammatical purposes.
       It's essential for connecting clauses, giving commands, asking for permission, expressing continuous actions, and much more.
       <br><br>
@@ -94,7 +101,7 @@
       The most basic and common use of the <span class="g">て</span>-form is its conjunctive function, which links sequential or simultaneous actions.
       <GrammarExample>
         <template #example>
-          <ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby><ruby>食<rt>た</rt></ruby>べ<span class="g">て</span>、<ruby>仕事<rt>しごと</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます
+          <ruby>朝<rt>あさ</rt></ruby>ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べ<span class="g">て</span>、<ruby>仕事<rt>しごと</rt></ruby>に<ruby>行<rt>い</rt></ruby>く
         </template>
         <template #translation>
           I eat breakfast and then go to work
@@ -123,11 +130,11 @@
           The level of politeness depends on the tone of voice — when said gently, it may sound like a request, but in a harsher tone, it could come across as a command
         </template>
       </GrammarExample>
-      For a more polite way of using the <span class="g">て</span>-form for giving requests - see <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">～てください</RouterLink>
+      For a more polite way of using the <span class="g">て</span>-form for making requests - see <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">～てください</RouterLink>
       <div class="note">
         <div class="note-title">Note:</div>
         While we called the <span class="g">て</span>-form a "verb form" earlier, it is really a grammatical form used across various word types, including verbs, adjectives, and even nouns.
-        See <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">て-form (adjective, noun)</RouterLink> for usage in adjectives and nouns.
+        See <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAdjectiveNoun.slug } }" class="link">{{ teAdjectiveNoun.title }}</RouterLink> for usage in adjectives and nouns.
       </div>
 
       <div class="section">
@@ -150,17 +157,35 @@
         "Sound convenience" refers to changes in pronunciation that make words easier to say, similar to how "want to" becomes "wanna" in English. In ancient Japanese, speakers modified verb roots
         to ease pronunciation with certain /t/-sound conjugations, leading to unique conjugation patterns still used today.
 
-        <GrammarExample>
-          <template #example>
-            <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="g">んで</span></div>
-            <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="g">して</span></div>
-            <div><ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby><span class="g">いて</span></div>
-            <div style="padding-top: 8px">ある → あ<span class="g">って</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="g">んで</span>
+          </div>
+          <div class="translation">
+            to read → read (and...)
+          </div>
+          <div class="example">
+            <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="g">して</span>
+          </div>
+          <div class="translation">
+            to speak → speak (and...)
+          </div>
+          <div class="example">
+            <ruby>書<rt>か</rt></ruby>く → <ruby>書<rt>か</rt></ruby><span class="g">いて</span>
+          </div>
+          <div class="translation">
+            to write → write (and...)
+          </div>
+          <div class="example">
+            ある → あ<span class="g">って</span>
+          </div>
+          <div class="translation">
+            to exist → exist (and...)
+          </div>
           <template #note>
             Godan verbs in て-form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
 
         <div class="note">
           <div class="note-title">Note:</div>
@@ -172,16 +197,29 @@
         <div class="grammar-subtitle">Ichidan verbs</div>
         For ichidan verbs, creating the <span class="g">て</span>-form is straightforward:
         Drop the final る and replace it with <span class="g">て</span>.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">て</span></div>
-            <div><ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">て</span></div>
-            <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">て</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">て</span>
+          </div>
+          <div class="translation">
+            to eat → eat (and...)
+          </div>
+          <div class="example">
+            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">て</span>
+          </div>
+          <div class="translation">
+            to fall → fall (and...)
+          </div>
+          <div class="example">
+            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">て</span>
+          </div>
+          <div class="translation">
+            to see → see (and...)
+          </div>
           <template #note>
             Ichidan verbs in て-form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
@@ -191,16 +229,29 @@
           <div class="note-title">Note:</div>
           The verb 行く (to go) is irregular in the <span class="g">て</span>-form, changing to <span class="g">行って</span> instead of following typical conjugation patterns.
         </div>
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">して</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>て</span></div>
-            <div><ruby>行<rt>い</rt></ruby>く → <span class="g"><ruby>行<rt>い</rt></ruby>って</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">して</span>
+          </div>
+          <div class="translation">
+            to do → do (and...)
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>て</span>
+          </div>
+          <div class="translation">
+            to come → come (and...)
+          </div>
+          <div class="example">
+            <ruby>行<rt>い</rt></ruby>く → <span class="g"><ruby>行<rt>い</rt></ruby>って</span>
+          </div>
+          <div class="translation">
+            to go → go (and...)
+          </div>
           <template #note>
             て-form of exceptions
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
     </template>
   </GrammarStructure>

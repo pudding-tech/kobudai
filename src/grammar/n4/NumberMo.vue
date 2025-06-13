@@ -14,7 +14,7 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      Noun + が／を + <span class="grammar-highlight">#counter</span> + <span class="grammar-highlight">も</span> + verb
+      Noun + が／を + <span class="grammar-highlight">number</span> + <span class="grammar-highlight">も</span> + verb
     </template>
     <template #related>
       Similarly, to say "as few as", see <RouterLink :to="{ name: 'grammarLoader', params: { slug: numberShika.slug } }" class="link">{{ numberShika.title }}</RouterLink>

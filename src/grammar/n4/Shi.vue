@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { shi as meta } from "./metadataN4";
 </script>
 
@@ -34,33 +35,47 @@
       To use <span class="g">し</span>, simply conjugate the verb, adjective, or noun clause as follows:
       <ul style="padding-right: 40px;">
         <li>For verbs: Attach し after the plain form.</li>
-        <GrammarExample>
-          <template #example>
+        <GrammarExampleSentences>
+          <div class="example">
             <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べる<span class="g">し</span>
-          </template>
+          </div>
+          <div class="translation">
+            to eat → to eat, and...
+          </div>
           <template #note>
             Using し with verbs
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
         <li>For い-adjectives: Attach し after the plain form.</li>
-        <GrammarExample>
-          <template #example>
+        <GrammarExampleSentences>
+          <div class="example">
             <ruby>安<rt>やす</rt></ruby>い → <ruby>安<rt>やす</rt></ruby>い<span class="g">し</span>
-          </template>
+          </div>
+          <div class="translation">
+            cheap → cheap, and...
+          </div>
           <template #note>
             Using し with い-adjectives
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
         <li>For な-adjectives and nouns: Attach だし after the plain form.</li>
-        <GrammarExample>
-          <template #example>
-            <div><ruby>静<rt>しず</rt></ruby>か → <ruby>静<rt>しず</rt></ruby>か<span class="g">だし</span></div>
-            <div><ruby>学生<rt>がくせい</rt></ruby> → <ruby>学生<rt>がくせい</rt></ruby><span class="g">だし</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>静<rt>しず</rt></ruby>か → <ruby>静<rt>しず</rt></ruby>か<span class="g">だし</span>
+          </div>
+          <div class="translation">
+            quiet → quiet, and...
+          </div>
+          <div class="example">
+            <ruby>学生<rt>がくせい</rt></ruby> → <ruby>学生<rt>がくせい</rt></ruby><span class="g">だし</span>
+          </div>
+          <div class="translation">
+            student → student, and...
+          </div>
           <template #note>
             Using し with な-adjectives and nouns
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </ul>
       <div class="note">
         <div class="note-title">Note:</div>

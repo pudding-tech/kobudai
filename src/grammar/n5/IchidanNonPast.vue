@@ -2,6 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { ichidanNonPast as meta, ichidan, ichidanNegative, ichidanPast, godanNonPast } from "./metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
 
@@ -117,17 +118,35 @@
         <br><br>
         This is the form you will find in dictionaries, and serves as the base form for many grammatical constructions.
         It requires no further conjugation and can be used as-is.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>食<rt>た</rt></ruby>べ<span class="g">る</span> – to eat</div>
-            <div><ruby>落<rt>お</rt></ruby>ち<span class="g">る</span> – to fall down</div>
-            <div><ruby>見<rt>み</rt></ruby><span class="g">る</span> – to see</div>
-            <div style="padding-top: 8px">い<span class="g">る</span> – to exist (living things)</div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>食<rt>た</rt></ruby>べ<span class="g">る</span>
+          </div>
+          <div class="translation">
+            to eat
+          </div>
+          <div class="example">
+            <ruby>落<rt>お</rt></ruby>ち<span class="g">る</span>
+          </div>
+          <div class="translation">
+            to fall down
+          </div>
+          <div class="example">
+            <ruby>見<rt>み</rt></ruby><span class="g">る</span>
+          </div>
+          <div class="translation">
+            to see
+          </div>
+          <div class="example">
+            い<span class="g">る</span>
+          </div>
+          <div class="translation">
+            to exist (living things)
+          </div>
           <template #note>
             Dictionary form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
@@ -137,31 +156,57 @@
         <br><br>
         To make an ichidan verb polite in the non-past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">ます</span>.
 
-        <GrammarExample>
-          <template #example>
-            <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ます</span></div>
-            <div><ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">ます</span></div>
-            <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ます</span></div>
-            <div style="padding-top: 8px">いる → い<span class="g">ます</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ます</span>
+          </div>
+          <div class="translation">
+            to eat
+          </div>
+          <div class="example">
+            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">ます</span>
+          </div>
+          <div class="translation">
+            to fall down
+          </div>
+          <div class="example">
+            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ます</span>
+          </div>
+          <div class="translation">
+            to see
+          </div>
+          <div class="example">
+            いる → い<span class="g">ます</span>
+          </div>
+          <div class="translation">
+            to exist (living things)
+          </div>
           <template #note>
             Polite non-past form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
         <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">します</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ます</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">します</span>
+          </div>
+          <div class="translation">
+            to do
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ます</span>
+          </div>
+          <div class="translation">
+            to come
+          </div>
           <template #note>
             Polite non-past form of exceptions
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
     </template>
   </GrammarStructure>

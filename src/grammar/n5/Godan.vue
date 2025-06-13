@@ -6,7 +6,7 @@
   // import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { godan as meta, godanNegative, godanPast, ichidan, te } from "./metadataN5";
+  import { godan as meta, godanNegative, godanNonPast, godanPast, ichidan, teVerb } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -23,7 +23,21 @@
     </template>
     <template #related>
       <div class="related-mb">See the other verb type:</div>
-      - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidan.slug } }" class="link">{{ ichidan.title }}</RouterLink>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidan.slug } }" class="link">{{ ichidan.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        Basic godan conjugations:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNonPast.slug } }" class="link">{{ godanNonPast.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
       <div class="title-container" :class="{ 'mobile': breakpointService.isMobile() }">
@@ -80,7 +94,7 @@
             This form is also the basis for the plain past and て-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
             For more information about this, see
             <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink> or
-            <RouterLink :to="{ name: 'grammarLoader', params: { slug: te.slug } }" class="link">て-form</RouterLink>.
+            <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">て-form</RouterLink>.
           </li>
         </ul>
         <li class="list"><b>Dictionary/Plain Form:</b> The base form of the verb, ending in a kana of the <span class="h">う</span> sound.</li>

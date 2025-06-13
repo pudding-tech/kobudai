@@ -38,7 +38,7 @@
       </ul>
       There are a few common variations of this structure that differ in formality:
       <table class="janai-table">
-        <tr class="header">
+        <tr>
           <th>Form</th>
           <th v-if="!breakpointService.isMobile()">Level of Formality</th>
           <th>Notes</th>

@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { sou as meta } from "./metadataN4";
+  import { sou as meta, souda } from "./metadataN4";
   import { adverbs } from "@/grammar/n5/metadataN5";
 
   const isPolite = ref(false);
@@ -25,12 +25,12 @@
       <div>な-adjective (negative) <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div>Verb (negative) <s class="remove">[い]</s> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div class="structure-title small">Exception</div>
-      <div>いい → よい <s class="remove">[い]</s> + <span class="h">さ</span> + そう + <span v-if="isPolite">です</span><span v-else>だ</span></div>
+      <div>いい → よい <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
     </template>
     <template #related>
       <div>Other ways of expressing "looks like":</div>
       <div>- みたい</div>
-      Do not confuse with the other そう, which implies hearsay.
+      Do not confuse with <RouterLink :to="{ name: 'grammarLoader', params: { slug: souda.slug } }" class="link">{{ souda.slug }}</RouterLink>, which implies hearsay.
     </template>
     <template #explanation>
       The grammar pattern <span class="g">～そう</span> is used to express what something looks like based on visual or immediate impressions.
@@ -104,7 +104,7 @@
           <li>For negative い-adjectives: Remove the final い from くない, then add <span class="h">さ</span> and <span class="g">そう</span>.</li>
           <GrammarExample>
             <template #example>
-              <ruby>美味<rt>おい</rt></ruby>しくない → <ruby>美味<rt>おい</rt></ruby>しくなさ<span class="g">そう</span>
+              <ruby>美味<rt>おい</rt></ruby>しくない → <ruby>美味<rt>おい</rt></ruby>しくな<span class="h">さ</span><span class="g">そう</span>
             </template>
             <template #translation>
               Doesn't look tasty
@@ -113,7 +113,7 @@
           <li>For negative な-adjectives: Remove the final い from じゃない, then add <span class="h">さ</span> and <span class="g">そう</span>.</li>
           <GrammarExample>
             <template #example>
-              <ruby>元気<rt>げんき</rt></ruby>じゃない → <ruby>元気<rt>げんき</rt></ruby>じゃなさ<span class="g">そう</span>
+              <ruby>元気<rt>げんき</rt></ruby>じゃない → <ruby>元気<rt>げんき</rt></ruby>じゃな<span class="h">さ</span><span class="g">そう</span>
             </template>
             <template #translation>
               Doesn't seem healthy
@@ -129,8 +129,8 @@
             </template>
           </GrammarExample>
         </ul>
-        Another way to express "doesn't look like" is by using the positive versions, and putting the negative on the <span class="g">～そう</span> itself.
-        This way is grammatically easier for learners, but both ways are common in everyday use.
+        Another way to express "doesn't look like" is by using the positive forms, and putting the negative on the <span class="g">～そう</span> itself.
+        Both ways of forming the negative are common in everyday use.
         <GrammarExample>
           <template #example>
             <ruby>美味<rt>おい</rt></ruby>し<span class="g">そう</span>じゃない
@@ -173,11 +173,11 @@
 
       <div class="note">
         <div class="note-title">Caution:</div>
-        Be careful not to confuse <span class="g">～そう</span> with <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'そうだ' } }" class="link">～そうだ</RouterLink>, which is used to express hearsay or information received from someone else.
+        Be careful not to confuse <span class="g">～そう</span> with <RouterLink :to="{ name: 'grammarLoader', params: { slug: souda.slug } }" class="link">{{ souda.slug }}</RouterLink>, which is used to express hearsay or information received from someone else.
       </div>
       <GrammarExample>
         <template #example>
-          <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るそう
+          <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るそうだ
         </template>
         <template #translation>
           <i>I heard it will rain</i>

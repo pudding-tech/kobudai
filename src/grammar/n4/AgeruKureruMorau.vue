@@ -1,7 +1,10 @@
 <script setup lang="ts">
+  import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { givingReceiving as meta } from "../n4/metadataN4";
+  import { ageruKureruMorau as meta } from "../n4/metadataN4";
+
+  const isPolite = ref(false);
 </script>
 
 <script lang="ts">
@@ -9,13 +12,13 @@
 </script>
 
 <template>
-  <GrammarStructure>
+  <GrammarStructure :show-polite="true" @politeness-change="(polite) => isPolite = polite">
     <template #title> {{ meta.title }}</template>
     <template #subtitle> {{ meta.subtitle }}</template>
     <template #structure>
-      <div>Giver + は／が + Receiver + に + <span class="grammar-highlight">あげる</span></div>
-      <div>Giver + は／が + Receiver + に + <span class="grammar-highlight">くれる</span></div>
-      <div>Receiver + は／が + Giver + に／から + <span class="grammar-highlight">もらう</span></div>
+      <div>Giver + は／が + Receiver + に + <span class="grammar-highlight">あげ<span v-if="isPolite">ます</span><span v-else>る</span></span></div>
+      <div>Giver + は／が + Receiver + に + <span class="grammar-highlight">くれ<span v-if="isPolite">ます</span><span v-else>る</span></span></div>
+      <div>Receiver + は／が + Giver + に／から + <span class="grammar-highlight">もら<span v-if="isPolite">います</span><span v-else>う</span></span></div>
     </template>
     <template #related>
 

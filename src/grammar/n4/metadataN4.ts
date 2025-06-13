@@ -16,7 +16,7 @@ export const gahoshi: GrammarPoint = {
   tags: ["want", "want something", "gahoshi", "noun", "noun phrase"]
 };
 
-export const givingReceiving: GrammarPoint = {
+export const ageruKureruMorau: GrammarPoint = {
   slug: "あげる-くれる-もらう",
   title: "あげる・くれる・もらう",
   subtitle: "Giving and receiving",
@@ -30,6 +30,14 @@ export const kamoshirenai: GrammarPoint = {
   subtitle: "Maybe, Perhaps, Might",
   titleRomaji: "kamoshirenai",
   tags: ["might", "maybe", "perhaps", "kamo", "uncertainty", "probably"]
+};
+
+export const nakutemoii: GrammarPoint = {
+  slug: "なくてもいい",
+  title: "～なくてもいい",
+  subtitle: "Don't have to, It's okay not to",
+  titleRomaji: "nakutemoii",
+  tags: ["don't have to", "it's okay not to", "nakutemoii", "permission", "lack of obligation"]
 };
 
 export const nara: GrammarPoint = {
@@ -87,6 +95,14 @@ export const sou: GrammarPoint = {
   tags: ["looks like", "seems like", "appear", "seem", "sou"]
 };
 
+export const souda: GrammarPoint = {
+  slug: "そうだ",
+  title: "そうだ",
+  subtitle: "I hear that... (Hearsay)",
+  titleRomaji: "souda",
+  tags: ["hearsay", "reporting", "souda", "hear", "it is said that", "rumor"]
+};
+
 export const tara: GrammarPoint = {
   slug: "たら",
   title: "～たら",
@@ -103,6 +119,14 @@ export const taradou: GrammarPoint = {
   tags: ["how about", "suggestion", "advice", "taradou", "conditional", "taradoudesuka"]
 };
 
+export const teAgeruKureruMorau: GrammarPoint = {
+  slug: "てあげる-てくれる-てもらう",
+  title: "～てあげる・～てくれる・～てもらう",
+  subtitle: "Doing something for someone",
+  titleRomaji: "teageru tekureru temorau",
+  tags: ["te-form", "giving", "receiving", "te ageru", "te kureru", "te morau", "give", "receive", "doing for someone"]
+};
+
 export const temiru: GrammarPoint = {
   slug: "てみる",
   title: "～てみる",
@@ -117,6 +141,14 @@ export const teoku: GrammarPoint = {
   subtitle: "Do something in preparation, Do something in advance",
   titleRomaji: "teoku",
   tags: ["do in advance", "prepare", "advance", "future use", "teoku", "preparation"]
+};
+
+export const tte: GrammarPoint = {
+  slug: "って",
+  title: "って",
+  subtitle: "Informal quotation",
+  titleRomaji: "tte",
+  tags: ["informal", "quoting", "hearsay", "tte", "casual speech", "they say", "they said"]
 };
 
 export const volitionalVerbs: GrammarPoint = {

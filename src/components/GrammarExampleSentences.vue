@@ -6,19 +6,10 @@
 </script>
 
 <template>
-  <div class="grammar-example">
+  <div class="grammar-example-sentences">
     <div v-if="!breakpointService.isMobile()" class="title">Example</div>
     <div class="container">
-      <div class="example">
-        <div>
-          <slot name="example"></slot>
-        </div>
-      </div>
-      <div v-if="slots.translation" class="translation">
-        <div>
-          <slot name="translation"></slot>
-        </div>
-      </div>
+      <slot />
       <div v-if="slots.note" class="example-note">
         <div class="note-inner">
           <slot name="note"></slot>
@@ -29,7 +20,7 @@
 </template>
 
 <style scoped>
-.grammar-example {
+.grammar-example-sentences {
   padding: 10px;
   margin: 20px 0;
   border-radius: var(--p-content-border-radius);
@@ -45,21 +36,6 @@
 
 .container {
   padding: 10px;
-}
-
-.example {
-  display: flex;
-  justify-content: center;
-  font-size: 1.3em;
-  text-align: center;
-}
-
-.translation {
-  display: flex;
-  justify-content: center;
-  margin-top: 8px;
-  opacity: 0.8;
-  text-align: center;
 }
 
 .example-note {

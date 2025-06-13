@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { ref } from "vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
@@ -165,17 +166,35 @@
         
         This is the form you will find in dictionaries, and serves as the base form for many grammatical constructions.
         It requires no further conjugation and can be used as-is.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>読<rt>よ</rt></ruby><span class="g">む</span> – to read</div>
-            <div><ruby>話<rt>はな</rt></ruby><span class="g">す</span> – to speak</div>
-            <div><ruby>行<rt>い</rt></ruby><span class="g">く</span> – to go</div>
-            <div style="padding-top: 8px">あ<span class="g">る</span> – to exist (inanimate objects)</div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>読<rt>よ</rt></ruby><span class="g">む</span>
+          </div>
+          <div class="translation">
+            to read
+          </div>
+          <div class="example">
+            <ruby>話<rt>はな</rt></ruby><span class="g">す</span>
+          </div>
+          <div class="translation">
+            to speak
+          </div>
+          <div class="example">
+            <ruby>行<rt>い</rt></ruby><span class="g">く</span>
+          </div>
+          <div class="translation">
+            to go
+          </div>
+          <div class="example">
+            あ<span class="g">る</span>
+          </div>
+          <div class="translation">
+            to exist (inanimate objects)
+          </div>
           <template #note>
             Dictionary form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
@@ -188,31 +207,57 @@
         </div>
         From here the verb can be conjugated in various polite forms. For the non-past form (present/future tense), you take the verb stem in the polite form (now ending in an い sound), and then add <span class="g">ます</span>.
 
-        <GrammarExample>
-          <template #example>
-            <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">み</span><span class="g">ます</span></div>
-            <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">し</span><span class="g">ます</span></div>
-            <div><ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">き</span><span class="g">ます</span></div>
-            <div style="padding-top: 8px">ある → あ<span class="h">り</span><span class="g">ます</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">み</span><span class="g">ます</span>
+          </div>
+          <div class="translation">
+            to read
+          </div>
+          <div class="example">
+            <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">し</span><span class="g">ます</span>
+          </div>
+          <div class="translation">
+            to speak
+          </div>
+          <div class="example">
+            <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">き</span><span class="g">ます</span>
+          </div>
+          <div class="translation">
+            to go
+          </div>
+          <div class="example">
+            ある → あ<span class="h">り</span><span class="g">ます</span>
+          </div>
+          <div class="translation">
+            to exist (inanimate objects)
+          </div>
           <template #note>
             Polite non-past form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
         <div class="grammar-subtitle">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">します</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ます</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">します</span>
+          </div>
+          <div class="translation">
+            to do
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ます</span>
+          </div>
+          <div class="translation">
+            to come
+          </div>
           <template #note>
             Polite non-past form of exceptions
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
     </template>
   </GrammarStructure>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { nara as meta, ba, tara } from "./metadataN4";
 </script>
 
@@ -46,16 +47,20 @@
         <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink> or <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink>.
         <span class="g">なら</span> feels more like "if it's true that X…" or "speaking of X…". This means the speaker must believe that the condition is true.
       </div>
-      <GrammarExample>
-        <template #example>
-          <div>Aさん: <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くつもりだよ</div>
-          <div>Bさん: <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<span class="g">なら</span>、<ruby>上野<rt>うえの</rt></ruby><ruby>公園<rt>こうえん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったほうがいいよ</div>
-        </template>
-        <template #translation>
-          <div>A: I'm planning to go to Tokyo</div>
-          <div>B: If you're going to Tokyo, you should go to Ueno Park</div>
-        </template>
-      </GrammarExample>
+      <GrammarExampleSentences>
+        <div class="example">
+          Aさん: <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>くつもりだよ
+        </div>
+        <div class="translation strong">
+          A: I'm planning to go to Tokyo
+        </div>
+        <div class="example">
+          Bさん: <ruby>東京<rt>とうきょう</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<span class="g">なら</span>、<ruby>上野<rt>うえの</rt></ruby><ruby>公園<rt>こうえん</rt></ruby>に<ruby>行<rt>い</rt></ruby>ったほうがいいよ
+        </div>
+        <div class="translation strong">
+          B: If you're going to Tokyo, you should go to Ueno Park
+        </div>
+      </GrammarExampleSentences>
       <span class="g">なら</span> cannot be used to express purely hypothetical or imaginative situations without context.
       It also isn't used to describe things that are always true or naturally happen, such as general facts or laws of nature — in those cases,
       the <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink> form is more appropriate.
@@ -73,16 +78,20 @@
         <div class="grammar-title">なら Used to Contrast or Limit</div>
         One important way <span class="g">なら</span> is used in Japanese is to respond to a suggestion or condition and narrow down the situation.
         It often carries the nuance of "if it's that specific case, then..." — meaning the speaker is limiting what they're saying to only that case, or contrasting it with other possibilities.
-        <GrammarExample>
-          <template #example>
-            <div>Aさん: <ruby>今週<rt>こんしゅう</rt></ruby>、<ruby>会<rt>あ</rt></ruby>えますか？</div>
-            <div>Bさん: <ruby>明日<rt>あした</rt></ruby><span class="g">なら</span>、<ruby>時間<rt>じかん</rt></ruby>がありますよ。</div>
-          </template>
-          <template #translation>
-            <div>A: Can we meet this week?</div>
-            <div>B: If it's tomorrow, then I have time</div>
-          </template>
-        </GrammarExample>
+        <GrammarExampleSentences>
+          <div class="example">
+            Aさん: <ruby>今週<rt>こんしゅう</rt></ruby>、<ruby>会<rt>あ</rt></ruby>えますか？
+          </div>
+          <div class="translation strong">
+            A: Can we meet this week?
+          </div>
+          <div class="example">
+            Bさん: <ruby>明日<rt>あした</rt></ruby><span class="g">なら</span>、<ruby>時間<rt>じかん</rt></ruby>がありますよ
+          </div>
+          <div class="translation strong">
+            B: If it's tomorrow, then I have time
+          </div>
+        </GrammarExampleSentences>
         In this conversation, A asks a broad question: "Can we meet this week?"
         B responds with a limited condition: "If it's tomorrow, yes."
         This doesn't mean B is free all week — only that tomorrow works. The use of <span class="g">なら</span> helps clearly contrast "tomorrow" with the rest of the week and limits their availability to that day.

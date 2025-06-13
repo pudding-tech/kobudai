@@ -3,6 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { teoku as meta } from "./metadataN4";
+  import { teVerb } from "../n5/metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -19,11 +20,11 @@
       <div>Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">お<span v-if="!isPolite">く</span><span v-else>きます</span></span></div>
       <div v-if="!isPolite">
         <div class="structure-title small">Casual variant</div>
-        <div>Verb (<span class="grammar-highlight">て-form</span>) + <s class="remove">[て]</s><span class="grammar-highlight">とく</span></div>
+        <div>Verb (<span class="grammar-highlight">て-form</span>) <s class="remove">[て]</s> + <span class="grammar-highlight">とく</span></div>
       </div>
     </template>
     <template #related>
-      
+      Based on the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink>
     </template>
     <template #explanation>
       The grammar pattern <span class="g">～ておく</span> is used when you do something in preparation for a future purpose or event. It often translates to "do something in advance",
@@ -109,7 +110,19 @@
             Contracted form of 勉強しておこう
           </template>
         </GrammarExample>
-        The polite or formal form is not contracted — contractions like <span class="g">～とく</span>. and <span class="g">～どく</span> (from <span class="g">～でおく</span>) are only used in casual settings, typically among friends or family.
+        <div class="note">
+          <div class="note-title">Note:</div>
+          When a verb in the て-form ends with で, the contraction of <span class="g">～でおく</span> becomes <span class="g">～どく</span> instead.
+        </div>
+        <GrammarExample>
+          <template #example>
+            本を読ん<span class="g">どきます</span>
+          </template>
+          <template #translation>
+            I'll read the book (in preparation)
+          </template>
+        </GrammarExample>
+        Keep in mind the polite or formal form is not contracted — contractions like <span class="g">～とく</span> and <span class="g">～どく</span> are only used in casual settings, typically among friends or family.
         These forms are very natural in everyday conversation, and you'll often hear them used for actions done in advance, just in case, or to be ready for something.
       </div>
     </template>

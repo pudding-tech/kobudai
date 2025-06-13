@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { ichidanNegative, ichidanNonPast, ichidanPast, te } from "@/grammar/n5/metadataN5";
+  import { ichidanNegative, ichidanNonPast, ichidanPast, teVerb } from "@/grammar/n5/metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { IchidanChartExample } from "@/types/types";
 
@@ -71,7 +71,7 @@
         okurigana: examples.value[word.value].okurigana
       },
       suffix: "～ます、～た、～て",
-      grammarPoint: [ichidanNonPast, ichidanNegative, ichidanPast, te],
+      grammarPoint: [ichidanNonPast, ichidanNegative, ichidanPast, teVerb],
       rowNr: 2
     },
     {

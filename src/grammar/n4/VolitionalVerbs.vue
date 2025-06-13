@@ -2,6 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
   import RelatedGrammarList from "@/components/RelatedGrammarList.vue";
   import { volitionalVerbs as meta, ba, potentialVerbs } from "./metadataN4";
@@ -125,22 +126,35 @@
             <GodanChart :selected-row="5" :word-selection="1" :show-word-selection="false" />
           </div>
           Once we have the volitional stem, simply add <span class="g">う</span> to the end.
-          <GrammarExample>
-            <template #example>
-              <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">も</span><span class="g">う</span></div>
-              <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">そ</span><span class="g">う</span></div>
-              <div><ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">こ</span><span class="g">う</span></div>
-            </template>
+          <GrammarExampleSentences>
+            <div class="example">
+              <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">も</span><span class="g">う</span>
+            </div>
+            <div class="translation">
+              to read → let's read
+            </div>
+            <div class="example">
+              <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">そ</span><span class="g">う</span>
+            </div>
+            <div class="translation">
+              to speak → let's speak
+            </div>
+            <div class="example">
+              <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">こ</span><span class="g">う</span>
+            </div>
+            <div class="translation">
+              to go → let's go
+            </div>
             <template #note>
               Volitional form (godan)
             </template>
-          </GrammarExample>
+          </GrammarExampleSentences>
           <GrammarExample>
             <template #example>
-              <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">こ</span><span class="g">う</span>
+              <ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby>に<ruby>行<rt>い</rt></ruby><span class="h">こ</span><span class="g">う</span>
             </template>
             <template #translation>
-              (I) go → Let's go
+              Let's go watch a movie
             </template>
           </GrammarExample>
         </div>
@@ -149,23 +163,35 @@
           <div class="grammar-subtitle">Volitional ichidan verbs</div>
           For ichidan verbs, forming the volitional is straightforward. Simply replace the final <span class="g">る</span>
           of the verb with <span class="g">よう</span>.
-  
-          <GrammarExample>
-            <template #example>
-              <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">よう</span></div>
-              <div><ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">よう</span></div>
-              <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">よう</span></div>
-            </template>
+          <GrammarExampleSentences>
+            <div class="example">
+              <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">よう</span>
+            </div>
+            <div class="translation">
+              to eat → let's eat
+            </div>
+            <div class="example">
+              <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">よう</span>
+            </div>
+            <div class="translation">
+              to fall → let's fall
+            </div>
+            <div class="example">
+              <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">よう</span>
+            </div>
+            <div class="translation">
+              to see → let's see
+            </div>
             <template #note>
               Volitional form (ichidan)
             </template>
-          </GrammarExample>
+          </GrammarExampleSentences>
           <GrammarExample>
             <template #example>
-              <ruby>出<rt>で</rt></ruby>る → <ruby>出<rt>で</rt></ruby><span class="g">よう</span>
+              <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>に<ruby>出<rt>で</rt></ruby><span class="g">よう</span>
             </template>
             <template #translation>
-              (I) will leave → Let's leave
+              Let's go out before it rains
             </template>
           </GrammarExample>
         </div>
@@ -186,41 +212,80 @@
           which is formed from the potential stem.
         </div>
         To form the polite version, Attach <span class="g">～ましょう</span> to the ます-stem of a verb.
-        <GrammarExample>
-          <template #example>
-            <div><ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">み</span><span class="g">ましょう</span></div>
-            <div><ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">し</span><span class="g">ましょう</span></div>
-            <div><ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">き</span><span class="g">ましょう</span></div>
-            <div><ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ましょう</span></div>
-            <div><ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ましょう</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>読<rt>よ</rt></ruby>む → <ruby>読<rt>よ</rt></ruby><span class="h">み</span><span class="g">ましょう</span>
+          </div>
+          <div class="translation">
+            to read → let's read
+          </div>
+          <div class="example">
+            <ruby>話<rt>はな</rt></ruby>す → <ruby>話<rt>はな</rt></ruby><span class="h">し</span><span class="g">ましょう</span>
+          </div>
+          <div class="translation">
+            to speak → let's speak
+          </div>
+          <div class="example">
+            <ruby>行<rt>い</rt></ruby>く → <ruby>行<rt>い</rt></ruby><span class="h">き</span><span class="g">ましょう</span>
+          </div>
+          <div class="translation">
+            to go → let's go
+          </div>
+          <div class="example">
+            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ましょう</span>
+          </div>
+          <div class="translation">
+            to eat → let's eat
+          </div>
+          <div class="example">
+            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ましょう</span>
+          </div>
+          <div class="translation">
+            to see → let's see
+          </div>
           <template #note>
             Polite volitional form
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">
         <div class="grammar-title">Exceptions</div>
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">しよう</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>こ</rt></ruby>よう</span></div>
-          </template>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">しよう</span>
+          </div>
+          <div class="translation">
+            to do → let's do
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>こ</rt></ruby>よう</span>
+          </div>
+          <div class="translation">
+            to come → let's come
+          </div>
           <template #note>
             Plain volitional form of exceptions
           </template>
-        </GrammarExample>
-        <GrammarExample>
-          <template #example>
-            <div>する → <span class="g">しましょう</span></div>
-            <div><ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ましょう</span></div>
-          </template>
+        </GrammarExampleSentences>
+        <GrammarExampleSentences>
+          <div class="example">
+            する → <span class="g">しましょう</span>
+          </div>
+          <div class="translation">
+            to do → let's do
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ましょう</span>
+          </div>
+          <div class="translation">
+            to come → let's come
+          </div>
           <template #note>
             Polite volitional form of exceptions
           </template>
-        </GrammarExample>
+        </GrammarExampleSentences>
       </div>
 
       <div class="section">

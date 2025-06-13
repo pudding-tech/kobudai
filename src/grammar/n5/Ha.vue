@@ -38,7 +38,7 @@
         <div class="note">
           <div class="note-title">Note:</div>
           Even though it's written using the hiragana <span class="g">は</span>, it is pronounced "wa" when used as a particle.
-          This is one of the very few cases in Japanese where the written character and the spoken sound don't match — so it's worth memorizing early on.
+          This is one of the very few cases in Japanese where the written character and the spoken sound don't match.
         </div>
       </div>
       <div class="section">

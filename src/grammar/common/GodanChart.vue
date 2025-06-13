@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { godanNegative, godanNonPast, godanPast, te } from "@/grammar/n5/metadataN5";
+  import { godanNegative, godanNonPast, godanPast, teVerb } from "@/grammar/n5/metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { GodanChartExample } from "@/types/types";
 
@@ -73,7 +73,7 @@
         okurigana: examples.value[word.value].okurigana[1]
       },
       suffix: "～ます、（～た）、（～て）",
-      grammarPoint: [godanNonPast, godanNegative, godanPast, te],
+      grammarPoint: [godanNonPast, godanNegative, godanPast, teVerb],
       rowNr: 2
     },
     {

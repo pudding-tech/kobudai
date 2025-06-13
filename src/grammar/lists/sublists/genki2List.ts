@@ -1,6 +1,6 @@
 import type { Sublist } from "@/types/types";
 import * as n4 from "../../n4/metadataN4";
-import { adverbs } from "../../n5/metadataN5";
+import { adverbs, qualifierSentences } from "../../n5/metadataN5";
 
 export const genki2List: Sublist = {
   name: "Genki II",
@@ -25,7 +25,7 @@ export const genki2List: Sublist = {
       grammarPoints: [
         n4.gahoshi,
         n4.kamoshirenai,
-        n4.givingReceiving,
+        n4.ageruKureruMorau,
         n4.taradou,
         n4.numberMo,
         n4.numberShika
@@ -37,14 +37,25 @@ export const genki2List: Sublist = {
       grammarPoints: [
         n4.volitionalVerbs,
         n4.volitionalToOmou,
-        n4.teoku
+        n4.teoku,
+        qualifierSentences
+      ]
+    },
+    {
+      title: "CHAPTER 16",
+      value: 4,
+      grammarPoints: [
+        n4.teAgeruKureruMorau
       ]
     },
     {
       title: "CHAPTER 17",
       value: 5,
       grammarPoints: [
-        n4.tara
+        n4.souda,
+        n4.tte,
+        n4.tara,
+        n4.nakutemoii
       ]
     },
     {
