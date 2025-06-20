@@ -5,6 +5,7 @@ export type GrammarPoint = {
   title: string,
   subtitle: string,
   titleRomaji?: string,
+  titlePlain?: string,
   tags?: string[],
 };
 

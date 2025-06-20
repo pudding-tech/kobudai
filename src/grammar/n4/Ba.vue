@@ -20,7 +20,7 @@
         <div>い-adjective <s class="remove">[い]</s> + <span class="grammar-highlight">ければ</span></div>
         <div>な-adjective + <span class="grammar-highlight">ならば</span> or <span class="grammar-highlight">であれば</span></div>
         <div>Noun + <span class="grammar-highlight">ならば</span> or <span class="grammar-highlight">であれば</span></div>
-        <div class="structure-title small top">Godan verbs</div>
+        <div class="structure-title small">Godan verbs</div>
         <div class="kanji-mb">
           <ruby>買<rt>か</rt>う</ruby> → <ruby>買<rt>か</rt></ruby><span class="grammar-highlight"><span class="h">え</span>ば</span>
         </div>
@@ -48,18 +48,18 @@
         <div class="kanji-mb">
           <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt></ruby><span class="grammar-highlight"><span class="h">せ</span>ば</span>
         </div>
-        <div class="structure-title small top">Ichidan verbs</div>
+        <div class="structure-title small">Ichidan verbs</div>
         <div class="kanji-mb">
-          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">れば</span>
+          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight"><span class="h">れ</span>ば</span>
         </div>
-        <div class="structure-title small top">Verb Exceptions</div>
+        <div class="structure-title small">Irregular verbs</div>
         <div class="kanji-mb">
-          <span>する</span> → <span class="grammar-highlight">すれば</span>
+          <span>する</span> → す<span class="grammar-highlight"><span class="h">れ</span>ば</span>
         </div>
         <div>
-          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>く</rt></ruby>れば</span>
+          <span><ruby>来<rt>く</rt>る</ruby></span> → <ruby>来<rt>く</rt></ruby><span class="grammar-highlight"><span class="h">れ</span>ば</span>
         </div>
-        <div class="structure-title small top">Negatives</div>
+        <div class="structure-title small">Negatives</div>
         <div>Negative verb (あ column) + な<s class="remove">[い]</s><span class="grammar-highlight">ければ</span></div>
         <div>Negative い-adj + くな<s class="remove">[い]</s><span class="grammar-highlight">ければ</span></div>
         <div>Negative noun/な-adj + じゃな<s class="remove">[い]</s><span class="grammar-highlight">ければ</span></div>
@@ -124,28 +124,48 @@
           </template>
         </GrammarExampleSentences>
         <div class="grammar-subtitle">Ichidan verbs</div>
-        For ichidan verbs, forming the conditional is done by replacing the final る of the verb with <span class="g">れば</span>.
+        You will notice that ichidan verbs conjugate to the <span class="g">ば</span>-form the exact same way as a godan verb ending with る does. Namely, change the る to a れ, then add <span class="g">ば</span>.
+        Alternatively, you can also think of it as dropping the る (as normal with ichidan verbs) and adding <span class="h">れ</span><span class="g">ば</span>.
         <GrammarExampleSentences>
           <div class="example">
-            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">れば</span>
+            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="h">れ</span><span class="g">ば</span>
           </div>
           <div class="translation">
             to eat → if (...) eat
           </div>
           <div class="example">
-            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">れば</span>
+            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="h">れ</span><span class="g">ば</span>
           </div>
           <div class="translation">
             to fall → if (...) fall
           </div>
           <div class="example">
-            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">れば</span>
+            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="h">れ</span><span class="g">ば</span>
           </div>
           <div class="translation">
             to see → if (...) see
           </div>
           <template #note>
             Conditional verbs (ichidan)
+          </template>
+        </GrammarExampleSentences>
+        <div class="grammar-subtitle">Irregular verbs</div>
+        For the <span class="g">ば</span>-form of the two irregular verbs, we conjugate them just as if they were godan verbs.
+        <GrammarExampleSentences>
+          <div class="example">
+            <span>する</span> → す<span class="h">れ</span><span class="g">ば</span>
+          </div>
+          <div class="translation">
+            to do → if (...) do
+          </div>
+          <div class="example">
+            <ruby>来<rt>く</rt></ruby>る → <ruby>来<rt>く</rt></ruby><span class="h">れ</span><span class="g">ば</span>
+          </div>
+          <div class="translation">
+            to come → if (...) come
+          </div>
+          <template #note>
+            Conditional verbs (irregular)
           </template>
         </GrammarExampleSentences>
         <div class="grammar-subtitle">い-adjectives</div>

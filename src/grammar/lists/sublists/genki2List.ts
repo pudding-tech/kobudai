@@ -62,6 +62,22 @@ export const genki2List: Sublist = {
       ]
     },
     {
+      title: "CHAPTER 19",
+      value: 7,
+      grammarPoints: [
+        n4.sonkeigo,
+        n4.verbStemKudasai
+      ]
+    },
+    {
+      title: "CHAPTER 20",
+      value: 8,
+      grammarPoints: [
+        n4.kenjougo,
+        n4.verbStemSuru
+      ]
+    },
+    {
       title: "CHAPTER 22",
       value: 10,
       grammarPoints: [

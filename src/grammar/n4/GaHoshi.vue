@@ -46,7 +46,6 @@
           Negative polite form
         </template>
       </GrammarExample>
-      <!-- This construction is used to express the speaker's desire for something. It cannot be used to directly state the desire of someone else. -->
 
       <div class="section">
         <div class="grammar-subtitle">Expressing what others want</div>

@@ -7,7 +7,6 @@
   import { breakpointService } from "@/services/breakpointService";
   import CustomSelectButton from "@/components/CustomSelectButton.vue";
   import GrammarListItem from "@/components/GrammarListItem.vue";
-  import GrammarListItemMobile from "@/components/GrammarListItemMobile.vue";
   import type { MainList, Section, Sublist } from "@/types/types";
 
   const listStore = useListStore();
@@ -148,7 +147,7 @@
         <AccordionHeader class="accordion-header">{{ section.title }}</AccordionHeader>
         <AccordionContent>
           <div v-for="(grammarPoint, index2) in section.grammarPoints" :key="index2">
-            <GrammarListItemMobile :grammarPoint="grammarPoint" class="grammar-point" />
+            <GrammarListItem :grammarPoint="grammarPoint" :mobile="true" class="grammar-point" />
           </div>
         </AccordionContent>
       </AccordionPanel>

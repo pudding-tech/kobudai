@@ -17,34 +17,38 @@
     <template #title> {{ meta.title }}</template>
     <template #subtitle> {{ meta.subtitle }}</template>
     <template #structure>
-      <div><span class="grammar-highlight">い-adjective</span> <span v-if="isPolite"> + です</span></div>
+      <div>...は + <span class="grammar-highlight">い-adjective</span> <span v-if="isPolite"> + です</span></div>
       <div style="margin-bottom: 10px"><span class="grammar-highlight">い-adjective</span> + noun + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <table class="structure-table">
-        <tr>
-          <th>Form</th>
-          <th>Ending</th>
-          <th>Example</th>
-        </tr>
-        <tr>
-          <td>Present</td>
-          <td><span class="grammar-highlight">～い</span><span v-if="isPolite">です</span></td>
-          <td><span class="grammar-highlight"><ruby>高<rt>たか</rt></ruby>い</span><span v-if="isPolite">です</span></td>
-        </tr>
-        <tr>
-          <td>Negative</td>
-          <td><span class="grammar-highlight">～くない</span><span v-if="isPolite">です</span></td>
-          <td><span class="grammar-highlight"><ruby>高<rt>たか</rt></ruby>くない</span><span v-if="isPolite">です</span></td>
-        </tr>
-        <tr>
-          <td>Past</td>
-          <td><span class="grammar-highlight">～かった</span><span v-if="isPolite">です</span></td>
-          <td><span class="grammar-highlight"><ruby>高<rt>たか</rt></ruby>かった</span><span v-if="isPolite">です</span></td>
-        </tr>
-        <tr>
-          <td>Past Negative</td>
-          <td><span class="grammar-highlight">～くなかった</span><span v-if="isPolite">です</span></td>
-          <td><span class="grammar-highlight"><ruby>高<rt>たか</rt></ruby>くなかった</span><span v-if="isPolite">です</span></td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Form</th>
+            <th>Ending</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Present</td>
+            <td><span class="grammar-highlight">～い</span><span v-if="isPolite">です</span></td>
+            <td><span class="grammar-highlight"><ruby>高<rt>たか</rt></ruby>い</span><span v-if="isPolite">です</span></td>
+          </tr>
+          <tr>
+            <td>Negative</td>
+            <td><span class="grammar-highlight">～くない</span><span v-if="isPolite">です</span></td>
+            <td><span class="grammar-highlight"><ruby>高<rt>たか</rt></ruby>くない</span><span v-if="isPolite">です</span></td>
+          </tr>
+          <tr>
+            <td>Past</td>
+            <td><span class="grammar-highlight">～かった</span><span v-if="isPolite">です</span></td>
+            <td><span class="grammar-highlight"><ruby>高<rt>たか</rt></ruby>かった</span><span v-if="isPolite">です</span></td>
+          </tr>
+          <tr>
+            <td>Past Negative</td>
+            <td><span class="grammar-highlight">～くなかった</span><span v-if="isPolite">です</span></td>
+            <td><span class="grammar-highlight"><ruby>高<rt>たか</rt></ruby>くなかった</span><span v-if="isPolite">です</span></td>
+          </tr>
+        </tbody>
       </table>
       <div class="structure-title small">Irregular</div>
       いい → <span class="grammar-highlight">よくない</span> / <span class="grammar-highlight">よかった</span> / <span class="grammar-highlight">よくなかった</span>
@@ -96,12 +100,15 @@
       </GrammarExample>
       <div class="note">
         <div class="note-title">Note:</div>
-        い-adjectives are often called "true adjectives" because they behave like standalone predicates without needing extra words.
-        That means they can directly modify nouns or end a sentence with no need for a linking verb like "to be". This is different from な-adjectives,
-        which need な before nouns and often require です or だ to act as predicates.
+        い-adjectives are often called "true adjectives" because they can function as complete predicates on their own — they don't need an additional verb like だ ("to be").
+        This means they can directly modify nouns or end a sentence without requiring anything extra.
+        In contrast, な-adjectives require な when modifying nouns and usually need だ or です to act as predicates.
         <br><br>
-        You can add です after an い-adjective to make the sentence more polite, but in that case, です is only a politeness marker and does not change the grammar.
-        This means using です in any other tense or form after an い-adjective is not allowed.
+        Because い-adjectives already carry their own grammatical structure, it is grammatically incorrect to use だ after an い-adjective.
+        <br><br>
+        You can, however, add です after an い-adjective to make the sentence more polite. In this case, です acts only as a politeness marker
+        and does not affect the grammar or meaning. For this reason, です cannot be conjugated (e.g., into past tense or negative) directly
+        after an い-adjective — only the adjective itself is conjugated for tense or negation.
       </div>
 
       <div class="section">
@@ -197,6 +204,7 @@
   border-collapse: collapse; 
   text-align: left;
 
+  thead tr,
   tr:not(:last-child) {
     border-bottom: 1px solid #cccccc24;
   }

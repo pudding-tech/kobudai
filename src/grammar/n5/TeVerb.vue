@@ -48,7 +48,7 @@
         Ichidan
       </div>
       <div class="kanji-mb">
-        <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt>べ<span class="grammar-highlight">て</span></ruby>
+        <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">て</span>
       </div>
       <div class="structure-title">
         Exceptions
@@ -59,8 +59,14 @@
       <div class="kanji-mb">
         <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>て</span>
       </div>
-      <div>
+      <div class="kanji-mb">
         <span><ruby>行<rt>い</rt>く</ruby></span> → <span class="grammar-highlight"><ruby>行<rt>い</rt></ruby>って</span>
+      </div>
+      <div class="structure-title">
+        Negatives
+      </div>
+      <div>
+        <ruby>食<rt>た</rt></ruby>べない → <ruby>食<rt>た</rt></ruby>べな<span class="grammar-highlight">くて</span>
       </div>
     </template>
     <template #related>
@@ -252,6 +258,25 @@
             て-form of exceptions
           </template>
         </GrammarExampleSentences>
+      </div>
+
+      <div class="section">
+        <div class="grammar-subtitle">Using the て-form with negative verbs</div>
+        To use the <span class="g">て</span>-form with a negative verb, you first conjugate the verb into its ない-form,
+        and then replace ない with な<span class="g">くて</span>. This form is used to connect clauses involving negative actions or states.
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>食<rt>た</rt></ruby>べない → <ruby>食<rt>た</rt></ruby>べな<span class="g">くて</span>
+          </div>
+          <div class="translation">
+            to not eat → not eat (and...)
+          </div>
+          <template #note>
+            て-form of negative verbs
+          </template>
+        </GrammarExampleSentences>
+        This form is often used to explain a reason or cause for the following action, much like saying "because (I didn't)..."" in English.
+        It's not used for making negative requests — that requires a different structure like ～ないでください.
       </div>
     </template>
   </GrammarStructure>

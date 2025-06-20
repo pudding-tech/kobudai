@@ -17,34 +17,38 @@
     <template #title> {{ meta.title }}</template>
     <template #subtitle> {{ meta.subtitle }}</template>
     <template #structure>
-      <div><span class="grammar-highlight">な-adjective</span> + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
+      <div>...は + <span class="grammar-highlight">な-adjective</span> + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
       <div style="margin-bottom: 10px"><span class="grammar-highlight">な-adjective</span> + <span class="grammar-highlight">な</span> + noun + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
       <table class="structure-table">
-        <tr>
-          <th>Form</th>
-          <th>Ending</th>
-          <th>Example</th>
-        </tr>
-        <tr>
-          <td>Present</td>
-          <td><span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></td>
-          <td><span class="grammar-highlight"><ruby>静<rt>しず</rt></ruby>か<span v-if="isPolite">です</span><span v-else>だ</span></span></td>
-        </tr>
-        <tr>
-          <td>Negative</td>
-          <td><span class="grammar-highlight"><span v-if="isPolite">じゃないです</span><span v-else>じゃない</span></span></td>
-          <td><span class="grammar-highlight"><ruby>静<rt>しず</rt></ruby>か<span v-if="isPolite">じゃないです</span><span v-else>じゃない</span></span></td>
-        </tr>
-        <tr>
-          <td>Past</td>
-          <td><span class="grammar-highlight"><span v-if="isPolite">でした</span><span v-else>だった</span></span></td>
-          <td><span class="grammar-highlight"><ruby>静<rt>しず</rt></ruby>か<span v-if="isPolite">でした</span><span v-else>だった</span></span></td>
-        </tr>
-        <tr>
-          <td>Past Negative</td>
-          <td><span class="grammar-highlight"><span v-if="isPolite">じゃなかったです</span><span v-else>じゃなかった</span></span></td>
-          <td><span class="grammar-highlight"><ruby>静<rt>しず</rt></ruby>か<span v-if="isPolite">じゃなかったです</span><span v-else>じゃなかった</span></span></td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Form</th>
+            <th>Ending</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Present</td>
+            <td><span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></td>
+            <td><span class="grammar-highlight"><ruby>静<rt>しず</rt></ruby>か<span v-if="isPolite">です</span><span v-else>だ</span></span></td>
+          </tr>
+          <tr>
+            <td>Negative</td>
+            <td><span class="grammar-highlight"><span v-if="isPolite">じゃないです</span><span v-else>じゃない</span></span></td>
+            <td><span class="grammar-highlight"><ruby>静<rt>しず</rt></ruby>か<span v-if="isPolite">じゃないです</span><span v-else>じゃない</span></span></td>
+          </tr>
+          <tr>
+            <td>Past</td>
+            <td><span class="grammar-highlight"><span v-if="isPolite">でした</span><span v-else>だった</span></span></td>
+            <td><span class="grammar-highlight"><ruby>静<rt>しず</rt></ruby>か<span v-if="isPolite">でした</span><span v-else>だった</span></span></td>
+          </tr>
+          <tr>
+            <td>Past Negative</td>
+            <td><span class="grammar-highlight"><span v-if="isPolite">じゃなかったです</span><span v-else>じゃなかった</span></span></td>
+            <td><span class="grammar-highlight"><ruby>静<rt>しず</rt></ruby>か<span v-if="isPolite">じゃなかったです</span><span v-else>じゃなかった</span></span></td>
+          </tr>
+        </tbody>
       </table>
     </template>
     <template #related>
@@ -202,6 +206,7 @@
   border-collapse: collapse; 
   text-align: left;
 
+  thead tr,
   tr:not(:last-child) {
     border-bottom: 1px solid #cccccc24;
   }

@@ -110,6 +110,43 @@
           </div>
         </GrammarExampleSentences>
       </div>
+
+      <div class="section">
+        <div class="grammar-subtitle">With Negatives</div>
+        The て-form can also be used with negative adjectives and nouns, although this is less common than with verbs.
+        When used this way, the て-form typically connects ideas, shows contrast, or adds descriptive information.
+        <br><br>
+        To form the て-form of a negative い-adjective, conjugate the adjective into its negative form (～くない),
+        then replace the final い with <span class="g">くて</span>.
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>高<rt>たか</rt></ruby>くない → <ruby>高<rt>たか</rt></ruby>くな<span class="g">くて</span>
+          </div>
+          <div class="translation">
+            not tall → not tall (and...)
+          </div>
+        </GrammarExampleSentences>
+        For negative な-adjectives and nouns, the negative form uses じゃない (or ではない in more formal speech).
+        To make the て-form, replace the final い with <span class="g">くて</span>, just like with い-adjectives.
+        <GrammarExampleSentences>
+          <div class="example">
+            <ruby>静<rt>しず</rt></ruby>かじゃない → <ruby>静<rt>しず</rt></ruby>かじゃな<span class="g">くて</span>
+          </div>
+          <div class="translation">
+            not quiet → not quiet (and...)
+          </div>
+        </GrammarExampleSentences>
+        This form is often used to contrast two facts, soften a correction, or build compound sentences
+        where the first clause describes a negative state or condition.
+        <GrammarExample>
+          <template #example>
+            <ruby>彼<rt>かれ</rt></ruby>は<ruby>医者<rt>いしゃ</rt></ruby>じゃな<span class="g">くて</span>、<ruby>看護師<rt>かんごし</rt></ruby>です
+          </template>
+          <template #translation>
+            He's not a doctor — he's a nurse
+          </template>
+        </GrammarExample>
+      </div>
     </template>
   </GrammarStructure>
 </template>
