@@ -43,7 +43,7 @@
       </div>
       <GrammarExample>
         <template #example>
-          ごはんを<span class="g">お<ruby>手伝<rt>てつだ</rt></ruby>いします</span>
+          ごはんを<span class="g">お</span><ruby>手伝<rt>てつだ</rt></ruby>い<span class="g">します</span>
         </template>
         <template #translation>
           I will (humbly) help with the meal
@@ -51,7 +51,7 @@
       </GrammarExample>
       <GrammarExample>
         <template #example>
-          カバンを<span class="g">お<ruby>持<rt>も</rt></ruby>ちしましょう</span>か？
+          カバンを<span class="g">お</span><ruby>持<rt>も</rt></ruby>ち<span class="g">しましょう</span>か？
         </template>
         <template #translation>
           Shall I (humbly) carry your bag?
@@ -66,7 +66,7 @@
       </div>
       <GrammarExample>
         <template #example>
-          この<ruby>資料<rt>しりょう</rt></ruby>を<span class="g">お<ruby>借<rt>か</rt></ruby>りいたします</span>
+          この<ruby>資料<rt>しりょう</rt></ruby>を<span class="g">お</span><ruby>借<rt>か</rt></ruby>り<span class="g">いたします</span>
         </template>
         <template #translation>
           I will (humbly) borrow this document
@@ -75,12 +75,12 @@
 
       <div class="section">
         <div class="grammar-subtitle">For する-verbs</div>
-        Creating the humble form of する-verbs is very straightforward; you simply add the appropriate prefix
-        (<span class="g">お</span> or <span class="g">ご</span>) to the noun.
+        Creating the humble form of する-verbs is very straightforward; you simply prefix the noun by the
+        appropriate honorific prefix, either <span class="g">お</span> or <span class="g">ご</span>, depending on the noun.
         Also note that like with regular verbs, not all する-verbs can be used in this form.
         <GrammarExample>
           <template #example>
-            あとで<span class="g">お<ruby>電話<rt>でんわ</rt></ruby>いたします</span>
+            あとで<span class="g">お</span><ruby>電話<rt>でんわ</rt></ruby><span class="g">いたします</span>
           </template>
           <template #translation>
             I will (humbly) call you later

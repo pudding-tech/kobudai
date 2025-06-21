@@ -146,6 +146,14 @@ export const maeni: GrammarPoint = {
   tags: ["before", "prior to", "mae ni", "front", "preceding"]
 };
 
+export const masenka: GrammarPoint = {
+  slug: "ませんか",
+  title: "～ませんか？",
+  subtitle: "Won't you...? Would you like to...? (Invitation)",
+  titleRomaji: "masenka",
+  tags: ["masenka", "invitation", "offer", "request", "polite"]
+};
+
 export const mo: GrammarPoint = {
   slug: "も",
   title: "も",

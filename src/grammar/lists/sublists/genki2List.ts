@@ -45,7 +45,8 @@ export const genki2List: Sublist = {
       title: "CHAPTER 16",
       value: 4,
       grammarPoints: [
-        n4.teAgeruKureruMorau
+        n4.teAgeruKureruMorau,
+        n4.teItadakemasenka
       ]
     },
     {

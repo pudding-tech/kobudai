@@ -49,7 +49,7 @@
       </div>
       <GrammarExample>
         <template #example>
-          <ruby>少々<rt>しょうしょう</rt></ruby><span class="g">お<ruby>待<rt>ま</rt></ruby>ちください</span>
+          <ruby>少々<rt>しょうしょう</rt></ruby><span class="g">お</span><ruby>待<rt>ま</rt></ruby>ち<span class="g">ください</span>
         </template>
         <template #translation>
           Please wait a moment
@@ -67,7 +67,7 @@
           Please take a look at this
         </template>
         <template #note>
-          Note the removal of になる from ご覧になる
+          Note the removal of になる from ご<ruby>覧<rt>らん</rt></ruby>になる
         </template>
       </GrammarExample>
 
@@ -81,7 +81,7 @@
         the standard polite request form, like 勉強してください. So while the pattern is useful and common, it's best to learn which combinations are actually used.
         <GrammarExample>
           <template #example>
-            お<ruby>足元<rt>あしもと</rt></ruby>に<span class="g">ご<ruby>注意<rt>ちゅうい</rt></ruby>ください</span>
+            お<ruby>足元<rt>あしもと</rt></ruby>に<span class="g">ご</span><ruby>注意<rt>ちゅうい</rt></ruby><span class="g">ください</span>
           </template>
           <template #translation>
             Please watch your step
@@ -92,7 +92,7 @@
         </GrammarExample>
         <GrammarExample>
           <template #example>
-            <ruby>駅<rt>えき</rt></ruby>のエレベーターを<span class="g">ご<ruby>利用<rt>りよう</rt></ruby>ください</span>
+            <ruby>駅<rt>えき</rt></ruby>のエレベーターを<span class="g">ご</span><ruby>利用<rt>りよう</rt></ruby><span class="g">ください</span>
           </template>
           <template #translation>
             Please use the station elevator

@@ -38,6 +38,7 @@ export const genki1List: Sublist = {
         n5.ichidanNonPast,
         n5.godanNegative,
         n5.ichidanNegative,
+        n5.masenka
       ]
     },
     {

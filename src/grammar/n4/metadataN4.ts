@@ -165,6 +165,14 @@ export const teAgeruKureruMorau: GrammarPoint = {
   tags: ["te-form", "giving", "receiving", "te ageru", "te kureru", "te morau", "give", "receive", "doing for someone"]
 };
 
+export const teItadakemasenka: GrammarPoint = {
+  slug: "ていただけませんか",
+  title: "～ていただけませんか？",
+  subtitle: "Could you please do... (Humble request)",
+  titleRomaji: "teitadakemasenka",
+  tags: ["very polite", "request", "te-form", "itadakemasenka", "please do", "keigo", "honorific", "kenjougo", "itadakimasen"]
+};
+
 export const temiru: GrammarPoint = {
   slug: "てみる",
   title: "～てみる",

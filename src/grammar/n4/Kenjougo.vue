@@ -2,7 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { kenjougo as meta, sonkeigo, verbStemSuru } from "./metadataN4";
+  import { kenjougo as meta, sonkeigo, teItadakemasenka, verbStemSuru } from "./metadataN4";
 </script>
 
 <script lang="ts">
@@ -52,6 +52,9 @@
       <div style="margin-top: 20px;">Further usage of kenjōgo:</div>
       <div>
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: verbStemSuru.slug } }" class="link">{{ verbStemSuru.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teItadakemasenka.slug } }" class="link">{{ teItadakemasenka.title }}</RouterLink>
       </div>
     </template>
     <template #explanation>

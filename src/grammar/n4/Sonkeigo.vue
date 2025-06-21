@@ -227,7 +227,7 @@
         This construction elevates the action of the listener or a third person, making the sentence polite and respectful.
         <GrammarExample>
           <template #example>
-            <ruby>先生<rt>せんせい</rt></ruby>はもう<span class="g">お<ruby>帰<rt>かえ</rt></ruby>りになりました</span>
+            <ruby>先生<rt>せんせい</rt></ruby>はもう<span class="g">お</span><ruby>帰<rt>かえ</rt></ruby>り<span class="g">になりました</span>
           </template>
           <template #translation>
             The teacher has already gone home
@@ -252,7 +252,7 @@
         This form is widely used in formal conversations and customer service to politely describe what someone else is currently doing.
         <GrammarExample>
           <template #example>
-            <ruby>田中<rt>たなか</rt></ruby>さまは<ruby>別<rt>べつ</rt></ruby>の<ruby>部屋<rt>へや</rt></ruby>で<span class="g"><ruby>待<rt>ま</rt></ruby>っていらっしゃいます</span>
+            <ruby>田中<rt>たなか</rt></ruby>さまは<ruby>別<rt>べつ</rt></ruby>の<ruby>部屋<rt>へや</rt></ruby>で<ruby>待<rt>ま</rt></ruby>っ<span class="g">ていらっしゃいます</span>
           </template>
           <template #translation>
             Mr. Tanaka is waiting in another room
