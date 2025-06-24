@@ -210,6 +210,15 @@ ruby rt {
   }
 }
 
+.grammar-box {
+  position: relative;
+  width: fit-content;
+  padding: 16px 24px;
+  margin: 16px 40px;
+  border: 1px solid var(--grammar-box-border-color);
+  border-radius: 4px;
+}
+
 /*
 * Variables
 */
@@ -232,6 +241,7 @@ ruby rt {
   --line-color: rgba(132, 132, 132, 0.4);
   --line-color-soft: #d2d7db7a;
   --accordion-color: #ebebeb;
+  --grammar-box-border-color: #75757566;
 
   /* HOME */
   --list-section-bg: #fbfbfb;
@@ -304,6 +314,7 @@ ruby rt {
   --line-color: rgba(255, 255, 255, 0.2);
   --line-color-soft: #272727;
   --accordion-color: #121212;
+  --grammar-box-border-color: #e1e1e166;
 
   /* HOME */
   --list-section-bg: #090909;

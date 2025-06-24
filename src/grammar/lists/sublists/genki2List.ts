@@ -46,7 +46,10 @@ export const genki2List: Sublist = {
       value: 4,
       grammarPoints: [
         n4.teAgeruKureruMorau,
-        n4.teItadakemasenka
+        n4.teItadakemasenka,
+        n4.toIi,
+        n4.toki,
+        n4.teSumimasen
       ]
     },
     {
@@ -75,7 +78,8 @@ export const genki2List: Sublist = {
       value: 8,
       grammarPoints: [
         n4.kenjougo,
-        n4.verbStemSuru
+        n4.verbStemSuru,
+        n4.naide
       ]
     },
     {

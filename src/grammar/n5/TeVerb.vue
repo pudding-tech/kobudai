@@ -66,7 +66,7 @@
         Negatives
       </div>
       <div>
-        <ruby>食<rt>た</rt></ruby>べない → <ruby>食<rt>た</rt></ruby>べな<span class="grammar-highlight">くて</span>
+        ～ない → ～な<span class="grammar-highlight">くて</span>
       </div>
     </template>
     <template #related>

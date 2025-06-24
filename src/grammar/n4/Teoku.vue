@@ -49,7 +49,7 @@
       <span class="g">～ておく</span> often implies foresight or efficiency — you're doing something now so you don't have to worry about it later.
       <GrammarExample>
         <template #example>
-          <ruby>試験<rt>しけん</rt></ruby>があるから、宿題をやっ<span class="g">ておきます</span>
+          <ruby>試験<rt>しけん</rt></ruby>があるから、<ruby>宿題<rt>しゅくだい</rt></ruby>をやっ<span class="g">ておきます</span>
         </template>
         <template #translation>
           Because there's a test, I'll get the homework done ahead of time
@@ -116,7 +116,7 @@
         </div>
         <GrammarExample>
           <template #example>
-            本を読ん<span class="g">どきます</span>
+            <ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>ん<span class="g">どきます</span>
           </template>
           <template #translation>
             I'll read the book (in preparation)

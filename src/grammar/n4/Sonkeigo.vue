@@ -1,8 +1,11 @@
 <script setup lang="ts">
+  import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { sonkeigo as meta, kenjougo, verbStemKudasai } from "./metadataN4";
+
+  const isPolite = ref(true);
 </script>
 
 <script lang="ts">
@@ -10,44 +13,42 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>
-      <span v-html="meta.title" />
-    </template>
+  <GrammarStructure :show-polite="true" :default-polite="true" @politeness-change="(value) => isPolite = value">
+    <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       <div class="kanji-mb">
-        いる → <span class="grammar-highlight">いらっしゃいます</span>（<span class="grammar-highlight">いらっしゃる</span>）
+        いる → <span class="grammar-highlight">いらっしゃ<span v-if="isPolite">います</span><span v-else>る</span></span>
       </div>
       <div class="kanji-mb">
-        <ruby>行<rt>い</rt></ruby>く / <ruby>来<rt>く</rt></ruby>る → <span class="grammar-highlight">いらっしゃいます</span>（<span class="grammar-highlight">いらっしゃる</span>）
+        <ruby>行<rt>い</rt></ruby>く / <ruby>来<rt>く</rt></ruby>る → <span class="grammar-highlight">いらっしゃ<span v-if="isPolite">います</span><span v-else>る</span></span>
       </div>
       <div class="kanji-mb">
-        <ruby>見<rt>み</rt></ruby>る → <span class="grammar-highlight">ご<ruby>覧<rt>らん</rt></ruby>になります</span>（<span class="grammar-highlight">～になる</span>）
+        <ruby>見<rt>み</rt></ruby>る → <span class="grammar-highlight">ご<ruby>覧<rt>らん</rt></ruby>にな<span v-if="isPolite">ります</span><span v-else>る</span></span>
       </div>
       <div class="kanji-mb">
-        <ruby>言<rt>い</rt></ruby>う → <span class="grammar-highlight">おっしゃいます</span>（<span class="grammar-highlight">おっしゃる</span>）
+        <ruby>言<rt>い</rt></ruby>う → <span class="grammar-highlight">おっしゃ<span v-if="isPolite">います</span><span v-else>る</span></span>
       </div>
       <div class="kanji-mb">
-        する → <span class="grammar-highlight">なさいます</span>（<span class="grammar-highlight">なさる</span>）
+        する → <span class="grammar-highlight">なさ<span v-if="isPolite">います</span><span v-else>る</span></span>
       </div>
       <div class="kanji-mb">
-        <ruby>食<rt>た</rt></ruby>べる / <ruby>飲<rt>の</rt></ruby>む → <span class="grammar-highlight"><ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がります</span>（<span class="grammar-highlight">～<ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>がる</span>）
+        <ruby>食<rt>た</rt></ruby>べる / <ruby>飲<rt>の</rt></ruby>む → <span class="grammar-highlight"><ruby>召<rt>め</rt></ruby>し<ruby>上<rt>あ</rt></ruby>が<span v-if="isPolite">ります</span><span v-else>る</span></span>
       </div>
       <div class="kanji-mb">
-        くれる → <span class="grammar-highlight">くださいます</span>（<span class="grammar-highlight">くださる</span>）
+        くれる → <span class="grammar-highlight">くださ<span v-if="isPolite">います</span><span v-else>る</span></span>
       </div>
       <div class="kanji-mb">
-        <ruby>寝<rt>ね</rt></ruby>る → <span class="grammar-highlight">お<ruby>休<rt>やす</rt></ruby>みになります</span>（<span class="grammar-highlight">～になる</span>）
+        <ruby>寝<rt>ね</rt></ruby>る → <span class="grammar-highlight">お<ruby>休<rt>やす</rt></ruby>みにな<span v-if="isPolite">ります</span><span v-else>る</span></span>
       </div>
       <div class="structure-title">
         Honorific constructions
       </div>
       <div class="kanji-mb">
-        Verb → <span class="grammar-highlight">お</span> + [verb stem] + <span class="grammar-highlight">になります</span>（<span class="grammar-highlight">～になる</span>）
+        Verb → <span class="grammar-highlight">お</span> + [verb stem] + <span class="grammar-highlight">にな<span v-if="isPolite">ります</span><span v-else>る</span></span>
       </div>
       <div class="kanji-mb">
-        ～ている → <span class="grammar-highlight">～ていらっしゃいます</span>（<span class="grammar-highlight">～ていらっしゃる</span>）
+        ～ている → <span class="grammar-highlight">～ていらっしゃ<span v-if="isPolite">います</span><span v-else>る</span></span>
       </div>
     </template>
     <template #related>

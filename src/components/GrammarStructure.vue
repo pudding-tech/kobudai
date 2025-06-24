@@ -3,14 +3,16 @@
   import { breakpointService } from "@/services/breakpointService";
 
   const props = withDefaults(defineProps<{
-    showPolite?: boolean
+    showPolite?: boolean,
+    defaultPolite?: boolean
   }>(), {
-    showPolite: false
+    showPolite: false,
+    defaultPolite: false
   });
 
   const emit = defineEmits(["politenessChange"]);
 
-  const isPolite = ref(false);
+  const isPolite = ref(props.defaultPolite);
   const isZoom = ref(false);
 
   const options = [

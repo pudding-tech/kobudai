@@ -26,23 +26,23 @@
 
   const examples = ref<IchidanChartExample[]>([
     {
-      kanaRow: "え",
+      kanaRow: "る",
       kanji: "食",
       furigana: "た",
       okurigana: "べ"
     },
     {
-      kanaRow: "え",
+      kanaRow: "る",
       kanji: "出",
       furigana: "で"
     },
     {
-      kanaRow: "い",
+      kanaRow: "る",
       kanji: "見",
       furigana: "み"
     },
     {
-      kanaRow: "い",
+      kanaRow: "る",
       kanji: "浴",
       furigana: "あ",
       okurigana: "び"
@@ -94,7 +94,7 @@
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana
       },
-      suffix: "～られる、～れば",
+      suffix: "～ろ、～られる、～れば",
       grammarPoint: [potentialVerbs, { slug: ba.slug, title: "Conditional verb" }],
       rowNr: 4
     },

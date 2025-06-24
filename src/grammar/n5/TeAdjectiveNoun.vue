@@ -19,6 +19,8 @@
       <div>Noun + <span class="grammar-highlight">で</span></div>
       <div class="structure-title small">Irregular</div>
       <div>いい → よ<span class="grammar-highlight">くて</span></div>
+      <div class="structure-title small">Negatives</div>
+      <div>～ない → ～な<span class="grammar-highlight">くて</span></div>
     </template>
     <template #related>
       <div class="related-mb">

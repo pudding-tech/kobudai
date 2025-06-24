@@ -35,7 +35,7 @@ export const kamoshirenai: GrammarPoint = {
 export const kenjougo: GrammarPoint = {
   slug: "kenjougo-humble",
   title: "Kenjōgo (Humble Language)",
-  subtitle: "Humble expressions in Japanese",
+  subtitle: "Humble expressions",
   tags: ["humble", "kenjougo", "謙譲語", "polite", "respectful", "language", "keigo"]
 };
 
@@ -45,6 +45,14 @@ export const mitai: GrammarPoint = {
   subtitle: "Similar to, Like, Resembling",
   titleRomaji: "mitai",
   tags: ["like", "similar to", "casual", "appearance", "resemblance"]
+};
+
+export const naide: GrammarPoint = {
+  slug: "ないで",
+  title: "～ないで",
+  subtitle: "Without doing...",
+  titleRomaji: "naide",
+  tags: ["without", "not doing", "negative form", "negative action"]
 };
 
 export const nakutemoii: GrammarPoint = {
@@ -87,22 +95,6 @@ export const numberShika: GrammarPoint = {
   tags: ["number", "shika", "only", "as few as", "just", "limitation", "emphasis"]
 };
 
-export const verbStemKudasai: GrammarPoint = {
-  slug: "お-verb-ください",
-  title: "お～ください",
-  subtitle: "Please do... (Honorific request)",
-  titleRomaji: "o-kudasai",
-  tags: ["please", "request", "honorific", "kudasai", "o verb", "polite request", "keigo"]
-};
-
-export const verbStemSuru: GrammarPoint = {
-  slug: "お-verb-する",
-  title: "お～する",
-  subtitle: "I will humbly do... (Humble action)",
-  titleRomaji: "o-suru",
-  tags: ["keigo", "o verb", "suru", "do", "polite", "respectful"]
-};
-
 export const potentialVerbs: GrammarPoint = {
   slug: "potential-verb",
   title: "Potential verb",
@@ -121,7 +113,7 @@ export const shi: GrammarPoint = {
 export const sonkeigo: GrammarPoint = {
   slug: "sonkeigo-honorific",
   title: "Sonkeigo (Honorific Language)",
-  subtitle: "Honorific expressions in Japanese",
+  subtitle: "Honorific expressions",
   tags: ["respectful", "sonkeigo", "尊敬語", "polite", "honorific", "language", "keigo"]
 };
 
@@ -189,12 +181,53 @@ export const teoku: GrammarPoint = {
   tags: ["do in advance", "prepare", "advance", "future use", "teoku", "preparation"]
 };
 
+export const teSumimasen: GrammarPoint = {
+  slug: "てすみません",
+  title: "～てすみません",
+  subtitle: "I'm sorry for...",
+  titleRomaji: "tesumimasen",
+  tags: ["apology", "sorry", "sumimasen", "polite"]
+};
+
+export const toIi: GrammarPoint = {
+  slug: "といい",
+  title: "といい",
+  subtitle: "I hope..., It would be good if...",
+  titleRomaji: "toii",
+  tags: ["to ii", "wish", "hope", "it would be good if", "it would be nice if"]
+};
+
+export const toki: GrammarPoint = {
+  slug: "とき",
+  title: "～<ruby>時<rt>とき</rt></ruby>",
+  subtitle: "When..., At the time of...",
+  titleRomaji: "toki",
+  titlePlain: "～時",
+  tags: ["when", "at the time", "toki", "time", "temporal"]
+};
+
 export const tte: GrammarPoint = {
   slug: "って",
   title: "って",
   subtitle: "Informal quotation",
   titleRomaji: "tte",
   tags: ["informal", "quoting", "hearsay", "tte", "casual speech", "they say", "they said"]
+};
+
+export const verbStemKudasai: GrammarPoint = {
+  slug: "お-verb-ください",
+  title: "お～ください",
+  subtitle: "Please do... (Honorific request)",
+  titleRomaji: "o-kudasai",
+  tags: ["please", "request", "honorific", "kudasai", "o verb", "polite request", "keigo"]
+};
+
+export const verbStemSuru: GrammarPoint = {
+  slug: "お-verb-する",
+  title: "お～する",
+  subtitle: "I will humbly do... (Humble action)",
+  titleRomaji: "o-suru",
+  tags: ["keigo", "o verb", "suru", "do", "polite", "respectful"]
 };
 
 export const volitionalVerbs: GrammarPoint = {
