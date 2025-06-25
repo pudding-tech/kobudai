@@ -27,9 +27,6 @@
       
     </template>
     <template #explanation>
-      <!-- The structure <span class="g">～時</span> (とき) is used to indicate when something happens. The event before <span class="g">時</span> acts as the time reference,
-      and the action that follows it is the main event. It can describe both past and present/future situations, depending on the verb tense used
-      in the clause before <span class="g">時</span>. -->
       The grammar pattern <span class="g">～時</span> (とき) connects two actions or events in time. It's used to express when something happens, or what was going on when something else occurred.
       <br><br>
       In this structure:

@@ -47,7 +47,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
       This structure implies that an expected or usual action did not happen, and something else happened instead.
       <GrammarExample>
         <template #example>
-          <ruby>寝<rt>ね</rt></ruby><span class="g">ないで</span>、<ruby>仕事に<rt>しごと</rt></ruby>行<rt>い</rt>きます
+          <ruby>寝<rt>ね</rt></ruby><span class="g">ないで</span>、<ruby>仕事<rt>しごと</rt></ruby>に行<rt>い</rt>きます
         </template>
         <template #translation>
           I will go to work without sleeping

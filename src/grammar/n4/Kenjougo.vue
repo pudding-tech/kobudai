@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { kenjougo as meta, sonkeigo, teItadakemasenka, verbStemSuru } from "./metadataN4";
+  import { kenjougo as meta, sonkeigo, teItadakemasenka, toIu, verbStemSuru } from "./metadataN4";
 
   const isPolite = ref(true);
 </script>
@@ -203,7 +203,8 @@
             My name is Ken
           </template>
           <template #note>
-            A humble way to introduce oneself, using the verb <ruby>申<rt>もう</rt></ruby>す
+            A humble way to introduce oneself, using the
+            <RouterLink :to="{ name: 'grammarLoader', params: { slug: toIu.slug } }" class="link">{{ toIu.titlePlain }}</RouterLink> construction
           </template>
         </GrammarExample>
         <GrammarExample>

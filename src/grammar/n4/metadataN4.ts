@@ -16,6 +16,14 @@ export const ba: GrammarPoint = {
   tags: ["if", "when", "conditional", "ba", "hypothetical", "verb"]
 };
 
+export const bayokatta: GrammarPoint = {
+  slug: "ばよかった",
+  title: "～ばよかった",
+  subtitle: "I wish I had... (Regret)",
+  titleRomaji: "bayokatta",
+  tags: ["regret", "wish", "ba", "hypothetical", "verb"]
+};
+
 export const gahoshi: GrammarPoint = {
   slug: "がほしい",
   title: "～がほしい",
@@ -45,6 +53,14 @@ export const mitai: GrammarPoint = {
   subtitle: "Similar to, Like, Resembling",
   titleRomaji: "mitai",
   tags: ["like", "similar to", "casual", "appearance", "resemblance"]
+};
+
+export const nagara: GrammarPoint = {
+  slug: "ながら",
+  title: "ながら",
+  subtitle: "While, During (Simultaneous actions)",
+  titleRomaji: "nagara",
+  tags: ["while", "during", "nagara", "simultaneous actions"]
 };
 
 export const naide: GrammarPoint = {
@@ -181,12 +197,28 @@ export const teoku: GrammarPoint = {
   tags: ["do in advance", "prepare", "advance", "future use", "teoku", "preparation"]
 };
 
+export const teShimau: GrammarPoint = {
+  slug: "てしまう",
+  title: "～てしまう",
+  subtitle: "To do by accident (regret), To do completely",
+  titleRomaji: "teshimau",
+  tags: ["finish doing", "completely", "regret", "te shimau", "chau", "jau", "accident", "unintentional", "action"]
+};
+
 export const teSumimasen: GrammarPoint = {
   slug: "てすみません",
   title: "～てすみません",
   subtitle: "I'm sorry for...",
   titleRomaji: "tesumimasen",
   tags: ["apology", "sorry", "sumimasen", "polite"]
+};
+
+export const toIf: GrammarPoint = {
+  slug: "と-if",
+  title: "と",
+  subtitle: "If, When... then (General conditional)",
+  titleRomaji: "to",
+  tags: ["if", "then", "to", "conditional", "hypothetical", "general"]
 };
 
 export const toIi: GrammarPoint = {
@@ -197,13 +229,29 @@ export const toIi: GrammarPoint = {
   tags: ["to ii", "wish", "hope", "it would be good if", "it would be nice if"]
 };
 
+export const toIu: GrammarPoint = {
+  slug: "と言う",
+  title: "と<ruby>言<rt>い</rt></ruby>う",
+  subtitle: "Called, Named, Known as",
+  titleRomaji: "toiu",
+  titlePlain: "と言う",
+  tags: ["to iu", "called", "named", "known as", "definition", "explanation"]
+};
+
 export const toki: GrammarPoint = {
-  slug: "とき",
+  slug: "時",
   title: "～<ruby>時<rt>とき</rt></ruby>",
   subtitle: "When..., At the time of...",
   titleRomaji: "toki",
   titlePlain: "～時",
   tags: ["when", "at the time", "toki", "time", "temporal"]
+};
+
+export const transitivityPairs: GrammarPoint = {
+  slug: "transitivity-pairs",
+  title: "Transitivity Pairs",
+  subtitle: "Understanding transitive and intransitive verbs",
+  tags: ["transitivity", "pairs", "transitive", "intransitive", "verbs", "verb pairs", "action verbs"]
 };
 
 export const tte: GrammarPoint = {

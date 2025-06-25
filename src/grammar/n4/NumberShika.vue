@@ -51,6 +51,9 @@
         <template #translation>
           I want to buy lunch, but I only have 100 yen
         </template>
+        <template #note>
+          Note that the verb here is the negative form of ある
+        </template>
       </GrammarExample>
       <div class="note">
         <div class="note-title">Note:</div>

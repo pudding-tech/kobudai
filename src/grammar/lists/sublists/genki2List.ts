@@ -66,6 +66,17 @@ export const genki2List: Sublist = {
       ]
     },
     {
+      title: "CHAPTER 18",
+      value: 6,
+      grammarPoints: [
+        n4.transitivityPairs,
+        n4.teShimau,
+        n4.toIf,
+        n4.nagara,
+        n4.bayokatta
+      ]
+    },
+    {
       title: "CHAPTER 19",
       value: 7,
       grammarPoints: [
@@ -79,7 +90,8 @@ export const genki2List: Sublist = {
       grammarPoints: [
         n4.kenjougo,
         n4.verbStemSuru,
-        n4.naide
+        n4.naide,
+        n4.toIu
       ]
     },
     {

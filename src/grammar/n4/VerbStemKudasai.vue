@@ -55,7 +55,7 @@
           Please wait a moment
         </template>
         <template #note>
-          A common phrase used in customer service
+          A commonly used phrase in customer service
         </template>
       </GrammarExample>
       When using honorific verbs (sonkeigo) that end in になる, drop the になる and treat the remaining part like a regular verb.
