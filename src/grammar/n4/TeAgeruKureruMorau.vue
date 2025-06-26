@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { teAgeruKureruMorau as meta, ageruKureruMorau, kenjougo, teItadakemasenka } from "./metadataN4";
-  import { masenka } from "../n5/metadataN5";
+  import { masenka, teVerb } from "../n5/metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -23,11 +23,14 @@
       <div class="structure-title">In questions</div>
       <div>Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">あげ<span v-if="isPolite">ましょうか</span><span v-else>ようか</span>？</span></div>
       <div>Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">くれ<span v-if="isPolite">ませんか</span><span v-else>ない</span>？</span></div>
-      <div>Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">もら<span v-if="isPolite">えません</span><span v-else>えない</span>？</span></div>
+      <div>Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">もら<span v-if="isPolite">えませんか</span><span v-else>えない</span>？</span></div>
     </template>
     <template #related>
-      <div class="related-mb">Giving and receiving:</div>
+      <div class="related-mb">Based on:</div>
       <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink>
+      </div>
+      <div style="margin-bottom: 20px">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ageruKureruMorau.slug } }" class="link">{{ ageruKureruMorau.title }}</RouterLink>
       </div>
       <div class="related-mb">Humble way of asking with ～てもらう:</div>

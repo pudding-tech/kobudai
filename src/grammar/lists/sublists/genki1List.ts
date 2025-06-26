@@ -62,6 +62,7 @@ export const genki1List: Sublist = {
       value: 6,
       grammarPoints: [
         n5.teVerb,
+        n5.teKudasai,
         n5.temoii
       ]
     },
@@ -70,6 +71,13 @@ export const genki1List: Sublist = {
       value: 7,
       grammarPoints: [
         n5.teAdjectiveNoun
+      ]
+    },
+    {
+      title: "CHAPTER 8",
+      value: 8,
+      grammarPoints: [
+        n5.naideKudasai
       ]
     }
   ]

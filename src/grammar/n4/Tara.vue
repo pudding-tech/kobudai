@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { tara as meta, ba, nara } from "./metadataN4";
+  import { tara as meta, ba, nara, toIf } from "./metadataN4";
 </script>
 
 <script lang="ts">
@@ -22,9 +22,16 @@
       </div>
     </template>
     <template #related>
-      Other conditionals:
-      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: nara.slug } }" class="link">{{ nara.title }}</RouterLink></div>
-      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink></div>
+      <div class="related-mb">Other conditionals:</div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: nara.slug } }" class="link">{{ nara.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: toIf.slug } }" class="link">{{ toIf.title }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
       The word <span class="g">～たら</span> is one of the most common ways to say "if" in Japanese.

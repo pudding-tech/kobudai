@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { temoii as meta } from "./metadataN5";
+  import { temoii as meta, teAdjectiveNoun, teVerb } from "./metadataN5";
   import { nakutemoii } from "../n4/metadataN4";
 
   const isPolite = ref(false);
@@ -27,8 +27,17 @@
       </div>
     </template>
     <template #related>
-      To express "don't have to", see
-      <RouterLink :to="{ name: 'grammarLoader', params: { slug: nakutemoii.slug } }" class="link">{{ nakutemoii.title }}</RouterLink>
+      <div class="related-mb">Based on:</div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink>
+      </div>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAdjectiveNoun.slug } }" class="link">{{ teAdjectiveNoun.title }}</RouterLink>
+      </div>
+      <div>
+        - To express "don't have to", see
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: nakutemoii.slug } }" class="link">{{ nakutemoii.title }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
       <span class="g">～てもいい</span> is a common Japanese grammar pattern used to express permission, meaning "it's okay to..." or "you may...".

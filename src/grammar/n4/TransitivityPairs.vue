@@ -63,7 +63,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
           put something in ↔ something goes in
         </div>
         <div class="example">
-          <ruby>出<rt>で</rt></ruby>す ↔ <ruby>出<rt>で</rt></ruby>る
+          <ruby>出<rt>だ</rt></ruby>す ↔ <ruby>出<rt>で</rt></ruby>る
         </div>
         <div class="translation">
           take something out ↔ something goes out
@@ -99,10 +99,10 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
           drop something ↔ something falls
         </div>
         <div class="example">
-          <ruby>汚<rt>よご</rt></ruby>す ↔ <ruby>汚<rt>よご</rt></ruby>れる
+          <ruby>壊<rt>こわ</rt></ruby>す ↔ <ruby>壊<rt>こわ</rt></ruby>れる
         </div>
         <div class="translation">
-          dirty something ↔ something becomes dirty
+          break something ↔ something breaks
         </div>
         <template #note>
           Selection of commonly used transitivity pairs
@@ -168,7 +168,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
         ～ている with transitive verbs generally describes an ongoing action being done by someone.
         <GrammarExample>
           <template #example>
-            <ruby>彼<rt>かれ</rt></ruby>を起こしています
+            <ruby>彼<rt>かれ</rt></ruby>を<ruby>起<rt>お</rt></ruby>こしています
           </template>
           <template #translation>
             I am waking him up

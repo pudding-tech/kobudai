@@ -161,6 +161,14 @@ export const mo: GrammarPoint = {
   titleRomaji: "mo"
 };
 
+export const naideKudasai: GrammarPoint = {
+  slug: "ないでください",
+  title: "～ないでください",
+  subtitle: "Please don't do...",
+  titleRomaji: "naidekudasai",
+  tags: ["please don't", "request", "negative form", "kudasai", "polite request"]
+};
+
 export const ne: GrammarPoint = {
   slug: "ね",
   title: "ね",
@@ -189,6 +197,14 @@ export const tekara: GrammarPoint = {
   subtitle: "After doing...",
   titleRomaji: "te kara",
   tags: ["after", "te kara", "doing", "verbing", "action", "sequence", "order"]
+};
+
+export const teKudasai: GrammarPoint = {
+  slug: "てください",
+  title: "～てください",
+  subtitle: "Please do...",
+  titleRomaji: "tekudasai",
+  tags: ["please", "request", "te form", "kudasai", "polite request"]
 };
 
 export const temoii: GrammarPoint = {

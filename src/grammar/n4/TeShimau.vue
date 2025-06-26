@@ -79,7 +79,10 @@
             あ、忘れ<span class="g">ちゃった</span>！
           </template>
           <template #translation>
-            Oh, I accidentally forgot!
+            Oh, I completely forgot!
+          </template>
+          <template #note>
+            The nuance is that the speaker forgot something unintentionally or regrettably
           </template>
         </GrammarExample>
         <GrammarExample>

@@ -4,7 +4,7 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { nakutemoii as meta } from "./metadataN4";
-  import { temoii } from "../n5/metadataN5";
+  import { temoii, teAdjectiveNoun, teVerb } from "../n5/metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -27,8 +27,17 @@
       </div>
     </template>
     <template #related>
-      To express "you may", see
-      <RouterLink :to="{ name: 'grammarLoader', params: { slug: temoii.slug } }" class="link">{{ temoii.title }}</RouterLink>
+      <div class="related-mb">Based on:</div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink>
+      </div>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAdjectiveNoun.slug } }" class="link">{{ teAdjectiveNoun.title }}</RouterLink>
+      </div>
+      <div>
+        - To express "you may", see
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: temoii.slug } }" class="link">{{ temoii.title }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
       <span class="g">～なくてもいい</span> is a common grammar pattern in Japanese that expresses that something does not need to be done, or that it's okay not to do or be something.
@@ -120,17 +129,13 @@
             Is it okay if I don't go?
           </template>
         </GrammarExample>
-        <span class="g">～なくてもいい</span> (with a rising intonation) can be used for asking in casual speech,
-        but in polite situations, use <span class="g">～なくてもいい</span>ですか.
+        <span class="g">～なくてもいい</span> (with a rising intonation) can be used for asking in casual contexts.
         <GrammarExample>
           <template #example>
             <ruby>天気<rt>てんき</rt></ruby>は<ruby>良<rt>よ</rt></ruby>く<span class="g">なくてもいい</span>？
           </template>
           <template #translation>
             Is it okay if the weather is not good?
-          </template>
-          <template #note>
-            ～なくてもいい？ can be used in casual speech
           </template>
         </GrammarExample>
       </div>

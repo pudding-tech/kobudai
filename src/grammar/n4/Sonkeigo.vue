@@ -239,8 +239,8 @@
         </GrammarExample>
         <div class="note">
           <div class="note-title">Note:</div>
-          Note: This form is mostly used with godan verbs and some ichidan verbs.
-          It's very common in everyday polite speech, especially when you don't have a special honorific verb available.
+          This form is mainly used with godan verbs. While it can technically be applied to ichidan verbs as well,
+          many of them have special honorific equivalents that are preferred in practice.
         </div>
       </div>
       <div class="section">

@@ -3,7 +3,7 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
-  import { ba as meta, nara, tara, potentialVerbs, volitionalVerbs } from "./metadataN4";
+  import { ba as meta, nara, tara, potentialVerbs, toIf, volitionalVerbs } from "./metadataN4";
 </script>
 
 <script lang="ts">
@@ -69,6 +69,7 @@
       <div class="related-mb">Other conditionals:</div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink></div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: nara.slug } }" class="link">{{ nara.title }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: toIf.slug } }" class="link">{{ toIf.title }}</RouterLink></div>
       <div class="related-mb" style="margin-top: 20px">Other verb conjugations:</div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink></div>
       <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: volitionalVerbs.slug } }" class="link">{{ volitionalVerbs.title }}</RouterLink></div>
@@ -210,31 +211,34 @@
             With な-adjectives and nouns
           </template>
         </GrammarExampleSentences>
-        <div class="grammar-subtitle">Using ～ば with negatives</div>
-        To make the negative ～ば form of adjectives, verbs, and nouns, you use the negative form and drop the い from ない, then add <span class="g">ければ</span>.
-        <GrammarExampleSentences>
-          <div class="example">
-            <ruby>食<rt>た</rt></ruby>べない → <ruby>食<rt>た</rt></ruby>べな<span class="g">ければ</span>
-          </div>
-          <div class="translation">
-            to not eat → if (...) not eat
-          </div>
-          <div class="example">
-            <ruby>高<rt>たか</rt></ruby>くない → <ruby>高<rt>たか</rt></ruby>くな<span class="g">ければ</span>
-          </div>
-          <div class="translation">
-            not expensive → if (...) not expensive
-          </div>
-          <div class="example">
-            <ruby>学生<rt>がくせい</rt></ruby>じゃない → <ruby>学生<rt>がくせい</rt></ruby>じゃな<span class="g">ければ</span>
-          </div>
-          <div class="translation">
-            not a student → if (...) not a student
-          </div>
-          <template #note>
-            Negative conditionals
-          </template>
-        </GrammarExampleSentences>
+
+        <div class="section">
+          <div class="grammar-title">Using ～ば with Negatives</div>
+          To make the negative ～ば form of adjectives, verbs, and nouns, you use the negative form and drop the い from ない, then add <span class="g">ければ</span>.
+          <GrammarExampleSentences>
+            <div class="example">
+              <ruby>食<rt>た</rt></ruby>べない → <ruby>食<rt>た</rt></ruby>べな<span class="g">ければ</span>
+            </div>
+            <div class="translation">
+              to not eat → if (...) not eat
+            </div>
+            <div class="example">
+              <ruby>高<rt>たか</rt></ruby>くない → <ruby>高<rt>たか</rt></ruby>くな<span class="g">ければ</span>
+            </div>
+            <div class="translation">
+              not expensive → if (...) not expensive
+            </div>
+            <div class="example">
+              <ruby>学生<rt>がくせい</rt></ruby>じゃない → <ruby>学生<rt>がくせい</rt></ruby>じゃな<span class="g">ければ</span>
+            </div>
+            <div class="translation">
+              not a student → if (...) not a student
+            </div>
+            <template #note>
+              Negative conditionals
+            </template>
+          </GrammarExampleSentences>
+        </div>
       </div>
 
       <div class="section">

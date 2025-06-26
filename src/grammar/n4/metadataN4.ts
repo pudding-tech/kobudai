@@ -200,7 +200,7 @@ export const teoku: GrammarPoint = {
 export const teShimau: GrammarPoint = {
   slug: "てしまう",
   title: "～てしまう",
-  subtitle: "To do by accident (regret), To do completely",
+  subtitle: "To do by accident (Regret), To do completely",
   titleRomaji: "teshimau",
   tags: ["finish doing", "completely", "regret", "te shimau", "chau", "jau", "accident", "unintentional", "action"]
 };
@@ -216,7 +216,7 @@ export const teSumimasen: GrammarPoint = {
 export const toIf: GrammarPoint = {
   slug: "と-if",
   title: "と",
-  subtitle: "If, When... then (General conditional)",
+  subtitle: "If/whenever... then... (Conditional)",
   titleRomaji: "to",
   tags: ["if", "then", "to", "conditional", "hypothetical", "general"]
 };

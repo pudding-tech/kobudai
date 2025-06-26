@@ -2,7 +2,8 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { teVerb as meta, godan, godanNonPast, godanNegative, godanPast, teAdjectiveNoun } from "./metadataN5";
+  import { teVerb as meta, godan, godanNonPast, godanNegative, godanPast, teAdjectiveNoun, tekara, teKudasai, temoii } from "./metadataN5";
+  import { teAgeruKureruMorau, teItadakemasenka, temiru, teoku, teShimau, teSumimasen } from "../n4/metadataN4";
 </script>
 
 <script lang="ts">
@@ -79,8 +80,35 @@
       <div class="related-mb">
         Further usage of the て-form:
       </div>
-      <div style="margin-bottom: 20px">
+      <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">～ている</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKudasai.slug } }" class="link">{{ teKudasai.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: temoii.slug } }" class="link">{{ temoii.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: temiru.slug } }" class="link">{{ temiru.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teoku.slug } }" class="link">{{ teoku.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAgeruKureruMorau.slug } }" class="link">{{ teAgeruKureruMorau.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teItadakemasenka.slug } }" class="link">{{ teItadakemasenka.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teSumimasen.slug } }" class="link">{{ teSumimasen.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: tekara.slug } }" class="link">{{ tekara.title }}</RouterLink>
+      </div>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teShimau.slug } }" class="link">{{ teShimau.title }}</RouterLink>
       </div>
       <div class="related-mb">
         Other verb conjugations:
@@ -136,7 +164,8 @@
           The level of politeness depends on the tone of voice — when said gently, it may sound like a request, but in a harsher tone, it could come across as a command
         </template>
       </GrammarExample>
-      For a more polite way of using the <span class="g">て</span>-form for making requests - see <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">～てください</RouterLink>
+      For a more polite way of using the <span class="g">て</span>-form for making requests - see
+      <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKudasai.slug } }" class="link">{{ teKudasai.title }}</RouterLink>
       <div class="note">
         <div class="note-title">Note:</div>
         While we called the <span class="g">て</span>-form a "verb form" earlier, it is really a grammatical form used across various word types, including verbs, adjectives, and even nouns.

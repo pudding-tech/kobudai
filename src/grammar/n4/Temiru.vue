@@ -3,6 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { temiru as meta } from "./metadataN4";
+  import { teVerb } from "../n5/metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -19,7 +20,7 @@
       Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">み<span v-if="!isPolite">る</span><span v-else>ます</span></span>
     </template>
     <template #related>
-      
+      Based on the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink>
     </template>
     <template #explanation>
       The grammar pattern <span class="g">～てみる</span> is used when you attempt to do something or try something out to see what happens. It implies testing or experimenting, often for the first time.

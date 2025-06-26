@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { ageruKureruMorau as meta } from "../n4/metadataN4";
+  import { ageruKureruMorau as meta, teAgeruKureruMorau } from "../n4/metadataN4";
 
   const isPolite = ref(false);
 </script>
@@ -21,7 +21,7 @@
       <div>Receiver + は／が + Giver + に／から + <span class="grammar-highlight">もら<span v-if="isPolite">います</span><span v-else>う</span></span></div>
     </template>
     <template #related>
-
+      See also <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAgeruKureruMorau.slug } }" class="link">{{ teAgeruKureruMorau.title }}</RouterLink>
     </template>
     <template #explanation>
       The act of giving and receiving in Japanese depends not only on who gives and who receives, but also on the speaker's relationship to the people involved.

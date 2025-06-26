@@ -2,7 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { nara as meta, ba, tara } from "./metadataN4";
+  import { nara as meta, ba, tara, toIf } from "./metadataN4";
 </script>
 
 <script lang="ts">
@@ -23,9 +23,16 @@
       </div>
     </template>
     <template #related>
-      Other conditionals:
-      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink></div>
-      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink></div>
+      <div class="related-mb">Other conditionals:</div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: toIf.slug } }" class="link">{{ toIf.title }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
       The word <span class="g">なら</span> is used when you want to say something like "if that's the case…" or "if that's true…".

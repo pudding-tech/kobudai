@@ -2,7 +2,8 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { teAdjectiveNoun as meta, adjectivesI, adjectivesNa, teVerb } from "./metadataN5";
+  import { teAdjectiveNoun as meta, adjectivesI, adjectivesNa, temoii, teVerb } from "./metadataN5";
+  import { teSumimasen } from "../n4/metadataN4";
 </script>
 
 <script lang="ts">
@@ -28,6 +29,15 @@
       </div>
       <div style="margin-bottom: 20px">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        Further usage of the て-form:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: temoii.slug } }" class="link">{{ temoii.title }}</RouterLink>
+      </div>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teSumimasen.slug } }" class="link">{{ teSumimasen.title }}</RouterLink>
       </div>
       <div class="related-mb">
         Adjectives:

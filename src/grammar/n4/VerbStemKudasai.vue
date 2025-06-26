@@ -2,6 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { verbStemKudasai as meta, sonkeigo } from "./metadataN4";
+  import { teKudasai } from "../n5/metadataN5";
 </script>
 
 <script lang="ts">
@@ -42,10 +43,10 @@
       commonly used in customer service, like public announcements or when addressing customers directly.
       <div class="note">
         <div class="note-title">Note:</div>
-        Although these expressions end with ください, it's more accurate to think of them as polite commands rather than requests.
-        When someone says お〜ください, they're typically encouraging you to do something for your own benefit. That's why it would be inappropriate
+        Although these expressions end with <span class="g">ください</span>, it's more accurate to think of them as polite commands rather than requests.
+        When someone says <span class="g">お〜ください</span>, they're typically encouraging you to do something for your own benefit. That's why it would be inappropriate
         to use this form when asking someone to do something for your own sake, like passing the salt — a standard
-        <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">〜てください</RouterLink> would be more suitable in that case.
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKudasai.slug } }" class="link">{{ teKudasai.title }}</RouterLink> would be more suitable in that case.
       </div>
       <GrammarExample>
         <template #example>
@@ -77,8 +78,8 @@
         verbs that are more formal, often seen in business or customer service contexts. For example, verbs like 勉強する (べんきょうする, to study)
         or 運動する (うんどうする, to exercise) don't normally appear in this form, because the expression wouldn't sound natural or appropriate.
         <br><br>
-        Instead, you'd just use
-        the standard polite request form, like 勉強してください. So while the pattern is useful and common, it's best to learn which combinations are actually used.
+        Instead, you'd just use the standard polite request form, like 勉強してください. So while the pattern is useful and common,
+        it's best to learn which combinations are actually used.
         <GrammarExample>
           <template #example>
             お<ruby>足元<rt>あしもと</rt></ruby>に<span class="g">ご</span><ruby>注意<rt>ちゅうい</rt></ruby><span class="g">ください</span>

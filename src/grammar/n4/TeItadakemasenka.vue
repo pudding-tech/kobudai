@@ -2,6 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { teItadakemasenka as meta, kenjougo, sonkeigo, teAgeruKureruMorau } from "./metadataN4";
+  import { teKudasai, teVerb } from "../n5/metadataN5";
 </script>
 
 <script lang="ts">
@@ -17,7 +18,13 @@
     </template>
     <template #related>
       <div class="related-mb">
-        Based on the humble form <RouterLink :to="{ name: 'grammarLoader', params: { slug: kenjougo.slug } }" class="link">{{ kenjougo.title }}</RouterLink>
+        Based on:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink>
+      </div>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: kenjougo.slug } }" class="link">{{ kenjougo.title }}</RouterLink>
       </div>
       <div>
         See also <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAgeruKureruMorau.slug } }" class="link">{{ teAgeruKureruMorau.title }}</RouterLink>
@@ -42,6 +49,8 @@
         </template>
       </GrammarExample>
       This expression is polite and humble, so it's often used in formal situations, like at work or when speaking to someone you want to show respect to.
+      For a less formal, but still polite request, you can use the more common
+      <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKudasai.slug } }" class="link">{{ teKudasai.title }}</RouterLink> form.
       <GrammarExample>
         <template #example>
           <ruby>少<rt>すこ</rt></ruby>し<ruby>待<rt>ま</rt></ruby>っ<span class="g">ていただけませんか</span>？
@@ -62,7 +71,8 @@
         In this construction, you are humbly positioning yourself as the receiver of a favor or action from the listener. So, when you say <span class="g">～ていただけませんか</span>,
         you're politely asking someone to do something for you, emphasizing your respectful position as the recipient.
         <br><br>
-        This contrasts with ～てください, which uses the <RouterLink :to="{ name: 'grammarLoader', params: { slug: sonkeigo.slug } }" class="link">honorific (sonkeigo)</RouterLink>
+        This contrasts with <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKudasai.slug } }" class="link">{{ teKudasai.title }}</RouterLink>, which uses the
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: sonkeigo.slug } }" class="link">honorific (sonkeigo)</RouterLink>
         word くださる (the honorific of くれる, "to give"), and emphasizes the listener as the giver performing an action for you.
         ～てください is historically a truncated form of ～てくださいませんか.
         <ul>
