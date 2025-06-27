@@ -15,9 +15,6 @@
     <template #structure>
       <div>Verb (ます stem) + <span class="grammar-highlight">ながら</span> + (main action)</div>
     </template>
-    <template #related>
-      
-    </template>
     <template #explanation>
       The grammar pattern <span class="g">ながら</span> is used to describe two actions happening at the same time,
       performed by the same subject. It is usually translated as "while doing..." in English.

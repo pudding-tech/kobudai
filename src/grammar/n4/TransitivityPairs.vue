@@ -13,16 +13,13 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(polite) => isPolite = polite">
+  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       <div><span class="grammar-highlight">Transitive verbs</span> take a direct object — they describe actions that someone does to something.</div>
       <br>
       <div><span class="grammar-highlight">Intransitive verbs</span> do not take a direct object — they describe actions or changes that happen by themselves.</div>
-    </template>
-    <template #related>
-
     </template>
     <template #explanation>
       In Japanese, many verbs come in pairs that express whether the subject does something (transitive) or whether something happens on its own (intransitive). These are called transitivity pairs.

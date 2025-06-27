@@ -13,7 +13,7 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(polite) => isPolite = polite">
+  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
@@ -38,36 +38,40 @@
       </ul>
       There are a few common variations of this structure that differ in formality:
       <table class="janai-table">
-        <tr>
-          <th>Form</th>
-          <th v-if="!breakpointService.isMobile()">Level of Formality</th>
-          <th>Notes</th>
-        </tr>
-        <tr>
-          <td><span class="g">ではありません</span></td>
-          <td v-if="!breakpointService.isMobile()">Very formal</td>
-          <td>Standard polite form</td>
-        </tr>
-        <tr>
-          <td><span class="g">ではない</span></td>
-          <td v-if="!breakpointService.isMobile()">Plain/formal-ish</td>
-          <td>Often used in writing</td>
-        </tr>
-        <tr>
-          <td><span class="g">じゃありません</span></td>
-          <td v-if="!breakpointService.isMobile()">Polite</td>
-          <td>Spoken, softer than ではありません</td>
-        </tr>
-        <tr>
-          <td><span class="g">じゃない</span></td>
-          <td v-if="!breakpointService.isMobile()">Casual</td>
-          <td>Common in daily conversation</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Form</th>
+            <th v-if="!breakpointService.isMobile()">Level of Formality</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="g">ではありません</span></td>
+            <td v-if="!breakpointService.isMobile()">Very formal</td>
+            <td>Standard polite form</td>
+          </tr>
+          <tr>
+            <td><span class="g">ではない</span></td>
+            <td v-if="!breakpointService.isMobile()">Plain/formal-ish</td>
+            <td>Often used in writing</td>
+          </tr>
+          <tr>
+            <td><span class="g">じゃありません</span></td>
+            <td v-if="!breakpointService.isMobile()">Polite</td>
+            <td>Spoken, softer than ではありません</td>
+          </tr>
+          <tr>
+            <td><span class="g">じゃない</span></td>
+            <td v-if="!breakpointService.isMobile()">Casual</td>
+            <td>Common in daily conversation</td>
+          </tr>
+        </tbody>
       </table>
       <br>
       <span class="g">じゃない</span> is actually a contraction:
       <ul>
-        <li><span class="g">ではありません</span> → <span class="g">ではない</span> → <span class="g">じゃない</span></li>
+        <li><span class="g">ではありません</span> → <span class="g">ではない</span> / <span class="g">じゃありません</span> → <span class="g">じゃない</span></li>
       </ul>
       <GrammarExample>
         <template #example>

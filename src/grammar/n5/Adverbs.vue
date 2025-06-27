@@ -17,9 +17,6 @@
       <div>い-adjective <s class="remove">[い]</s> + <span class="grammar-highlight">く</span> + verb</div>
       <div>な-adjective + <span class="grammar-highlight">に</span> + verb</div>
     </template>
-    <template #related>
-
-    </template>
     <template #explanation>
       In Japanese, adverbs describe how an action is performed — similar to English words like quickly, happily, or quietly.
       Many Japanese adverbs are formed by modifying adjectives.

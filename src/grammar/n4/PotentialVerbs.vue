@@ -5,11 +5,11 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
   import RelatedGrammarList from "@/components/RelatedGrammarList.vue";
-  import { potentialVerbs as meta, volitionalVerbs, ba } from "./metadataN4";
+  import { potentialVerbs as meta, ba, passiveVerbs, volitionalVerbs } from "./metadataN4";
   import { godan, godanNegative, godanNonPast, godanPast, ichidan, ichidanNegative, ichidanNonPast, ichidanPast } from "../n5/metadataN5";
 
   const isPolite = ref(false);
-  const related: { slug: string, title: string }[] = [godan, ichidan, godanNonPast, ichidanNonPast, godanNegative, ichidanNegative, godanPast, ichidanPast, volitionalVerbs, { slug: ba.slug, title: "Conditional verb (～ば)" }];
+  const related: { slug: string, title: string }[] = [godan, ichidan, godanNonPast, ichidanNonPast, godanNegative, ichidanNegative, godanPast, ichidanPast, volitionalVerbs, { slug: ba.slug, title: "Conditional verb (～ば)" }, passiveVerbs];
 </script>
 
 <script lang="ts">
@@ -17,7 +17,7 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(polite) => isPolite = polite">
+  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
@@ -227,7 +227,7 @@
         </GrammarExampleSentences>
         <div class="note">
           <div class="note-title">Note:</div>
-          Most polite verb forms in Japanese are made by taking the continuative (ます) stem and adding a polite ending. But the potential form works differently -
+          Most polite verb forms in Japanese are made by taking the continuative (ます) stem and adding a polite ending. But the potential form works differently —
           it becomes a new verb with full conjugation ability. This means it can be conjugated into the polite form by simply adding <span class="g">ます</span> to the end of the potential stem.
         </div>
       </div>

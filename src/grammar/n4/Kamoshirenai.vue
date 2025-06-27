@@ -12,18 +12,14 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(polite) => isPolite = polite">
+  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      <!-- Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">み<span v-if="!isPolite">る</span><span v-else>ます</span></span> -->
       <div>Verb (plain form) + <span class="grammar-highlight">かもしれ<span v-if="isPolite">ません</span><span v-else>ない</span></span></div>
       <div>い-adjective + <span class="grammar-highlight">かもしれ<span v-if="isPolite">ません</span><span v-else>ない</span></span></div>
       <div>な-adjective + <span class="grammar-highlight">かもしれ<span v-if="isPolite">ません</span><span v-else>ない</span></span></div>
       <div>Noun + <span class="grammar-highlight">かもしれ<span v-if="isPolite">ません</span><span v-else>ない</span></span></div>
-    </template>
-    <template #related>
-      
     </template>
     <template #explanation>
       The grammar pattern <span class="g">かもしれない</span> is used to express possibility or uncertainty — similar to saying "might", "maybe", or "perhaps" in English.

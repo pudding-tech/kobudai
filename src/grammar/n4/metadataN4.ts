@@ -32,6 +32,14 @@ export const gahoshi: GrammarPoint = {
   tags: ["want", "want something", "gahoshi", "noun", "noun phrase"]
 };
 
+export const hazu: GrammarPoint = {
+  slug: "はず",
+  title: "はず",
+  subtitle: "Believe to be true, Expected to be the case",
+  titleRomaji: "hazu",
+  tags: ["supposed to", "expected to", "hazu", "certainty", "assumption", "belief"]
+};
+
 export const kamoshirenai: GrammarPoint = {
   slug: "かもしれない",
   title: "かもしれない",
@@ -111,11 +119,34 @@ export const numberShika: GrammarPoint = {
   tags: ["number", "shika", "only", "as few as", "just", "limitation", "emphasis"]
 };
 
+export const passiveSentences: GrammarPoint = {
+  slug: "passive-sentences",
+  title: "Passive sentences",
+  subtitle: "Direct and indirect passive voice",
+  titleRomaji: "passive sentences",
+  tags: ["passive", "passive voice", "passive sentences", "godan", "ichidan", "verb", "sentence structure"]
+};
+
+export const passiveVerbs: GrammarPoint = {
+  slug: "passive-verb",
+  title: "Passive verb",
+  subtitle: "～れる、～られる (was done to)",
+  tags: ["passive", "passive sentences", "godan", "ichidan", "verb"]
+};
+
 export const potentialVerbs: GrammarPoint = {
   slug: "potential-verb",
   title: "Potential verb",
   subtitle: "～る、～られる (to be able, can)",
   tags: ["potential", "can", "verbs", "verb", "godan", "ichidan", "be able"]
+};
+
+export const questionsInSentences: GrammarPoint = {
+  slug: "questions-in-sentences",
+  title: "Question-phrase + か・かどうか",
+  subtitle: "Questions in sentences, Whether or not...",
+  titleRomaji: "(question phrase) + ka",
+  tags: ["questions", "ka", "embedded questions", "sentence structure", "grammar"]
 };
 
 export const shi: GrammarPoint = {
@@ -181,20 +212,28 @@ export const teItadakemasenka: GrammarPoint = {
   tags: ["very polite", "request", "te-form", "itadakemasenka", "please do", "keigo", "honorific", "kenjougo", "itadakimasen"]
 };
 
-export const temiru: GrammarPoint = {
+export const teKureteArigatou: GrammarPoint = {
+  slug: "てくれてありがとう",
+  title: "～てくれてありがとう",
+  subtitle: "Thank you for doing...",
+  titleRomaji: "tekuretearigatou",
+  tags: ["thank you", "gratitude", "te-form", "te kurete arigatou", "appreciation", "doing for someone"]
+};
+
+export const teMiru: GrammarPoint = {
   slug: "てみる",
   title: "～てみる",
   subtitle: "Try to...",
   titleRomaji: "temiru",
-  tags: ["try to", "try doing", "temiru", "try something"]
+  tags: ["try to", "try doing", "te miru", "try something"]
 };
 
-export const teoku: GrammarPoint = {
+export const teOku: GrammarPoint = {
   slug: "ておく",
   title: "～ておく",
   subtitle: "Do something in preparation, Do something in advance",
   titleRomaji: "teoku",
-  tags: ["do in advance", "prepare", "advance", "future use", "teoku", "preparation"]
+  tags: ["do in advance", "prepare", "advance", "future use", "te oku", "preparation"]
 };
 
 export const teShimau: GrammarPoint = {
@@ -211,6 +250,14 @@ export const teSumimasen: GrammarPoint = {
   subtitle: "I'm sorry for...",
   titleRomaji: "tesumimasen",
   tags: ["apology", "sorry", "sumimasen", "polite"]
+};
+
+export const teYokatta: GrammarPoint = {
+  slug: "てよかった",
+  title: "～てよかった",
+  subtitle: "I'm glad that..., It was good that...",
+  titleRomaji: "teyokatta",
+  tags: ["glad", "happy", "te yokatta", "relief", "satisfaction", "te-form"]
 };
 
 export const toIf: GrammarPoint = {
@@ -291,4 +338,12 @@ export const volitionalToOmou: GrammarPoint = {
   subtitle: "I think I will...",
   titleRomaji: "volitional toomou",
   tags: ["think", "thinking", "will", "volitional", "omou", "intention", "decision"]
+};
+
+export const yasuiNikui: GrammarPoint = {
+  slug: "やすい-にくい",
+  title: "～やすい・～にくい",
+  subtitle: "Easy to..., Hard to...",
+  titleRomaji: "yasui nikui",
+  tags: ["easy", "hard", "yasui", "nikui", "verb", "adjective", "difficulty"]
 };

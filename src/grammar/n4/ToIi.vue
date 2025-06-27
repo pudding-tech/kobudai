@@ -12,16 +12,13 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(polite) => isPolite = polite">
+  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       <div>Short form (non-past) + <span class="grammar-highlight">といい<span v-if="isPolite">ですね</span><span v-else>ね</span></span></div>
       <div class="structure-title small">For myself:</div>
       <div>Short form (non-past) + <span class="grammar-highlight">といいん<span v-if="isPolite">ですが</span><span v-else>だけど</span></span></div>
-    </template>
-    <template #related>
-
     </template>
     <template #explanation>
       The structure <span class="g">～といい</span> is used to express a hope or wish that something happens or turns out well. It can be

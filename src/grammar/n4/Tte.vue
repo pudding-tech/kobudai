@@ -19,9 +19,6 @@
       <div>な-adjective + <span class="grammar-highlight">だ</span> + <span class="grammar-highlight">って</span>(言ってた)</div>
       <div>Noun + <span class="grammar-highlight">だ</span> + <span class="grammar-highlight">って</span>(言ってた)</div>
     </template>
-    <template #related>
-      
-    </template>
     <template #explanation>
       <span class="g">って</span> is a casual way to quote something someone said, heard, or thought. It's commonly used in spoken Japanese and is especially frequent in informal conversations.
 

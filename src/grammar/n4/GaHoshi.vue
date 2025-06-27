@@ -12,16 +12,13 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(polite) => isPolite = polite">
+  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       <div>Noun + <span class="grammar-highlight">がほしい<span v-if="isPolite">です</span></span></div>
       <div class="structure-title small">Talking about someone else's desire (3rd person)</div>
       <div>Noun + <span class="grammar-highlight">をほしが<span v-if="isPolite">ります</span><span v-else>る</span></span></div>
-    </template>
-    <template #related>
-      
     </template>
     <template #explanation>
       The word <span class="g">ほしい</span> is used to express wanting a thing (not an action). It attaches to a noun marked by <span class="g">が</span>, and is used when the speaker is the one who wants something.

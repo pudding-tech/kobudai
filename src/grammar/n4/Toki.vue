@@ -23,9 +23,6 @@
         <div>Noun + <span class="grammar-highlight">の</span> + <span class="grammar-highlight"><ruby>時<rt>とき</rt></ruby></span></div>
       </div>
     </template>
-    <template #related>
-      
-    </template>
     <template #explanation>
       The grammar pattern <span class="g">～時</span> (とき) connects two actions or events in time. It's used to express when something happens, or what was going on when something else occurred.
       <br><br>
@@ -113,13 +110,13 @@
         Instead, this construction is most naturally used when the time-reference event is completed, and the main event follows as a result of the time-reference event being completed.
         <GrammarExample>
           <template #example>
-            カードを<ruby>入<rt>い</rt></ruby>れた<span class="g"><ruby>時<rt>とき</rt></ruby></span>、お<ruby>金<rt>かね</rt></ruby>が<ruby>出<rt>で</rt></ruby>ました
+            カードを<ruby>入<rt>い</rt></ruby>れた<span class="g"><ruby>時<rt>とき</rt></ruby></span>、お<ruby>金<rt>かね</rt></ruby>が<ruby>出<rt>で</rt></ruby>ます
           </template>
           <template #translation>
-            When I inserted the card, money came out
+            When I have inserted the card, money comes out
           </template>
           <template #note>
-            Past verb shows completed action (card inserted); present result as a consequence (money came out)
+            The past tense indicates a completed action (inserting the card), followed by a present result (money comes out)
           </template>
         </GrammarExample>
 

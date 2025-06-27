@@ -15,9 +15,6 @@
     <template #structure>
       Period of time + <span class="grammar-highlight">に</span> + number of times
     </template>
-    <template #related>
-
-    </template>
     <template #explanation>
       The particle <span class="g">に</span> is commonly used with expressions of time to indicate how often something happens over a specific period.
       The structure is:

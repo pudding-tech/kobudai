@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref } from "vue";
+  import { ref, useSlots } from "vue";
   import { breakpointService } from "@/services/breakpointService";
 
   const props = withDefaults(defineProps<{
@@ -11,6 +11,9 @@
   });
 
   const emit = defineEmits(["politenessChange"]);
+
+  const slots = useSlots();
+  const hasRelated = !!slots.related;
 
   const isPolite = ref(props.defaultPolite);
   const isZoom = ref(false);
@@ -144,7 +147,7 @@
           </div>
         </AccordionContent>
       </AccordionPanel>
-      <AccordionPanel value="1">
+      <AccordionPanel v-if="hasRelated" value="1">
         <AccordionHeader>Related</AccordionHeader>
         <AccordionContent>
           <div class="related">

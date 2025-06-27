@@ -4,13 +4,16 @@
   import { useListStore } from "@/stores/listStore";
   import { useThemeStore } from "@/stores/themeStore";
   import { breakpointService } from "@/services/breakpointService";
+  import { scrollService } from "@/services/scrollService";
   import { search } from "@/services/searchService";
+  import { useRoute } from "vue-router";
   import MobileSettings from "./MobileSettings.vue";
   import SearchResults from "./SearchResults.vue";
   import CustomInputText from "./CustomInputText.vue";
 
   const listStore = useListStore();
   const themeStore = useThemeStore();
+  const route = useRoute();
   const searchText = ref<string>("");
   const settingsOpen = ref(false);
   const searchMobileOpen = ref(false);
@@ -21,6 +24,10 @@
   const selectedMainListValue = computed({
     get: () => listStore.getMainList.value,
     set: (newValue: string) => listStore.setMainList(newValue)
+  });
+
+  const isList = computed(() => {
+    return route.name === "list" || route.name === "home";
   });
 
   watch(searchText, (query) => {
@@ -65,7 +72,14 @@
 </script>
 
 <template>
-  <Toolbar :class="breakpointService.isMobile() ? 'mobile-navbar mobile-color' : 'navbar'">
+  <Toolbar
+    :class="[
+      breakpointService.isMobile() ?
+        ['mobile-navbar', 'mobile-color', isList ? 'sticky' : '']
+        : 'navbar',
+      { 'hide-sticky': scrollService.hideSticky() }
+    ]"
+  >
     <template #start>
       <div class="container">
         <RouterLink :to="{ name: 'home' }" v-ripple class="kobudai">
@@ -119,6 +133,12 @@
 .mobile-navbar {
   border-width: 0 0 1px 0;
   border-radius: 0;
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
 }
 
 .logo {

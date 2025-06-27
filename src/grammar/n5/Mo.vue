@@ -15,9 +15,6 @@
     <template #structure>
       Noun + <span class="grammar-highlight">も</span>
     </template>
-    <template #related>
-      
-    </template>
     <template #explanation>
       The particle <span class="g">も</span> means "also" or "too" in Japanese. It is used to indicate that something is the same or applies in addition to something else.
       <span class="g">も</span> replaces particles like は (topic marker) or が (subject marker) when used, but keeps the basic sentence structure the same.

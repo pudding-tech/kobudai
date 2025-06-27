@@ -15,9 +15,6 @@
     <template #structure>
       Sentence + <span class="grammar-highlight">よ</span>
     </template>
-    <template #related>
-      
-    </template>
     <template #explanation>
       The sentence-ending particle <span class="g">よ</span> is used to give emphasis, assert information, or provide new information that the speaker believes the listener may not know. It makes the statement more forceful or confident, similar to saying "you know" or "I'm telling you" in English.
       <GrammarExample>

@@ -38,7 +38,16 @@
 </script>
 
 <template>
-  <NotFound v-if="notFound" />
-  <component v-else-if="grammarPoint" :is="grammarPoint.component" />
-  <ProgressSpinner v-else style="display: flex" />
+  <div class="grammar-loader">
+    <NotFound v-if="notFound" />
+    <component v-else-if="grammarPoint" :is="grammarPoint.component" />
+    <ProgressSpinner v-else style="display: flex" />
+  </div>
 </template>
+
+<style scoped>
+.grammar-loader {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+</style>

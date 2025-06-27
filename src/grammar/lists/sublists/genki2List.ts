@@ -13,7 +13,7 @@ export const genki2List: Sublist = {
         n4.potentialVerbs,
         n4.shi,
         n4.sou,
-        n4.temiru,
+        n4.teMiru,
         n4.nara,
         n4.niFrequency,
         adverbs
@@ -37,7 +37,7 @@ export const genki2List: Sublist = {
       grammarPoints: [
         n4.volitionalVerbs,
         n4.volitionalToOmou,
-        n4.teoku,
+        n4.teOku,
         qualifierSentences
       ]
     },
@@ -81,7 +81,10 @@ export const genki2List: Sublist = {
       value: 7,
       grammarPoints: [
         n4.sonkeigo,
-        n4.verbStemKudasai
+        n4.verbStemKudasai,
+        n4.teKureteArigatou,
+        n4.teYokatta,
+        n4.hazu
       ]
     },
     {
@@ -91,7 +94,17 @@ export const genki2List: Sublist = {
         n4.kenjougo,
         n4.verbStemSuru,
         n4.naide,
-        n4.toIu
+        n4.questionsInSentences,
+        n4.toIu,
+        n4.yasuiNikui
+      ]
+    },
+    {
+      title: "CHAPTER 21",
+      value: 9,
+      grammarPoints: [
+        n4.passiveVerbs,
+        n4.passiveSentences
       ]
     },
     {

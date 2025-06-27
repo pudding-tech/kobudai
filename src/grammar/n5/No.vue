@@ -15,9 +15,6 @@
     <template #structure>
       Noun ₁ + <span class="grammar-highlight">の</span> + Noun ₂
     </template>
-    <template #related>
-      
-    </template>
     <template #explanation>
       The particle <span class="g">の</span> in the pattern "noun <span class="g">の</span> noun" is used to show possession or describe the relationship between two nouns - much like 's or "of" in English.
       Essentially, <span class="g">の</span> lets you build more complex noun phrases by linking multiple nouns together.

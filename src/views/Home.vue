@@ -5,6 +5,7 @@
   import { useListStore } from "@/stores/listStore";
   import { isValidList } from "@/lists";
   import { breakpointService } from "@/services/breakpointService";
+  import { scrollService } from "@/services/scrollService";
   import CustomSelectButton from "@/components/CustomSelectButton.vue";
   import GrammarListItem from "@/components/GrammarListItem.vue";
   import type { MainList, Section, Sublist } from "@/types/types";
@@ -47,6 +48,8 @@
   const expandedText = computed(() => isAllCollapsed.value ? "Expand all" : "Collapse all");
 
   onMounted(() => {
+    scrollService.reset();
+
     const mainList = route.params.mainlist as string | undefined;
     const subList = route.params.sublist as string | undefined;
 
@@ -133,7 +136,7 @@
     </div>
   </div>
   <div v-else>
-    <div class="list-section mobile">
+    <div class="list-section mobile sticky" :class="{ 'hide-sticky': scrollService.hideSticky() }">
       <span class="title">
         - {{ selectedMainList?.name.toUpperCase() }} -
       </span>
@@ -180,6 +183,18 @@
     padding-top: 20px;
     background-color: var(--list-section-bg);
     justify-content: space-between;
+
+    &.sticky {
+      position: sticky;
+      /* top: 0; */
+      top: 65px;
+      z-index: 999;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &.hide-sticky {
+      transition: transform 0.3s;
+      transform: translateY(calc(-100% - 65px));
+    }
 
     .title {
       font-size: 1.3rem;

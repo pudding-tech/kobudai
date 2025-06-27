@@ -15,9 +15,6 @@
     <template #structure>
       <span class="grammar-highlight">Plain-form sentence</span> + noun
     </template>
-    <template #details>
-      
-    </template>
     <template #explanation>
       In Japanese, you can describe a noun by placing an entire sentence before it. This is called a <i>qualifying sentence</i> or a <i>relative clause</i>,
       and it works like "the book I read" or "a person who lives in Tokyo" in English.

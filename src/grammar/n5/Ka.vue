@@ -15,9 +15,6 @@
     <template #structure>
       Phrase + <span class="grammar-highlight">か</span>
     </template>
-    <template #related>
-      
-    </template>
     <template #explanation>
       The sentence-ending particle <span class="g">か</span> in Japanese is used to form questions. It's placed at the end of a sentence to indicate that the sentence is a question, similar to how a question mark works in English.
       <GrammarExample>

@@ -45,10 +45,11 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   /* -- */
   /* N4 */
   /* -- */
+  [n4.ageruKureruMorau.slug]: () => import("./n4/AgeruKureruMorau.vue").then(processImport),
   [n4.ba.slug]: () => import("./n4/Ba.vue").then(processImport),
   [n4.bayokatta.slug]: () => import("./n4/BaYokatta.vue").then(processImport),
   [n4.gahoshi.slug]: () => import("./n4/GaHoshi.vue").then(processImport),
-  [n4.ageruKureruMorau.slug]: () => import("./n4/AgeruKureruMorau.vue").then(processImport),
+  [n4.hazu.slug]: () => import("./n4/Hazu.vue").then(processImport),
   [n4.kamoshirenai.slug]: () => import("./n4/Kamoshirenai.vue").then(processImport),
   [n4.kenjougo.slug]: () => import("./n4/Kenjougo.vue").then(processImport),
   [n4.mitai.slug]: () => import("./n4/Mitai.vue").then(processImport),
@@ -61,7 +62,10 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n4.numberShika.slug]: () => import("./n4/NumberShika.vue").then(processImport),
   [n4.verbStemKudasai.slug]: () => import("./n4/VerbStemKudasai.vue").then(processImport),
   [n4.verbStemSuru.slug]: () => import("./n4/VerbStemSuru.vue").then(processImport),
+  [n4.passiveSentences.slug]: () => import("./n4/PassiveSentences.vue").then(processImport),
+  [n4.passiveVerbs.slug]: () => import("./n4/PassiveVerbs.vue").then(processImport),
   [n4.potentialVerbs.slug]: () => import("./n4/PotentialVerbs.vue").then(processImport),
+  [n4.questionsInSentences.slug]: () => import("./n4/QuestionsInSentences.vue").then(processImport),
   [n4.shi.slug]: () => import("./n4/Shi.vue").then(processImport),
   [n4.sonkeigo.slug]: () => import("./n4/Sonkeigo.vue").then(processImport),
   [n4.sou.slug]: () => import("./n4/Sou.vue").then(processImport),
@@ -71,9 +75,11 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n4.teShimau.slug]: () => import("./n4/TeShimau.vue").then(processImport),
   [n4.teAgeruKureruMorau.slug]: () => import("./n4/TeAgeruKureruMorau.vue").then(processImport),
   [n4.teItadakemasenka.slug]: () => import("./n4/TeItadakemasenka.vue").then(processImport),
-  [n4.temiru.slug]: () => import("./n4/Temiru.vue").then(processImport),
-  [n4.teoku.slug]: () => import("./n4/Teoku.vue").then(processImport),
+  [n4.teKureteArigatou.slug]: () => import("./n4/TeKureteArigatou.vue").then(processImport),
+  [n4.teMiru.slug]: () => import("./n4/TeMiru.vue").then(processImport),
+  [n4.teOku.slug]: () => import("./n4/TeOku.vue").then(processImport),
   [n4.teSumimasen.slug]: () => import("./n4/TeSumimasen.vue").then(processImport),
+  [n4.teYokatta.slug]: () => import("./n4/TeYokatta.vue").then(processImport),
   [n4.toIf.slug]: () => import("./n4/To-If.vue").then(processImport),
   [n4.toIi.slug]: () => import("./n4/ToIi.vue").then(processImport),
   [n4.toIu.slug]: () => import("./n4/ToIu.vue").then(processImport),
@@ -81,5 +87,6 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n4.transitivityPairs.slug]: () => import("./n4/TransitivityPairs.vue").then(processImport),
   [n4.tte.slug]: () => import("./n4/Tte.vue").then(processImport),
   [n4.volitionalVerbs.slug]: () => import("./n4/VolitionalVerbs.vue").then(processImport),
-  [n4.volitionalToOmou.slug]: () => import("./n4/VolitionalToOmou.vue").then(processImport)
+  [n4.volitionalToOmou.slug]: () => import("./n4/VolitionalToOmou.vue").then(processImport),
+  [n4.yasuiNikui.slug]: () => import("./n4/YasuiNikui.vue").then(processImport)
 };

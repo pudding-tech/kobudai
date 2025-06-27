@@ -17,9 +17,6 @@
     <template #structure>
       Negative verb (plain form) + <span class="grammar-highlight">で</span> + main action
     </template>
-    <template #related>
-
-    </template>
     <template #explanation>
       The grammar pattern <span class="g">～ないで</span> is used to express doing something without doing something else.
       It is formed by attaching で to the plain negative form of a verb, and often translated as "without doing [X]".
@@ -60,7 +57,7 @@
 
       <GrammarExample>
         <template #example>
-          <ruby>寝<rt>ね</rt></ruby><span class="g">ないで</span>、<ruby>仕事<rt>しごと</rt></ruby>に行<rt>い</rt>きます
+          <ruby>寝<rt>ね</rt></ruby><span class="g">ないで</span>、<ruby>仕事<rt>しごと</rt></ruby>に<ruby>行<rt>い</rt></ruby>きます
         </template>
         <template #translation>
           I will go to work without sleeping

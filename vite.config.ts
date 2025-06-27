@@ -12,6 +12,7 @@ export default defineConfig({
       manifest: {
         name: "Kobudai",
         short_name: "Kobudai",
+        theme_color: "#161417",
         background_color: "#1d1d1d",
         icons: [
           {

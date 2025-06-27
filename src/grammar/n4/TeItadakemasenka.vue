@@ -3,6 +3,7 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import { teItadakemasenka as meta, kenjougo, sonkeigo, teAgeruKureruMorau } from "./metadataN4";
   import { teKudasai, teVerb } from "../n5/metadataN5";
+  import { breakpointService } from "@/services/breakpointService";
 </script>
 
 <script lang="ts">
@@ -11,7 +12,14 @@
 
 <template>
   <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
+    <template #title>
+      <div v-if="breakpointService.isMobile()" style="word-break: normal;">
+        {{ meta.title }}
+      </div>
+      <span v-else>
+        {{ meta.title }}
+      </span>
+    </template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">いただけませんか</span>

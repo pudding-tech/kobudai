@@ -21,7 +21,6 @@ body {
   margin: 0;
   font-family: "Roboto", Arial, sans-serif;
   background-color: var(--body-bg);
-  overflow-y: scroll;
 
   &.mobile {
     background-color: var(--body-bg-mobile);
@@ -42,9 +41,6 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  overflow-x: hidden;
-  /* overflow-y: hidden; */
-  overflow-y: auto;
 }
 
 .grammar-highlight {
@@ -217,6 +213,16 @@ ruby rt {
   margin: 16px 40px;
   border: 1px solid var(--grammar-box-border-color);
   border-radius: 4px;
+}
+
+.sticky {
+  transition: transform 0.3s;
+  transform: translate(0);
+}
+
+.hide-sticky {
+  transition: transform 0.2s;
+  transform: translateY(-100%);
 }
 
 /*
