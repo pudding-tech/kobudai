@@ -38,7 +38,7 @@
     </template>
     <template #explanation>
       <span class="g">～てくれてありがとう</span> is used to express gratitude for someone doing something for you. It literally
-      means "thank you for doing (something for me)", and is a combination of:
+      means "thank you for doing [verb] for me", and is a combination of:
       <ul>
         <li style="margin-bottom: 6px;">
           <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">～て-form</RouterLink>

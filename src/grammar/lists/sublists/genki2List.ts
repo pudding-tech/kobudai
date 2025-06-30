@@ -111,6 +111,8 @@ export const genki2List: Sublist = {
       title: "CHAPTER 22",
       value: 10,
       grammarPoints: [
+        n4.causativeVerbs,
+        n4.causativeSentences,
         n4.ba
       ]
     }

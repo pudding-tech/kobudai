@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { ichidanNegative, ichidanNonPast, ichidanPast, teVerb } from "@/grammar/n5/metadataN5";
-  import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
+  import { ichidanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative, teVerb } from "@/grammar/n5/metadataN5";
+  import { ba, causativeVerbs, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { IchidanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -52,14 +52,14 @@
   const data = computed(() => [
     {
       row: examples.value[word.value].kanaRow,
-      forms: "Plain negative, Plain negative past",
+      forms: "Plain negative, Plain negative past, Passive, Causative",
       stem: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana
       },
-      suffix: "～ない、～なかった",
-      grammarPoint: [ichidanNegative, { slug: null, title: "Negative past verb (ichidan)" }],
+      suffix: "～ない、～なかった、<br>～られる、～させる",
+      grammarPoint: [ichidanNegative, ichidanPastNegative, passiveVerbs, causativeVerbs],
       rowNr: 1
     },
     {
@@ -158,9 +158,7 @@
       </Column>
       <Column v-if="!breakpointService.isMobile()" field="suffix" header="Endings">
         <template #body="slotProps">
-          <div class="text">
-            {{ slotProps.data.suffix }}
-          </div>
+          <div class="text" v-html="slotProps.data.suffix" />
         </template>
       </Column>
       <Column v-if="props.showLinks && !breakpointService.isMobile()" field="grammarPoint" header="Grammar Points">

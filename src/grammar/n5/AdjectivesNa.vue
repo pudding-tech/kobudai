@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { adjectivesNa as meta, adjectivesI } from "./metadataN5";
+  import { adjectivesNa as meta, adjectivesI, adverbs } from "./metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -52,8 +52,9 @@
       </table>
     </template>
     <template #related>
-      Other type of adjective:
-      <RouterLink :to="{ name: 'grammarLoader', params: { slug: adjectivesI.slug } }" class="link">{{ adjectivesI.title }}</RouterLink>
+      <div class="related-mb">See also:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: adjectivesI.slug } }" class="link">{{ adjectivesI.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: adverbs.slug } }" class="link">{{ adverbs.title }}</RouterLink></div>
     </template>
     <template #explanation>
       Adjectives are used to describe or modify nouns. In Japanese, there are two main types of adjectives:

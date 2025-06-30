@@ -3,6 +3,7 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { shi as meta } from "./metadataN4";
+  import { teVerb } from "../n5/metadataN5";
 </script>
 
 <script lang="ts">
@@ -112,7 +113,7 @@
             That movie is interesting and tear-jerking, so I recommend it
           </template>
         </GrammarExample>
-        The first sentence, using the <RouterLink :to="{ name: 'grammarLoader', params: { slug: 'くて' } }" class="link">くて</RouterLink> construction, feels more objective, presenting a straightforward list of qualities. The second sentence, which uses <span class="g">し</span>, carries a softer, more subjective tone — as if the speaker is gently justifying their recommendation.
+        The first sentence, using the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">て-form</RouterLink> construction, feels more objective, presenting a straightforward list of qualities. The second sentence, which uses <span class="g">し</span>, carries a softer, more subjective tone — as if the speaker is gently justifying their recommendation.
         In this way, <span class="g">し</span> goes beyond simply listing things; it opens a window into the speaker’s thoughts and emotions, adding nuance to what they say and why they feel that way.
         <br><br>
         You can also use <span class="g">し</span> with only one stated 'reason'. Unlike other similar grammatical structures, this usage implies that the mentioned reason is just one of many possible reasons,
@@ -139,7 +140,7 @@
             I'm not going today. I'm tired, and it's raining too.
           </template>
           <template #note>
-            Here the situation or result comes first, and the reasons follow.
+            Here the situation is stated first, and the reasons follow
           </template>
         </GrammarExample>
       </div>

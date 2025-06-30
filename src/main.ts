@@ -2,6 +2,7 @@ import "./assets/main.css";
 import "primeicons/primeicons.css";
 
 import { createApp, type ObjectDirective } from "vue";
+import { registerSW } from "virtual:pwa-register";
 import App from "./App.vue";
 import router from "./router/router";
 import PrimeVue from "primevue/config";
@@ -220,5 +221,16 @@ const mainList = localStorage.getItem("mainList");
 const sublist = localStorage.getItem("sublist");
 listStore.setMainList(mainList, false);
 listStore.setSublist(sublist, false);
+
+const updateSW = registerSW({
+  onNeedRefresh() {
+    if (confirm("A new version is available. Refresh now?")) {
+      updateSW(true);
+    }
+  },
+  onOfflineReady() {
+    console.log("App is ready to work offline");
+  }
+});
 
 app.mount("#app");

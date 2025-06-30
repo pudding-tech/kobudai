@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
-  import { godanPast as meta, godan, godanNonPast, godanNegative, ichidanPast, teVerb } from "./metadataN5";
+  import { godanPast as meta, godan, godanNonPast, godanNegative, godanPastNegative, ichidanPast, teVerb } from "./metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
 
   const isPolite = ref(false);
@@ -18,84 +18,44 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      <div v-if="isPolite">
-        <div class="kanji-mb">
-          <ruby>買<rt>か</rt>う</ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight"><span class="h">い</span>ました</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>待<rt>ま</rt>つ</ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight"><span class="h">ち</span>ました</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>取<rt>と</rt>る</ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight"><span class="h">り</span>ました</span></ruby>
-        </div>
-        <div class="kanji-mb" style="margin-top: 15px">
-          <ruby>読<rt>よ</rt>む</ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight"><span class="h">み</span>ました</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>遊<rt>あそ</rt>ぶ</ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight"><span class="h">び</span>ました</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>死<rt>し</rt>ぬ</ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight"><span class="h">に</span>ました</span></ruby>
-        </div>
-        <div class="kanji-mb" style="margin-top: 15px">
-          <ruby>書<rt>か</rt>く</ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight"><span class="h">き</span>ました</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>泳<rt>およ</rt>ぐ</ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight"><span class="h">ぎ</span>ました</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight"><span class="h">し</span>ました</span></ruby>
-        </div>
-        <div class="structure-title">
-          Exceptions
-        </div>
-        <div class="kanji-mb">
-          <span>する</span> → <span class="grammar-highlight">しました</span>
-        </div>
-        <div>
-          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>ました</span>
-        </div>
+      <div class="kanji-mb">
+        <ruby>買<rt>か</rt>う</ruby> → <ruby>買<rt>か</rt></ruby><span v-if="isPolite" class="grammar-highlight"><span class="h">い</span>ました</span><span v-else class="grammar-highlight">った</span>
       </div>
-      <div v-else>
-        <div class="kanji-mb">
-          <ruby>買<rt>か</rt>う</ruby> → <ruby>買<rt>か</rt><span class="grammar-highlight">った</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>待<rt>ま</rt>つ</ruby> → <ruby>待<rt>ま</rt><span class="grammar-highlight">った</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>取<rt>と</rt>る</ruby> → <ruby>取<rt>と</rt><span class="grammar-highlight">った</span></ruby>
-        </div>
-        <div class="kanji-mb" style="margin-top: 15px">
-          <ruby>読<rt>よ</rt>む</ruby> → <ruby>読<rt>よ</rt><span class="grammar-highlight">んだ</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>遊<rt>あそ</rt>ぶ</ruby> → <ruby>遊<rt>あそ</rt><span class="grammar-highlight">んだ</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>死<rt>し</rt>ぬ</ruby> → <ruby>死<rt>し</rt><span class="grammar-highlight">んだ</span></ruby>
-        </div>
-        <div class="kanji-mb" style="margin-top: 15px">
-          <ruby>書<rt>か</rt>く</ruby> → <ruby>書<rt>か</rt><span class="grammar-highlight">いた</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>泳<rt>およ</rt>ぐ</ruby> → <ruby>泳<rt>およ</rt><span class="grammar-highlight">いだ</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt><span class="grammar-highlight">した</span></ruby>
-        </div>
-        <div class="structure-title">
-          Exceptions
-        </div>
-        <div class="kanji-mb">
-          <span>する</span> → <span class="grammar-highlight">した</span>
-        </div>
-        <div class="kanji-mb">
-          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>た</span>
-        </div>
-        <div>
-          <span><ruby>行<rt>い</rt>く</ruby></span> → <span class="grammar-highlight"><ruby>行<rt>い</rt></ruby>った</span>
-        </div>
+      <div class="kanji-mb">
+        <ruby>待<rt>ま</rt>つ</ruby> → <ruby>待<rt>ま</rt></ruby><span v-if="isPolite" class="grammar-highlight"><span class="h">ち</span>ました</span><span v-else class="grammar-highlight">った</span>
+      </div>
+      <div class="kanji-mb">
+        <ruby>取<rt>と</rt>る</ruby> → <ruby>取<rt>と</rt></ruby><span v-if="isPolite" class="grammar-highlight"><span class="h">り</span>ました</span><span v-else class="grammar-highlight">った</span>
+      </div>
+      <div class="kanji-mb" style="margin-top: 15px">
+        <ruby>読<rt>よ</rt>む</ruby> → <ruby>読<rt>よ</rt></ruby><span v-if="isPolite" class="grammar-highlight"><span class="h">み</span>ました</span><span v-else class="grammar-highlight">んだ</span>
+      </div>
+      <div class="kanji-mb">
+        <ruby>遊<rt>あそ</rt>ぶ</ruby> → <ruby>遊<rt>あそ</rt></ruby><span v-if="isPolite" class="grammar-highlight"><span class="h">び</span>ました</span><span v-else class="grammar-highlight">んだ</span>
+      </div>
+      <div class="kanji-mb">
+        <ruby>死<rt>し</rt>ぬ</ruby> → <ruby>死<rt>し</rt></ruby><span v-if="isPolite" class="grammar-highlight"><span class="h">に</span>ました</span><span v-else class="grammar-highlight">んだ</span>
+      </div>
+      <div class="kanji-mb" style="margin-top: 15px">
+        <ruby>書<rt>か</rt>く</ruby> → <ruby>書<rt>か</rt></ruby><span v-if="isPolite" class="grammar-highlight"><span class="h">き</span>ました</span><span v-else class="grammar-highlight">いた</span>
+      </div>
+      <div class="kanji-mb">
+        <ruby>泳<rt>およ</rt>ぐ</ruby> → <ruby>泳<rt>およ</rt></ruby><span v-if="isPolite" class="grammar-highlight"><span class="h">ぎ</span>ました</span><span v-else class="grammar-highlight">いだ</span>
+      </div>
+      <div class="kanji-mb">
+        <ruby>話<rt>はな</rt>す</ruby> → <ruby>話<rt>はな</rt></ruby><span v-if="isPolite" class="grammar-highlight"><span class="h">し</span>ました</span><span v-else class="grammar-highlight">した</span>
+      </div>
+      <div class="structure-title">
+        Exceptions
+      </div>
+      <div class="kanji-mb">
+        <span>する</span> → <span class="grammar-highlight">し{{ isPolite ? "ました" : "た"}}</span>
+      </div>
+      <div :class="{ 'kanji-mb': !isPolite }">
+        <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>{{ isPolite ? "ました" : "た"}}</span>
+      </div>
+      <div v-if="!isPolite">
+        <span><ruby>行<rt>い</rt>く</ruby></span> → <span class="grammar-highlight"><ruby>行<rt>い</rt></ruby>った</span>
       </div>
     </template>
     <template #related>
@@ -116,6 +76,9 @@
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPastNegative.slug } }" class="link">{{ godanPastNegative.title }}</RouterLink>
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink>

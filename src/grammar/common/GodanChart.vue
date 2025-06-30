@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { godanNegative, godanNonPast, godanPast, teVerb } from "@/grammar/n5/metadataN5";
-  import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
+  import { godanNegative, godanNonPast, godanPast, godanPastNegative, teVerb } from "@/grammar/n5/metadataN5";
+  import { ba, causativeVerbs, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { GodanChartExample } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -54,14 +54,14 @@
   const data = computed(() => [
     {
       row: examples.value[word.value].kanaRow[0],
-      forms: "Plain negative, Plain negative past",
+      forms: "Plain negative, Plain negative past, Passive, Causative",
       stem: {
         kanji: examples.value[word.value].kanji,
         furigana: examples.value[word.value].furigana,
         okurigana: examples.value[word.value].okurigana[0]
       },
-      suffix: "～ない、～なかった",
-      grammarPoint: [godanNegative, { slug: null, title: "Negative past verb (godan)" }],
+      suffix: "～ない、～なかった、<br>～れる、～せる",
+      grammarPoint: [godanNegative, godanPastNegative, passiveVerbs, causativeVerbs],
       rowNr: 1
     },
     {
@@ -160,9 +160,7 @@
       </Column>
       <Column v-if="!breakpointService.isMobile()" field="suffix" header="Endings">
         <template #body="slotProps">
-          <div class="text">
-            {{ slotProps.data.suffix }}
-          </div>
+          <div class="text" v-html="slotProps.data.suffix" />
         </template>
       </Column>
       <Column v-if="props.showLinks && !breakpointService.isMobile()" field="grammarPoint" header="Related Grammar Points">

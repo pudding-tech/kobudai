@@ -28,10 +28,10 @@
       <div>いい → よい <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
     </template>
     <template #related>
-      <div>Other ways of expressing "looks like":</div>
+      <div class="related-mb">Other ways of expressing "looks like":</div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: mitai.slug } }" class="link">{{ mitai.title }}</RouterLink></div>
-      <div>- ようだ</div>
-      <div style="margin-top: 20px;">Note:</div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">ようだ</RouterLink></div>
+      <div style="margin-top: 20px;">Caution:</div>
       Do not confuse with <RouterLink :to="{ name: 'grammarLoader', params: { slug: souda.slug } }" class="link">{{ souda.title }}</RouterLink>, which implies hearsay.
     </template>
     <template #explanation>
@@ -144,7 +144,7 @@
       </div>
 
       <div class="section">
-        <div class="grammar-subtitle">Modifying nouns and verbs</div>
+        <div class="grammar-title">Modifying nouns and verbs</div>
         The adjective + <span class="g">～そう</span> combination can also be used to modify nouns and verbs.
         <span class="g">そう</span> is itself a な-adjective, so it can be used to modify nouns just like any other な-adjective.
         <GrammarExample>

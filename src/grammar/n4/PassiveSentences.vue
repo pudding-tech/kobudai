@@ -14,9 +14,9 @@
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       <div class="structure-title small top">Direct passive</div>
-      <div>(Acted upon) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + <span class="g">(verb in passive form)</span></div>
+      <div>(Acted upon) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + <span class="g">(passive verb)</span></div>
       <div class="structure-title small">Indirect passive</div>
-      <div>(Affected) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + (acted upon) <span class="h">を</span> + <span class="g">(verb in passive form)</span></div>
+      <div>(Affected) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + (acted upon) <span class="h">を</span> + <span class="g">(passive verb)</span></div>
     </template>
     <template #related>
       Based on the <RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveVerbs.slug } }" class="link">{{ passiveVerbs.title }}</RouterLink> form
@@ -90,7 +90,7 @@
         <div class="grammar-title">Direct Passive</div>
         In direct passive sentences, the subject is acted upon <b>directly</b> by someone.
         <ul>
-          <li>[Acted upon] <span class="h">は</span>/<span class="h">が</span> [doer] <span class="h">に</span> <span class="g">[action-passive verb]</span></li>
+          <li>[Acted upon] <span class="h">は</span>/<span class="h">が</span> [doer] <span class="h">に</span> <span class="g">[action - passive verb]</span></li>
         </ul>
         <GrammarExample>
           <template #example>
@@ -130,7 +130,7 @@
         This construction is commonly used to express unpleasant experiences, involvement, or being impacted by someone else's actions.
         Often, there is another object being acted upon, which is marked with <span class="h">を</span>, but this is not required — it depends on the verb used.
         <ul>
-          <li>[Affected] <span class="h">は</span>/<span class="h">が</span> [doer] <span class="h">に</span> [acted upon] <span class="h">を</span> <span class="g">[action-passive verb]</span></li>
+          <li>[Affected] <span class="h">は</span>/<span class="h">が</span> [doer] <span class="h">に</span> [acted upon] <span class="h">を</span> <span class="g">[action - passive verb]</span></li>
         </ul>
         <GrammarExample>
           <template #example>
@@ -140,7 +140,7 @@
             My friend broke the refrigerator (and I was affected by it)
           </template>
           <template #note>
-            The subject didn't receive the action directly, but was still impacted
+            The subject didn't receive the action directly
           </template>
         </GrammarExample>
         <GrammarExample>

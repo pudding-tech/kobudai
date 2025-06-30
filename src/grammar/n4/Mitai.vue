@@ -22,7 +22,7 @@
       <div>な-adjective + <span class="grammar-highlight">みたい</span><span v-if="isPolite"> + です</span></div>
     </template>
     <template #related>
-      <div>Other ways of expressing "looks like":</div>
+      <div class="related-mb">Other ways of expressing "looks like":</div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: sou.slug } }" class="link">{{ sou.title }}</RouterLink></div>
       <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">ようだ</RouterLink></div>
     </template>

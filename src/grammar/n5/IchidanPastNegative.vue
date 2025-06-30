@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { ichidanPast as meta, godanPast, ichidan, ichidanNegative, ichidanNonPast, ichidanPastNegative } from "./metadataN5";
+  import { ichidanPastNegative as meta, ichidan, ichidanNegative, ichidanNonPast, ichidanPast, godanPastNegative } from "./metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
 
   const isPolite = ref(false);
@@ -18,27 +18,27 @@
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       <div class="kanji-mb">
-        <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">{{ isPolite ? "ました" : "た"}}</span>
+        <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">{{ isPolite ? "ませんでした" : "なかった"}}</span>
       </div>
       <div class="kanji-mb">
-        <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">{{ isPolite ? "ました" : "た"}}</span>
+        <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">{{ isPolite ? "ませんでした" : "なかった"}}</span>
       </div>
       <div class="structure-title">
         Exceptions
       </div>
       <div class="kanji-mb">
-        <span>する</span> → <span class="grammar-highlight">し{{ isPolite ? "ました" : "た"}}</span>
+        <span>する</span> → <span class="grammar-highlight">し{{ isPolite ? "ませんでした" : "なかった"}}</span>
       </div>
       <div>
-        <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>{{ isPolite ? "ました" : "た"}}</span>
+        <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>{{ isPolite ? "き" : "こ"}}</rt></ruby>{{ isPolite ? "ませんでした" : "なかった"}}</span>
       </div>
     </template>
     <template #related>
       <div class="related-mb">
-        Past form of godan verbs:
+        Past negative form of godan verbs:
       </div>
       <div style="margin-bottom: 20px">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPastNegative.slug } }" class="link">{{ godanPastNegative.title }}</RouterLink>
       </div>
       <div class="related-mb">
         Other ichidan conjugations:
@@ -53,7 +53,7 @@
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNegative.slug } }" class="link">{{ ichidanNegative.title }}</RouterLink>
       </div>
       <div class="related-mb">
-        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPastNegative.slug } }" class="link">{{ ichidanPastNegative.title }}</RouterLink>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPast.slug } }" class="link">{{ ichidanPast.title }}</RouterLink>
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink>
@@ -66,40 +66,41 @@
       </div>
     </template>
     <template #explanation>
-      <div class="grammar-title">The Past Form of Ichidan Verbs</div>
-      The past form of Japanese verbs is used to describe actions that have already been completed, or events that have already happened.
+      <div class="grammar-title">The Past Negative Form of Ichidan Verbs</div>
+      The past negative form of Japanese verbs expresses that an action did not take place in the past.
 
       <div class="section">
-        <div class="grammar-subtitle">Plain form (informal)</div>
-        Since ichidan verbs have only one possible conjugation pattern, conjugating them is straightforward.
-        To change an ichidan verb into the past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">た</span>.
+        <div class="grammar-subtitle">Plain past negative (informal)</div>
+        To create the plain past negative form of an ichidan verb we drop the final syllable る to get the verb stem.
+        Then, simply add <span class="g">なかった</span> to the end.
+
         <GrammarExampleSentences>
           <div class="example">
-            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">た</span>
+            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">なかった</span>
           </div>
           <div class="translation">
-            to eat → ate
+            to eat → did not eat
           </div>
           <div class="example">
-            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">た</span>
+            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">なかった</span>
           </div>
           <div class="translation">
-            to fall → fell
+            to fall → did not fall
           </div>
           <div class="example">
-            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">た</span>
+            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">なかった</span>
           </div>
           <div class="translation">
-            to see → saw
+            to see → did not see
           </div>
           <div class="example">
-            いる → い<span class="g">た</span>
+            いる → い<span class="g">なかった</span>
           </div>
           <div class="translation">
-            to exist → existed (animate)
+            to exist → did not exist (animate)
           </div>
           <template #note>
-            Plain past form
+            Plain past negative form
           </template>
         </GrammarExampleSentences>
       </div>
@@ -107,35 +108,36 @@
       <div class="section">
         <div class="grammar-subtitle">Polite form</div>
         The polite form of a verb is used in formal situations, such as speaking with strangers or people of higher social status.
-        To make an ichidan verb polite in the past form, you simply drop the last syllable <span class="g">る</span>, then add <span class="g">ました</span>.
+        The ichidan polite stem is the same stem as all the other conjugations use, which is found by dropping the final syllable る.
+        For the polite past negative form, add <span class="g">ませんでした</span>.
 
         <GrammarExampleSentences>
           <div class="example">
-            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ました</span>
+            <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="g">ませんでした</span>
           </div>
           <div class="translation">
-            to eat → ate
+            to eat → did not eat
           </div>
           <div class="example">
-            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">ました</span>
+            <ruby>落<rt>お</rt></ruby>ちる → <ruby>落<rt>お</rt></ruby>ち<span class="g">ませんでした</span>
           </div>
           <div class="translation">
-            to fall → fell
+            to fall → did not fall
           </div>
           <div class="example">
-            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ました</span>
+            <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="g">ませんでした</span>
           </div>
           <div class="translation">
-            to see → saw
+            to see → did not see
           </div>
           <div class="example">
-            いる → い<span class="g">ました</span>
+            いる → い<span class="g">ませんでした</span>
           </div>
           <div class="translation">
-            to exist → existed (animate)
+            to exist → did not exist (animate)
           </div>
           <template #note>
-            Polite past form
+            Polite past negative form
           </template>
         </GrammarExampleSentences>
       </div>
@@ -145,36 +147,36 @@
         The two irregular verbs する and 来る do not follow the usual conjugation patterns. Instead, they have unique forms that must be memorized.
         <GrammarExampleSentences>
           <div class="example">
-            する → <span class="g">した</span>
+            する → <span class="g">しなかった</span>
           </div>
           <div class="translation">
-            to do → did
+            to do → did not do
           </div>
           <div class="example">
-            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>た</span>
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>こ</rt></ruby>なかった</span>
           </div>
           <div class="translation">
-            to come → came
+            to come → did not come
           </div>
           <template #note>
-            Plain past form of exceptions
+            Plain past negative form of exceptions
           </template>
         </GrammarExampleSentences>
         <GrammarExampleSentences>
           <div class="example">
-            する → <span class="g">しました</span>
+            する → <span class="g">しませんでした</span>
           </div>
           <div class="translation">
-            to do → did
+            to do → did not do
           </div>
           <div class="example">
-            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ました</span>
+            <ruby>来<rt>く</rt></ruby>る → <span class="g"><ruby>来<rt>き</rt></ruby>ませんでした</span>
           </div>
           <div class="translation">
-            to come → came
+            to come → did not come
           </div>
           <template #note>
-            Polite past form of irregular verbs
+            Polite past negative form of exceptions
           </template>
         </GrammarExampleSentences>
       </div>

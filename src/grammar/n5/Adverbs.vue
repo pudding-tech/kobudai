@@ -2,7 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { adverbs as meta } from "./metadataN5";
+  import { adverbs as meta, adjectivesI, adjectivesNa } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -16,6 +16,11 @@
     <template #structure>
       <div>い-adjective <s class="remove">[い]</s> + <span class="grammar-highlight">く</span> + verb</div>
       <div>な-adjective + <span class="grammar-highlight">に</span> + verb</div>
+    </template>
+    <template #related>
+      <div class="related-mb">See also:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: adjectivesI.slug } }" class="link">{{ adjectivesI.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: adjectivesNa.slug } }" class="link">{{ adjectivesNa.title }}</RouterLink></div>
     </template>
     <template #explanation>
       In Japanese, adverbs describe how an action is performed — similar to English words like quickly, happily, or quietly.

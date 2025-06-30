@@ -4,7 +4,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
-  import { godanNonPast as meta, ichidanNonPast, godan, godanNegative, godanPast } from "./metadataN5";
+  import { godanNonPast as meta, ichidanNonPast, godan, godanNegative, godanPast, godanPastNegative } from "./metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
 
   const isPolite = ref(false);
@@ -114,6 +114,9 @@
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPastNegative.slug } }" class="link">{{ godanPastNegative.title }}</RouterLink>
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink>

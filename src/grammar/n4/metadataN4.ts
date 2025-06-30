@@ -24,6 +24,20 @@ export const bayokatta: GrammarPoint = {
   tags: ["regret", "wish", "ba", "hypothetical", "verb"]
 };
 
+export const causativeVerbs: GrammarPoint = {
+  slug: "causative-verb",
+  title: "Causative verb",
+  subtitle: "～せる、～させる (to make someone do)",
+  tags: ["causative", "make someone do", "verb", "godan", "ichidan", "causative form"]
+};
+
+export const causativeSentences: GrammarPoint = {
+  slug: "causative-sentences",
+  title: "Causative sentences",
+  subtitle: "Using causative verbs in sentences",
+  tags: ["causative", "sentences", "verb", "godan", "ichidan", "sentence structure"]
+};
+
 export const gahoshi: GrammarPoint = {
   slug: "がほしい",
   title: "～がほしい",
@@ -130,7 +144,7 @@ export const passiveSentences: GrammarPoint = {
 export const passiveVerbs: GrammarPoint = {
   slug: "passive-verb",
   title: "Passive verb",
-  subtitle: "～れる、～られる (was done to)",
+  subtitle: "～れる、～られる (be done to)",
   tags: ["passive", "passive sentences", "godan", "ichidan", "verb"]
 };
 

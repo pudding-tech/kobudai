@@ -6,8 +6,8 @@
   // import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { godan as meta, godanNegative, godanNonPast, godanPast, ichidan, teVerb } from "./metadataN5";
-  import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
+  import { godan as meta, godanNegative, godanNonPast, godanPast, godanPastNegative, ichidan, teVerb } from "./metadataN5";
+  import { ba, causativeVerbs, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
 </script>
 
 <script lang="ts">
@@ -38,6 +38,9 @@
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPastNegative.slug } }" class="link">{{ godanPastNegative.title }}</RouterLink>
       </div>
     </template>
     <template #explanation>
@@ -80,15 +83,20 @@
       </div>
       Here's a short breakdown of the various forms:
       <ul>
-        <li class="list"><b>Plain negative, Plain negative past:</b> The verb stem changes to end in a <span class="h">あ</span> sound.</li>
+        <li class="list"><b>Plain negative, Plain negative past, Passive, Causative:</b> The verb stem changes to end in a <span class="h">あ</span> sound.</li>
         <div v-if="breakpointService.isMobile()">
           <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink></div>
-          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">Negative past verb (godan)</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPastNegative.slug } }" class="link">{{ godanPastNegative.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveVerbs.slug } }" class="link">{{ passiveVerbs.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: causativeVerbs.slug } }" class="link">{{ causativeVerbs.title }}</RouterLink></div>
         </div>
         <ul>
           <li class="list">For the plain negative form one adds ない to the stem (e.g. 行かない, to not go).</li>
           <li class="list">For the plain negative past form one adds なかった to the stem (e.g. 行かなかった, did not go).</li>
-          <li class="list"><span class="h">*</span> Note that when the verb ends in <span class="h">う</span> it becomes <span class="h">わ</span>, not あ. See <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink> for more information.</li>
+          <span class="h">*</span> Note that when the verb ends in <span class="h">う</span> it becomes <span class="h">わ</span>, not あ.
+          See <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink> for more information.
+          <li class="list">For the passive form one adds られる to the stem (e.g. 行かれる, to be gone).</li>
+          <li class="list">For the causative form one adds させる to the stem (e.g. 行かせる, to make someone go).</li>
         </ul>
         <li class="list"><b>Continuative, Polite form:</b> The verb stem changes to end in a <span class="h">い</span> sound.</li>
         <div v-if="breakpointService.isMobile()">

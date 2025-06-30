@@ -37,17 +37,55 @@ export const n5List: Sublist = {
         n5.godanNonPast,
         n5.ichidanNonPast,
         n5.godanNegative,
-        n5.ichidanNegative,
-        n5.godanPast,
-        n5.ichidanPast
+        n5.ichidanNegative
       ]
     },
     {
       title: "SECTION 4",
       value: 4,
       grammarPoints: [
+        n5.godanPast,
+        n5.ichidanPast,
+        n5.godanPastNegative,
+        n5.ichidanPastNegative
+      ]
+    },
+    {
+      title: "SECTION 5",
+      value: 5,
+      grammarPoints: [
+        n5.adjectivesI,
+        n5.adjectivesNa,
+        n5.masenka,
+        n5.qualifierSentences,
         n5.adverbs
       ]
-    }
+    },
+    {
+      title: "SECTION 6",
+      value: 6,
+      grammarPoints: [
+        n5.teVerb,
+        n5.teAdjectiveNoun,
+        n5.teKudasai,
+        n5.naideKudasai
+      ]
+    },
+    {
+      title: "SECTION 7",
+      value: 7,
+      grammarPoints: [
+        n5.maeni,
+        n5.tekara,
+        n5.temoii
+      ]
+    },
+    // {
+    //   title: "SECTION 8",
+    //   value: 8,
+    //   grammarPoints: [
+
+    //   ]
+    // }
   ]
 };

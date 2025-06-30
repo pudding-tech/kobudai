@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { ichidanNonPast as meta, ichidan, ichidanNegative, ichidanPast, godanNonPast } from "./metadataN5";
+  import { ichidanNonPast as meta, ichidan, ichidanNegative, ichidanPast, godanNonPast, ichidanPastNegative } from "./metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
 
   const isPolite = ref(false);
@@ -71,6 +71,9 @@
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPast.slug } }" class="link">{{ ichidanPast.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPastNegative.slug } }" class="link">{{ ichidanPastNegative.title }}</RouterLink>
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink>

@@ -64,6 +64,14 @@ export const godanPast: GrammarPoint = {
   tags: ["tta", "nda", "ita", "ida", "shita", "mashita", "verbs"]
 };
 
+export const godanPastNegative: GrammarPoint = {
+  slug: "godan-past-negative",
+  title: "Past negative verb (godan)",
+  // title: "Godan verb (past negative)",
+  subtitle: "～なかった、～ませんでした",
+  tags: ["nakatta", "masen deshita", "verbs"]
+};
+
 export const ha: GrammarPoint = {
   slug: "は",
   title: "は",
@@ -100,6 +108,13 @@ export const ichidanPast: GrammarPoint = {
   // title: "Ichidan verb (past)",
   subtitle: "～た、～ました",
   tags: ["ta", "mashita", "verbs"]
+};
+
+export const ichidanPastNegative: GrammarPoint = {
+  slug: "ichidan-past-negative",
+  title: "Past negative verb (ichidan)",
+  subtitle: "～なかった、～ませんでした",
+  tags: ["nakatta", "masen deshita", "verbs"]
 };
 
 export const janai: GrammarPoint = {

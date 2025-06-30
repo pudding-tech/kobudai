@@ -46,7 +46,9 @@ export const genki1List: Sublist = {
       value: 4,
       grammarPoints: [
         n5.godanPast,
-        n5.ichidanPast
+        n5.ichidanPast,
+        n5.godanPastNegative,
+        n5.ichidanPastNegative
       ]
     },
     {

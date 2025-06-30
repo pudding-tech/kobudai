@@ -9,6 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      registerType: "prompt",
       manifest: {
         name: "Kobudai",
         short_name: "Kobudai",

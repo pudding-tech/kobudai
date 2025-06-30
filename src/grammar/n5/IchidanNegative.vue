@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { ichidanNegative as meta, ichidan, ichidanNonPast, ichidanPast, godanNegative } from "./metadataN5";
+  import { ichidanNegative as meta, ichidan, godanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative } from "./metadataN5";
   import { ba, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
 
   const isPolite = ref(false);
@@ -17,39 +17,20 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      <div v-if="isPolite">
-        <div class="kanji-mb">
-          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">ません</span>
-        </div>
-        <div class="kanji-mb">
-          <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">ません</span>
-        </div>
-        <div class="structure-title">
-          Exceptions
-        </div>
-        <div class="kanji-mb">
-          <span>する</span> → <span class="grammar-highlight">しません</span>
-        </div>
-        <div>
-          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>き</rt></ruby>ません</span>
-        </div>
+      <div class="kanji-mb">
+        <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">{{ isPolite ? "ません" : "ない"}}</span>
       </div>
-      <div v-else>
-        <div class="kanji-mb">
-          <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt>べ<span class="grammar-highlight">ない</span></ruby>
-        </div>
-        <div class="kanji-mb">
-          <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt><span class="grammar-highlight">ない</span></ruby>
-        </div>
-        <div class="structure-title">
-          Exceptions
-        </div>
-        <div class="kanji-mb">
-          <span>する</span> → <span class="grammar-highlight">しない</span>
-        </div>
-        <div>
-          <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>こ</rt>ない</ruby></span>
-        </div>
+      <div class="kanji-mb">
+        <ruby>見<rt>み</rt></ruby>る → <ruby>見<rt>み</rt></ruby><span class="grammar-highlight">{{ isPolite ? "ません" : "ない"}}</span>
+      </div>
+      <div class="structure-title">
+        Exceptions
+      </div>
+      <div class="kanji-mb">
+        <span>する</span> → <span class="grammar-highlight">し{{ isPolite ? "ません" : "ない"}}</span>
+      </div>
+      <div>
+        <span><ruby>来<rt>く</rt>る</ruby></span> → <span class="grammar-highlight"><ruby>来<rt>{{ isPolite ? "き" : "こ"}}</rt></ruby>{{ isPolite ? "ません" : "ない"}}</span>
       </div>
     </template>
     <template #related>
@@ -70,6 +51,9 @@
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPast.slug } }" class="link">{{ ichidanPast.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPastNegative.slug } }" class="link">{{ ichidanPastNegative.title }}</RouterLink>
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { ref, useSlots } from "vue";
+  import { useRelatedStore } from "@/stores/relatedStore";
   import { breakpointService } from "@/services/breakpointService";
 
   const props = withDefaults(defineProps<{
@@ -12,19 +13,28 @@
 
   const emit = defineEmits(["politenessChange"]);
 
+  const relatedStore = useRelatedStore();
   const slots = useSlots();
   const hasRelated = !!slots.related;
 
   const isPolite = ref(props.defaultPolite);
-  const isZoom = ref(false);
+  const isExpanded = ref(false);
+  const openPanels = ref(
+    relatedStore.showRelated.value ? ["0", "1"] : ["0"]
+  );
 
   const options = [
     { label: "Standard", value: false },
     { label: "Polite", value: true },
   ];
 
-  const zoomChange = () => {
-    isZoom.value = !isZoom.value;
+  const onAccordionUpdate = (value: string | string[] | null | undefined) => {
+    const arr = Array.isArray(value) ? value : value ? [value] : [];
+    relatedStore.setRelated(arr.includes("1"));
+  };
+
+  const expandChange = () => {
+    isExpanded.value = !isExpanded.value;
   };
 
   const politenessChange = () => {
@@ -86,25 +96,25 @@
       </div>
       <div class="content">
         <div class="top-row">
-          <Card :class="['card', 'top-left', { 'expanded': isZoom }]">
+          <Card :class="['card', 'top-left', { 'expanded': isExpanded }]">
             <template #title>
               <div class="info-title">
                 <div class="structure">
                   <div>Structure</div>
                   <div>
-                    <Button :icon="isZoom ? 'pi pi-arrow-down-left-and-arrow-up-right-to-center' : 'pi pi-arrow-up-right-and-arrow-down-left-from-center'" severity="secondary" :class="{ 'zoom-button': showPolite }" @click="zoomChange()" />
+                    <Button :icon="isExpanded ? 'pi pi-arrow-down-left-and-arrow-up-right-to-center' : 'pi pi-arrow-up-right-and-arrow-down-left-from-center'" severity="secondary" :class="{ 'expand-button': showPolite }" @click="expandChange()" />
                     <SelectButton v-if="props.showPolite" v-model="isPolite" :options="options" option-label="label" option-value="value" :allow-empty="false" @update:model-value="politenessChange()" />
                   </div>
                 </div>
               </div>
             </template>
             <template #content>
-              <div class="structure-content" :class="{ 'big-text': isZoom }">
+              <div class="structure-content" :class="{ 'big-text': isExpanded }">
                 <slot name="structure"></slot>
               </div>
             </template>
           </Card>
-          <Card class="card top-right" :class="{ 'hidden': isZoom }">
+          <Card class="card top-right" :class="{ 'hidden': isExpanded }">
             <template #title>
               <div class="info-title mg-bottom">Related</div>
             </template>
@@ -134,13 +144,13 @@
         <slot name="subtitle"></slot>
       </div>
     </div>
-    <Accordion :value="['0']" multiple :dt="headerMobile">
+    <Accordion v-model:value="openPanels" multiple :dt="headerMobile" @update:value="onAccordionUpdate($event)">
       <AccordionPanel value="0">
         <AccordionHeader>Structure</AccordionHeader>
         <AccordionContent>
-          <div class="structure" :class="{ 'big-text': isZoom }">
+          <div class="structure" :class="{ 'big-text': isExpanded }">
             <div class="buttons">
-              <Button :icon="isZoom ? 'pi pi-arrow-down-left-and-arrow-up-right-to-center' : 'pi pi-arrow-up-right-and-arrow-down-left-from-center'" severity="secondary" @click="zoomChange()" />
+              <Button :icon="isExpanded ? 'pi pi-arrow-down-left-and-arrow-up-right-to-center' : 'pi pi-arrow-up-right-and-arrow-down-left-from-center'" severity="secondary" @click="expandChange()" />
               <SelectButton v-if="props.showPolite" v-model="isPolite" :options="options" option-label="label" option-value="value" :allow-empty="false" @update:model-value="politenessChange()" />
             </div>
             <slot name="structure"></slot>
@@ -272,7 +282,7 @@
   margin-top: 2px;
 }
 
-.zoom-button {
+.expand-button {
   margin-right: 10px;
 }
 

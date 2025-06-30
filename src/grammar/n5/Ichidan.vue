@@ -4,8 +4,8 @@
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { ichidan as meta, godan, ichidanNegative, ichidanNonPast, ichidanPast, teVerb } from "./metadataN5";
-  import { ba, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
+  import { ichidan as meta, godan, ichidanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative, teVerb } from "./metadataN5";
+  import { ba, causativeVerbs, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
 </script>
 
 <script lang="ts">
@@ -35,6 +35,9 @@
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPast.slug } }" class="link">{{ ichidanPast.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPastNegative.slug } }" class="link">{{ ichidanPastNegative.title }}</RouterLink>
       </div>
     </template>
     <template #explanation>
@@ -69,7 +72,12 @@
         <li class="list"><b>Plain negative, Plain negative past:</b> Verb stem (drop the <span class="g">る</span>), then add ない (e.g. 食べない) or なかった (e.g. 食べなかった).</li>
         <div v-if="breakpointService.isMobile()">
           <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanNegative.slug } }" class="link">{{ ichidanNegative.title }}</RouterLink></div>
-          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">Negative past verb (ichidan)</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidanPastNegative.slug } }" class="link">{{ ichidanPastNegative.title }}</RouterLink></div>
+        </div>
+        <li class="list"><b>Passive, Causative:</b> Verb stem (drop the <span class="g">る</span>), then add られる (e.g. 食べられる) or させる (e.g. 食べさせる).</li>
+        <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveVerbs.slug } }" class="link">{{ passiveVerbs.title }}</RouterLink></div>
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: causativeVerbs.slug } }" class="link">{{ causativeVerbs.title }}</RouterLink></div>
         </div>
         <li class="list"><b>Polite form:</b> Verb stem (drop the <span class="g">る</span>), then add ます (e.g. 食べます).</li>
         <div v-if="breakpointService.isMobile()">
