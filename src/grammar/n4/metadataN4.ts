@@ -1,5 +1,22 @@
 import type { GrammarPoint } from "@/types/types";
 
+export const adjectiveSuru: GrammarPoint = {
+  slug: "adjective-suru",
+  title: "Adjective + する",
+  subtitle: "～くする・にする (to make something...)",
+  titleRomaji: "adjective suru",
+  tags: ["adjective", "suru", "verb", "adjectives"]
+};
+
+export const aidaNi: GrammarPoint = {
+  slug: "間に",
+  title: "<ruby>間<rt>あいだ</rt></ruby>に・<ruby>間<rt>あいだ</rt></ruby>",
+  subtitle: "While, During (Time period)",
+  titleRomaji: "aidani aida",
+  titlePlain: "間に・間",
+  tags: ["while", "during", "aida ni", "time period", "temporal", "between", "duration"]
+};
+
 export const ageruKureruMorau: GrammarPoint = {
   slug: "あげる-くれる-もらう",
   title: "あげる・くれる・もらう",
@@ -38,12 +55,12 @@ export const causativeSentences: GrammarPoint = {
   tags: ["causative", "sentences", "verb", "godan", "ichidan", "sentence structure"]
 };
 
-export const gahoshi: GrammarPoint = {
+export const gaHoshii: GrammarPoint = {
   slug: "がほしい",
   title: "～がほしい",
   subtitle: "Wanting something",
-  titleRomaji: "gahoshi",
-  tags: ["want", "want something", "gahoshi", "noun", "noun phrase"]
+  titleRomaji: "gahoshii",
+  tags: ["want", "want something", "ga hoshii", "noun", "noun phrase"]
 };
 
 export const hazu: GrammarPoint = {
@@ -107,6 +124,14 @@ export const nara: GrammarPoint = {
   subtitle: "If it's true that, If it is the case that",
   titleRomaji: "nara",
   tags: ["if", "in case", "nara", "conditional", "hypothetical", "ra"]
+};
+
+export const nasai: GrammarPoint = {
+  slug: "なさい",
+  title: "なさい",
+  subtitle: "Do... (Polite command)",
+  titleRomaji: "nasai",
+  tags: ["imperative", "command", "nasai", "polite", "do this", "request", "instruction"]
 };
 
 export const niFrequency: GrammarPoint = {
@@ -218,6 +243,22 @@ export const teAgeruKureruMorau: GrammarPoint = {
   tags: ["te-form", "giving", "receiving", "te ageru", "te kureru", "te morau", "give", "receive", "doing for someone"]
 };
 
+export const teAru: GrammarPoint = {
+  slug: "てある",
+  title: "～てある",
+  subtitle: "Something is done, Has been done (Resulting state)",
+  titleRomaji: "tearu",
+  tags: ["remaining state", "te aru", "completed action", "state of being"]
+};
+
+export const teHoshii: GrammarPoint = {
+  slug: "てほしい",
+  title: "～てほしい",
+  subtitle: "I want you to do...",
+  titleRomaji: "tehoshii",
+  tags: ["want", "te-form", "te hoshii", "request", "desire", "action"]
+};
+
 export const teItadakemasenka: GrammarPoint = {
   slug: "ていただけませんか",
   title: "～ていただけませんか？",
@@ -306,13 +347,6 @@ export const toki: GrammarPoint = {
   titleRomaji: "toki",
   titlePlain: "～時",
   tags: ["when", "at the time", "toki", "time", "temporal"]
-};
-
-export const transitivityPairs: GrammarPoint = {
-  slug: "transitivity-pairs",
-  title: "Transitivity Pairs",
-  subtitle: "Understanding transitive and intransitive verbs",
-  tags: ["transitivity", "pairs", "transitive", "intransitive", "verbs", "verb pairs", "action verbs"]
 };
 
 export const tte: GrammarPoint = {

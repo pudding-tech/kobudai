@@ -4,7 +4,7 @@
   import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { ichidan as meta, godan, ichidanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative, teVerb } from "./metadataN5";
+  import { ichidan as meta, godan, ichidanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative, imperativeVerbs, teVerb } from "./metadataN5";
   import { ba, causativeVerbs, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
 </script>
 
@@ -103,6 +103,7 @@
         </div>
         <li class="list"><b>Imperative, Potential, Conditional form:</b> Verb stem (drop the <span class="g">る</span>), then a suffix can be added to create the different forms (e.g. 食べ, 食べられる, 食べれば).</li>
         <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: imperativeVerbs.slug } }" class="link">{{ imperativeVerbs.title }}</RouterLink></div>
           <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink></div>
           <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">Conditional verb</RouterLink></div>
         </div>

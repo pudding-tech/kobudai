@@ -2,8 +2,8 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { transitivityPairs as meta } from "./metadataN4";
-import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
+  import { transitivityPairs as meta, teIru } from "./metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -159,8 +159,9 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
 
       <div class="section">
         <div class="grammar-title">Using ～ている with Transitive vs Intransitive Verbs</div>
-        The grammar pattern <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">～ている</RouterLink>
-        is often used to describe ongoing actions or resulting states, but the nuance it conveys depends on whether the verb is transitive or intransitive.
+        The grammar pattern <RouterLink :to="{ name: 'grammarLoader', params: { slug: teIru.slug } }" class="link">{{ teIru.title }}</RouterLink>
+        is used to describe ongoing actions or resulting states, but the nuance it conveys depends on which category the verb belongs to.
+        While there are no hard-and-fast rules for determining this, there are some general patterns that can help you make educated guesses:
         <br><br>
         ～ている with transitive verbs generally describes an ongoing action being done by someone.
         <GrammarExample>
@@ -175,7 +176,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
           </template>
         </GrammarExample>
 
-        ～ている with intransitive verbs usually describes a resulting state after an action has occurred.
+        ～ている with intransitive verbs often (but not always) describes a resulting state after an action has occurred.
         <GrammarExample>
           <template #example>
             <ruby>彼<rt>かれ</rt></ruby>が<ruby>起<rt>お</rt></ruby>きています

@@ -3,8 +3,8 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
-  import { godanPastNegative as meta, godan, godanNegative, godanNonPast, godanPast, ichidanPastNegative } from "./metadataN5";
-  import { ba, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
+  import { godanPastNegative as meta, godan, godanNegative, godanNonPast, godanPast, ichidanPastNegative, imperativeVerbs, teVerb } from "./metadataN5";
+  import { ba, causativeVerbs, passiveVerbs, potentialVerbs, volitionalVerbs } from "@/grammar/n4/metadataN4";
 
   const isPolite = ref(false);
 </script>
@@ -81,13 +81,25 @@
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanPast.slug } }" class="link">{{ godanPast.title }}</RouterLink>
       </div>
       <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">て-form</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: imperativeVerbs.slug } }" class="link">{{ imperativeVerbs.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink>
       </div>
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: volitionalVerbs.slug } }" class="link">{{ volitionalVerbs.title }}</RouterLink>
       </div>
-      <div>
+      <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">Conditional verb (～ば)</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveVerbs.slug } }" class="link">{{ passiveVerbs.title }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativeVerbs.slug } }" class="link">{{ causativeVerbs.title }}</RouterLink>
       </div>
     </template>
     <template #explanation>

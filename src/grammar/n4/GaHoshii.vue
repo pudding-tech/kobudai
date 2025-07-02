@@ -2,7 +2,8 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { gahoshi as meta } from "./metadataN4";
+  import { gaHoshii as meta, teHoshii } from "./metadataN4";
+  import { tai } from "../n5/metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -16,9 +17,14 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      <div>Noun + <span class="grammar-highlight">がほしい<span v-if="isPolite">です</span></span></div>
+      <div>Noun + <span class="grammar-highlight">がほしい</span><span v-if="isPolite"> + です</span></div>
       <div class="structure-title small">Talking about someone else's desire (3rd person)</div>
       <div>Noun + <span class="grammar-highlight">をほしが<span v-if="isPolite">ります</span><span v-else>る</span></span></div>
+    </template>
+    <template #related>
+      <div class="related-mb">See also:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: tai.slug } }" class="link">{{ tai.title }}</RouterLink> (for what you want to do yourself)</div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: teHoshii.slug } }" class="link">{{ teHoshii.title }}</RouterLink> (for what you want someone else to do)</div>
     </template>
     <template #explanation>
       The word <span class="g">ほしい</span> is used to express wanting a thing (not an action). It attaches to a noun marked by <span class="g">が</span>, and is used when the speaker is the one who wants something.
@@ -34,7 +40,7 @@
       <span class="g">ほしい</span> is an い-adjective, so it can be conjugated like any other い-adjective. This includes making polite statements, which can be done by adding です to the end of the sentence.
       <GrammarExample>
         <template #example>
-          <ruby>本<rt>ほん</rt></ruby>があまり<span class="g"><ruby>欲<rt>ほ</rt></ruby>しくないです</span>
+          <ruby>本<rt>ほん</rt></ruby>があまり<span class="g"><ruby>欲<rt>ほ</rt></ruby>しくない</span>です
         </template>
         <template #translation>
           I don't really want a book
@@ -45,9 +51,9 @@
       </GrammarExample>
 
       <div class="section">
-        <div class="grammar-subtitle">Expressing what others want</div>
+        <div class="grammar-title">Expressing What Others Want</div>
         Japanese has a subtle but important cultural rule: you generally cannot speak directly about someone else's internal emotional state, including what they "want".
-        So, when talking about a third person's desire, you cannot use <span class="g">〜がほしい</span> directly. Instead you use the verb form:
+        So, when talking about a third person's desire, you cannot use <span class="g">〜がほしい</span> directly. Instead you use the verb:
         <ul>
           <li><span class="g">〜をほしがる</span> (or with kanji, <span class="g"><ruby>欲<rt>ほ</rt></ruby>しがる</span>)</li>
         </ul>
@@ -84,7 +90,6 @@
       </div>
 
       <div class="section">
-        <!-- <div class="grammar-subtitle">Someone says they want</div> -->
          If someone says they want something, it is also possible to say what they desire by using <span class="g">〜がほしい</span> together with と言っている.
          This is because you're reporting their own words, not assuming their feelings.
         <GrammarExample>

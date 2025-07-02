@@ -37,6 +37,8 @@
           Why don't you sleep a bit more?
         </template>
       </GrammarExample>
+      This structure can sound gently encouraging, neutral, or even mildly critical, depending on your tone of voice and the situation.
+      With the right intonation, it can be supportive — but if used carelessly, it might sound like you're implying the other person isn't doing the obvious or right thing.
       <div class="note">
         <div class="note-title">Caution:</div>
         Even though <span class="g">～たらどう</span> translates as "why don't you…?" or "how about…?", unlike in English it is not used for invitations or suggestions without
@@ -53,8 +55,15 @@
           Why don't you eat?
         </template>
       </GrammarExample>
-      This structure can sound gently encouraging, neutral, or even mildly critical, depending on your tone of voice and the situation.
-      With the right intonation, it can be supportive — but if used carelessly, it might sound like you're implying the other person isn't doing the obvious or right thing.
+      In casual contexts it is also possible to drop the <span class="g">どう</span> and just end on <span class="g">～たら</span>, though this can sound very direct, borderline aggresive.
+      <GrammarExample>
+        <template #example>
+          じゃあ、<ruby>勉強<rt>べんきょう</rt></ruby>し<span class="g">たら</span>？
+        </template>
+        <template #translation>
+          So, why don't you study?
+        </template>
+      </GrammarExample>
     </template>
   </GrammarStructure>
 </template>

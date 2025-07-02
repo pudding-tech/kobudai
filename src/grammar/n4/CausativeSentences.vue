@@ -61,10 +61,19 @@
         When someone lets you do something for your benefit, a causative verb is often paired with くれる or もらう, which implies the "let" meaning of the sentence.
         <GrammarExample>
           <template #example>
-            <ruby>部長<rt>ぶちょう</rt></ruby><span class="h">は</span><ruby>私<rt>わたし</rt></ruby><span class="h">に</span><span class="g"><ruby>発表<rt>はっぴょう</rt></ruby>させてくれた</span>
+            <ruby>部長<rt>ぶちょう</rt></ruby><span class="h">は</span><ruby>私<rt>わたし</rt></ruby><span class="h">に</span><span class="g"><ruby>発表<rt>はっぴょう</rt></ruby>させて</span>くれた
           </template>
           <template #translation>
-            The manager let me give the presentation
+            The manager let me do the presentation
+          </template>
+        </GrammarExample>
+        Similarly, if you want to express that you allow someone to do something, you can use a causative verb with あげる, again implying the "let" meaning.
+        <GrammarExample>
+          <template #example>
+            <ruby>私<rt>わたし</rt></ruby>が<ruby>作<rt>つく</rt></ruby>ったケーキ<span class="h">を</span><span class="g"><ruby>食<rt>た</rt></ruby>べさせて</span>あげる
+          </template>
+          <template #translation>
+            I'll let you eat the cake I made
           </template>
         </GrammarExample>
       </div>
@@ -84,7 +93,7 @@
         </div>
         <GrammarExample>
           <template #example>
-            <ruby>先生<rt>せんせい</rt></ruby><span class="h">は</span><ruby>学生<rt>がくせい</rt></ruby><span class="h">を</span><span class="g"><ruby>座<rt>すわ</rt></ruby>らさた</span>
+            <ruby>先生<rt>せんせい</rt></ruby><span class="h">は</span><ruby>学生<rt>がくせい</rt></ruby><span class="h">を</span><span class="g"><ruby>座<rt>すわ</rt></ruby>らせた</span>
           </template>
           <template #translation>
             The teacher made the student sit down
@@ -95,7 +104,7 @@
         </GrammarExample>
         <GrammarExample>
           <template #example>
-            <ruby>先生<rt>せんせい</rt></ruby><span class="h">は</span><ruby>学生<rt>がくせい</rt></ruby><span class="h">に</span><span class="g"><ruby>座<rt>すわ</rt></ruby>らさた</span>
+            <ruby>先生<rt>せんせい</rt></ruby><span class="h">は</span><ruby>学生<rt>がくせい</rt></ruby><span class="h">に</span><span class="g"><ruby>座<rt>すわ</rt></ruby>らせた</span>
           </template>
           <template #translation>
             The teacher let the student sit down

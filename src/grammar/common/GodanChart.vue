@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { godanNegative, godanNonPast, godanPast, godanPastNegative, teVerb } from "@/grammar/n5/metadataN5";
+  import { godanNegative, godanNonPast, godanPast, godanPastNegative, imperativeVerbs, teVerb } from "@/grammar/n5/metadataN5";
   import { ba, causativeVerbs, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { GodanChartExample } from "@/types/types";
 
@@ -97,7 +97,7 @@
         okurigana: examples.value[word.value].okurigana[3]
       },
       suffix: "～る、～ば",
-      grammarPoint: [potentialVerbs, { slug: ba.slug, title: "Conditional verb" }],
+      grammarPoint: [imperativeVerbs, potentialVerbs, { slug: ba.slug, title: "Conditional verb" }],
       rowNr: 4
     },
     {

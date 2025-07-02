@@ -33,7 +33,7 @@ export const n4List: Sublist = {
       grammarPoints: [
         n4.volitionalVerbs,
         n4.volitionalToOmou,
-        n4.gahoshi,
+        n4.gaHoshii,
         n4.souda,
       ]
     },
@@ -81,7 +81,7 @@ export const n4List: Sublist = {
       title: "SECTION 8",
       value: 8,
       grammarPoints: [
-        n4.transitivityPairs,
+        n4.teAru,
         n4.niFrequency,
         n4.toki,
         n4.numberMo,
@@ -111,18 +111,21 @@ export const n4List: Sublist = {
       title: "SECTION 11",
       value: 11,
       grammarPoints: [
-        n4.passiveSentences,
         n4.passiveVerbs,
+        n4.passiveSentences,
         n4.causativeVerbs,
         n4.causativeSentences,
       ]
     },
-    // {
-    //   title: "SECTION 12",
-    //   value: 12,
-    //   grammarPoints: [
-        
-    //   ]
-    // }
+    {
+      title: "SECTION 12",
+      value: 12,
+      grammarPoints: [
+        n4.teHoshii,
+        n4.adjectiveSuru,
+        n4.aidaNi,
+        n4.nasai
+      ]
+    }
   ]
 };

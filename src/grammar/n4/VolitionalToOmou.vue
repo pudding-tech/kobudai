@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { volitionalToOmou as meta, volitionalVerbs } from "./metadataN4";
+  import { volitionalToOmou as meta, mitai, volitionalVerbs } from "./metadataN4";
 
   const isPolite = ref(false);
 </script>
@@ -78,7 +78,7 @@
           It seems like he's thinking of coming
         </template>
         <template #note>
-          This works because the <RouterLink :to="{ name: 'grammarLoader', params: { slug: volitionalVerbs.slug } }" class="link">～みたい</RouterLink>
+          This works because the <RouterLink :to="{ name: 'grammarLoader', params: { slug: mitai.slug } }" class="link">{{ mitai.title }}</RouterLink>
           construction makes it clear that you're expressing your interpretation of someone else's intention
         </template>
       </GrammarExample>

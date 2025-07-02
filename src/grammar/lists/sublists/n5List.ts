@@ -56,9 +56,9 @@ export const n5List: Sublist = {
       grammarPoints: [
         n5.adjectivesI,
         n5.adjectivesNa,
+        n5.adverbs,
         n5.masenka,
-        n5.qualifierSentences,
-        n5.adverbs
+        n5.qualifierSentences
       ]
     },
     {
@@ -75,17 +75,20 @@ export const n5List: Sublist = {
       title: "SECTION 7",
       value: 7,
       grammarPoints: [
+        n5.teIru,
+        n5.transitivityPairs,
         n5.maeni,
-        n5.tekara,
-        n5.temoii
+        n5.teKara
       ]
     },
-    // {
-    //   title: "SECTION 8",
-    //   value: 8,
-    //   grammarPoints: [
-
-    //   ]
-    // }
+    {
+      title: "SECTION 8",
+      value: 8,
+      grammarPoints: [
+        n5.imperativeVerbs,
+        n5.tai,
+        n5.temoii
+      ]
+    }
   ]
 };

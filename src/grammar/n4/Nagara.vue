@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { nagara as meta } from "./metadataN4";
+  import { nagara as meta, aidaNi } from "./metadataN4";
 </script>
 
 <script lang="ts">
@@ -14,6 +14,10 @@
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       <div>Verb (ます stem) + <span class="grammar-highlight">ながら</span> + (main action)</div>
+    </template>
+    <template #related>
+      <div class="related-mb">Describing two events happening at the same time:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: aidaNi.slug } }" class="link">{{ aidaNi.titlePlain }}</RouterLink></div>
     </template>
     <template #explanation>
       The grammar pattern <span class="g">ながら</span> is used to describe two actions happening at the same time,

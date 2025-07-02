@@ -5,12 +5,12 @@
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
   import RelatedGrammarList from "@/components/RelatedGrammarList.vue";
-  import { volitionalVerbs as meta, ba, potentialVerbs } from "./metadataN4";
-  import { godan, godanNegative, godanNonPast, godanPast, godanPastNegative, ichidan, ichidanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative } from "../n5/metadataN5";
+  import { volitionalVerbs as meta, ba, causativeVerbs, passiveVerbs, potentialVerbs } from "./metadataN4";
+  import { godan, godanNegative, godanNonPast, godanPast, godanPastNegative, ichidan, ichidanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative, imperativeVerbs, teVerb } from "../n5/metadataN5";
 
   const isPolite = ref(false);
   const related: { slug: string, title: string }[] = [godan, ichidan, godanNonPast, ichidanNonPast, godanNegative, ichidanNegative,
-    godanPast, ichidanPast, godanPastNegative, ichidanPastNegative, potentialVerbs, { slug: ba.slug, title: "Conditional verb (～ば)" }];
+    godanPast, ichidanPast, godanPastNegative, ichidanPastNegative, teVerb, imperativeVerbs, potentialVerbs, { slug: ba.slug, title: "Conditional verb (～ば)" }, passiveVerbs, causativeVerbs];
 </script>
 
 <script lang="ts">

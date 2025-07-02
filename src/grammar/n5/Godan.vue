@@ -6,7 +6,7 @@
   // import DistinguishVerbTypes from "../common/DistinguishVerbTypes.vue";
   import IrregularVerbs from "../common/IrregularVerbs.vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { godan as meta, godanNegative, godanNonPast, godanPast, godanPastNegative, ichidan, teVerb } from "./metadataN5";
+  import { godan as meta, godanNegative, godanNonPast, godanPast, godanPastNegative, ichidan, imperativeVerbs, teVerb } from "./metadataN5";
   import { ba, causativeVerbs, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
 </script>
 
@@ -122,6 +122,7 @@
         </div>
         <li class="list"><b>Imperative, Potential, Conditional form:</b> The verb changes to end in a <span class="h">え</span> sound, then a suffix can be added to create the different forms (e.g. 行け, 行ける, 行けば).</li>
         <div v-if="breakpointService.isMobile()">
+          <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: imperativeVerbs.slug } }" class="link">{{ imperativeVerbs.title }}</RouterLink></div>
           <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink></div>
           <div style="margin-bottom: 5px;"><RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">Conditional verb</RouterLink></div>
         </div>

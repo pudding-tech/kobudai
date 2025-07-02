@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
   import { breakpointService } from "@/services/breakpointService";
-  import { ichidanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative, teVerb } from "@/grammar/n5/metadataN5";
+  import { ichidanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative, imperativeVerbs, teVerb } from "@/grammar/n5/metadataN5";
   import { ba, causativeVerbs, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
   import type { IchidanChartExample } from "@/types/types";
 
@@ -95,7 +95,7 @@
         okurigana: examples.value[word.value].okurigana
       },
       suffix: "～ろ、～られる、～れば",
-      grammarPoint: [potentialVerbs, { slug: ba.slug, title: "Conditional verb" }],
+      grammarPoint: [imperativeVerbs, potentialVerbs, { slug: ba.slug, title: "Conditional verb" }],
       rowNr: 4
     },
     {

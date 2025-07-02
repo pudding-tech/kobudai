@@ -117,6 +117,13 @@ export const ichidanPastNegative: GrammarPoint = {
   tags: ["nakatta", "masen deshita", "verbs"]
 };
 
+export const imperativeVerbs: GrammarPoint = {
+  slug: "imperative-verb",
+  title: "Imperative verb",
+  subtitle: "（～え）、～ろ (command to do)",
+  tags: ["imperative", "commands", "requests", "verb form", "verb conjugation"]
+};
+
 export const janai: GrammarPoint = {
   slug: "じゃない",
   title: "じゃない",
@@ -206,11 +213,27 @@ export const qualifierSentences: GrammarPoint = {
   tags: ["qualifier", "sentences"]
 };
 
-export const tekara: GrammarPoint = {
+export const tai: GrammarPoint = {
+  slug: "たい",
+  title: "～たい",
+  subtitle: "Want to do...",
+  titleRomaji: "tai",
+  tags: ["want to", "desire", "verb", "verbing", "wanting", "verb form", "verb conjugation"]
+};
+
+export const teIru: GrammarPoint = {
+  slug: "ている",
+  title: "～ている",
+  subtitle: "Doing, In a state of being",
+  titleRomaji: "teiru",
+  tags: ["te iru", "doing", "state", "resulting state", "intransitive", "transitive"]
+};
+
+export const teKara: GrammarPoint = {
   slug: "てから",
   title: "～てから",
   subtitle: "After doing...",
-  titleRomaji: "te kara",
+  titleRomaji: "tekara",
   tags: ["after", "te kara", "doing", "verbing", "action", "sequence", "order"]
 };
 
@@ -244,6 +267,13 @@ export const teAdjectiveNoun: GrammarPoint = {
   subtitle: "～くて、～で",
   titleRomaji: "te form (adjective, noun)",
   tags: ["te", "te-form", "adjective", "adjectives", "noun", "conjunctive", "connecting", "clauses"]
+};
+
+export const transitivityPairs: GrammarPoint = {
+  slug: "transitivity-pairs",
+  title: "Transitivity Pairs",
+  subtitle: "Understanding transitive and intransitive verbs",
+  tags: ["transitivity", "pairs", "transitive", "intransitive", "verbs", "verb pairs", "action verbs"]
 };
 
 export const yo: GrammarPoint = {

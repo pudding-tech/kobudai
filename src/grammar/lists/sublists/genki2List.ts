@@ -1,6 +1,6 @@
 import type { Sublist } from "@/types/types";
 import * as n4 from "../../n4/metadataN4";
-import { adverbs, maeni, qualifierSentences, tekara } from "../../n5/metadataN5";
+import { adverbs, maeni, qualifierSentences, teKara, transitivityPairs } from "../../n5/metadataN5";
 
 export const genki2List: Sublist = {
   name: "Genki II",
@@ -23,7 +23,7 @@ export const genki2List: Sublist = {
       title: "CHAPTER 14",
       value: 2,
       grammarPoints: [
-        n4.gahoshi,
+        n4.gaHoshii,
         n4.kamoshirenai,
         n4.ageruKureruMorau,
         n4.taradou,
@@ -62,14 +62,14 @@ export const genki2List: Sublist = {
         n4.nakutemoii,
         n4.mitai,
         maeni,
-        tekara
+        teKara
       ]
     },
     {
       title: "CHAPTER 18",
       value: 6,
       grammarPoints: [
-        n4.transitivityPairs,
+        transitivityPairs,
         n4.teShimau,
         n4.toIf,
         n4.nagara,
@@ -104,7 +104,11 @@ export const genki2List: Sublist = {
       value: 9,
       grammarPoints: [
         n4.passiveVerbs,
-        n4.passiveSentences
+        n4.passiveSentences,
+        n4.teAru,
+        n4.aidaNi,
+        n4.adjectiveSuru,
+        n4.teHoshii
       ]
     },
     {
@@ -113,6 +117,7 @@ export const genki2List: Sublist = {
       grammarPoints: [
         n4.causativeVerbs,
         n4.causativeSentences,
+        n4.nasai,
         n4.ba
       ]
     }

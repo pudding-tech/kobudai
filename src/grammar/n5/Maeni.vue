@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { maeni as meta, tekara } from "./metadataN5";
+  import { maeni as meta, teKara } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -17,7 +17,7 @@
       <div>Noun + <span class="grammar-highlight">の</span> + <span class="grammar-highlight">前に</span></div>
     </template>
     <template #related>
-      See also <RouterLink :to="{ name: 'grammarLoader', params: { slug: tekara.slug } }" class="link">{{ tekara.title }}</RouterLink> for sequential actions
+      See also <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKara.slug } }" class="link">{{ teKara.title }}</RouterLink> for sequential actions
     </template>
     <template #explanation>
       <span class="g">前に</span> has two common uses - it can indicate that something happens before another action or event, or it can describe location,

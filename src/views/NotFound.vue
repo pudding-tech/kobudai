@@ -8,7 +8,7 @@
     <img src="../assets/kobudai2.png" class="kobudai" />
   </div>
   <div class="text">
-    <div :class="{ 'mobile': breakpointService.isMobile() }">Uh-oh! It seems you've sailed off the map and into uncharted waters. No compass in sight, and no sign of the page you're seeking.</div>
+    <div :class="{ 'mobile': breakpointService.isMobile() }">Uh-oh! It seems you've sailed off the map and into uncharted waters. Only water as far as you can see, and no sign of the page you're seeking.</div>
     <div>But fear not, brave navigator! Chart a course&nbsp;<RouterLink to="/" class="link">back to safer shores</RouterLink>, or try searching for a new island (or page) to explore.</div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { ref, useSlots } from "vue";
-  import { useRelatedStore } from "@/stores/relatedStore";
+  import { usePanelStore } from "@/stores/panelStore";
   import { breakpointService } from "@/services/breakpointService";
 
   const props = withDefaults(defineProps<{
@@ -13,14 +13,17 @@
 
   const emit = defineEmits(["politenessChange"]);
 
-  const relatedStore = useRelatedStore();
+  const panelStore = usePanelStore();
   const slots = useSlots();
   const hasRelated = !!slots.related;
 
   const isPolite = ref(props.defaultPolite);
   const isExpanded = ref(false);
-  const openPanels = ref(
-    relatedStore.showRelated.value ? ["0", "1"] : ["0"]
+  const openPanels = ref<string[]>(
+    [
+      panelStore.showStructure.value ? "0" : null,
+      panelStore.showRelated.value ? "1" : null
+    ].filter((v): v is string => typeof v === "string")
   );
 
   const options = [
@@ -30,7 +33,8 @@
 
   const onAccordionUpdate = (value: string | string[] | null | undefined) => {
     const arr = Array.isArray(value) ? value : value ? [value] : [];
-    relatedStore.setRelated(arr.includes("1"));
+    panelStore.setStructure(arr.includes("0"));
+    panelStore.setRelated(arr.includes("1"));
   };
 
   const expandChange = () => {

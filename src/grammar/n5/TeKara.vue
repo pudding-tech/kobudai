@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { tekara as meta, maeni, teVerb } from "./metadataN5";
+  import { teKara as meta, maeni, teIru, teVerb } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -50,8 +50,8 @@
         that the first action must be completed before the second one can begin — it highlights a clear sequence where the first action sets the stage for the second.
       </div>
 
-      Using <span class="g">～てから</span> followed by a verb in the ～ている form usually expresses a continuous or repeated action
-      or state that began after the first action. It adds a nuance of "since doing X, Y has been happening."
+      Using <span class="g">～てから</span> followed by a verb in the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teIru.slug } }" class="link">{{ teIru.title }}</RouterLink>
+      form usually expresses a continuous or repeated action or state that began after the first action. It adds a nuance of "since doing X, Y has been happening."
       <GrammarExample>
         <template #example>
           <ruby>新<rt>あたら</rt></ruby>しい<ruby>家<rt>いえ</rt></ruby>に<ruby>住<rt>す</rt></ruby>ん<span class="g">でから</span>、
