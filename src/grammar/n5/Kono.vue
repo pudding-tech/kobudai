@@ -91,6 +91,21 @@
           Which of two potential bags
         </template>
       </GrammarExample>
+
+      <div class="note">
+        <div class="note-title">Note:</div>
+        <span class="g">その</span> is also often used for things that are not physically present but are known to the speaker
+        and listener — such as something mentioned earlier, understood from context, or conceptual in nature.
+        In this way, <span class="g">その</span> frequently points to "that [thing] we both know or just talked about".
+      </div>
+      <GrammarExample>
+        <template #example>
+          <span class="g">その</span>アイデアは<ruby>面白<rt>おもしろ</rt></ruby>いね
+        </template>
+        <template #translation>
+          That idea is fun, right?
+        </template>
+      </GrammarExample>
     </template>
   </GrammarStructure>
 </template>

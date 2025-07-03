@@ -118,7 +118,9 @@ export const genki2List: Sublist = {
         n4.causativeVerbs,
         n4.causativeSentences,
         n4.nasai,
-        n4.ba
+        n4.ba,
+        n4.noni,
+        n4.noyouni
       ]
     }
   ]

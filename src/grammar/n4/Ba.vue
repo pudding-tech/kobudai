@@ -101,7 +101,7 @@
         <div class="grammar-title">How to Form the ～ば Conditional</div>
         <div class="grammar-subtitle">Godan verbs</div>
         For godan verbs, let's take a look at the godan five-step chart again.
-        Move down on the chart, from the う row to the え row, to find the stem for the conditional form.
+        Move down on the chart, from the う row (the dictionary form) to the え row, to find the stem for the conditional form.
         You'll notice that it's the same stem as for the imperative and potential forms.
         <div class="chart">
           <GodanChart :selected-row="4" :word-selection="1" :show-word-selection="false" />

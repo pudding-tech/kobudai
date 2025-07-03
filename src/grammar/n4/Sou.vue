@@ -77,8 +77,9 @@
         </GrammarExample>
       </ul>
       Although <span class="g">～そう</span> is often used when something looks a certain way, it's not limited to just visual impressions.
-      The key idea is that <span class="g">～そう</span> expresses a conclusion made without solid proof. For example, you might say a cookie is おいしそう ("looks delicious") before tasting it — you're making a guess based on how it appears.
-      But after tasting it, you'd say おいしい, because you now have direct evidence. However, for adjectives where appearance is the deciding factor — like きれい ("pretty") — we don't typically use <span class="g">～そう</span>.
+      The key idea is that <span class="g">～そう</span> expresses a conclusion made without solid proof. For example, you might say a cookie is おいしそう ("looks delicious")
+      before tasting it — you're making a guess based on how it appears. But after tasting it, you'd say おいしい, because you now have direct evidence.
+      However, for adjectives where appearance is the deciding factor — like きれい ("pretty") — we don't typically use <span class="g">～そう</span>.
       If something looks pretty, we just say きれい, since the appearance alone is enough to make that judgment.
       <div class="note">
         <div class="note-title">Note:</div>
@@ -170,25 +171,18 @@
             Literally: "Walk in a way that seems sleepy"
           </template>
         </GrammarExample>
-        See <RouterLink :to="{ name: 'grammarLoader', params: { slug: adverbs.slug } }" class="link">{{ adverbs.title + " 「" + adverbs.subtitle }}」</RouterLink> for more details on adverbs.
+        See <RouterLink :to="{ name: 'grammarLoader', params: { slug: adverbs.slug } }" class="link">{{ adverbs.title + " 「" + adverbs.subtitle }}」</RouterLink>
+        for more details on adverbs.
       </div>
 
       <div class="note">
         <div class="note-title">Caution:</div>
-        Be careful not to confuse <span class="g">～そう</span> with <RouterLink :to="{ name: 'grammarLoader', params: { slug: souda.slug } }" class="link">{{ souda.slug }}</RouterLink>, which is used to express hearsay or information received from someone else.
+        Be careful not to confuse <span class="g">～そう</span> with <RouterLink :to="{ name: 'grammarLoader', params: { slug: souda.slug } }" class="link">{{ souda.slug }}</RouterLink>,
+        which is used to express hearsay or information received from someone else.
+        The grammatical structure is different in that meaning (e.g., 雨が降るそうだ, "I heard it will rain").
+        <br><br>
+        To avoid confusion, pay attention to whether you're making a guess based on appearance or reporting information.
       </div>
-      <GrammarExample>
-        <template #example>
-          <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るそうだ
-        </template>
-        <template #translation>
-          <i>I heard it will rain</i>
-        </template>
-        <template #note>
-           The grammatical structure is different in this meaning
-        </template>
-      </GrammarExample>
-      To avoid confusion, pay attention to whether you're making a guess based on appearance or reporting information.
     </template>
   </GrammarStructure>
 </template>

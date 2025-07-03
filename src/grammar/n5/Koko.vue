@@ -71,6 +71,21 @@
           Where is the bathroom?
         </template>
       </GrammarExample>
+
+      <div class="note">
+        <div class="note-title">Note:</div>
+        When referring to a place that is abstract or not physically present, <span class="g">そこ</span> is often the most natural choice.
+        It doesn't necessarily imply physical proximity, but rather refers to 'that place' — something known to or previously mentioned
+        in the conversation. This can include physical locations, conceptual spaces, or scenes being imagined or discussed.
+      </div>
+      <GrammarExample>
+        <template #example>
+          スーパーが<ruby>楽<rt>たの</rt></ruby>しいです。<span class="g">そこ</span>が<ruby>好<rt>す</rt></ruby>きです。
+        </template>
+        <template #translation>
+          I like the supermarket. It's fun there.
+        </template>
+      </GrammarExample>
     </template>
   </GrammarStructure>
 </template>

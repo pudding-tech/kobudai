@@ -121,7 +121,8 @@
 
         <div class="section">
           <div class="grammar-subtitle">Volitional godan verbs</div>
-          To create the volitional form a godan verb we can take a look at the godan five-step chart again. Move down on the chart, from the う row to the お row, to find the stem for the volitional form.
+          To form the volitional of a godan verb, refer to the godan five-step chart below. Change the final syllable
+          from the う row (the dictionary form) to the お row to get the stem for the volitional form.
           <div class="chart">
             <GodanChart :selected-row="5" :word-selection="1" :show-word-selection="false" />
           </div>

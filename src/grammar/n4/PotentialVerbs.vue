@@ -97,7 +97,8 @@
 
       <div class="section">
         <div class="grammar-subtitle">Potential godan verbs</div>
-        To create the potential form a godan verb we can take a look at the godan five-step chart again. Move down on the chart, from the う row to the え row, to find the stem for the potential form.
+        To form the potential of a godan verb, refer to the godan five-step chart below. Change the final syllable
+        from the う row (the dictionary form) to the え row to get the stem for the potential form.
         <div class="chart">
           <GodanChart :selected-row="4" :show-word-selection="false" />
         </div>

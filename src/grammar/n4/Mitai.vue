@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { mitai as meta, sou } from "./metadataN4";
+  import { mitai as meta, sou, youda } from "./metadataN4";
 
   const isPolite = ref(false);
 </script>
@@ -24,7 +24,7 @@
     <template #related>
       <div class="related-mb">Other ways of expressing "looks like":</div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: sou.slug } }" class="link">{{ sou.title }}</RouterLink></div>
-      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">ようだ</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: youda.slug } }" class="link">{{ youda.title }}</RouterLink></div>
     </template>
     <template #explanation>
       <span class="g">みたい</span> is a versatile and commonly used expression in spoken Japanese. It's a fairly informal way to express that something
@@ -78,13 +78,12 @@
           辛そう would be more natural here, but みたい is also acceptable
         </template>
       </GrammarExample>
-      
 
       <div class="note">
         <div class="note-title">Note:</div>
         While <span class="g">みたい</span> is common in everyday conversation,
-        more formal equivalents like <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">ようだ</RouterLink>
-        or <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">らしい</RouterLink> are often more prevalent in writing or polite conversation.
+        more formal equivalents like <RouterLink :to="{ name: 'grammarLoader', params: { slug: youda.slug } }" class="link">{{ youda.title }}</RouterLink>
+        and <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">らしい</RouterLink> are often more prevalent in writing or polite conversation.
       </div>
     </template>
   </GrammarStructure>

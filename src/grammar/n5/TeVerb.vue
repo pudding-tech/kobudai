@@ -2,7 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { teVerb as meta, godan, godanNonPast, godanPast, ichidan, ichidanNonPast, ichidanPast, teAdjectiveNoun, teIru, teKara, teKudasai, temoii } from "./metadataN5";
+  import { teVerb as meta, godan, godanNonPast, godanPast, ichidan, ichidanNonPast, ichidanPast, naideKudasai, teAdjectiveNoun, teIru, teKara, teKudasai, temoii } from "./metadataN5";
   import { teAgeruKureruMorau, teAru, teHoshii, teItadakemasenka, teMiru, teOku, teShimau, teSumimasen } from "../n4/metadataN4";
 </script>
 
@@ -317,7 +317,16 @@
           </template>
         </GrammarExampleSentences>
         This form is often used to explain a reason or cause for the following action, much like saying "because (I didn't)..."" in English.
-        It's not used for making negative requests — that requires a different structure like ～ないでください.
+        <GrammarExample>
+          <template #example>
+            お<ruby>金<rt>かね</rt></ruby>がな<span class="g">くて</span>、<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>かなかった
+          </template>
+          <template #translation>
+            I didn't go on a trip, because I didn't have money
+          </template>
+        </GrammarExample>
+        It's not used for making negative requests — that requires a different structure like
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: naideKudasai.slug } }" class="link">{{ naideKudasai.title }}</RouterLink>.
       </div>
     </template>
   </GrammarStructure>

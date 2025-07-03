@@ -70,8 +70,6 @@
           Use with a noun
         </template>
       </GrammarExample>
-      <!-- When using <span class="g">かもしれない</span> the level of certainty is low to moderate. This means you're not claiming something is true - you're speculating. -->
-      <!-- <br><br> -->
       In casual speech, <span class="g">かもしれない</span> is often shortened to <span class="g">かも</span>. This is very natural in conversations among friends.
       <GrammarExample>
         <template #example>
@@ -83,11 +81,13 @@
       </GrammarExample>
       <div class="note">
       <div class="note-title">Note:</div>
-        Breaking down the meaning of <span class="g">かもしれない</span> we have かも — a casual particle that means "maybe" or "possibly", and しれない — the negative potential form of the verb 知る ("しる", to know).
+        Breaking down the word <span class="g">かもしれない</span> itself, we have the question marker か (introduces uncertainty or doubt) and the particle も ("also/even"),
+        followed by しれない — the negative potential form of the verb 知る ("しる", to know).
         So <span class="g">かもしれない</span> literally means something like:
-        <br>
         <ul>
-          <li>"It's not knowable" → "There's no way to be sure" → "Maybe"</li>
+          <li>か (if / whether) + も (even) + しれない (cannot know)</li>
+          <div class="note-style">→ "Even if that were the case, I can't know for sure"</div>
+          <div class="note-style">→ "It might be so / It could be"</div>
         </ul>
       </div>
 
@@ -128,3 +128,11 @@
     </template>
   </GrammarStructure>
 </template>
+
+<style scoped>
+.note-style {
+  margin-left: 8px;
+  font-style: italic;
+  opacity: 0.8;
+}
+</style>

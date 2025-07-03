@@ -94,7 +94,8 @@
 
       <div class="section">
         <div class="grammar-subtitle">Causative godan verbs</div>
-        To create the causative form a godan verb we can take a look at the godan five-step chart again. Move up on the chart, from the う row to the あ row, to find the stem for the causative form.
+        To form the causative of a godan verb, refer to the godan five-step chart below. Change the final syllable
+        from the う row (the dictionary form) to the あ row to get the stem for the causative form.
         <div class="chart">
           <GodanChart :selected-row="1" :show-word-selection="false" />
         </div>

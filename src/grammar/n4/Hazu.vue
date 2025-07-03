@@ -20,8 +20,8 @@
       <div class="structure-inner">
         <div>Verb (plain form) + <span class="grammar-highlight">はず</span></div>
         <div>い-adjective + <span class="grammar-highlight">はず</span></div>
-        <div>な-adjective + <span class="grammar-highlight">なはず</span></div>
-        <div>Noun + <span class="grammar-highlight">のはず</span></div>
+        <div>な-adjective + <span class="grammar-highlight"><span class="h">な</span>はず</span></div>
+        <div>Noun + <span class="grammar-highlight"><span class="h">の</span>はず</span></div>
       </div>
     </template>
     <template #explanation>
@@ -46,12 +46,12 @@
 
       <div class="note">
         <div class="note-title">Note:</div>
-        When using <span class="g">はず</span> with a noun, it becomes <span class="g">のはず</span>.
-        Similarily, with な-adjectives, it becomes <span class="g">なはず</span>.
+        When using <span class="g">はず</span> with a noun, it becomes <span class="h">の</span><span class="g">はず</span>.
+        Similarily, with な-adjectives, it becomes <span class="h">な</span><span class="g">はず</span>.
       </div>
       <GrammarExample>
         <template #example>
-          <ruby>今日<rt>きょう</rt></ruby>は<ruby>休<rt>やす</rt></ruby>み<span class="g">のはず</span>です
+          <ruby>今日<rt>きょう</rt></ruby>は<ruby>休<rt>やす</rt></ruby>み<span class="h">の</span><span class="g">はず</span>です
         </template>
         <template #translation>
           It should be a day off today

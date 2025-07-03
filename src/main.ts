@@ -222,15 +222,8 @@ const sublist = localStorage.getItem("sublist");
 listStore.setMainList(mainList, false);
 listStore.setSublist(sublist, false);
 
-const updateSW = registerSW({
-  onNeedRefresh() {
-    if (confirm("A new version is available. Refresh now?")) {
-      updateSW(true);
-    }
-  },
-  onOfflineReady() {
-    console.log("App is ready to work offline");
-  }
+registerSW({
+  immediate: true
 });
 
 app.mount("#app");

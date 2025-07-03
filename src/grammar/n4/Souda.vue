@@ -22,7 +22,7 @@
       <div>Noun + だ + <span class="grammar-highlight">そう<span v-if="isPolite">です</span><span v-else>だ</span></span></div>
     </template>
     <template #related>
-      Do not confuse with <RouterLink :to="{ name: 'grammarLoader', params: { slug: sou.slug } }" class="link">{{ sou.slug }}</RouterLink>, which means "looks/seems like".
+      Do not confuse with <RouterLink :to="{ name: 'grammarLoader', params: { slug: sou.slug } }" class="link">{{ sou.title }}</RouterLink>, which means "looks/seems like".
     </template>
     <template #explanation>
       <span class="g">そうだ</span> is used to report information you heard from someone else — like secondhand information, rumors, or hearsay.
@@ -119,10 +119,10 @@
       </GrammarExample>
 
       <div class="note">
-        <div class="note-title">Note:</div>
+        <div class="note-title">Caution:</div>
         Be careful not to confuse this with the other <RouterLink :to="{ name: 'grammarLoader', params: { slug: sou.slug } }" class="link">{{ sou.slug }}</RouterLink>
         grammar point that means "looks like" or "seems like."
-        That one attaches differently (e.g., 雨が降りそう, "It looks like it's going to rain")
+        That one attaches differently (e.g., 雨が降りそう, "It looks like it's going to rain").
       </div>
     </template>
   </GrammarStructure>

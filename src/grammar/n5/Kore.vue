@@ -91,6 +91,21 @@
           Which of two potential bags
         </template>
       </GrammarExample>
+
+      <div class="note">
+        <div class="note-title">Note:</div>
+        <span class="g">それ</span> can also be used used for things that are not physically present, but are understood from context.
+        It commonly refers to something the listener knows about — whether it's been mentioned earlier, is understood conceptually,
+        or is not physically in front of either person.
+      </div>
+      <GrammarExample>
+        <template #example>
+          <span class="g">そこ</span>はちょっと<ruby>難<rt>むずか</rt></ruby>しいですね
+        </template>
+        <template #translation>
+          That's a bit difficult, isn't it?
+        </template>
+      </GrammarExample>
     </template>
   </GrammarStructure>
 </template>

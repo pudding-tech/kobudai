@@ -110,8 +110,8 @@
 
       <div class="section">
         <div class="grammar-subtitle">Imperative godan verbs</div>
-        To create the imperative form a godan verb we can take a look at the godan five-step chart again. Move down on the chart,
-        from the う row to the え row.
+        To form the imperative of a godan verb, refer to the godan five-step chart below, and change the final syllable
+        from the う row (dictionary form) to the え row (imperative form).
         <div class="chart">
           <GodanChart :selected-row="4" :show-word-selection="false" />
         </div>
@@ -144,7 +144,7 @@
 
       <div class="section">
         <div class="grammar-subtitle">Imperative ichidan verbs</div>
-        For ichidan verbs, you form the imperative by replacing the final <span class="g">る</span>
+        For ichidan verbs, you form the imperative by replacing the final る
         of the verb with <span class="g">ろ</span>.
 
         <GrammarExampleSentences>
@@ -208,7 +208,8 @@
           <li>[Verb in dictionary form] + <span class="g">な</span></li>
         </ul>
         Like the regular imperative form, the negative imperative is very direct and can sound blunt or harsh.
-        It's often used in urgent situations, strict instructions or warnings, or commands in sports or military contexts.
+        It's generally best reserved for moments of urgency, strong emotion, or when speaking strictly to someone
+        of lower status, like a child.
         <GrammarExample>
           <template #example>
             そのラーメンを<ruby>食<rt>た</rt></ruby>べる<span class="g">な</span>！

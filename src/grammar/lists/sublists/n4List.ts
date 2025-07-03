@@ -124,7 +124,10 @@ export const n4List: Sublist = {
         n4.teHoshii,
         n4.adjectiveSuru,
         n4.aidaNi,
-        n4.nasai
+        n4.nasai,
+        n4.noni,
+        n4.youda,
+        n4.noyouni
       ]
     }
   ]

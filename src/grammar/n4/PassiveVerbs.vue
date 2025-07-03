@@ -97,7 +97,8 @@
 
       <div class="section">
         <div class="grammar-subtitle">Passive godan verbs</div>
-        To create the passive form a godan verb we can take a look at the godan five-step chart again. Move up on the chart, from the う row to the あ row, to find the stem for the passive form.
+        To form the passive of a godan verb, refer to the godan five-step chart below. Change the final syllable
+        from the う row (the dictionary form) to the あ row to get the stem for the passive form.
         <div class="chart">
           <GodanChart :selected-row="1" :show-word-selection="false" />
         </div>

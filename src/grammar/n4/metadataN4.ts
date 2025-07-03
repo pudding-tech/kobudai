@@ -44,8 +44,8 @@ export const bayokatta: GrammarPoint = {
 export const causativeVerbs: GrammarPoint = {
   slug: "causative-verb",
   title: "Causative verb",
-  subtitle: "～せる、～させる (to make someone do)",
-  tags: ["causative", "make someone do", "verb", "godan", "ichidan", "causative form"]
+  subtitle: "～せる、～させる (to make/let someone do)",
+  tags: ["causative", "make someone do", "verb", "godan", "ichidan", "causative form", "force", "allow", "let", "permission"]
 };
 
 export const causativeSentences: GrammarPoint = {
@@ -140,6 +140,22 @@ export const niFrequency: GrammarPoint = {
   subtitle: "Frequency of an action",
   titleRomaji: "ni frequency",
   tags: ["frequency", "ni", "how often", "how many times", "ni hindo"]
+};
+
+export const noni: GrammarPoint = {
+  slug: "のに",
+  title: "のに",
+  subtitle: "Despite, Although, Even though",
+  titleRomaji: "noni",
+  tags: ["although", "even though", "despite", "contrast", "unexpected result"]
+};
+
+export const noyouni: GrammarPoint = {
+  slug: "のように-のような",
+  title: "のように・のような",
+  subtitle: "Just like, Similar to, In the manner of",
+  titleRomaji: "noyouni noyouna",
+  tags: ["like", "similar to", "comparison", "simile", "resemblance"]
 };
 
 export const numberMo: GrammarPoint = {
@@ -394,4 +410,12 @@ export const yasuiNikui: GrammarPoint = {
   subtitle: "Easy to..., Hard to...",
   titleRomaji: "yasui nikui",
   tags: ["easy", "hard", "yasui", "nikui", "verb", "adjective", "difficulty"]
+};
+
+export const youda: GrammarPoint = {
+  slug: "ようだ",
+  title: "ようだ",
+  subtitle: "It seems that..., It looks like...",
+  titleRomaji: "youda",
+  tags: ["seems", "looks like", "youda", "appearance", "resemblance", "speculation"]
 };

@@ -258,7 +258,7 @@ export const teVerb: GrammarPoint = {
   title: "て-form (verb)",
   subtitle: "～って、～んで、～いて、～いで、～して、～て",
   titleRomaji: "te form (verb)",
-  tags: ["te", "te-form", "verbs", "conjunctive", "connecting", "clauses", "requests", "commands"]
+  tags: ["te", "te", "te", "te", "te", "te", "te-form", "teform", "verbs", "conjunctive", "connecting", "clauses", "requests", "commands"]
 };
 
 export const teAdjectiveNoun: GrammarPoint = {
@@ -266,7 +266,7 @@ export const teAdjectiveNoun: GrammarPoint = {
   title: "て-form (adjective, noun)",
   subtitle: "～くて、～で",
   titleRomaji: "te form (adjective, noun)",
-  tags: ["te", "te-form", "adjective", "adjectives", "noun", "conjunctive", "connecting", "clauses"]
+  tags: ["te", "te", "te", "te", "te", "te", "te-form", "teform", "adjective", "adjectives", "noun", "conjunctive", "connecting", "clauses"]
 };
 
 export const transitivityPairs: GrammarPoint = {

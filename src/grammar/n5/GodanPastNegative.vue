@@ -108,7 +108,8 @@
 
       <div class="section">
         <div class="grammar-subtitle">Plain past negative (informal)</div>
-        To create the plain past negative form of a godan verb we can take a look at the godan five-step chart again. Move up on the chart, from the う row to the あ row, changing the sound of the final syllable.
+        To form the plain past negative of a godan verb, refer to the godan five-step chart below. Change the final syllable
+        from the う row (the dictionary form) to the あ row to get the stem for the plain past negative form.
         <div class="chart">
           <GodanChart :selected-row="1" :word-selection="2" :show-word-selection="false" />
         </div>
