@@ -9,7 +9,7 @@ import PrimeVue from "primevue/config";
 import Aura from "@primevue/themes/aura";
 import { definePreset } from "@primevue/themes";
 import { useThemeStore } from "@/stores/themeStore";
-import { useListStore } from "./stores/listStore";
+import { initLists } from "./stores/listStore";
 
 import Accordion from "primevue/accordion";
 import AccordionContent from "primevue/accordioncontent";
@@ -214,13 +214,8 @@ if (savedTheme === "dark" || (!savedTheme && prefersDarkMode)) {
   themeStore.setDarkMode(true, false);
 }
 
-// Set chosen lists
-const listStore = useListStore();
-
-const mainList = localStorage.getItem("mainList");
-const sublist = localStorage.getItem("sublist");
-listStore.setMainList(mainList, false);
-listStore.setSublist(sublist, false);
+// Initialize lists
+initLists();
 
 registerSW({
   immediate: true

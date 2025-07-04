@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { passiveSentences as meta, passiveVerbs } from "./metadataN4";
+  import { passiveSentences as meta, causativePassiveSentences, causativeSentences, passiveVerbs } from "./metadataN4";
 </script>
 
 <script lang="ts">
@@ -16,10 +16,13 @@
       <div class="structure-title small top">Direct passive</div>
       <div>(Acted upon) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + <span class="g">(passive verb)</span></div>
       <div class="structure-title small">Indirect passive</div>
-      <div>(Affected) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + (acted upon) <span class="h">を</span> + <span class="g">(passive verb)</span></div>
+      <div>(Affected) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + (acted upon) を + <span class="g">(passive verb)</span></div>
     </template>
     <template #related>
       Based on the <RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveVerbs.slug } }" class="link">{{ passiveVerbs.title }}</RouterLink> form
+      <div class="related-mb" style="margin-top: 10px;">See also:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativeSentences.slug } }" class="link">{{ causativeSentences.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativePassiveSentences.slug } }" class="link">{{ causativePassiveSentences.title }}</RouterLink></div>
     </template>
     <template #explanation>
       In Japanese, passive sentences are used when the subject is acted upon by someone or something, rather than doing the action themselves.
@@ -40,7 +43,7 @@
       </ul>
       <div class="note">
         <div class="note-title">Note:</div>
-        See <RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveVerbs.slug } }" class="link">Passive Verbs</RouterLink> for how to conjugate verbs into their passive form.
+        See <RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveVerbs.slug } }" class="link">{{ passiveVerbs.title }}</RouterLink> for how to conjugate verbs into their passive form.
       </div>
       Japanese passive sentences fall into two broad categories: Direct passive, used when the subject is directly acted upon by someone, and
       indirect passive, used when the subject is not directly affected by the verb, but still experiences some emotional or circumstantial impact from another person's action.
@@ -128,13 +131,13 @@
         <div class="grammar-title">Indirect Passive</div>
         In indirect passive sentences, the subject is not the direct target of the action, but they are affected by it, often in an emotional or inconvenient way.
         This construction is commonly used to express unpleasant experiences, involvement, or being impacted by someone else's actions.
-        Often, there is another object being acted upon, which is marked with <span class="h">を</span>, but this is not required — it depends on the verb used.
+        Often, there is another object being acted upon, which is marked with を, but this is not required — it depends on the verb used.
         <ul>
-          <li>[Affected] <span class="h">は</span>/<span class="h">が</span> [doer] <span class="h">に</span> [acted upon] <span class="h">を</span> <span class="g">[action - passive verb]</span></li>
+          <li>[Affected] <span class="h">は</span>/<span class="h">が</span> [doer] <span class="h">に</span> [acted upon] を <span class="g">[action - passive verb]</span></li>
         </ul>
         <GrammarExample>
           <template #example>
-            <ruby>私<rt>わたし</rt></ruby><span class="h">は</span><ruby>友<rt>とも</rt></ruby>だち<span class="h">に</span><ruby>冷蔵庫<rt>れいぞうこ</rt></ruby><span class="h">を</span><span class="g"><ruby>壊<rt>こわ</rt></ruby>された</span>
+            <ruby>私<rt>わたし</rt></ruby><span class="h">は</span><ruby>友<rt>とも</rt></ruby>だち<span class="h">に</span><ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>を<span class="g"><ruby>壊<rt>こわ</rt></ruby>された</span>
           </template>
           <template #translation>
             My friend broke the refrigerator (and I was affected by it)

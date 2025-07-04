@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { causativeSentences as meta, causativeVerbs } from "./metadataN4";
+  import { causativeSentences as meta, causativePassiveSentences, causativeVerbs, passiveSentences } from "./metadataN4";
 </script>
 
 <script lang="ts">
@@ -13,14 +13,21 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      <div>(Commander) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + (object) <span class="h">を</span> + <span class="g">(causative verb)</span></div>
+      <div>(Commander) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + <span class="g">(causative verb)</span></div>
     </template>
     <template #related>
       Based on the <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativeVerbs.slug } }" class="link">{{ causativeVerbs.title }}</RouterLink> form
+      <div class="related-mb" style="margin-top: 10px;">See also:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveSentences.slug } }" class="link">{{ passiveSentences.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativePassiveSentences.slug } }" class="link">{{ causativePassiveSentences.title }}</RouterLink></div>
     </template>
     <template #explanation>
       Causative sentences express making or letting someone do something. They show that the subject is not doing the action willingly,
       but rather because someone else caused or allowed them to do it. The nuance depends on context and verb choice.
+      <div class="note">
+        <div class="note-title">Note:</div>
+        See <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativeVerbs.slug } }" class="link">{{ causativeVerbs.title }}</RouterLink> for how to conjugate verbs into their causative form.
+      </div>
 
       <div class="section">
         <div class="grammar-title">Making Someone do Something (Force, Instruction, or Authority)</div>
@@ -30,7 +37,7 @@
         </ul>
         <GrammarExample>
           <template #example>
-            <ruby>私<rt>わたし</rt></ruby><span class="h">は</span><ruby>弟<rt>おとうと</rt></ruby><span class="h">に</span><ruby>野菜<rt>やさい</rt></ruby><span class="h">を</span><span class="g"><ruby>食<rt>た</rt></ruby>べさせた</span>
+            <ruby>私<rt>わたし</rt></ruby><span class="h">は</span><ruby>弟<rt>おとうと</rt></ruby><span class="h">に</span><ruby>野菜<rt>やさい</rt></ruby>を<span class="g"><ruby>食<rt>た</rt></ruby>べさせた</span>
           </template>
           <template #translation>
             I made my little brother eat his vegetables
@@ -49,7 +56,7 @@
         But the nuance here is permissive — not forcing, but allowing.
         <GrammarExample>
           <template #example>
-            <ruby>父<rt>ちち</rt></ruby><span class="h">は</span><ruby>私<rt>わたし</rt></ruby><span class="h">に</span><ruby>車<rt>くるま</rt></ruby><span class="h">を</span><span class="g"><ruby>運転<rt>うんてん</rt></ruby>させた</span>
+            <ruby>父<rt>ちち</rt></ruby><span class="h">は</span><ruby>私<rt>わたし</rt></ruby><span class="h">に</span><ruby>車<rt>くるま</rt></ruby>を<span class="g"><ruby>運転<rt>うんてん</rt></ruby>させた</span>
           </template>
           <template #translation>
             My father let me drive the car
@@ -70,7 +77,7 @@
         Similarly, if you want to express that you allow someone to do something, you can use a causative verb with あげる, again implying the "let" meaning.
         <GrammarExample>
           <template #example>
-            <ruby>私<rt>わたし</rt></ruby>が<ruby>作<rt>つく</rt></ruby>ったケーキ<span class="h">を</span><span class="g"><ruby>食<rt>た</rt></ruby>べさせて</span>あげる
+            <ruby>私<rt>わたし</rt></ruby>が<ruby>作<rt>つく</rt></ruby>ったケーキを<span class="g"><ruby>食<rt>た</rt></ruby>べさせて</span>あげる
           </template>
           <template #translation>
             I'll let you eat the cake I made

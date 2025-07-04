@@ -3,7 +3,7 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
-  import { ba as meta, causativeVerbs, nara, tara, potentialVerbs, toIf, passiveVerbs, volitionalVerbs } from "./metadataN4";
+  import { ba as meta, causativePassiveVerbs, causativeVerbs, nara, tara, potentialVerbs, toIf, passiveVerbs, volitionalVerbs } from "./metadataN4";
   import { godan, ichidan, imperativeVerbs } from "../n5/metadataN5";
 </script>
 
@@ -78,7 +78,8 @@
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: potentialVerbs.slug } }" class="link">{{ potentialVerbs.title }}</RouterLink></div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: volitionalVerbs.slug } }" class="link">{{ volitionalVerbs.title }}</RouterLink></div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveVerbs.slug } }" class="link">{{ passiveVerbs.title }}</RouterLink></div>
-      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativeVerbs.slug } }" class="link">{{ causativeVerbs.title }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativeVerbs.slug } }" class="link">{{ causativeVerbs.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativePassiveVerbs.slug } }" class="link">{{ causativePassiveVerbs.title }}</RouterLink></div>
     </template>
     <template #explanation>
       The <span class="g">～ば</span> form is another way to say "if" in Japanese. It's a more formal or neutral-sounding conditional, and it tends to focus on natural results, general truths, or logical outcomes.

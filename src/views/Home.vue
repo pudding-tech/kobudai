@@ -54,11 +54,8 @@
     const subList = route.params.sublist as string | undefined;
 
     if (mainList && subList && isValidList(mainList, subList)) {
-      if (listStore.getMainList.value !== mainList) {
-        listStore.setMainList(mainList);
-      }
-      if (listStore.getSublist.value !== subList) {
-        listStore.setSublist(subList);
+      if (listStore.getMainList.value !== mainList || listStore.getSublist.value !== subList) {
+        listStore.setMainList(mainList, subList);
       }
     }
     else {

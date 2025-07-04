@@ -34,7 +34,7 @@
 
 .selection-element {
   padding: 10px 20px;
-  border: 1px solid #52525b;
+  border: 1px solid var(--custom-select-button-border-color);
   cursor: pointer;
   color: var(--custom-select-button-text);
   transition: color 0.2s, background-color 0.2s;

@@ -11,6 +11,10 @@
 
   const themeStore = useThemeStore();
 
+  const closeDrawer = () => {
+    open.value = false;
+  };
+
   const changeTheme = () => {
     emit("changeTheme");
   };
@@ -19,6 +23,9 @@
 <template>
   <Drawer v-model:visible="open" position="top" :showCloseIcon="false" :blockScroll="true" class="options-drawer">
     <div class="container">
+      <div class="close-section" v-ripple>
+        <Button label="Close" variant="text" severity="secondary" size="small" class="close-button" @click="closeDrawer()" />
+      </div>
       <div class="list-item">
         <label>Change list:</label>
         <Select v-model="selectedMainListValue" :options="props.listOptions" option-label="label" option-value="value" class="list-select" />
@@ -49,6 +56,17 @@
 
 .theme-select {
   width: 60px;
+}
+
+.close-section {
+  display: flex;
+  background-color: var(--accordion-color);
+  border-radius: var(--p-content-border-radius);
+
+  .close-button {
+    width: 100%;
+    justify-content: center;
+  }
 }
 </style>
 

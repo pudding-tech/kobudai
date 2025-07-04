@@ -56,6 +56,8 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n4.ageruKureruMorau.slug]: () => import("./n4/AgeruKureruMorau.vue").then(processImport),
   [n4.ba.slug]: () => import("./n4/Ba.vue").then(processImport),
   [n4.bayokatta.slug]: () => import("./n4/BaYokatta.vue").then(processImport),
+  [n4.causativePassiveSentences.slug]: () => import("./n4/CausativePassiveSentences.vue").then(processImport),
+  [n4.causativePassiveVerbs.slug]: () => import("./n4/CausativePassiveVerbs.vue").then(processImport),
   [n4.causativeSentences.slug]: () => import("./n4/CausativeSentences.vue").then(processImport),
   [n4.causativeVerbs.slug]: () => import("./n4/CausativeVerbs.vue").then(processImport),
   [n4.gaHoshii.slug]: () => import("./n4/GaHoshii.vue").then(processImport),

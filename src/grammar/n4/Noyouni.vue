@@ -14,8 +14,6 @@
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       <div class="structure-title small top">Done like "A", or a charcteristic like "A"</div>
-      <!-- <div class="structure-title small top">Done like "A" / A charcteristic like "A"</div> -->
-      <!-- <div>Noun A + <span class="grammar-highlight">のように</span> + action/description</div> -->
       <div>Noun A + <span class="grammar-highlight">のように</span> + verb/adjective</div>
       <div class="structure-title small">A "B" like "A"</div>
       <div>Noun A + <span class="grammar-highlight">のような</span> + noun B</div>

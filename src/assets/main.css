@@ -283,6 +283,7 @@ ruby rt {
   /* CUSTOM SELECT BUTTON */
   --custom-select-button-text: rgba(0, 0, 0, 0.7);
   --custom-select-button-text-hover: rgba(0, 0, 0, 1);
+  --custom-select-button-border-color: var(--p-select-border-color);
 
   /* NOTFOUND */
   --back-to-home-color: var(--p-primary-500);
@@ -356,6 +357,7 @@ ruby rt {
   /* CUSTOM SELECT BUTTON */
   --custom-select-button-text: rgba(255, 255, 255, 0.7);
   --custom-select-button-text-hover: rgba(255, 255, 255, 1);
+  --custom-select-button-border-color: #52525b;
 
   /* NOTFOUND */
   --back-to-home-color: var(--p-primary-250);

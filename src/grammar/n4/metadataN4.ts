@@ -41,11 +41,19 @@ export const bayokatta: GrammarPoint = {
   tags: ["regret", "wish", "ba", "hypothetical", "verb"]
 };
 
-export const causativeVerbs: GrammarPoint = {
-  slug: "causative-verb",
-  title: "Causative verb",
-  subtitle: "～せる、～させる (to make/let someone do)",
-  tags: ["causative", "make someone do", "verb", "godan", "ichidan", "causative form", "force", "allow", "let", "permission"]
+export const causativePassiveSentences: GrammarPoint = {
+  slug: "causative-passive-sentences",
+  title: "Causative-passive sentences",
+  subtitle: "Using causative-passive verbs in sentences",
+  titleRomaji: "causative passive sentences",
+  tags: ["causative passive", "sentences", "verb", "godan", "ichidan", "sentence structure", "causative passive form"]
+};
+
+export const causativePassiveVerbs: GrammarPoint = {
+  slug: "causative-passive-verb",
+  title: "Causative-passive verb",
+  subtitle: "～される、～させられる (to be made to do)",
+  tags: ["causative passive", "verb", "godan", "ichidan", "causative passive form", "forced to do"]
 };
 
 export const causativeSentences: GrammarPoint = {
@@ -53,6 +61,13 @@ export const causativeSentences: GrammarPoint = {
   title: "Causative sentences",
   subtitle: "Using causative verbs in sentences",
   tags: ["causative", "sentences", "verb", "godan", "ichidan", "sentence structure"]
+};
+
+export const causativeVerbs: GrammarPoint = {
+  slug: "causative-verb",
+  title: "Causative verb",
+  subtitle: "～せる、～させる (to make/let someone do)",
+  tags: ["causative", "make someone do", "verb", "godan", "ichidan", "causative form", "force", "allow", "let", "permission"]
 };
 
 export const gaHoshii: GrammarPoint = {

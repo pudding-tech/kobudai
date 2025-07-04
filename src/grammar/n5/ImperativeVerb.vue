@@ -5,10 +5,10 @@
   import RelatedGrammarList from "@/components/RelatedGrammarList.vue";
   import GodanChart from "@/grammar/common/GodanChart.vue";
   import { imperativeVerbs as meta, godan, godanNonPast, godanNegative, godanPast, godanPastNegative, ichidan, ichidanNegative, ichidanNonPast, ichidanPast, ichidanPastNegative, naideKudasai, teKudasai, teVerb } from "./metadataN5";
-  import { ba, causativeVerbs, nasai, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
+  import { ba, causativePassiveVerbs, causativeVerbs, nasai, passiveVerbs, potentialVerbs, volitionalVerbs } from "../n4/metadataN4";
 
   const related: { slug: string, title: string }[] = [godan, ichidan, godanNonPast, ichidanNonPast, godanNegative, ichidanNegative,
-    godanPast, ichidanPast, godanPastNegative, ichidanPastNegative, teVerb, potentialVerbs, volitionalVerbs, { slug: ba.slug, title: "Conditional verb (～ば)" }, passiveVerbs, causativeVerbs];
+    godanPast, ichidanPast, godanPastNegative, ichidanPastNegative, teVerb, potentialVerbs, volitionalVerbs, { slug: ba.slug, title: "Conditional verb (～ば)" }, passiveVerbs, causativeVerbs, causativePassiveVerbs];
 </script>
 
 <script lang="ts">
@@ -82,6 +82,7 @@
       <RelatedGrammarList :related="related" />
     </template>
     <template #explanation>
+      <div class="grammar-title">The Imperative Form of Verbs</div>
       The imperative form is used to give commands or strong requests. It tells someone to do something,
       and is similar to saying "do (something)!" in English. It's most commonly used in urgent situations,
       on signs and labels, or military and sports contexts.

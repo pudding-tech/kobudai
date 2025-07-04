@@ -1,9 +1,9 @@
 import pluginVue from "eslint-plugin-vue";
-import vueTsEslintConfig from "@vue/eslint-config-typescript";
+import { defineConfigWithVueTs, vueTsConfigs } from "@vue/eslint-config-typescript";
 
-export default [
-  ...pluginVue.configs["flat/essential"],
-  ...vueTsEslintConfig(),
+export default defineConfigWithVueTs(
+  pluginVue.configs["flat/essential"],
+  vueTsConfigs.recommended,
   {
     rules: {
       "semi": "error",
@@ -17,7 +17,7 @@ export default [
     files: ["**/*.vue", "**/*.js", "**/*.jsx", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx", "**/*.cts", "**/*.mts"],
     languageOptions: {
       ecmaVersion: "latest",
-      sourceType: "script",
+      sourceType: "module",
     },
   }
-];
+);
