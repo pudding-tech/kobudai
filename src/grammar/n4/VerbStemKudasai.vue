@@ -62,7 +62,7 @@
       When using honorific verbs (sonkeigo) that end in になる, drop the になる and treat the remaining part like a regular verb.
       <GrammarExample>
         <template #example>
-          こちらを<span class="g">ご<ruby>覧<rt>らん</rt></ruby>ください</span>
+          こちらを<span class="g">ご</span><ruby>覧<rt>らん</rt></ruby><span class="g">ください</span>
         </template>
         <template #translation>
           Please take a look at this

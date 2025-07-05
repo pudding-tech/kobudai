@@ -57,7 +57,7 @@
       </GrammarExample>
       <GrammarExample>
         <template #example>
-          <ruby>子供<rt>こども</rt></ruby><spanc class="h">な</spanc><span class="g">のに</span>、とても<ruby>礼儀正<rt>れいぎただ</rt></ruby>しいです
+          <ruby>子供<rt>こども</rt></ruby><span class="h">な</span><span class="g">のに</span>、とても<ruby>礼儀正<rt>れいぎただ</rt></ruby>しいです
         </template>
         <template #translation>
           Even though they are children, they are very polite

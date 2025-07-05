@@ -22,8 +22,8 @@
       <div>A + <span class="grammar-highlight"><ruby>間<rt>あいだ</rt></ruby></span>、 + B</div>
       <div class="structure-inner">
         <div>Verb (～ている) + <span class="grammar-highlight"><ruby>間<rt>あいだ</rt></ruby>に</span> + B</div>
-        <div>[Noun] + <span class="grammar-highlight">の<ruby>間<rt>あいだ</rt></ruby>に</span> + B</div>
-        <div>な-Adjective + <span class="grammar-highlight">な<ruby>間<rt>あいだ</rt></ruby>に</span> + B</div>
+        <div>[Noun] + <span class="grammar-highlight"><span class="h">の</span><ruby>間<rt>あいだ</rt></ruby>に</span> + B</div>
+        <div>な-Adjective + <span class="grammar-highlight"><span class="h">な</span><ruby>間<rt>あいだ</rt></ruby>に</span> + B</div>
         <div>い-Adjective + <span class="grammar-highlight"><ruby>間<rt>あいだ</rt></ruby>に</span> + B</div>
       </div>
     </template>
@@ -50,10 +50,11 @@
           While I was watching TV, the phone rang
         </template>
       </GrammarExample>
-      When <ruby>間<rt>あいだ</rt></ruby> is used after a noun, it must be prefixed with the particle の, forming <span class="g">の<ruby>間<rt>あいだ</rt></ruby>に</span>.
+      When <ruby>間<rt>あいだ</rt></ruby> is used after a noun, it must be prefixed with the particle <span class="h">の</span>, forming <span class="h">の</span><span class="g"><ruby>間<rt>あいだ</rt></ruby>に</span>.
+      Similarily, when used with な-adjectives, it takes the form <span class="h">な</span><span class="g"><ruby>間<rt>あいだ</rt></ruby>に</span>.
       <GrammarExample>
         <template #example>
-          <ruby>休<rt>やす</rt></ruby>み<span class="g">の<ruby>間<rt>あいだ</rt></ruby>に</span>、この<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みたい
+          <ruby>休<rt>やす</rt></ruby>み<span class="h">の</span><span class="g"><ruby>間<rt>あいだ</rt></ruby>に</span>、この<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みたい
         </template>
         <template #translation>
           I want to read this book during the vacation

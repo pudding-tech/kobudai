@@ -2,8 +2,8 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { teVerb as meta, godan, godanNonPast, godanPast, ichidan, ichidanNonPast, ichidanPast, naideKudasai, teAdjectiveNoun, teIru, teKara, teKudasai, temoii } from "./metadataN5";
-  import { teAgeruKureruMorau, teAru, teHoshii, teItadakemasenka, teMiru, teOku, teShimau, teSumimasen } from "../n4/metadataN4";
+  import { teVerb as meta, godan, godanNonPast, godanPast, ichidan, ichidanNonPast, ichidanPast, naideKudasai, teAdjectiveNoun, teHaIkenai, teIru, teKara, teKudasai, temoii } from "./metadataN5";
+  import { teAgeruKureruMorau, teAru, teHoshii, teItadakemasenka, teMiru, teMo, teOku, teShimau, teSumimasen } from "../n4/metadataN4";
 </script>
 
 <script lang="ts">
@@ -113,8 +113,14 @@
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAru.slug } }" class="link">{{ teAru.title }}</RouterLink>
       </div>
-      <div style="margin-bottom: 20px">
+      <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teHoshii.slug } }" class="link">{{ teHoshii.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teHaIkenai.slug } }" class="link">{{ teHaIkenai.title }}</RouterLink>
+      </div>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teMo.slug } }" class="link">{{ teMo.title }}</RouterLink>
       </div>
       <div class="related-mb">
         Other verb conjugations:

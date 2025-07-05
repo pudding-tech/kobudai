@@ -18,8 +18,8 @@
     <template #structure>
       <div>Verb (short form) + <span class="grammar-highlight">そう<span v-if="isPolite">です</span><span v-else>だ</span></span></div>
       <div>い-adjective + <span class="grammar-highlight">そう<span v-if="isPolite">です</span><span v-else>だ</span></span></div>
-      <div>な-adjective + だ + <span class="grammar-highlight">そう<span v-if="isPolite">です</span><span v-else>だ</span></span></div>
-      <div>Noun + だ + <span class="grammar-highlight">そう<span v-if="isPolite">です</span><span v-else>だ</span></span></div>
+      <div>な-adjective + <span class="grammar-highlight"><span class="h">だ</span>そう<span v-if="isPolite">です</span><span v-else>だ</span></span></div>
+      <div>Noun + <span class="grammar-highlight"><span class="h">だ</span>そう<span v-if="isPolite">です</span><span v-else>だ</span></span></div>
     </template>
     <template #related>
       Do not confuse with <RouterLink :to="{ name: 'grammarLoader', params: { slug: sou.slug } }" class="link">{{ sou.title }}</RouterLink>, which means "looks/seems like".
@@ -56,7 +56,7 @@
 
       <GrammarExample>
         <template #example>
-          <ruby>彼<rt>かれ</rt></ruby>は<ruby>元気<rt>げんき</rt></ruby>だ<span class="g">そうです</span>
+          <ruby>彼<rt>かれ</rt></ruby>は<ruby>元気<rt>げんき</rt></ruby><span class="h">だ</span><span class="g">そうです</span>
         </template>
         <template #translation>
           I hear he is well
@@ -68,7 +68,7 @@
 
       <GrammarExample>
         <template #example>
-          あの<ruby>人<rt>ひと</rt></ruby>は<ruby>医者<rt>いしゃ</rt></ruby>だ<span class="g">そうだ</span>
+          あの<ruby>人<rt>ひと</rt></ruby>は<ruby>医者<rt>いしゃ</rt></ruby><span class="h">だ</span><span class="g">そうだ</span>
         </template>
         <template #translation>
           I hear that person is a doctor

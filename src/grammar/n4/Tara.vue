@@ -17,8 +17,8 @@
       <div class="structure-inner">
         <div>Verb (plain past form) + <span class="grammar-highlight">ら</span></div>
         <div>い-adjective (past form) + <span class="grammar-highlight">ら</span></div>
-        <div>な-adjective + だった + <span class="grammar-highlight">ら</span></div>
-        <div>Noun + だった + <span class="grammar-highlight">ら</span></div>
+        <div>な-adjective + <span class="grammar-highlight"><span class="h">だった</span>ら</span></div>
+        <div>Noun + <span class="grammar-highlight"><span class="h">だった</span>ら</span></div>
       </div>
     </template>
     <template #related>
@@ -68,7 +68,7 @@
       </div>
       <GrammarExample>
         <template #example>
-          <ruby>私<rt>わたし</rt></ruby>が<ruby>先生<rt>せんせい</rt></ruby>だった<span class="g">ら</span>、もっとやさしく<ruby>教<rt>おし</rt></ruby>える
+          <ruby>私<rt>わたし</rt></ruby>が<ruby>先生<rt>せんせい</rt></ruby><span class="h">だった</span><span class="g">ら</span>、もっとやさしく<ruby>教<rt>おし</rt></ruby>える
         </template>
         <template #translation>
           If I were the teacher, I would teach more kindly

@@ -17,8 +17,8 @@ export default defineConfig({
         background_color: "#1d1d1d",
         icons: [
           {
-            src: "/kobudai1.png",
-            sizes: "213x213",
+            src: "/kobudai.png",
+            sizes: "144x144",
             type: "image/png"
           }
         ]

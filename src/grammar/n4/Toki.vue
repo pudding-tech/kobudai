@@ -19,8 +19,8 @@
       <div class="structure-inner">
         <div>Verb (plain present/past) + <span class="grammar-highlight"><ruby>時<rt>とき</rt></ruby></span></div>
         <div>い-adjective + <span class="grammar-highlight"><ruby>時<rt>とき</rt></ruby></span></div>
-        <div>な-adjective + <span class="grammar-highlight">な</span> + <span class="grammar-highlight"><ruby>時<rt>とき</rt></ruby></span></div>
-        <div>Noun + <span class="grammar-highlight">の</span> + <span class="grammar-highlight"><ruby>時<rt>とき</rt></ruby></span></div>
+        <div>な-adjective + <span class="grammar-highlight"><span class="h">な</span><ruby>時<rt>とき</rt></ruby></span></div>
+        <div>Noun + <span class="grammar-highlight"><span class="h">の</span><ruby>時<rt>とき</rt></ruby></span></div>
       </div>
     </template>
     <template #explanation>
@@ -37,8 +37,8 @@
       </div>
       The verb, adjective, or noun before <span class="g">時</span> determines the timing of the main event in relation to the first action or state.
       The particle <span class="g">時</span> itself means "time" or "when", and can be used with verbs, adjectives, or nouns.
-      When used with な-adjectives, it requires <span class="g">な</span> before <span class="g">時</span>, and when used with nouns,
-      it requires <span class="g">の</span> before <span class="g">時</span>.
+      When used with な-adjectives, it requires <span class="h">な</span> before <span class="g">時</span>, and when used with nouns,
+      it requires <span class="h">の</span> before <span class="g">時</span>.
 
       <div class="section">
         <div class="grammar-subtitle">Present Tense of Time Reference Event</div>
@@ -56,7 +56,7 @@
         </GrammarExample>
         <GrammarExample>
           <template #example>
-            <ruby>元気<rt>げんき</rt></ruby><span class="g">な<ruby>時<rt>とき</rt></ruby></span>、<ruby>山<rt>やま</rt></ruby>に<ruby>登<rt>のぼ</rt></ruby>る
+            <ruby>元気<rt>げんき</rt></ruby><span class="h">な</span><span class="g"><ruby>時<rt>とき</rt></ruby></span>、<ruby>山<rt>やま</rt></ruby>に<ruby>登<rt>のぼ</rt></ruby>る
           </template>
           <template #translation>
             When I'm energetic, I climb mountains
@@ -82,7 +82,7 @@
         </GrammarExample>
         <GrammarExample>
           <template #example>
-            <ruby>学生<rt>がくせい</rt></ruby><span class="g">の<ruby>時<rt>とき</rt></ruby></span>、<ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいました
+            <ruby>学生<rt>がくせい</rt></ruby><span class="h">の</span><span class="g"><ruby>時<rt>とき</rt></ruby></span>、<ruby>日本<rt>にほん</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいました
           </template>
           <template #translation>
             When I was a student, I lived in Japan

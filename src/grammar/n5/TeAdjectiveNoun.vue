@@ -3,7 +3,7 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { teAdjectiveNoun as meta, adjectivesI, adjectivesNa, temoii, teVerb } from "./metadataN5";
-  import { teSumimasen } from "../n4/metadataN4";
+  import { teSumimasen, teMo } from "../n4/metadataN4";
 </script>
 
 <script lang="ts">
@@ -36,8 +36,11 @@
       <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: temoii.slug } }" class="link">{{ temoii.title }}</RouterLink>
       </div>
-      <div style="margin-bottom: 20px">
+      <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teSumimasen.slug } }" class="link">{{ teSumimasen.title }}</RouterLink>
+      </div>
+      <div style="margin-bottom: 20px">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teMo.slug } }" class="link">{{ teMo.title }}</RouterLink>
       </div>
       <div class="related-mb">
         Adjectives:

@@ -17,8 +17,8 @@
       <div class="structure-inner">
         <div>Verb (plain form present) + <span class="grammar-highlight">と</span></div>
         <div>い-adjective (present) + <span class="grammar-highlight">と</span></div>
-        <div>な-adjective (present) + <span class="grammar-highlight">だと</span></div>
-        <div>Noun (present) + <span class="grammar-highlight">だと</span></div>
+        <div>な-adjective (present) + <span class="grammar-highlight"><span class="h">だ</span>と</span></div>
+        <div>Noun (present) + <span class="grammar-highlight"><span class="h">だ</span>と</span></div>
       </div>
     </template>
     <template #related>
@@ -76,7 +76,7 @@
 
       <GrammarExample>
         <template #example>
-          <ruby>雨<rt>あめ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby><span class="g">だと</span>、<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れます
+          <ruby>雨<rt>あめ</rt></ruby>の<ruby>日<rt>ひ</rt></ruby><span class="h">だ</span><span class="g">と</span>、<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れます
         </template>
         <template #translation>
           Whenever it's a rainy day, the trains are delayed

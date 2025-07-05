@@ -1,11 +1,8 @@
 <script setup lang="ts">
-  import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { transitivityPairs as meta, teIru } from "./metadataN5";
-
-  const isPolite = ref(false);
 </script>
 
 <script lang="ts">
@@ -13,7 +10,7 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
+  <GrammarStructure>
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
@@ -140,13 +137,13 @@
       </div>
       <GrammarExampleSentences>
         <div class="example">
-          <ruby>音楽<rt>おんがく</rt></ruby>を<ruby>始<rt>はじ</rt></ruby>めた
+          <ruby>音楽<rt>おんがく</rt></ruby><span class="h">を</span><ruby>始<rt>はじ</rt></ruby>めた
         </div>
         <div class="translation">
           I started the music
         </div>
         <div class="example">
-          <ruby>音楽<rt>おんがく</rt></ruby>が<ruby>始<rt>はじ</rt></ruby>まった
+          <ruby>音楽<rt>おんがく</rt></ruby><span class="h">が</span><ruby>始<rt>はじ</rt></ruby>まった
         </div>
         <div class="translation">
           The music started (by itself)
@@ -166,7 +163,7 @@
         ～ている with transitive verbs generally describes an ongoing action being done by someone.
         <GrammarExample>
           <template #example>
-            <ruby>彼<rt>かれ</rt></ruby>を<ruby>起<rt>お</rt></ruby>こしています
+            <ruby>彼<rt>かれ</rt></ruby><span class="h">を</span><ruby>起<rt>お</rt></ruby>こしています
           </template>
           <template #translation>
             I am waking him up
@@ -179,7 +176,7 @@
         ～ている with intransitive verbs often (but not always) describes a resulting state after an action has occurred.
         <GrammarExample>
           <template #example>
-            <ruby>彼<rt>かれ</rt></ruby>が<ruby>起<rt>お</rt></ruby>きています
+            <ruby>彼<rt>かれ</rt></ruby><span class="h">が</span><ruby>起<rt>お</rt></ruby>きています
           </template>
           <template #translation>
             He is awake

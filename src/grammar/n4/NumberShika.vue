@@ -13,7 +13,7 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      Noun + が／を + <span class="grammar-highlight">number</span> + <span class="grammar-highlight">しか</span> + verb (negative)
+      Noun + が／を + <span class="grammar-highlight">number</span> + <span class="grammar-highlight">しか</span> + <span class="grammar-highlight">verb (negative)</span>
     </template>
     <template #related>
       Similarly, to say "as many as", see <RouterLink :to="{ name: 'grammarLoader', params: { slug: numberMo.slug } }" class="link">{{ numberMo.title }}</RouterLink>

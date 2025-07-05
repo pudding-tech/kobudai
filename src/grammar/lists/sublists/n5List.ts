@@ -87,7 +87,8 @@ export const n5List: Sublist = {
       grammarPoints: [
         n5.imperativeVerbs,
         n5.tai,
-        n5.temoii
+        n5.temoii,
+        n5.teHaIkenai
       ]
     }
   ]

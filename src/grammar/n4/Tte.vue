@@ -14,10 +14,10 @@
     <template #title>{{ meta.title }}</template>
     <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
-      <div>Verb (short form) + <span class="grammar-highlight">って</span>(言ってた)</div>
-      <div>い-adjective + <span class="grammar-highlight">って</span>(言ってた)</div>
-      <div>な-adjective + <span class="grammar-highlight">だ</span> + <span class="grammar-highlight">って</span>(言ってた)</div>
-      <div>Noun + <span class="grammar-highlight">だ</span> + <span class="grammar-highlight">って</span>(言ってた)</div>
+      <div>Verb (short form) + <span class="grammar-highlight">って</span></div>
+      <div>い-adjective + <span class="grammar-highlight">って</span></div>
+      <div>な-adjective + <span class="grammar-highlight"><span class="h">だ</span>って</span></div>
+      <div>Noun + <span class="grammar-highlight"><span class="h">だ</span>って</span></div>
     </template>
     <template #explanation>
       <span class="g">って</span> is a casual way to quote something someone said, heard, or thought. It's commonly used in spoken Japanese and is especially frequent in informal conversations.
@@ -79,13 +79,13 @@
           そのジェットコースターは<ruby>楽<rt>たの</rt></ruby>しい<span class="g">って</span>
         </template>
         <template #translation>
-          That rollercoaster's supposed to be fun
+          That rollercoaster's supposedly fun
         </template>
       </GrammarExample>
 
       <GrammarExample>
         <template #example>
-          <ruby>明日<rt>あした</rt></ruby>は<ruby>休<rt>やす</rt></ruby>み<span class="g">だって</span>
+          <ruby>明日<rt>あした</rt></ruby>は<ruby>休<rt>やす</rt></ruby>み<span class="h">だ</span><span class="g">って</span>
         </template>
         <template #translation>
           I heard tomorrow's a day off

@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { nakutemoii as meta } from "./metadataN4";
+  import { nakutemoii as meta, teMo } from "./metadataN4";
   import { temoii, teAdjectiveNoun, teVerb } from "../n5/metadataN5";
 
   const isPolite = ref(false);
@@ -29,12 +29,15 @@
     <template #related>
       <div class="related-mb">Based on:</div>
       <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teMo.slug } }" class="link">{{ teMo.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink>
       </div>
-      <div style="margin-bottom: 20px">
+      <div>
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAdjectiveNoun.slug } }" class="link">{{ teAdjectiveNoun.title }}</RouterLink>
       </div>
-      <div>
+      <div style="margin-top: 20px">
         - To express "you may", see
         <RouterLink :to="{ name: 'grammarLoader', params: { slug: temoii.slug } }" class="link">{{ temoii.title }}</RouterLink>
       </div>
@@ -53,6 +56,12 @@
           You don't have to eat / It's okay not to eat
         </template>
       </GrammarExample>
+      <div class="note">
+        <div class="note-title">Note:</div>
+        <span class="g">～なくてもいい</span> is actually a specialized use of the grammar point
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: teMo.slug } }" class="link">{{ teMo.title }}</RouterLink>.
+        Literally, it means "even if not [something], it's good".
+      </div>
 
       To use <span class="g">～なくてもいい</span>, conjugate the negative verb, adjective, or noun as follows:
       <GrammarExampleSentences>

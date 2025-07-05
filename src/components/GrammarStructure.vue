@@ -1,5 +1,7 @@
 <script setup lang="ts">
   import { ref, useSlots } from "vue";
+  import { useRouter } from "vue-router";
+  import { lastRoute } from "@/router/router";
   import { usePanelStore } from "@/stores/panelStore";
   import { breakpointService } from "@/services/breakpointService";
 
@@ -13,6 +15,7 @@
 
   const emit = defineEmits(["politenessChange"]);
 
+  const router = useRouter();
   const panelStore = usePanelStore();
   const slots = useSlots();
   const hasRelated = !!slots.related;
@@ -43,6 +46,15 @@
 
   const politenessChange = () => {
     emit("politenessChange", isPolite.value);
+  };
+
+  const goHome = () => {
+    if (lastRoute?.name === "home" || lastRoute?.name === "list") {
+      router.back();
+    }
+    else {
+      router.push({ name: "home" });
+    }
   };
 
   const headerMobile = ref({
@@ -86,9 +98,9 @@
   <div v-if="!breakpointService.isMobile()" class="container">
     <div class="bg">
       <div class="corner">
-        <RouterLink :to="{ name: 'home' }">
-          <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" v-ripple />
-        </RouterLink>
+        <!-- <RouterLink :to="{ name: 'home' }"> -->
+          <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" v-ripple @click="goHome()" />
+        <!-- </RouterLink> -->
       </div>
       <div class="header">
         <div class="title">

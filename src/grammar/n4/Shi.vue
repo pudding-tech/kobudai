@@ -19,8 +19,8 @@
       <div class="structure-inner">
         <div>Verb + <span class="grammar-highlight">し</span></div>
         <div>い-adjective + <span class="grammar-highlight">し</span></div>
-        <div>な-adjective + <span class="grammar-highlight">だし</span></div>
-        <div>Noun + <span class="grammar-highlight">だし</span></div>
+        <div>な-adjective + <span class="grammar-highlight"><span class="h">だ</span>し</span></div>
+        <div>Noun + <span class="grammar-highlight"><span class="h">だ</span>し</span></div>
       </div>
     </template>
     <template #related>
@@ -62,13 +62,13 @@
         <li>For な-adjectives and nouns: Attach だし after the plain form.</li>
         <GrammarExampleSentences>
           <div class="example">
-            <ruby>静<rt>しず</rt></ruby>か → <ruby>静<rt>しず</rt></ruby>か<span class="g">だし</span>
+            <ruby>静<rt>しず</rt></ruby>か → <ruby>静<rt>しず</rt></ruby>か<span class="g"><span class="h">だ</span>し</span>
           </div>
           <div class="translation">
             quiet → quiet, and...
           </div>
           <div class="example">
-            <ruby>学生<rt>がくせい</rt></ruby> → <ruby>学生<rt>がくせい</rt></ruby><span class="g">だし</span>
+            <ruby>学生<rt>がくせい</rt></ruby> → <ruby>学生<rt>がくせい</rt></ruby><span class="g"><span class="h">だ</span>し</span>
           </div>
           <div class="translation">
             student → student, and...

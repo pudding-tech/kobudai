@@ -62,7 +62,7 @@
       </GrammarExample>
       Compare this to the causative sentence:<br>
       <ul>
-        <ruby>親<rt>おや</rt></ruby><span class="h">は</span><ruby>私<rt>わたし</rt></ruby><span class="h">に</span><ruby>野菜<rt>やさい</rt></ruby>を<span class="g"><ruby>食<rt>た</rt></ruby>べさせた</span>
+        <ruby>親<rt>おや</rt></ruby><span class="h">は</span><ruby>私<rt>わたし</rt></ruby><span class="h">に</span><ruby>野菜<rt>やさい</rt></ruby>を<ruby>食<rt>た</rt></ruby>べさせた
         → "My parents made me eat my vegetables"
       </ul>
       Compared to regular causative sentences, causative-passive sentences reverse the roles of the particles used for the 'doer' and the 'commander'.

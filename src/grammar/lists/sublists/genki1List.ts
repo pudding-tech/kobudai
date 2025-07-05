@@ -65,7 +65,8 @@ export const genki1List: Sublist = {
       grammarPoints: [
         n5.teVerb,
         n5.teKudasai,
-        n5.temoii
+        n5.temoii,
+        n5.teHaIkenai
       ]
     },
     {

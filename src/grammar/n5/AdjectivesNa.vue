@@ -18,7 +18,7 @@
     <template #subtitle> {{ meta.subtitle }}</template>
     <template #structure>
       <div>...は + <span class="grammar-highlight">な-adjective</span> + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
-      <div style="margin-bottom: 10px"><span class="grammar-highlight">な-adjective</span> + <span class="grammar-highlight">な</span> + noun + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
+      <div style="margin-bottom: 10px"><span class="grammar-highlight">な-adjective</span> + <span class="h">な</span> + noun + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
       <table class="structure-table">
         <thead>
           <tr>
@@ -61,11 +61,11 @@
       <RouterLink :to="{ name: 'grammarLoader', params: { slug: adjectivesI.slug } }" class="link">い-adjectives</RouterLink> and <span class="g">な-adjectives</span>.
       <br><br>
       This section focuses on <span class="g">な-adjectives</span>, which is a category of Japanese adjectives that function more like nouns in terms of grammar.
-      Unlike い-adjectives, which inflect on their own, な-adjectives rely on copulas like だ or です to express tense and politeness, and on the particle <span class="g">な</span> when modifying nouns.
+      Unlike い-adjectives, which inflect on their own, な-adjectives rely on copulas like だ or です to express tense and politeness, and on the particle <span class="h">な</span> when modifying nouns.
       They are sometimes called "quasi-adjectives" or "adjectival nouns".
       <GrammarExample>
         <template #example>
-          <span class="g"><ruby>静<rt>しず</rt></ruby>かな</span><ruby>町<rt>まち</rt></ruby>
+          <span class="g"><ruby>静<rt>しず</rt></ruby>か</span><span class="h">な</span><ruby>町<rt>まち</rt></ruby>
         </template>
         <template #translation>
           A quiet town
@@ -79,12 +79,12 @@
         <li>Before a noun to describe it</li>
         <li>At the end of a sentence as the predicate</li>
       </ul>
-      Unline い-adjectives, they require some helper words to both modify nouns and to express tense.
+      Unlike い-adjectives, they require some helper words to both modify nouns and to express tense.
       <br><br>
       When a な-adjective is used to modify a noun directly, it must be followed by <span class="g">な</span>.
       <GrammarExample>
         <template #example>
-          ここは<span class="g"><ruby>綺麗<rt>きれい</rt></ruby>な</span><ruby>部屋<rt>へや</rt></ruby>だ
+          ここは<span class="g"><ruby>綺麗<rt>きれい</rt></ruby></span><span class="h">な</span><ruby>部屋<rt>へや</rt></ruby>だ
         </template>
         <template #translation>
           This is a clean room

@@ -35,6 +35,7 @@ export const n4List: Sublist = {
         n4.volitionalToOmou,
         n4.gaHoshii,
         n4.souda,
+        n4.verbMade,
       ]
     },
     {
@@ -45,6 +46,7 @@ export const n4List: Sublist = {
         n4.teShimau,
         n4.teOku,
         n4.nagara,
+        n4.kata,
       ]
     },
     {
@@ -93,7 +95,10 @@ export const n4List: Sublist = {
       value: 9,
       grammarPoints: [
         n4.yasuiNikui,
+        n4.teMo,
         n4.nakutemoii,
+        n4.niSuru,
+        n4.kotoNiSuru
       ]
     },
     {
@@ -115,6 +120,8 @@ export const n4List: Sublist = {
         n4.passiveSentences,
         n4.causativeVerbs,
         n4.causativeSentences,
+        n4.causativePassiveVerbs,
+        n4.causativePassiveSentences
       ]
     },
     {

@@ -20,12 +20,12 @@
       <div v-if="isPolite">
         Noun + <span class="grammar-highlight">じゃないです</span><br>
         Noun + <span class="grammar-highlight">ではありません</span><br>
-        [ な ] adjective + <span class="grammar-highlight">じゃないです</span><br>
-        [ な ] adjective + <span class="grammar-highlight">ではありません</span>
+        な-adjective + <span class="grammar-highlight">じゃないです</span><br>
+        な-adjective + <span class="grammar-highlight">ではありません</span>
       </div>
       <div v-else>
         Noun + <span class="grammar-highlight">じゃない</span><br>
-        [ な ] adjective + <span class="grammar-highlight">じゃない</span>
+        な-adjective + <span class="grammar-highlight">じゃない</span>
       </div>
     </template>
     <template #related>

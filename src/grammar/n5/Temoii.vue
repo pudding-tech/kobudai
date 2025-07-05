@@ -4,7 +4,7 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { temoii as meta, teAdjectiveNoun, teVerb } from "./metadataN5";
-  import { nakutemoii } from "../n4/metadataN4";
+  import { nakutemoii, teMo } from "../n4/metadataN4";
 
   const isPolite = ref(false);
 </script>
@@ -29,12 +29,15 @@
     <template #related>
       <div class="related-mb">Based on:</div>
       <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teMo.slug } }" class="link">{{ teMo.title }}</RouterLink>
+      </div>
+      <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink>
       </div>
-      <div style="margin-bottom: 20px">
+      <div>
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAdjectiveNoun.slug } }" class="link">{{ teAdjectiveNoun.title }}</RouterLink>
       </div>
-      <div>
+      <div style="margin-top: 20px">
         - To express "don't have to", see
         <RouterLink :to="{ name: 'grammarLoader', params: { slug: nakutemoii.slug } }" class="link">{{ nakutemoii.title }}</RouterLink>
       </div>
@@ -51,6 +54,12 @@
           You may eat / It's okay to eat
         </template>
       </GrammarExample>
+      <div class="note">
+        <div class="note-title">Note:</div>
+        <span class="g">～てもいい</span> is actually a specialized use of the grammar point
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: teMo.slug } }" class="link">{{ teMo.title }}</RouterLink>.
+        Literally, it means "even if [something], it's good".
+      </div>
 
       To use <span class="g">～てもいい</span>, conjugate the verb, adjective, or noun as follows:
       <GrammarExampleSentences>

@@ -2,7 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { nasai as meta } from "./metadataN4";
-  import { imperativeVerbs, naideKudasai, teKudasai } from "../n5/metadataN5";
+  import { imperativeVerbs, naideKudasai, teHaIkenai, teKudasai } from "../n5/metadataN5";
 </script>
 
 <script lang="ts">
@@ -23,7 +23,7 @@
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: imperativeVerbs.slug } }" class="link">{{ imperativeVerbs.title }}</RouterLink></div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKudasai.slug } }" class="link">{{ teKudasai.title }}</RouterLink></div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: naideKudasai.slug } }" class="link">{{ naideKudasai.title }}</RouterLink></div>
-      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">～てはいけません</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: teHaIkenai.slug } }" class="link">{{ teHaIkenai.title }}</RouterLink></div>
     </template>
     <template #explanation>
       <span class="g">なさい</span> is used to give polite but firm instructions or commands.
@@ -47,8 +47,8 @@
         verb followed by <span class="g">のをやめなさい</span>, which comes from the verb やめる ("to stop").
         As this essentially means "stop doing (something)", it only makes sense for actions that are already happening.
         <br><br>
-        Otherwise, other constructions like
-        <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">～てはいけません</RouterLink> or
+        Otherwise, constructions like
+        <RouterLink :to="{ name: 'grammarLoader', params: { slug: teHaIkenai.slug } }" class="link">{{ teHaIkenai.title }}</RouterLink> or
         <RouterLink :to="{ name: 'grammarLoader', params: { slug: naideKudasai.slug } }" class="link">{{ naideKudasai.title }}</RouterLink>
         can also used for telling someone not to do something.
       </div>

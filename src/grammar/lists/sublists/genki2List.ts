@@ -122,6 +122,18 @@ export const genki2List: Sublist = {
         n4.noni,
         n4.noyouni
       ]
+    },
+    {
+      title: "CHAPTER 23",
+      value: 11,
+      grammarPoints: [
+        n4.causativePassiveVerbs,
+        n4.causativePassiveSentences,
+        n4.teMo,
+        n4.kotoNiSuru,
+        n4.verbMade,
+        n4.kata
+      ]
     }
   ]
 };

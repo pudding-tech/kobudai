@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { sou as meta, mitai, souda } from "./metadataN4";
+  import { sou as meta, mitai, souda, youda } from "./metadataN4";
   import { adverbs } from "@/grammar/n5/metadataN5";
 
   const isPolite = ref(false);
@@ -21,16 +21,16 @@
       <div>な-adjective + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div>Verb (ます stem) + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div class="structure-title small">Negatives</div>
-      <div>い-adjective (negative) <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
-      <div>な-adjective (negative) <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
+      <div>い-adjective (negative) <s class="remove">[い]</s> + <span class="grammar-highlight"><span class="h">さ</span>そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
+      <div>な-adjective (negative) <s class="remove">[い]</s> + <span class="grammar-highlight"><span class="h">さ</span>そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div>Verb (negative) <s class="remove">[い]</s> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <div class="structure-title small">Exception</div>
-      <div>いい → よい <s class="remove">[い]</s> + <span class="h">さ</span> + <span class="grammar-highlight">そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
+      <div>いい → よい <s class="remove">[い]</s> + <span class="grammar-highlight"><span class="h">さ</span>そう</span> + <span v-if="isPolite">です</span><span v-else>だ</span></div>
     </template>
     <template #related>
       <div class="related-mb">Other ways of expressing "looks like":</div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: mitai.slug } }" class="link">{{ mitai.title }}</RouterLink></div>
-      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: null } }" class="link">ようだ</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: youda.slug } }" class="link">{{ youda.title }}</RouterLink></div>
       <div style="margin-top: 20px;">Caution:</div>
       Do not confuse with <RouterLink :to="{ name: 'grammarLoader', params: { slug: souda.slug } }" class="link">{{ souda.title }}</RouterLink>, which implies hearsay.
     </template>
@@ -87,7 +87,7 @@
       </div>
       <GrammarExample>
         <template #example>
-          いい → <ruby>良<rt>よ</rt></ruby>さ<span class="g">そう</span>
+          いい → <ruby>良<rt>よ</rt></ruby><span class="h">さ</span><span class="g">そう</span>
         </template>
         <template #translation>
           Looks good
@@ -104,7 +104,7 @@
         <div class="grammar-subtitle">Negative</div>
         <span class="g">～そう</span> can also be used with the negative forms, to express "doesn't look like" or "doesn't seem like".
         <ul style="padding-right: 40px;">
-          <li>For negative い-adjectives: Remove the final い from くない, then add <span class="h">さ</span> and <span class="g">そう</span>.</li>
+          <li>For negative い-adjectives: Remove the final い from くない, then add <span class="h">さ</span><span class="g">そう</span>.</li>
           <GrammarExample>
             <template #example>
               <ruby>美味<rt>おい</rt></ruby>しくない → <ruby>美味<rt>おい</rt></ruby>しくな<span class="h">さ</span><span class="g">そう</span>
@@ -113,7 +113,7 @@
               Doesn't look tasty
             </template>
           </GrammarExample>
-          <li>For negative な-adjectives: Remove the final い from じゃない, then add <span class="h">さ</span> and <span class="g">そう</span>.</li>
+          <li>For negative な-adjectives: Remove the final い from じゃない, then add <span class="h">さ</span><span class="g">そう</span>.</li>
           <GrammarExample>
             <template #example>
               <ruby>元気<rt>げんき</rt></ruby>じゃない → <ruby>元気<rt>げんき</rt></ruby>じゃな<span class="h">さ</span><span class="g">そう</span>

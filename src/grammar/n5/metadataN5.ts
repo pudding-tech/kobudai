@@ -162,9 +162,10 @@ export const kore: GrammarPoint = {
 
 export const maeni: GrammarPoint = {
   slug: "前に",
-  title: "前に",
+  title: "<ruby>前<rt>まえ</rt></ruby>に",
   subtitle: "Before, In front of",
-  titleRomaji: "mae ni",
+  titleRomaji: "maeni",
+  titlePlain: "前に",
   tags: ["before", "prior to", "mae ni", "front", "preceding"]
 };
 
@@ -219,6 +220,14 @@ export const tai: GrammarPoint = {
   subtitle: "Want to do...",
   titleRomaji: "tai",
   tags: ["want to", "desire", "verb", "verbing", "wanting", "verb form", "verb conjugation"]
+};
+
+export const teHaIkenai: GrammarPoint = {
+  slug: "てはいけない",
+  title: "～てはいけない",
+  subtitle: "Must not do...",
+  titleRomaji: "tehaikenai",
+  tags: ["must not", "prohibition", "negative", "te form", "verb form", "verb conjugation", "forbidden"]
 };
 
 export const teIru: GrammarPoint = {

@@ -94,11 +94,28 @@ export const kamoshirenai: GrammarPoint = {
   tags: ["might", "maybe", "perhaps", "kamo", "uncertainty", "probably"]
 };
 
+export const kata: GrammarPoint = {
+  slug: "方",
+  title: "<ruby>方<rt>かた</rt></ruby>",
+  subtitle: "Way of doing..., How to...",
+  titleRomaji: "kata",
+  titlePlain: "方",
+  tags: ["how to", "method", "way of doing", "technique", "manner", "instructional"]
+};
+
 export const kenjougo: GrammarPoint = {
   slug: "kenjougo-humble",
   title: "Kenjōgo (Humble Language)",
   subtitle: "Humble expressions",
   tags: ["humble", "kenjougo", "謙譲語", "polite", "respectful", "language", "keigo"]
+};
+
+export const kotoNiSuru: GrammarPoint = {
+  slug: "ことにする",
+  title: "ことにする",
+  subtitle: "Decide to..., Make a decision to...",
+  titleRomaji: "kotonisuru",
+  tags: ["decide", "decision", "koto ni suru", "intention", "resolve", "plan"]
 };
 
 export const mitai: GrammarPoint = {
@@ -155,6 +172,14 @@ export const niFrequency: GrammarPoint = {
   subtitle: "Frequency of an action",
   titleRomaji: "ni frequency",
   tags: ["frequency", "ni", "how often", "how many times", "ni hindo"]
+};
+
+export const niSuru: GrammarPoint = {
+  slug: "にする",
+  title: "にする",
+  subtitle: "Decide on, Choose, Make a decision",
+  titleRomaji: "nisuru",
+  tags: ["decide", "choice", "ni suru", "make a decision", "selection"]
 };
 
 export const noni: GrammarPoint = {
@@ -314,6 +339,14 @@ export const teMiru: GrammarPoint = {
   tags: ["try to", "try doing", "te miru", "try something"]
 };
 
+export const teMo: GrammarPoint = {
+  slug: "ても",
+  title: "～ても",
+  subtitle: "Even if...",
+  titleRomaji: "temo",
+  tags: ["in the case", "even", "te mo", "conditional", "hypothetical", "te-form"]
+};
+
 export const teOku: GrammarPoint = {
   slug: "ておく",
   title: "～ておく",
@@ -386,6 +419,14 @@ export const tte: GrammarPoint = {
   subtitle: "Informal quotation",
   titleRomaji: "tte",
   tags: ["informal", "quoting", "hearsay", "tte", "casual speech", "they say", "they said"]
+};
+
+export const verbMade: GrammarPoint = {
+  slug: "verb-まで",
+  title: "Verb + まで",
+  subtitle: "Until..., Up to the point of doing...",
+  titleRomaji: "verb made",
+  tags: ["until", "up to", "verb", "made", "action", "verb phrase", "limit", "extent"]
 };
 
 export const verbStemKudasai: GrammarPoint = {
