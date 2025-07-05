@@ -5,13 +5,30 @@
     </summary>
   </ul>
 </div>
+<div align="center">
 
-Kobudai is a grammar resource designed to help users learn Japanese grammar, providing a quick and easy way to look up grammar points. Each point is organized into sorted lists based on popular resources, like the JLPT levels and the Genki textbooks. Additionally, all grammar points are fully searchable for quick access.
-~ WIP ~
+  [![GitHub latest release version](https://img.shields.io/github/v/release/pudding-tech/kobudai.svg)](https://github.com/pudding-tech/kobudai/releases/latest)
+  [![pull-request](https://github.com/pudding-tech/kobudai/actions/workflows/build.yml/badge.svg)](https://github.com/pudding-tech/kobudai/actions/workflows/build.yml)
+</div>
 
-## Project Setup
+Kobudai is a Japanese grammar resource designed to help learners quickly look up and understand grammar points. Grammar is organized into sorted lists based on popular resources, such as JLPT levels and the Genki textbooks. All grammar points are fully searchable for fast access.
+
+## Features
+
+- 📚 **Comprehensive Grammar Database:** Covers JLPT N5–N4 and Genki I & II grammar points.
+- 🔍 **Instant Search:** Quickly find grammar points by keyword or structure.
+- 🗂️ **Organized Lists:** Browse grammar by JLPT level or textbook chapter.
+- 📱 **Responsive Design:** Works on desktop and mobile devices.
+- 📝 **Detailed Explanations:** Each grammar point includes structure, explanations, and examples.
+- 🔗 **Related Grammar:** Easily jump between related grammar topics.
+
+## Installation
+
+Clone the repository and install dependencies:
 
 ```sh
+git clone https://github.com/pudding-tech/kobudai.git
+cd kobudai
 npm install
 ```
 
@@ -25,12 +42,6 @@ npm run dev
 
 ```sh
 npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
 
 ## License
