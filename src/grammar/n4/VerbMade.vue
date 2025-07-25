@@ -52,7 +52,7 @@
       </div>
       <GrammarExample>
         <template #example>
-          <ruby>母<rt>はは</rt></ruby>が<ruby>帰<rt>かえ</rt></ruby>ってくる<span class="g">まで</span>、テレビを<ruby>見</ruby>た
+          <ruby>母<rt>はは</rt></ruby>が<ruby>帰<rt>かえ</rt></ruby>ってくる<span class="g">まで</span>、テレビを<ruby>見<rt>み</rt></ruby>た
         </template>
         <template #translation>
           I watched TV until my mom came home

@@ -83,7 +83,7 @@
       <div class="note">
         <div class="note-title">Note:</div>
         Even though <span class="g">みる</span> comes from 見る (みる, "to see"), when used in this grammar pattern, it is never written in kanji.
-        Always write it as <span class="g">～てみる</span>, in hiragana only.
+        Always write it as <span class="g">～てみる</span>, with hiragana only.
       </div>
     </template>
   </GrammarStructure>

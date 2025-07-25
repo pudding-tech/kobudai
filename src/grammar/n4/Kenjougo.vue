@@ -51,7 +51,7 @@
     <template #related>
       See also <RouterLink :to="{ name: 'grammarLoader', params: { slug: sonkeigo.slug } }" class="link">Sonkeigo (Honorific Language)</RouterLink>
       <div style="margin-top: 20px;">Further usage of kenjōgo:</div>
-      <div>
+      <div class="related-mb">
         - <RouterLink :to="{ name: 'grammarLoader', params: { slug: verbStemSuru.slug } }" class="link">{{ verbStemSuru.title }}</RouterLink>
       </div>
       <div>
@@ -189,7 +189,7 @@
             まもなく、<ruby>電車<rt>でんしゃ</rt></ruby>が<span class="g"><ruby>参<rt>まい</rt></ruby>ります</span>
           </template>
           <template #translation>
-            The train is coming soon
+            The train will be arriving shortly
           </template>
           <template #note>
             A humble way to announce the train's arrival, commonly heard at train stations
@@ -215,7 +215,7 @@
             This is today's menu
           </template>
           <template #note>
-            A humble and very polite way to present the menu. While somewhat formal or old-fashioned, it can stil be heard in customer service settings
+            A humble and very polite way to present the menu — can be heard in customer service settings
           </template>
         </GrammarExample>
         <div class="note">

@@ -22,7 +22,7 @@
   <div class="result-container" :class="{ 'mobile': props.mobile }">
     <template v-if="searchResults.length">
       <div v-ripple v-for="result in searchResults" :key="result.title" class="search-result" :class="{ 'mobile': props.mobile }" @click="gotoGrammar(result.slug)">
-        <div class="title">{{ result.title }}</div>
+        <div class="title" v-html="result.title" />
         <div class="subtitle">{{ result.subtitle }}</div>
       </div>
     </template>

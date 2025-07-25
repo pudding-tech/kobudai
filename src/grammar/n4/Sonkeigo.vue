@@ -233,9 +233,6 @@
           <template #translation>
             The teacher has already gone home
           </template>
-          <template #note>
-            <ruby>帰<rt>かえ</rt></ruby>り is the ます stem of <ruby>帰<rt>かえ</rt></ruby>る
-          </template>
         </GrammarExample>
         <div class="note">
           <div class="note-title">Note:</div>
@@ -244,7 +241,7 @@
         </div>
       </div>
       <div class="section">
-        <div class="grammar-title">Using ～ている to ～ていらっしゃる for Honorific Ongoing Actions</div>
+        <div class="grammar-title">Using ～ていらっしゃる for Honorific Ongoing Actions</div>
         To make the progressive or continuous form respectful, Japanese often replaces the plain ～ている form with:
         <ul>
           <li>～ている → <span class="g">～ていらっしゃる</span></li>

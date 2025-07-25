@@ -48,7 +48,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
       </GrammarExample>
       <div class="note">
         <div class="note-title">Note:</div>
-        When using a verb that takes an object with a <ruby class="g">方<rt>かた</rt></ruby> phrase, the particle を changes to の.
+        When using a verb that takes an object with a <span class="g">方</span> phrase, the particle を changes to の.
         <ul>
           <li>バナナを<ruby>食<rt>た</rt></ruby>べる → バナナの<ruby>食<rt>た</rt></ruby>べ<ruby class="g">方<rt>かた</rt></ruby> ("the way of eating a banana")</li>
         </ul>
@@ -71,7 +71,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
       </GrammarExample>
 
       When using <ruby class="g">方<rt>かた</rt></ruby> with する-verbs, there needs to be a の particle between the noun and the verb する, now in the form of し.
-      Over time, "し + <ruby class="g">方<rt>かた</rt></ruby>" became fossilized into a common compound: <span class="g">仕方</span> (しかた), which literally means "way of doing".
+      Over time, "し + <span class="g">方</span>" became fossilized into a common compound: <span class="g">仕方</span> (しかた), which literally means "way of doing".
       <ul style="margin-top: 4px;">
         <li>[Noun] + の + し<ruby class="g">方<rt>かた</rt></ruby> → [noun] + の + <ruby class="g">仕方<rt>しかた</rt></ruby></li>
       </ul>
@@ -87,7 +87,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
 
       <div class="note">
         <div class="note-title">Note:</div>
-        You might recognize the word from the very common phrase <ruby class="g">仕方<rt>しかた</rt></ruby>がない,
+        You might recognize the word from the very common phrase <span class="g">仕方</span>がない,
         commonly translated as "it can't be helped". Literally, it would mean "there is no way of doing".
       </div>
     </template>

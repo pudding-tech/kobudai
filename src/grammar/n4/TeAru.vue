@@ -57,6 +57,8 @@
         The verb used with <span class="g">～てある</span> must be transitive because it describes a state resulting
         from a deliberate action done to something. Since transitive verbs take a direct object, they can show that
         something was done and left in that state — which intransitive verbs cannot do.
+        <br><br>
+        Also note that the direct object is typically marked with は or が when used with <span class="g">～てある</span>.
       </div>
       <GrammarExample>
         <template #example>

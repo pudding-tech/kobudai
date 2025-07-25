@@ -45,7 +45,7 @@
       </div>
       <GrammarExample>
         <template #example>
-          <ruby>毎朝<rt>まいあさ</rt></ruby>、パンケーキを食べない<span class="g">ことにしました</span>
+          <ruby>毎朝<rt>まいあさ</rt></ruby>、パンケーキを<ruby>食<rt>た</rt></ruby>べない<span class="g">ことにしました</span>
         </template>
         <template #translation>
           I decided to not to eat pancakes every morning
@@ -60,7 +60,7 @@
         or personal rules, something the speaker has decided to make a habit of doing or a routine they follow.
         <GrammarExample>
           <template #example>
-            毎日ジョギングをする<span class="g">ことにしている</span>
+            <ruby>毎日<rt>まいにち</rt></ruby>ジョギングをする<span class="g">ことにしている</span>
           </template>
           <template #translation>
             I make it a habit to jog every day
