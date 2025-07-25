@@ -32,7 +32,7 @@
       It shows that the result in the second part of the sentence will happen regardless of the condition in the first part.
       <br><br>
       It can be used with the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">て-form</RouterLink> of verbs,
-      as well as the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAdjectiveNoun.slug } }" class="link">て-form</RouterLink> of い-adjectives, な-adjectives, and nouns.
+      as well as the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teAdjectiveNoun.slug } }" class="link">て-form</RouterLink> of adjectives and nouns.
       <GrammarExample>
         <template #example>
           <ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>っ<span class="g">ても</span>、<ruby>行<rt>い</rt></ruby>きます
@@ -46,7 +46,7 @@
       </GrammarExample>
       <GrammarExample>
         <template #example>
-          <ruby>忙<rt>いそが</rt></ruby>し<span class="g">くても</span>、<ruby>来<rt>き</rt></ruby>きます
+          <ruby>忙<rt>いそが</rt></ruby>し<span class="g">くても</span>、<ruby>来<rt>き</rt></ruby>ます
         </template>
         <template #translation>
           Even if I'm busy, I will come
@@ -89,7 +89,7 @@
       </GrammarExample>
       <GrammarExample>
         <template #example>
-          <ruby>元気</ruby>じゃな<span class="g">くても</span>、<ruby>来<rt>こ</rt></ruby>なければいけない
+          <ruby>元気<rt>げんき</rt></ruby>じゃな<span class="g">くても</span>、<ruby>来<rt>こ</rt></ruby>なければいけない
         </template>
         <template #translation>
           Even if you're not well, you have to come
@@ -108,10 +108,10 @@
           <ruby>食<rt>た</rt></ruby>べ<span class="g">ても</span>いい
         </template>
         <template #translation>
-          It's okay if you eat
+          You may eat
         </template>
         <template #note>
-          Literally, "even if you eat, it's okay"
+          Literally, "even if you eat, it's good"
         </template>
       </GrammarExample>
     </template>

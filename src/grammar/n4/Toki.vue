@@ -116,7 +116,7 @@
             When I have inserted the card, money comes out
           </template>
           <template #note>
-            The past tense indicates a completed action (inserting the card), followed by a present result (money comes out)
+            The past tense indicates a completed action (inserted the card), followed by a present result (money comes out)
           </template>
         </GrammarExample>
 

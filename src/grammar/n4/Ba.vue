@@ -69,8 +69,8 @@
     <template #related>
       <div class="related-mb">Other conditionals:</div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: tara.slug } }" class="link">{{ tara.title }}</RouterLink></div>
-      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: nara.slug } }" class="link">{{ nara.title }}</RouterLink></div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: toIf.slug } }" class="link">{{ toIf.title }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: nara.slug } }" class="link">{{ nara.title }}</RouterLink></div>
       <div class="related-mb" style="margin-top: 20px">Other verb conjugations:</div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink></div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidan.slug } }" class="link">{{ ichidan.title }}</RouterLink></div>

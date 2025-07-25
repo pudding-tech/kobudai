@@ -50,8 +50,8 @@
           While I was watching TV, the phone rang
         </template>
       </GrammarExample>
-      When <ruby>間<rt>あいだ</rt></ruby> is used after a noun, it must be prefixed with the particle <span class="h">の</span>, forming <span class="h">の</span><span class="g"><ruby>間<rt>あいだ</rt></ruby>に</span>.
-      Similarily, when used with な-adjectives, it takes the form <span class="h">な</span><span class="g"><ruby>間<rt>あいだ</rt></ruby>に</span>.
+      When <ruby class="g">間<rt>あいだ</rt></ruby> is used after a noun, it must be prefixed with the particle <span class="h">の</span>, forming <span class="h">の</span><span class="g">間に</span>.
+      Similarily, when used with な-adjectives, it takes the form <span class="h">な</span><span class="g">間に</span>.
       <GrammarExample>
         <template #example>
           <ruby>休<rt>やす</rt></ruby>み<span class="h">の</span><span class="g"><ruby>間<rt>あいだ</rt></ruby>に</span>、この<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>みたい
@@ -64,7 +64,7 @@
       <div class="note">
         <div class="note-title">Note:</div>
         When using <span class="g"><ruby>間<rt>あいだ</rt></ruby>に</span>, "B" must be a shorter event that occurs within the duration of "A".
-        If "B" extends throughout the time when "A" occurs, <span class="g"><ruby>間<rt>あいだ</rt></ruby></span> without the particle に should be used.
+        If "B" extends throughout the time when "A" occurs, <span class="g">間</span> without the particle に should be used.
       </div>
       <GrammarExample>
         <template #example>

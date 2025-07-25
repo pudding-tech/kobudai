@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { toIi as meta, potentialVerbs } from "./metadataN4";
+  import { toIi as meta, potentialVerbs, toIf } from "./metadataN4";
 
   const isPolite = ref(false);
 </script>
@@ -19,6 +19,9 @@
       <div>Short form (non-past) + <span class="grammar-highlight">といい<span v-if="isPolite">ですね</span><span v-else>ね</span></span></div>
       <div class="structure-title small">For myself:</div>
       <div>Short form (non-past) + <span class="grammar-highlight">といいん<span v-if="isPolite">ですが</span><span v-else>だけど</span></span></div>
+    </template>
+    <template #related>
+      Based on the conditional form <RouterLink :to="{ name: 'grammarLoader', params: { slug: toIf.slug } }" class="link">{{ toIf.title }}</RouterLink>
     </template>
     <template #explanation>
       The structure <span class="g">～といい</span> is used to express a hope or wish that something happens or turns out well. It can be
