@@ -9,16 +9,18 @@
   const route = useRoute();
 
   const slug = Array.isArray(route.params.slug) ? route.params.slug[0] : route.params.slug;
-  const grammarPoint = shallowRef<GrammarComponent | null>(null);
+  const grammarPoint = shallowRef<GrammarComponent | undefined>();
   const notFound = ref(false);
 
   onMounted(async () => {
     try {
-      grammarPoint.value = await grammarIndex[slug]?.();
+      if (slug) {
+        grammarPoint.value = await grammarIndex[slug]?.();
+      }
       if (!grammarPoint.value) {
         notFound.value = true;
       }
-      
+
       const metaTitle = grammarPoint.value?.meta?.title;
       if (metaTitle) {
         document.title = `${metaTitle} - Kobudai`;

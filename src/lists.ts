@@ -18,7 +18,7 @@ export const getSublists = () => sublists;
 export const getDefaultMainList = () => defaultMainList;
 
 export const isValidList = (mainList: string, subList: string): boolean => {
-  return mainListsValue.includes(mainList) && sublists[mainList]?.includes(subList);
+  return mainListsValue.includes(mainList) && (sublists[mainList]?.includes(subList) ?? false);
 };
 
 export const getMainListByValue = (value: string): MainList | undefined => {

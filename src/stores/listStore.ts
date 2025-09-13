@@ -12,8 +12,8 @@ export const initLists = () => {
   mainList.value = (loadedMainList && getMainListsValue().includes(loadedMainList)) ? loadedMainList : getDefaultMainList();
 
   const savedSublist: string | undefined = sublistMap.value[mainList.value];
-  const validSublists = getSublists()[mainList.value];
-  sublist.value = validSublists.includes(savedSublist) ? savedSublist : validSublists[0];
+  const validSublists = getSublists()[mainList.value] ?? [];
+  sublist.value = validSublists.includes(savedSublist ?? "") ? savedSublist! : (validSublists[0] ?? "");
   sublistMap.value[mainList.value] = sublist.value;
 };
 
@@ -36,19 +36,19 @@ export const useListStore = () => {
     localStorage.setItem("mainList", mainList.value);
 
     // If sublist is provided and valid, set it; otherwise set sublist to last-used or default for this main list
-    const validSublists = getSublists()[mainList.value];
+    const validSublists = getSublists()[mainList.value] ?? [];
     if (sublist && validSublists.includes(sublist)) {
       setSublist(sublist);
     }
     else {
       const lastSublist = sublistMap.value[mainList.value];
-      setSublist(lastSublist && validSublists.includes(lastSublist) ? lastSublist : validSublists[0]);
+      setSublist(lastSublist && validSublists.includes(lastSublist) ? lastSublist : (validSublists[0] ?? ""));
     }
   };
 
   const setSublist = (list: string) => {
-    const validSublists = getSublists()[mainList.value];
-    sublist.value = validSublists.includes(list) ? list : validSublists[0];
+    const validSublists = getSublists()[mainList.value] ?? [];
+    sublist.value = validSublists.includes(list) ? list : (validSublists[0] ?? "");
     sublistMap.value[mainList.value] = sublist.value;
     localStorage.setItem("sublists", JSON.stringify(sublistMap.value));
 
