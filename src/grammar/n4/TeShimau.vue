@@ -76,7 +76,7 @@
         mistakes, or things that happened against one's intention.
         <GrammarExample>
           <template #example>
-            あ、忘れ<span class="g">ちゃった</span>！
+            あ、<ruby>忘<rt>わす</rt></ruby>れ<span class="g">ちゃった</span>！
           </template>
           <template #translation>
             Oh, I completely forgot!
@@ -87,7 +87,7 @@
         </GrammarExample>
         <GrammarExample>
           <template #example>
-            飲ん<span class="g">じゃう</span>
+            <ruby>飲<rt>の</rt></ruby>ん<span class="g">じゃう</span>
           </template>
           <template #translation>
             I will drink it all up (...and might regret it)

@@ -77,7 +77,7 @@
         Furthermore, いただく is conjugated into its negative potential polite form, <span class="g">いただけません</span>, to gently ask if the speaker may receive the favor of the action.
         <br><br>
         In this construction, you are humbly positioning yourself as the receiver of a favor or action from the listener. So, when you say <span class="g">～ていただけませんか</span>,
-        you're politely asking someone to do something for you, emphasizing your respectful position as the recipient.
+        you're politely asking someone to do something for you, emphasizing your humble position as the recipient.
         <br><br>
         This contrasts with <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKudasai.slug } }" class="link">{{ teKudasai.title }}</RouterLink>, which uses the
         <RouterLink :to="{ name: 'grammarLoader', params: { slug: sonkeigo.slug } }" class="link">honorific (sonkeigo)</RouterLink>

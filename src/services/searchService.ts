@@ -4,10 +4,11 @@ import type { GrammarPoint } from "@/types/types";
 
 export const searchResults = ref<GrammarPoint[]>([]);
 
-const titleWeight = 4;
-const subtitleWeight = 3;
-const tagWeight = 1;
-const fullMatchFactor = 2;
+const TITLE_WEIGHT = 4;
+const SUBTITLE_WEIGHT = 3;
+const TAG_WEIGHT = 1;
+const FULL_MATCH_FACTOR = 2;
+const MAX_RESULTS = 30;
 
 export const search = (queryString: string) => {
   if (!queryString.trim()) {
@@ -18,40 +19,40 @@ export const search = (queryString: string) => {
   const query = queryString.toLowerCase().trim();
   const queryWords = query.split(" ").filter(word => word.length > 0);
 
-  const scores = allList
-    .map(item => {
+  searchResults.value = allList
+    .map(gp => {
       let totalScore = 0;
 
       // Match full query
-      totalScore = calculateScore(query, item, fullMatchFactor);
+      totalScore = calculateScore(query, gp, FULL_MATCH_FACTOR);
 
       // Match each word individually, weighted by word length
       if (queryWords.length > 1) {
         const averageWordLength = queryWords.reduce((sum, word) => sum + word.length, 0) / queryWords.length || 1;
         for (const word of queryWords) {
           const lengthFactor = Math.min(word.length / averageWordLength, 2);
-          totalScore += calculateScore(word, item, lengthFactor);
+          totalScore += calculateScore(word, gp, lengthFactor);
         }
       }
 
-      return { item, score: totalScore };
+      return { gp, score: totalScore };
     })
-    .filter(item => item.score > 0)
+    .filter(result => result.score > 0)
     .sort((a, b) => {
       if (b.score !== a.score) {
         return b.score - a.score;
       }
-      return a.item.title.localeCompare(b.item.title);
-    });
-
-    searchResults.value = scores.map(result => result.item).slice(0, 30);
+      return a.gp.title.localeCompare(b.gp.title);
+    })
+    .map(result => result.gp)
+    .slice(0, MAX_RESULTS);
 };
 
-const calculateScore = (query: string, item: GrammarPoint, weightFactor: number): number => {
-  const titleScore = (item.title.toLowerCase().includes(query) || item.titleRomaji?.toLowerCase().includes(query)) ? titleWeight * weightFactor : 0;
-  const subtitleScore = item.subtitle.toLowerCase().includes(query) ? subtitleWeight * weightFactor : 0;
-  const tagScore = item.tags?.reduce((score, tag) => {
-    return score + (tag.toLowerCase().includes(query) ? tagWeight * weightFactor : 0);
+const calculateScore = (query: string, gp: GrammarPoint, weightFactor: number): number => {
+  const titleScore = (gp.title.toLowerCase().includes(query) || gp.titleRomaji?.toLowerCase().includes(query)) ? TITLE_WEIGHT * weightFactor : 0;
+  const subtitleScore = gp.subtitle.toLowerCase().includes(query) ? SUBTITLE_WEIGHT * weightFactor : 0;
+  const tagScore = gp.tags?.reduce((score, tag) => {
+    return score + (tag.toLowerCase().includes(query) ? TAG_WEIGHT * weightFactor : 0);
   }, 0) ?? 0;
 
   return titleScore + subtitleScore + tagScore;

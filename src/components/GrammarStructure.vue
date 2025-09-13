@@ -279,6 +279,7 @@
 
 .structure-content {
   font-size: 1em;
+  font-weight: 340;
   line-height: 1.6;
   transition: font-size 0.2s;
 

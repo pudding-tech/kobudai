@@ -6,8 +6,8 @@ import { registerSW } from "virtual:pwa-register";
 import App from "./App.vue";
 import router from "./router/router";
 import PrimeVue from "primevue/config";
-import Aura from "@primevue/themes/aura";
-import { definePreset } from "@primevue/themes";
+import Aura from "@primeuix/themes/aura";
+import { definePreset } from "@primeuix/themes";
 import { useThemeStore } from "@/stores/themeStore";
 import { initLists } from "./stores/listStore";
 
@@ -119,34 +119,38 @@ const customTheme = definePreset(Aura, {
     card: {
       colorScheme: {
         light: {
-          background: "{zinc.100}",
+          root: {
+            background: "{zinc.100}"
+          }
         },
         dark: {
-          background: "#202020"
+          root: {
+            background: "#202020"
+          }
         }
       }
     },
     dialog: {
       content: {
-        padding: 0
+        padding: "0"
       }
     },
     progressspinner: {
       colorScheme: {
         light: {
           root: {
-            "color.1": "{primary.300}",
-            "color.2": "{primary.300}",
-            "color.3": "{primary.300}",
-            "color.4": "{primary.300}"
+            colorOne: "{primary.300}",
+            colorTwo: "{primary.300}",
+            colorThree: "{primary.300}",
+            colorFour: "{primary.300}"
           }
         },
         dark: {
           root: {
-            "color.1": "{primary.300}",
-            "color.2": "{primary.300}",
-            "color.3": "{primary.300}",
-            "color.4": "{primary.300}"
+            colorOne: "{primary.300}",
+            colorTwo: "{primary.300}",
+            colorThree: "{primary.300}",
+            colorFour: "{primary.300}"
           }
         }
       }

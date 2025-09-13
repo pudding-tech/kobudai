@@ -51,68 +51,74 @@
     }
   ]);
 
-  const data = computed(() => [
-    {
-      row: examples.value[word.value].kanaRow[0],
-      forms: "Plain negative, Plain negative past, Passive, Causative",
-      stem: {
-        kanji: examples.value[word.value].kanji,
-        furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].okurigana[0]
-      },
-      suffix: "～ない、～なかった、<br>～れる、～せる",
-      grammarPoint: [godanNegative, godanPastNegative, passiveVerbs, causativeVerbs],
-      rowNr: 1
-    },
-    {
-      row: examples.value[word.value].kanaRow[1],
-      forms: "Continuative, Polite",
-      stem: {
-        kanji: examples.value[word.value].kanji,
-        furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].okurigana[1]
-      },
-      suffix: "～ます、（～た）、（～て）",
-      grammarPoint: [godanNonPast, godanNegative, godanPast, teVerb],
-      rowNr: 2
-    },
-    {
-      row: examples.value[word.value].kanaRow[2], 
-      forms: "Dictionary, Plain non-past",
-      stem: {
-        kanji: examples.value[word.value].kanji,
-        furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].okurigana[2]
-      },
-      suffix: null,
-      grammarPoint: [godanNonPast],
-      rowNr: 3
-    },
-    {
-      row: examples.value[word.value].kanaRow[3],
-      forms: "Imperative, Potential, Conditional",
-      stem: {
-        kanji: examples.value[word.value].kanji,
-        furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].okurigana[3]
-      },
-      suffix: "～る、～ば",
-      grammarPoint: [imperativeVerbs, potentialVerbs, { slug: ba.slug, title: "Conditional verb" }],
-      rowNr: 4
-    },
-    {
-      row: examples.value[word.value].kanaRow[4],
-      forms: "Volitional",
-      stem: {
-        kanji: examples.value[word.value].kanji,
-        furigana: examples.value[word.value].furigana,
-        okurigana: examples.value[word.value].okurigana[4]
-      },
-      suffix: "～う",
-      grammarPoint: [volitionalVerbs],
-      rowNr: 5
+  const data = computed(() => {
+    const example = examples.value[word.value];
+    if (!example) {
+      return [];
     }
-  ]);
+    return [
+      {
+        row: example.kanaRow[0],
+        forms: "Plain negative, Plain negative past, Passive, Causative",
+        stem: {
+          kanji: example.kanji,
+          furigana: example.furigana,
+          okurigana: example.okurigana[0]
+        },
+        suffix: "～ない、～なかった、<br>～れる、～せる",
+        grammarPoint: [godanNegative, godanPastNegative, passiveVerbs, causativeVerbs],
+        rowNr: 1
+      },
+      {
+        row: example.kanaRow[1],
+        forms: "Continuative, Polite",
+        stem: {
+          kanji: example.kanji,
+          furigana: example.furigana,
+          okurigana: example.okurigana[1]
+        },
+        suffix: "～ます、（～た）、<br>（～て）",
+        grammarPoint: [godanNonPast, godanNegative, godanPast, teVerb],
+        rowNr: 2
+      },
+      {
+        row: example.kanaRow[2], 
+        forms: "Dictionary, Plain non-past",
+        stem: {
+          kanji: example.kanji,
+          furigana: example.furigana,
+          okurigana: example.okurigana[2]
+        },
+        suffix: null,
+        grammarPoint: [godanNonPast],
+        rowNr: 3
+      },
+      {
+        row: example.kanaRow[3],
+        forms: "Imperative, Potential, Conditional",
+        stem: {
+          kanji: example.kanji,
+          furigana: example.furigana,
+          okurigana: example.okurigana[3]
+        },
+        suffix: "～る、～ば",
+        grammarPoint: [imperativeVerbs, potentialVerbs, { slug: ba.slug, title: "Conditional verb" }],
+        rowNr: 4
+      },
+      {
+        row: example.kanaRow[4],
+        forms: "Volitional",
+        stem: {
+          kanji: example.kanji,
+          furigana: example.furigana,
+          okurigana: example.okurigana[4]
+        },
+        suffix: "～う",
+        grammarPoint: [volitionalVerbs],
+        rowNr: 5
+      }
+    ];
+  });
 
   const selectedRow = computed(() => {
     return (data: { rowNr: number }) => {
@@ -185,6 +191,7 @@
 
 .text {
   font-size: 1.2rem;
+  font-weight: 340;
   white-space: nowrap;
 
   &.kanji {
