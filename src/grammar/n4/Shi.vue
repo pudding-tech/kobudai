@@ -120,7 +120,7 @@
         even if the others are not explicitly stated. This gives the sentence an open-ended or suggestive nuance.
         <GrammarExample>
           <template #example>
-            この<ruby>店<rt>みせ</rt></ruby>は<ruby>安<rt>やす</rt></ruby>い<span class="g">し</span>、よく行く
+            この<ruby>店<rt>みせ</rt></ruby>は<ruby>安<rt>やす</rt></ruby>い<span class="g">し</span>、よく<ruby>行<rt>い</rt></ruby>く
           </template>
           <template #translation>
             This store is cheap (among other things), so I often go there

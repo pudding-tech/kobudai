@@ -51,6 +51,7 @@
   display: flex;
   justify-content: center;
   font-size: 1.3em;
+  font-weight: 340;
   text-align: center;
 }
 
