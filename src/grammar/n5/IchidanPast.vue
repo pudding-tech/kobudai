@@ -13,9 +13,7 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta" :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #structure>
       <div class="kanji-mb">
         <ruby>食<rt>た</rt></ruby>べる → <ruby>食<rt>た</rt></ruby>べ<span class="grammar-highlight">{{ isPolite ? "ました" : "た"}}</span>

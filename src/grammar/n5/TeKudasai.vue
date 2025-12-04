@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">ください</span></div>
       <div class="structure-title small">Casual variant</div>

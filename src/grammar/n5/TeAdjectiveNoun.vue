@@ -11,9 +11,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>い-adjective <s class="remove">[い]</s> + <span class="grammar-highlight">くて</span></div>
       <div>な-adjective + <span class="grammar-highlight">で</span></div>

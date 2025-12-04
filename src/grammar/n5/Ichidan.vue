@@ -13,9 +13,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       ～<span class="g">る</span>（～<span class="g">iru/eru</span>）
     </template>

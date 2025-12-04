@@ -10,11 +10,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>
-      <span v-html="meta.title" />
-    </template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       Verb (ます stem) + <span class="grammar-highlight"><ruby>方<rt>かた</rt></ruby></span>
     </template>

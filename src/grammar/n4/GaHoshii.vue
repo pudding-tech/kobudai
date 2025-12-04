@@ -13,9 +13,7 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta" :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #structure>
       <div>Noun + <span class="grammar-highlight">がほしい</span><span v-if="isPolite"> + です</span></div>
       <div class="structure-title small">Talking about someone else's desire (3rd person)</div>

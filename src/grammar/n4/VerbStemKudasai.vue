@@ -10,9 +10,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div class="structure-title top">For regular verbs</div>
       <span class="grammar-highlight">お</span> + verb (ます stem) + <span class="grammar-highlight">ください</span>

@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
+  <GrammarStructure :meta="meta">
     <template #title>
       <div v-if="breakpointService.isMobile()" style="word-break: normal;">
         {{ meta.title }}
@@ -20,7 +20,6 @@
         {{ meta.title }}
       </span>
     </template>
-    <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">いただけませんか</span>
     </template>

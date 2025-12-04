@@ -15,9 +15,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       ～<span class="g">う</span>、～<span class="g">つ</span>、～<span class="g">る</span>、～<span class="g">む</span>、～<span class="g">ぶ</span>、～<span class="g">ぬ</span>、
       ～<span class="g">く</span>、～<span class="g">ぐ</span>、～<span class="g">す</span>

@@ -13,9 +13,7 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta" :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #structure>
       <div>Verb (ます stem) + <span class="grammar-highlight">たい</span><span v-if="isPolite"> + です</span></div>
       <div class="structure-title small">Talking about someone else's desire (3rd person)</div>
@@ -38,19 +36,16 @@
         </template>
       </GrammarExample>
 
-      <!-- <div class="note">
-        <div class="note-title">Note:</div> -->
       When you add <span class="g">たい</span> to a verb, it becomes an い-adjective. This means you can conjugate it like any other い-adjective.
       <ul class="example-list">
         <li><ruby>食<rt>た</rt></ruby>べ<span class="g">たくない</span> → "Don't want to eat"</li>
         <li><ruby>泳<rt>およ</rt></ruby>ぎ<span class="g">たかった</span> → "Wanted to swim"</li>
         <li><ruby>行<rt>い</rt></ruby>き<span class="g">たくなかった</span> → "Didn't want to go"</li>
       </ul>
-      <!-- </div> -->
       This also goes for the polite form, which is made by adding です to the end of the sentence.
       <GrammarExample>
         <template #example>
-          この<ruby>映画<rt>えうが</rt></ruby>を<ruby>見<rt>み</rt></ruby><span class="g">たくない</span>です
+          この<ruby>映画<rt>えいが</rt></ruby>を<ruby>見<rt>み</rt></ruby><span class="g">たくない</span>です
         </template>
         <template #translation>
           I don't want to watch this movie

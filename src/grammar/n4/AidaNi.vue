@@ -10,11 +10,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>
-      <span v-html="meta.title" />
-    </template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div class="structure-title small top">Event "B" happens during "A"</div>
       <div>A + <span class="grammar-highlight"><ruby>間<rt>あいだ</rt></ruby>に</span> + B</div>

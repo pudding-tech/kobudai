@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>(Plain form) + <span class="grammar-highlight">のに</span> + (unexpected fact) </div>
       <div class="structure-inner">

@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { ka as meta } from "./metadataN5";
+  import { ka as meta, ne, yo } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -9,11 +9,20 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       Phrase + <span class="grammar-highlight">か</span>
+    </template>
+    <template #related>
+      <div class="related-mb">
+        Other sentence-ending particles:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: yo.slug } }" class="link">{{ yo.title + " (emphasis)" }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ne.slug } }" class="link">{{ ne.title + " (agreement)" }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
       The sentence-ending particle <span class="g">か</span> in Japanese is used to form questions. It's placed at the end of a sentence to indicate that the sentence is a question, similar to how a question mark works in English.

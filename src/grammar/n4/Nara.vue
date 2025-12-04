@@ -10,9 +10,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>Sentence 1 + <span class="grammar-highlight">なら</span> + Sentence 2</div>
       <div class="structure-inner">

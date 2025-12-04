@@ -11,9 +11,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       (Person + に) + verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">ほしい</span>
     </template>

@@ -4,8 +4,10 @@
   import { lastRoute } from "@/router/router";
   import { usePanelStore } from "@/stores/panelStore";
   import { breakpointService } from "@/services/breakpointService";
+  import type { GrammarPoint } from "@/types/types";
 
   const props = withDefaults(defineProps<{
+    meta: GrammarPoint,
     showPolite?: boolean,
     defaultPolite?: boolean
   }>(), {
@@ -97,17 +99,31 @@
 <template>
   <div v-if="!breakpointService.isMobile()" class="container">
     <div class="bg">
-      <div class="corner">
-        <!-- <RouterLink :to="{ name: 'home' }"> -->
-          <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" v-ripple @click="goHome()" />
-        <!-- </RouterLink> -->
+      <div class="corner-left">
+        <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" v-ripple @click="goHome()" />
+      </div>
+      <div class="corner-right">
+        <!-- prefer slot if provided; otherwise use meta.level -->
+        <slot name="level">
+          {{ props.meta?.level }}
+        </slot>
       </div>
       <div class="header">
         <div class="title">
-          <slot name="title"></slot>
+          <!-- prefer slot if provided; otherwise use meta.title (optionally as HTML) -->
+          <slot name="title">
+            <template v-if="props.meta?.titlePlain">
+              <span v-html="props.meta?.title" />
+            </template>
+            <template v-else>
+              {{ props.meta?.title }}
+            </template>
+          </slot>
         </div>
         <div class="subtitle">
-          <slot name="subtitle"></slot>
+          <slot name="subtitle">
+            {{ props.meta?.subtitle }}
+          </slot>
         </div>
       </div>
       <div class="content">
@@ -153,11 +169,27 @@
   </div>
   <div v-else class="mobile">
     <div class="header-mobile">
+      <div class="level">
+        <!-- prefer slot if provided; otherwise use meta.level -->
+        <slot name="level">
+          {{ props.meta?.level }}
+        </slot>
+      </div>
       <div class="title">
-        <slot name="title"></slot>
+        <!-- prefer slot if provided; otherwise use meta.title (optionally as HTML) -->
+        <slot name="title">
+          <template v-if="props.meta?.titlePlain">
+            <span v-html="props.meta?.title" />
+          </template>
+          <template v-else>
+            {{ props.meta?.title }}
+          </template>
+        </slot>
       </div>
       <div class="subtitle">
-        <slot name="subtitle"></slot>
+        <slot name="subtitle">
+          {{ props.meta?.subtitle }}
+        </slot>
       </div>
     </div>
     <Accordion v-model:value="openPanels" multiple :dt="headerMobile" @update:value="onAccordionUpdate($event)">
@@ -196,6 +228,7 @@
 }
 
 .bg {
+  position: relative;
   background-color: var(--grammar-structure-bg);
   min-width: 1200px;
   max-width: 1200px;
@@ -293,10 +326,21 @@
   line-height: 1.6;
 }
 
-.corner {
+.corner-left {
   position: absolute;
   margin-left: 2px;
   margin-top: 2px;
+}
+
+.corner-right {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: var(--grammar-level-color);
+  font-size: 24px;
+  border: 1px solid var(--grammar-level-border-color);
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .expand-button {
@@ -310,6 +354,7 @@
 
 .mobile {
   .header-mobile {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -317,7 +362,6 @@
     background-color: var(--grammar-structure-header-mobile);
     padding-top: 20px;
     padding-bottom: 20px;
-    /* font-family: "Yu Gothic", "Hiragino Sans", Meiryo, sans-serif; */
 
     .title {
       font-size: 2.4rem;
@@ -333,6 +377,13 @@
       text-align: center;
       margin-top: 10px;
       word-break: keep-all;
+    }
+    .level {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      color: var(--grammar-level-color-mobile);
+      font-size: 18px;
     }
   }
 

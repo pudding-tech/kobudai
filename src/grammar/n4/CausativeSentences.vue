@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>(Commander) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + <span class="g">(causative verb)</span></div>
     </template>

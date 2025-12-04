@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>Negative verb (plain form) + <span class="grammar-highlight">でください</span></div>
       <div class="structure-title small">Casual variant</div>

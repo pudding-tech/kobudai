@@ -13,9 +13,7 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta" :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #structure>
       <div>Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">お<span v-if="!isPolite">く</span><span v-else>きます</span></span></div>
       <div v-if="!isPolite">
