@@ -9,11 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>
-      <span v-html="meta.title" />
-    </template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>(Time reference event) + <span class="grammar-highlight"><ruby>時<rt>とき</rt></ruby></span> + (main event)</div>
       <div class="structure-inner">

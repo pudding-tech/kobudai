@@ -10,9 +10,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">も</span></div>
       <div>い-adjective <s class="remove">[い]</s> + <span class="grammar-highlight">くても</span></div>

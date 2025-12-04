@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div class="structure-title small top">Direct passive</div>
       <div>(Acted upon) <span class="h">は</span>/<span class="h">が</span> + (doer) <span class="h">に</span> + <span class="g">(passive verb)</span></div>

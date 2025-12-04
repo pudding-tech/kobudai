@@ -250,6 +250,8 @@ ruby rt {
   /* GRAMMAR LIST */
   --list-item-bg: #f7f7f7;
   --list-item-bg-hover: white;
+  --list-item-level-color: #8d8d8d;
+  --list-item-level-border-color: #cbcbcb;
 
   /* GRAMMAR STRUCTURE */
   --grammar-structure-bg: #e3e3e3;
@@ -257,6 +259,9 @@ ruby rt {
   --grammar-structure-header: #d6d6d6;
   --grammar-structure-header-mobile: #fbfbfb;
   --grammar-card-border: rgba(73, 73, 73, 0.27);
+  --grammar-level-color: #8d8d8d;
+  --grammar-level-color-mobile: #a3a3a3;
+  --grammar-level-border-color: #b3b3b3;
 
   /* GRAMMAR EXAMPLE */
   --grammar-example-bg: #fdfdfd;
@@ -324,6 +329,8 @@ ruby rt {
   /* GRAMMAR LIST */
   --list-item-bg: #212121;
   --list-item-bg-hover: #2f2f2f;
+  --list-item-level-color: #9d9d9d;
+  --list-item-level-border-color: #383838;
 
   /* GRAMMAR STRUCTURE */
   --grammar-structure-bg: var(--p-zinc-900);
@@ -331,6 +338,9 @@ ruby rt {
   --grammar-structure-header: #393939;
   --grammar-structure-header-mobile: #111111;
   --grammar-card-border: rgba(73, 73, 73, 0.74);
+  --grammar-level-color: #9d9d9d;
+  --grammar-level-color-mobile: #696969;
+  --grammar-level-border-color: #4d4d4d;
 
   /* GRAMMAR EXAMPLE */
   --grammar-example-bg: #2d2d2d;

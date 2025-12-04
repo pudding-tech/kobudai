@@ -10,9 +10,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       Verb (ます stem) + <span class="grammar-highlight">ませんか</span>
     </template>

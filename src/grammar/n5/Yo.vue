@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { yo as meta } from "./metadataN5";
+  import { yo as meta, ka, ne } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -9,11 +9,20 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       Sentence + <span class="grammar-highlight">よ</span>
+    </template>
+    <template #related>
+      <div class="related-mb">
+        Other sentence-ending particles:
+      </div>
+      <div class="related-mb">
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ka.slug } }" class="link">{{ ka.title + " (question marking particle)" }}</RouterLink>
+      </div>
+      <div>
+        - <RouterLink :to="{ name: 'grammarLoader', params: { slug: ne.slug } }" class="link">{{ ne.title + " (agreement)" }}</RouterLink>
+      </div>
     </template>
     <template #explanation>
       The sentence-ending particle <span class="g">よ</span> is used to give emphasis, assert information, or provide new information that the speaker believes the listener may not know. It makes the statement more forceful or confident, similar to saying "you know" or "I'm telling you" in English.

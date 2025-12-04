@@ -9,11 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>
-      <span v-html="meta.title" />
-    </template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       "Name" + <span class="grammar-highlight">と言う</span> + (noun)
     </template>

@@ -10,9 +10,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>Clause (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">すみません</span></div>
       <div class="structure-title small">Other variations</div>

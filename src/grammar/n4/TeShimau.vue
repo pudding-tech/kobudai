@@ -13,9 +13,7 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta" :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #structure>
       <div>Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">しま<span v-if="!isPolite">う</span><span v-else>います</span></span></div>
       <div v-if="!isPolite">
@@ -62,7 +60,7 @@
         To avoid confusion:
         <ul>
           <li>Use it with positive or neutral verbs in formal contexts to express completion.</li>
-          <li>Expect it to be heard as regretful when used with negative or accident-prone actions.</li>
+          <li>Expect it to be understood as regretful when used with negative or accident-prone actions.</li>
         </ul>
       </div>
 

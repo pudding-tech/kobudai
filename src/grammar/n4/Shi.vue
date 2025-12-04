@@ -11,9 +11,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>Reason + <span class="grammar-highlight">し</span> + reason + <span class="grammar-highlight">し</span> + situation</div>
       <div class="structure-inner">

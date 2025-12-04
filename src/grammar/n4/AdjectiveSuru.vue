@@ -1,9 +1,9 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
+  import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { adjectiveSuru as meta } from "./metadataN4";
   import { adverbs } from "../n5/metadataN5";
-import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
 </script>
 
 <script lang="ts">
@@ -11,9 +11,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>い-adjective <s class="remove">[い]</s> + <span class="grammar-highlight">く</span> + <span class="grammar-highlight">する</span></div>
       <div>な-adjective + <span class="grammar-highlight">に</span> + <span class="grammar-highlight">する</span></div>

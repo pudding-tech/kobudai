@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       Noun + が／を + <span class="grammar-highlight">number</span> + <span class="grammar-highlight">しか</span> + <span class="grammar-highlight">verb (negative)</span>
     </template>

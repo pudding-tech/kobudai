@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div class="structure-title small top">Done like "A", or a charcteristic like "A"</div>
       <div>Noun A + <span class="grammar-highlight">のように</span> + verb/adjective</div>

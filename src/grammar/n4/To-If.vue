@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>Clause 1 + <span class="grammar-highlight">と</span> + clause 2</div>
       <div class="structure-inner">
@@ -34,7 +32,7 @@
       </div>
     </template>
     <template #explanation>
-      The particle <span class="g">と</span> is used to express natural or automatic consequences — something that always
+      The particle <span class="g">と</span> can be used to express natural or automatic consequences — something that always
       or usually happens as a result of something else. It can often be translated as "if", "when", or "whenever", depending on the context.
 
       <ul>

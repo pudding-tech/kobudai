@@ -11,9 +11,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       Negative verb (plain form) + <span class="grammar-highlight">で</span> + main action
     </template>

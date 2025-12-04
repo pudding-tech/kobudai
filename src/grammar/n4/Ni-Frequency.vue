@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title> {{ meta.title }}</template>
-    <template #subtitle> {{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       Period of time + <span class="grammar-highlight">に</span> + number of times
     </template>

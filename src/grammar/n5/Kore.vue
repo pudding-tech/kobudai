@@ -9,9 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>{{ meta.title }}</template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <span class="grammar-highlight">これ</span> (near the speaker)<br>
       <span class="grammar-highlight">それ</span> (near the listener)<br>

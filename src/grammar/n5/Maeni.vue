@@ -9,11 +9,7 @@
 </script>
 
 <template>
-  <GrammarStructure>
-    <template #title>
-      <span v-html="meta.title" />
-    </template>
-    <template #subtitle>{{ meta.subtitle }}</template>
+  <GrammarStructure :meta="meta">
     <template #structure>
       <div>Verb (dictionary form) + <span class="grammar-highlight">前に</span></div>
       <div>Noun + <span class="grammar-highlight"><span class="h">の</span>前に</span></div>

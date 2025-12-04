@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <GrammarStructure :show-polite="true" @politeness-change="(value) => isPolite = value">
+  <GrammarStructure :meta="meta" :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #title>
       <div v-if="breakpointService.isMobile()" style="word-break: normal;">
         {{ meta.title }}
@@ -23,7 +23,6 @@
         {{ meta.title }}
       </span>
     </template>
-    <template #subtitle>{{ meta.subtitle }}</template>
     <template #structure>
       Verb (<span class="grammar-highlight">て-form</span>) + <span class="grammar-highlight">くれてありがとう<span v-if="isPolite">ございます</span></span>
     </template>
