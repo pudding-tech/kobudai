@@ -29,6 +29,33 @@ export const adverbs: GrammarPoint = {
   tags: ["adverbs", "adverb", "adverbial", "adverbials", "ku", "ni"]
 };
 
+export const counters: GrammarPoint = {
+  slug: "counters",
+  title: "Counters",
+  subtitle: "Counting units and objects",
+  titleRomaji: "counters",
+  level: LEVEL,
+  tags: ["counters", "counting", "units", "objects", "tsu", "nin", "dai", "mai", "hon", "satsu", "ko", "hiki", "hito"]
+};
+
+export const de: GrammarPoint = {
+  slug: "で",
+  title: "で",
+  subtitle: "At, In, By (means of), Location particle",
+  titleRomaji: "de",
+  level: LEVEL,
+  tags: ["location", "particle", "by", "at", "in"]
+};
+
+export const deshita: GrammarPoint = {
+  slug: "だった-でした",
+  title: "だった・でした",
+  subtitle: "Was, Were",
+  titleRomaji: "datta deshita",
+  level: LEVEL,
+  tags: ["past", "da", "desu", "copula"]
+};
+
 export const desu: GrammarPoint = {
   slug: "です",
   title: "だ・です",
@@ -36,6 +63,16 @@ export const desu: GrammarPoint = {
   titleRomaji: "da desu",
   level: LEVEL,
   tags: ["copula"]
+};
+
+export const gaAruIru: GrammarPoint = {
+  slug: "がある-いる",
+  title: "～が<ruby>有<rt>あ</rt></ruby>る・～が<ruby>居<rt>い</rt></ruby>る",
+  subtitle: "There is/are (existence)",
+  titleRomaji: "ga aru ga iru",
+  titlePlain: "～がある・～がいる",
+  level: LEVEL,
+  tags: ["existence", "there is", "there are", "verbs"]
 };
 
 export const godan: GrammarPoint = {
@@ -89,6 +126,15 @@ export const ha: GrammarPoint = {
   subtitle: "Topic marking particle (As for...)",
   titleRomaji: "ha wa",
   level: LEVEL
+};
+
+export const he: GrammarPoint = {
+  slug: "へ",
+  title: "へ",
+  subtitle: "Direction particle (to, towards)",
+  titleRomaji: "he e",
+  level: LEVEL,
+  tags: ["direction", "particle", "to", "towards"]
 };
 
 export const ichidan: GrammarPoint = {
@@ -156,6 +202,14 @@ export const ka: GrammarPoint = {
   title: "か",
   subtitle: "Question marking particle",
   titleRomaji: "ka",
+  level: LEVEL
+};
+
+export const kara: GrammarPoint = {
+  slug: "から",
+  title: "から",
+  subtitle: "Because, Since, So",
+  titleRomaji: "kara",
   level: LEVEL
 };
 
@@ -227,6 +281,15 @@ export const ne: GrammarPoint = {
   level: LEVEL
 };
 
+export const ni: GrammarPoint = {
+  slug: "に",
+  title: "に",
+  subtitle: "Indicates location, direction, time",
+  titleRomaji: "ni",
+  level: LEVEL,
+  tags: ["direction", "location", "time", "particle"]
+};
+
 export const no: GrammarPoint = {
   slug: "の",
   title: "の",
@@ -242,6 +305,16 @@ export const qualifierSentences: GrammarPoint = {
   titleRomaji: "Sentence plus noun",
   level: LEVEL,
   tags: ["qualifier", "sentences"]
+};
+
+export const sukiKirai: GrammarPoint = {
+  slug: "好き-嫌い",
+  title: "<ruby>好<rt>す</rt></ruby>き・<ruby>嫌<rt>きら</rt></ruby>い",
+  subtitle: "Likes and dislikes",
+  titleRomaji: "suki kirai",
+  titlePlain: "好き・嫌い",
+  level: LEVEL,
+  tags: ["like", "dislike", "preferences", "feelings"]
 };
 
 export const tai: GrammarPoint = {
@@ -316,12 +389,39 @@ export const teAdjectiveNoun: GrammarPoint = {
   tags: ["te", "te", "te", "te", "te", "te", "te-form", "teform", "adjective", "adjectives", "noun", "conjunctive", "connecting", "clauses"]
 };
 
+export const to: GrammarPoint = {
+  slug: "と",
+  title: "と",
+  subtitle: "And, with",
+  titleRomaji: "to",
+  level: LEVEL,
+  tags: ["and", "with", "particle"]
+};
+
 export const transitivityPairs: GrammarPoint = {
   slug: "transitivity-pairs",
   title: "Transitivity Pairs",
   subtitle: "Understanding transitive and intransitive verbs",
   level: LEVEL,
   tags: ["transitivity", "pairs", "transitive", "intransitive", "verbs", "verb pairs", "action verbs"]
+};
+
+export const wo: GrammarPoint = {
+  slug: "を",
+  title: "を",
+  subtitle: "Direct object marking particle",
+  titleRomaji: "wo o",
+  level: LEVEL,
+  tags: ["object", "particle", "direct object", "wo", "o"]
+};
+
+export const ya: GrammarPoint = {
+  slug: "や",
+  title: "や",
+  subtitle: "And such, among other things",
+  titleRomaji: "ya",
+  level: LEVEL,
+  tags: ["and such", "non-exhaustive list", "とか", "toka", "particle"]
 };
 
 export const yo: GrammarPoint = {

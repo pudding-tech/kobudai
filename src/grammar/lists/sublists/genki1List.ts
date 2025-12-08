@@ -1,5 +1,6 @@
 import type { Sublist } from "@/types/types";
 import * as n5 from "../../n5/metadataN5";
+import { volitionalVerbs } from "../../n4/metadataN4";
 
 export const genki1List: Sublist = {
   name: "Genki I",
@@ -34,10 +35,14 @@ export const genki1List: Sublist = {
       grammarPoints: [
         n5.godan,
         n5.ichidan,
+        n5.wo,
         n5.godanNonPast,
         n5.ichidanNonPast,
         n5.godanNegative,
         n5.ichidanNegative,
+        n5.de,
+        n5.ni,
+        n5.he,
         n5.masenka
       ]
     },
@@ -45,10 +50,13 @@ export const genki1List: Sublist = {
       title: "CHAPTER 4",
       value: 4,
       grammarPoints: [
+        n5.gaAruIru,
+        n5.deshita,
         n5.godanPast,
         n5.ichidanPast,
         n5.godanPastNegative,
-        n5.ichidanPastNegative
+        n5.ichidanPastNegative,
+        n5.to
       ]
     },
     {
@@ -56,7 +64,10 @@ export const genki1List: Sublist = {
       value: 5,
       grammarPoints: [
         n5.adjectivesI,
-        n5.adjectivesNa
+        n5.adjectivesNa,
+        n5.sukiKirai,
+        volitionalVerbs,
+        n5.counters
       ]
     },
     {
@@ -66,7 +77,8 @@ export const genki1List: Sublist = {
         n5.teVerb,
         n5.teKudasai,
         n5.temoii,
-        n5.teHaIkenai
+        n5.teHaIkenai,
+        n5.kara
       ]
     },
     {
@@ -89,6 +101,7 @@ export const genki1List: Sublist = {
       value: 11,
       grammarPoints: [
         n5.tai,
+        n5.ya
       ]
     }
   ]

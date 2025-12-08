@@ -34,20 +34,28 @@ export const n5List: Sublist = {
       grammarPoints: [
         n5.godan,
         n5.ichidan,
+        n5.wo,
         n5.godanNonPast,
         n5.ichidanNonPast,
         n5.godanNegative,
-        n5.ichidanNegative
+        n5.ichidanNegative,
+        n5.de,
+        n5.ni,
+        n5.he,
       ]
     },
     {
       title: "SECTION 4",
       value: 4,
       grammarPoints: [
+        n5.gaAruIru,
+        n5.deshita,
         n5.godanPast,
         n5.ichidanPast,
         n5.godanPastNegative,
-        n5.ichidanPastNegative
+        n5.ichidanPastNegative,
+        n5.to,
+        n5.ya
       ]
     },
     {
@@ -56,6 +64,7 @@ export const n5List: Sublist = {
       grammarPoints: [
         n5.adjectivesI,
         n5.adjectivesNa,
+        n5.sukiKirai,
         n5.adverbs,
         n5.masenka,
         n5.qualifierSentences
@@ -65,6 +74,7 @@ export const n5List: Sublist = {
       title: "SECTION 6",
       value: 6,
       grammarPoints: [
+        n5.counters,
         n5.teVerb,
         n5.teAdjectiveNoun,
         n5.teKudasai,
@@ -78,7 +88,8 @@ export const n5List: Sublist = {
         n5.teIru,
         n5.transitivityPairs,
         n5.maeni,
-        n5.teKara
+        n5.teKara,
+        n5.kara
       ]
     },
     {

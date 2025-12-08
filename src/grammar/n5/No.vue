@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { no as meta } from "./metadataN5";
+  import { no as meta, ha, ni, mo, to } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -11,7 +11,16 @@
 <template>
   <GrammarStructure :meta="meta">
     <template #structure>
-      Noun ₁ + <span class="grammar-highlight">の</span> + Noun ₂
+      Noun + <span class="grammar-highlight">の</span> + noun
+    </template>
+    <template #related>
+      <div class="related-mb">
+        Other common particles:
+      </div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: ha.slug } }" class="link">{{ ha.title + " (topic particle)" }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: ni.slug } }" class="link">{{ ni.title + " (location, movement)" }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: to.slug } }" class="link">{{ to.title + " (and, with)" }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: mo.slug } }" class="link">{{ mo.title + " (also, too)" }}</RouterLink></div>
     </template>
     <template #explanation>
       The particle <span class="g">の</span> in the pattern "noun <span class="g">の</span> noun" is used to show possession or describe the relationship between two nouns - much like 's or "of" in English.

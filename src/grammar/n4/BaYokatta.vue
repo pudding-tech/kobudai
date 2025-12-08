@@ -22,8 +22,8 @@
       Based on the <RouterLink :to="{ name: 'grammarLoader', params: { slug: ba.slug } }" class="link">{{ ba.title }}</RouterLink> conditional form
     </template>
     <template #explanation>
-      The structure <span class="g">～ばよかった</span> used to express regret, remorse, or a missed opportunity about something you (or someone else)
-      didn't do, but now wish had happened.
+      The structure <span class="g">～ばよかった</span> is used to express regret, remorse, or a missed opportunity about something you (or someone else)
+      didn't do, but now wish had done.
       <br><br>
       To use this grammar point, take the conditional <span class="g">～ば</span> form of a verb and attach <span class="g">よかった</span> ("was good").
       <GrammarExample>
