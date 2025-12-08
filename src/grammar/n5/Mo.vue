@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { mo as meta } from "./metadataN5";
+  import { mo as meta, ha, ni, no, to } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -12,6 +12,15 @@
   <GrammarStructure :meta="meta">
     <template #structure>
       Noun + <span class="grammar-highlight">も</span>
+    </template>
+    <template #related>
+      <div class="related-mb">
+        Other common particles:
+      </div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: ha.slug } }" class="link">{{ ha.title + " (topic particle)" }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: ni.slug } }" class="link">{{ ni.title + " (location, movement)" }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: to.slug } }" class="link">{{ to.title + " (and, with)" }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: no.slug } }" class="link">{{ no.title + " (possesion, relationship)" }}</RouterLink></div>
     </template>
     <template #explanation>
       The particle <span class="g">も</span> means "also" or "too" in Japanese. It is used to indicate that something is the same or applies in addition to something else.

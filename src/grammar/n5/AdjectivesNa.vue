@@ -15,8 +15,8 @@
 <template>
   <GrammarStructure :meta="meta" :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #structure>
-      <div>...は + <span class="grammar-highlight">な-adjective</span> + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
-      <div style="margin-bottom: 10px"><span class="grammar-highlight">な-adjective</span> + <span class="h">な</span> + noun + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
+      <div><span class="cat">Predicate:</span>。。。は + <span class="grammar-highlight">な-adjective</span> + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
+      <div style="margin-bottom: 10px"><span class="cat">Modifier:</span><span class="grammar-highlight">な-adjective</span> + <span class="h">な</span> + noun + <span class="grammar-highlight"><span v-if="isPolite">です</span><span v-else>だ</span></span></div>
       <table class="structure-table">
         <thead>
           <tr>
@@ -142,6 +142,15 @@
             I'm not feeling well today
           </template>
         </GrammarExample>
+        Furthermore, じゃ is a contraction of では, so in very formal contexts, you might see or hear <span class="g">ではありません</span> used as well.
+        <GrammarExample>
+          <template #example>
+            ドイツ<ruby>語<rt>ご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby><span class="g">ではありません</span>
+          </template>
+          <template #translation>
+            I'm not good at German
+          </template>
+        </GrammarExample>
       </div>
 
       <div class="section">
@@ -213,5 +222,10 @@
   th, td {
     padding: 8px 8px;
   }
+}
+
+.cat {
+  display: inline-block;
+  width: 100px;
 }
 </style>

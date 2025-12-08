@@ -15,8 +15,8 @@
 <template>
   <GrammarStructure :meta="meta" :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #structure>
-      <div>...は + <span class="grammar-highlight">い-adjective</span> <span v-if="isPolite"> + です</span></div>
-      <div style="margin-bottom: 10px"><span class="grammar-highlight">い-adjective</span> + noun + <span v-if="isPolite">です</span><span v-else>だ</span></div>
+      <div><span class="cat">Predicate:</span>。。。は + <span class="grammar-highlight">い-adjective</span> <span v-if="isPolite"> + です</span></div>
+      <div style="margin-bottom: 10px"><span class="cat">Modifier:</span><span class="grammar-highlight">い-adjective</span> + noun + <span v-if="isPolite">です</span><span v-else>だ</span></div>
       <table class="structure-table">
         <thead>
           <tr>
@@ -211,5 +211,10 @@
   th, td {
     padding: 8px 8px;
   }
+}
+
+.cat {
+  display: inline-block;
+  width: 100px;
 }
 </style>

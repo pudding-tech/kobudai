@@ -3,7 +3,7 @@
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
   import { shi as meta } from "./metadataN4";
-  import { teVerb } from "../n5/metadataN5";
+  import { kara, teVerb } from "../n5/metadataN5";
 </script>
 
 <script lang="ts">
@@ -22,8 +22,8 @@
       </div>
     </template>
     <template #related>
-      Other ways of giving reasons:
-      <div>- から</div>
+      <div class="related-mb">Other ways of giving reasons:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: kara.slug } }" class="link">{{ kara.title }}</RouterLink></div>
       <div>- ので</div>
     </template>
     <template #explanation>
@@ -31,7 +31,7 @@
       When a verb, adjective, or noun clause is followed by <span class="g">し</span>, the clause behaves grammatically as if it were a predicate on its own.
       This makes it possible to stack multiple reasons together seamlessly, unlike other common structures for giving a reason for something.
       <br><br>
-      To use <span class="g">し</span>, simply conjugate the verb, adjective, or noun clause as follows:
+      To use <span class="g">し</span>, simply attach it to the verb, adjective, or noun clause as follows:
       <ul style="padding-right: 40px;">
         <li>For verbs: Attach し after the plain form.</li>
         <GrammarExampleSentences>
@@ -97,7 +97,7 @@
         Compare these two sentences:
         <GrammarExample>
           <template #example>
-            その<ruby>映画<rt>えいが</rt></ruby>は<ruby>面白<rt>おもしろ</rt></ruby>くて<ruby>泣<rt>な</rt></ruby>けておすすめです
+            その<ruby>映画<rt>えいが</rt></ruby>は<ruby>面白<rt>おもしろ</rt></ruby>くて、<ruby>泣<rt>な</rt></ruby>けて、おすすめです
           </template>
           <template #translation>
             That movie is interesting, tear-jerking, and recommended

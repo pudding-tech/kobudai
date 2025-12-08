@@ -2,7 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { transitivityPairs as meta, teIru } from "./metadataN5";
+  import { transitivityPairs as meta, teIru, wo } from "./metadataN5";
 </script>
 
 <script lang="ts">
@@ -15,6 +15,10 @@
       <div><span class="grammar-highlight">Transitive verbs</span> take a direct object — they describe actions that someone does to something.</div>
       <br>
       <div><span class="grammar-highlight">Intransitive verbs</span> do not take a direct object — they describe actions or changes that happen by themselves.</div>
+    </template>
+    <template #related>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: wo.slug } }" class="link">{{ wo.title + " (direct object particle)" }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: teIru.slug } }" class="link">{{ teIru.title }}</RouterLink></div>
     </template>
     <template #explanation>
       In Japanese, many verbs come in pairs that express whether the subject does something (transitive) or whether something happens on its own (intransitive). These are called transitivity pairs.
