@@ -1,6 +1,7 @@
 html {
   font-size: 17px;
   -webkit-tap-highlight-color: transparent;
+  overflow-y: scroll;
 }
 
 body {
@@ -218,6 +219,12 @@ ruby rt {
 .hide-sticky {
   transition: transform 0.2s;
   transform: translateY(-100%);
+}
+
+.ripple-disabled {
+  span[role="presentation"] {
+    display: none !important;
+  }
 }
 
 /*

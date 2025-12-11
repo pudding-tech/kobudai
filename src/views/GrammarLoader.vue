@@ -3,6 +3,7 @@
   import { useRoute } from "vue-router";
   import { grammarIndex } from "@/grammar/grammarIndex";
   import { resolveScroll, setResolveScroll } from "@/router/scrollResolver";
+  import { breakpointService } from "@/services/breakpointService";
   import type { GrammarComponent } from "@/types/types";
   import NotFound from "./NotFound.vue";
 
@@ -43,7 +44,7 @@
   <div class="grammar-loader">
     <NotFound v-if="notFound" />
     <component v-else-if="grammarPoint" :is="grammarPoint.component" />
-    <ProgressSpinner v-else style="display: flex" />
+    <ProgressSpinner v-else class="loading-spinner" :class="{ 'mobile': breakpointService.isMobile() }" />
   </div>
 </template>
 
@@ -51,5 +52,14 @@
 .grammar-loader {
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.loading-spinner {
+  display: flex;
+  overflow: clip;
+
+  &.mobile {
+    margin-top: 40px;
+  }
 }
 </style>

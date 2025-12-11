@@ -48,3 +48,9 @@ export type IchidanChartExample = {
   furigana: string,
   okurigana?: string
 };
+
+export type AppearsInList = {
+  name: string;
+  mainlistValue: string;
+  sublistValue: string;
+}

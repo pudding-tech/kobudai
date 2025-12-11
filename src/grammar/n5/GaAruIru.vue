@@ -2,7 +2,7 @@
   import { ref } from "vue";
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { gaAruIru as meta } from "./metadataN5";
+  import { gaAruIru as meta, godan, godanNegative, ichidan } from "./metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -16,6 +16,11 @@
     <template #structure>
       <div>Noun + <span class="grammar-highlight">が</span> + <span class="grammar-highlight"><ruby>有<rt>あ</rt></ruby><span v-if="isPolite">ります</span><span v-else>る</span></span></div>
       <div>Noun + <span class="grammar-highlight">が</span> + <span class="grammar-highlight"><ruby>居<rt>い</rt></ruby><span v-if="isPolite">ます</span><span v-else>る</span></span></div>
+    </template>
+    <template #related>
+      <div class="related-mb">More about verbs:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: godan.slug } }" class="link">{{ godan.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: ichidan.slug } }" class="link">{{ ichidan.title }}</RouterLink></div>
     </template>
     <template #explanation>
       The expressions <span class="g">～が<ruby>有<rt>あ</rt></ruby>る</span> and <span class="g">～が<ruby>居<rt>い</rt></ruby>る</span>, often written in hiragana only
@@ -46,6 +51,20 @@
             There is a test tomorrow
           </template>
         </GrammarExample>
+
+        <div class="note">
+          <div class="note-title">Note:</div>
+          The plain negative form of <span class="g">ある</span> is irregular, and becomes <span class="g">ない</span>.
+          See <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink> for more details.
+        </div>
+        <GrammarExample>
+          <template #example>
+            この<ruby>公園<rt>こうえん</rt></ruby>にトイレが<span class="g">ない</span>
+          </template>
+          <template #translation>
+            There is no restroom in this park
+          </template>
+        </GrammarExample>
       </div>
       <div class="section">
         <div class="grammar-subtitle">～がいる (animate beings)</div>
@@ -73,14 +92,10 @@
           </template>
         </GrammarExample>
       </div>
-      You may notice the last example's translation includes "I have a friend", which leads to an important additional meaning of this structure.
+      You may notice the last example's translation includes "I have a friend", which leads to an important additional meaning of these verbs.
 
       <div class="section">
         <div class="grammar-subtitle">The additional meaning: "I have …"</div>
-        <!-- In Japanese, possession is often expressed using the same existence structure:
-        <ul>
-          <li>[Location] に + [thing/person] + <span class="g">が</span> + <span class="g">ある</span>／<span class="g">いる</span></li>
-        </ul> -->
         Japanese does not use a verb equivalent to English "to have" for basic possession. Instead, it expresses possession
         by stating that something exists in the speaker's world — and the listener understands it as "I have...".
         When the location is implicit (often the speaker's personal sphere), the sentence naturally takes on the meaning "I have...".
@@ -97,18 +112,15 @@
         </GrammarExample>
         <GrammarExample>
           <template #example>
-            <ruby>犬<rt>いぬ</rt></ruby>が<span class="g">います</span>
+            <ruby>妹<rt>いもうと</rt></ruby>が<span class="g">います</span>
           </template>
           <template #translation>
-            I have a dog
+            I have a younger sister
           </template>
           <template #note>
-            Literally, "there is a dog"
+            Literally, "there is a younger sister"
           </template>
         </GrammarExample>
-        <!-- Japanese does not use a verb equivalent to English "to have" for basic possession.
-        Instead, it expresses possession by stating that something exists in the speaker's world —
-        and the listener understands it as "I have...". -->
       </div>
     </template>
   </GrammarStructure>

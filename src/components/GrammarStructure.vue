@@ -1,9 +1,10 @@
 <script setup lang="ts">
-  import { ref, useSlots } from "vue";
+  import { computed, ref } from "vue";
   import { useRouter } from "vue-router";
   import { lastRoute } from "@/router/router";
   import { usePanelStore } from "@/stores/panelStore";
   import { breakpointService } from "@/services/breakpointService";
+  import { getSublistsForGrammarPoint } from "@/utils/getSublistsForGrammarPoint";
   import type { GrammarPoint } from "@/types/types";
 
   const props = withDefaults(defineProps<{
@@ -19,11 +20,14 @@
 
   const router = useRouter();
   const panelStore = usePanelStore();
-  const slots = useSlots();
-  const hasRelated = !!slots.related;
+  const appearances = computed(() => getSublistsForGrammarPoint(props.meta));
 
   const isPolite = ref(props.defaultPolite);
   const isExpanded = ref(false);
+  const appearsIn = ref();
+  const appearsInMobile = ref(false);
+  const popupHideTimeout = ref<number | null>(null);
+  const suppressPopupUntil = ref<number>(0);
   const openPanels = ref<string[]>(
     [
       panelStore.showStructure.value ? "0" : null,
@@ -44,10 +48,43 @@
 
   const expandChange = () => {
     isExpanded.value = !isExpanded.value;
+
+    // Suppress "appears in" popup when collapsing structure
+    if (isExpanded.value === false && breakpointService.isMobile() === false) {
+      suppressPopupUntil.value = Date.now() + 300;
+    }
   };
 
   const politenessChange = () => {
     emit("politenessChange", isPolite.value);
+  };
+
+  const showAppearsInPopup = (event: MouseEvent) => {
+    cancelHidePopup();
+
+    // Suppress popup if recently collapsed structure
+    if (Date.now() < suppressPopupUntil.value) {
+      return;
+    }
+    appearsIn.value.show(event);
+  };
+
+  const hideAppearsInPopup = (delay: number) => {
+    popupHideTimeout.value = window.setTimeout(() => {
+      appearsIn.value.hide();
+    }, delay);
+  };
+
+  const cancelHidePopup = () => {
+    if (popupHideTimeout.value) {
+      clearTimeout(popupHideTimeout.value);
+      popupHideTimeout.value = null;
+    }
+  };
+
+  const toggleAppearsInMobile = (event: MouseEvent) => {
+    event?.stopPropagation();
+    appearsInMobile.value = !appearsInMobile.value;
   };
 
   const goHome = () => {
@@ -94,6 +131,12 @@
       }
     }
   });
+
+  const mobileDialog = ref({
+    content: {
+      padding: "0 26px 22px"
+    }
+  });
 </script>
 
 <template>
@@ -131,12 +174,10 @@
           <Card :class="['card', 'top-left', { 'expanded': isExpanded }]">
             <template #title>
               <div class="info-title">
-                <div class="structure">
-                  <div>Structure</div>
-                  <div>
-                    <Button :icon="isExpanded ? 'pi pi-arrow-down-left-and-arrow-up-right-to-center' : 'pi pi-arrow-up-right-and-arrow-down-left-from-center'" severity="secondary" :class="{ 'expand-button': showPolite }" @click="expandChange()" />
-                    <SelectButton v-if="props.showPolite" v-model="isPolite" :options="options" option-label="label" option-value="value" :allow-empty="false" @update:model-value="politenessChange()" />
-                  </div>
+                <div>Structure</div>
+                <div>
+                  <Button :icon="isExpanded ? 'pi pi-arrow-down-left-and-arrow-up-right-to-center' : 'pi pi-arrow-up-right-and-arrow-down-left-from-center'" severity="secondary" :class="{ 'expand-button': showPolite }" @click="expandChange()" />
+                  <SelectButton v-if="props.showPolite" v-model="isPolite" :options="options" option-label="label" option-value="value" :allow-empty="false" @update:model-value="politenessChange()" />
                 </div>
               </div>
             </template>
@@ -148,7 +189,18 @@
           </Card>
           <Card class="card top-right" :class="{ 'hidden': isExpanded }">
             <template #title>
-              <div class="info-title mg-bottom">Related</div>
+              <div class="info-title">
+                <div>Related</div>
+                <Button icon="pi pi-link" severity="secondary" @mouseenter="showAppearsInPopup($event)" @mouseleave="hideAppearsInPopup(150)" class="ripple-disabled" />
+              </div>
+              <Popover ref="appearsIn" style="max-width: 280px;" @mouseenter="cancelHidePopup()" @mouseleave="hideAppearsInPopup(150)">
+                <div>This grammar point appears in the following resources:</div>
+                <ul class="appears-in-list">
+                  <li v-for="list in appearances" :key="list.sublistValue">
+                    <RouterLink :to="{ name: 'list', params: { mainlist: list.mainlistValue, sublist: list.sublistValue } }" class="link">{{ list.name }}</RouterLink>
+                  </li>
+                </ul>
+              </Popover>
             </template>
             <template #content>
               <div class="related-content">
@@ -205,8 +257,21 @@
           </div>
         </AccordionContent>
       </AccordionPanel>
-      <AccordionPanel v-if="hasRelated" value="1">
-        <AccordionHeader>Related</AccordionHeader>
+      <AccordionPanel value="1">
+        <AccordionHeader>
+          <div class="related-title-mobile">
+            Related
+            <Button icon="pi pi-link" severity="secondary" class="appears-button-mobile" @click="toggleAppearsInMobile($event)" />
+          </div>
+          <Dialog v-model:visible="appearsInMobile" modal :dismissableMask="true" :closable="false" :dt="mobileDialog" style="width: 90vw; min-height: 54vw;">
+            <div>This grammar point appears in the following resources:</div>
+            <ul class="appears-in-list">
+              <li v-for="list in appearances" :key="list.sublistValue">
+                <RouterLink :to="{ name: 'list', params: { mainlist: list.mainlistValue, sublist: list.sublistValue } }" class="link">{{ list.name }}</RouterLink>
+              </li>
+            </ul>
+          </Dialog>
+        </AccordionHeader>
         <AccordionContent>
           <div class="related">
             <slot name="related"></slot>
@@ -297,17 +362,10 @@
 }
 
 .info-title {
+  display: flex;
+  justify-content: space-between;
   font-size: 1.2rem;
   opacity: 0.8;
-  
-  &.mg-bottom {
-    margin-bottom: 5px;
-  }
-
-  .structure {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .structure-content {
@@ -350,6 +408,10 @@
 .explanation {
   line-height: 1.5;
   word-break: keep-all;
+}
+
+.appears-in-list li:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .mobile {
@@ -400,6 +462,16 @@
 
     &.big-text {
       font-size: 1.7rem;
+    }
+  }
+
+  .related-title-mobile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .appears-button-mobile {
+      margin: -10px 0;
     }
   }
 

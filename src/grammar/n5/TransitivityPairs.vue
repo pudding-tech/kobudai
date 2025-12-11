@@ -122,7 +122,7 @@
       Intransitive verbs do not take a direct object — the subject itself experiences the action, usually marked with <span class="h">が</span>.
       <GrammarExample>
         <template #example>
-          <ruby>ドア<rt>どあ</rt></ruby><span class="h">が</span><ruby>開<rt>あ</rt></ruby>きました
+          ドア<span class="h">が</span><ruby>開<rt>あ</rt></ruby>きました
         </template>
         <template #translation>
           The door opened

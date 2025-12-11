@@ -80,8 +80,8 @@
         </template>
       </GrammarExample>
       Over time, a hybrid form became popular in modern Japanese: <span class="g">じゃないです</span>, where the general politeness marker です is added to the end of the casual <span class="g">じゃない</span>.
-      This form is widely used in speech because it softens the casual <span class="g">じゃない</span> by adding です, which makes it sound a bit more polite — even though it’s technically redundant.
-      After all, ない is already the plain negative form of ありません, so saying <span class="g">じゃないです</span> is like saying “not-is” and then tacking on “is” again.
+      This form is widely used in speech because it softens the casual <span class="g">じゃない</span> by adding です, which makes it sound a bit more polite — even though it's technically redundant.
+      After all, ない is already the plain negative form of ありません, so saying <span class="g">じゃないです</span> is like saying "is not" and then tacking on "is" again.
       Grammatically speaking, it's not ideal — but socially, it's accepted and very common in most everyday contexts. It should however be avoided in formal writing or speeches.
       <GrammarExample>
         <template #example>
@@ -91,7 +91,18 @@
           (I am) not a teacher
         </template>
         <template #note>
-          Polite form
+          Common polite form
+        </template>
+      </GrammarExample>
+      <GrammarExample>
+        <template #example>
+          <ruby>先生<rt>せんせい</rt></ruby><span class="g">ではありません</span>
+        </template>
+        <template #translation>
+          (I am) not a teacher
+        </template>
+        <template #note>
+          Formal polite form
         </template>
       </GrammarExample>
       <div class="note">
