@@ -3,7 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
-  import { adjectivesNa as meta, adjectivesI, adverbs } from "./metadataN5";
+  import { adjectivesNa as meta, adjectivesI, adverbs, sukiKirai } from "./metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -52,6 +52,7 @@
     <template #related>
       <div class="related-mb">See also:</div>
       <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: adjectivesI.slug } }" class="link">{{ adjectivesI.title }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: sukiKirai.slug } }" class="link">{{ sukiKirai.titlePlain }}</RouterLink></div>
       <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: adverbs.slug } }" class="link">{{ adverbs.title }}</RouterLink></div>
     </template>
     <template #explanation>

@@ -69,10 +69,10 @@ export const gaAruIru: GrammarPoint = {
   slug: "がある-いる",
   title: "～が<ruby>有<rt>あ</rt></ruby>る・～が<ruby>居<rt>い</rt></ruby>る",
   subtitle: "There is/are (existence)",
-  titleRomaji: "ga aru ga iru",
+  titleRomaji: "gaaru gairu",
   titlePlain: "～がある・～がいる",
   level: LEVEL,
-  tags: ["existence", "there is", "there are", "verbs"]
+  tags: ["existence", "there is", "there are", "verbs", "inanimate", "animate", "aru", "iru", "ga aru", "ga iru"]
 };
 
 export const godan: GrammarPoint = {

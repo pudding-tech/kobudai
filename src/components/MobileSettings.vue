@@ -27,7 +27,7 @@
         <Button label="Close" variant="text" severity="secondary" size="small" class="close-button" @click="closeDrawer()" />
       </div>
       <div class="list-item">
-        <label>Change list:</label>
+        <label>Change resource:</label>
         <Select v-model="selectedMainListValue" :options="props.listOptions" option-label="label" option-value="value" class="list-select" />
       </div>
       <div class="list-item">

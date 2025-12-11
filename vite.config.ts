@@ -10,6 +10,10 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: "autoUpdate",
+      strategies: "generateSW",
+      workbox: {
+        cleanupOutdatedCaches: true
+      },
       manifest: {
         name: "Kobudai",
         short_name: "Kobudai",
