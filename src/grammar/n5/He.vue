@@ -26,7 +26,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
       Unlike <RouterLink :to="{ name: 'grammarLoader', params: { slug: ni.slug } }" class="link">{{ ni.title }}</RouterLink>,
       which emphasizes arrival at a destination, <span class="g">へ</span> highlights movement in the direction of that place.
       <br><br>
-      Use <span class="g">へ</span> with verbs of motion such as <ruby>行<rt>い</rt></ruby>く (to go), <ruby>来<rt>く</rt></ruby>る (to come), and <ruby>帰<rt>かえ</rt></ruby>る (to return).
+      Use <span class="g">へ</span> with verbs of motion such as 行く (いく, to go), 来る (くる, to come), and 帰る (かえる, to return).
 
       <GrammarExample>
         <template #example>
@@ -64,7 +64,7 @@ import GrammarExampleSentences from "@/components/GrammarExampleSentences.vue";
             <ruby>日本<rt>にほん</rt></ruby><span class="g">へ</span><ruby>行<rt>い</rt></ruby>きます
           </div>
           <div class="translation">
-            I am going to Japan (focus on heading toward Japan - destination less emphasized)
+            I am going to Japan (focus on heading towards Japan - destination less emphasized)
           </div>
         </GrammarExampleSentences>
       </div>

@@ -18,7 +18,7 @@
       <div>Reason + <span class="grammar-highlight">から</span> + situation</div>
       <div class="structure-inner">
         <div>Verb + <span class="grammar-highlight">から</span></div>
-        <div>い-adjective + <span class="grammar-highlight">から</span></div>
+        <div>い-adjective + <span class="grammar-highlight"><span v-if="isPolite" class="h">です</span>から</span></div>
         <div>な-adjective + <span class="grammar-highlight"><span v-if="isPolite" class="h">です</span><span v-else class="h">だ</span>から</span></div>
         <div>Noun + <span class="grammar-highlight"><span v-if="isPolite" class="h">です</span><span v-else class="h">だ</span>から</span></div>
       </div>
@@ -46,7 +46,7 @@
           I'll go to bed early because I'm tired
         </template>
         <template #note>
-          Alternately, "I'm tired, so I will go to bed early"
+          Alternatively, "I'm tired, so I will go to bed early"
         </template>
       </GrammarExample>
 
@@ -61,26 +61,55 @@
         </template>
       </GrammarExample>
 
-      から can follow both the plain form and the polite form of verbs, adjectives, and nouns.
-      When using the polite form with な-adjectives and nouns, use <span class="h">です</span> instead of <span class="h">だ</span>, forming
-      <span class="h">です</span><span class="g">から</span>.
-      This pattern is very common in polite requests, explanations, and customer-service dialogue.
+      Despite using the copula だ, <span class="h">だ</span><span class="g">から</span> can be used to form polite sentences.
       <GrammarExample>
         <template #example>
-          こちらのほうが<ruby>安<rt>やす</rt></ruby>い<span class="h">です</span><span class="g">から</span>、おすすめです
+          <ruby>雨<rt>あめ</rt></ruby><span class="h">だ</span><span class="g">から</span>、<ruby>出<rt>で</rt></ruby>かけません
+        </template>
+        <template #translation>
+          I won't go out since it's raining
+        </template>
+      </GrammarExample>
+
+      However, even though it is not strictly necessary in order to form polite sentences, <span class="g">から</span> can follow the polite
+      form of verbs, adjectives, and nouns. When using the polite form with な-adjectives and nouns, use <span class="h">です</span> instead of <span class="h">だ</span>,
+      forming <span class="h">です</span><span class="g">から</span>.
+      This pattern makes the sentence sound very polite and is quite common in customer-service situations.
+      <GrammarExample>
+        <template #example>
+          こちらの<ruby>方<rt>ほう</rt></ruby>が<ruby>安<rt>やす</rt></ruby>い<span class="h">です</span><span class="g">から</span>、おすすめです
         </template>
         <template #translation>
           This one is cheaper, so I recommend it
         </template>
       </GrammarExample>
+
+      It also works with verbs and い-adjectives in their polite forms.
+      <GrammarExample>
+        <template #example>
+          <ruby>忙<rt>いそが</rt></ruby>しい<span class="h">です</span><span class="g">から</span>、<ruby>行<rt>い</rt></ruby>けません
+        </template>
+        <template #translation>
+          I'm busy, so I can't go
+        </template>
+      </GrammarExample>
+      <GrammarExample>
+        <template #example>
+          <ruby>電車<rt>でんしゃ</rt></ruby>がまもなく<ruby>到着<rt>とうちゃく</rt></ruby>します<span class="g">から</span>、ご<ruby>注意<rt>ちゅうい</rt></ruby>ください
+        </template>
+        <template #translation>
+          The train will arrive shortly, so please be careful
+        </template>
+      </GrammarExample>
+
       <div class="note">
         <div class="note-title">Note:</div>
-        Using a polite form before <span class="g">から</span> does not make the entire sentence polite. You must also end the sentence politely.
+        Using a polite form before <span class="g">から</span> does not make the entire sentence polite.
         A sentence like:
         <ul>
           <li><ruby>忙<rt>いそが</rt></ruby>しい<span class="h">です</span><span class="g">から</span>、<ruby>行<rt>い</rt></ruby>かない</li>
         </ul>
-        sounds unnatural because the middle part is polite but the ending is plain. Instead, use either fully polite or fully plain.
+        sounds unnatural because the middle part is polite, but the ending is plain. In these cases, the ending must also be polite.
       </div>
 
       <br>

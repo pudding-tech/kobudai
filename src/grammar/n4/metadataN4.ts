@@ -508,7 +508,7 @@ export const volitionalVerbs: GrammarPoint = {
   title: "Volitional verb",
   subtitle: "～う、～よう、～ましょう (let's, shall we)",
   level: LEVEL,
-  tags: ["volitional", "let's", "shall we", "verb", "godan", "ichidan", "volitional form"]
+  tags: ["volitional", "let's", "shall we", "verb", "godan", "ichidan", "volitional form", "you", "mashou"]
 };
 
 export const volitionalToOmou: GrammarPoint = {

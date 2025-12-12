@@ -215,6 +215,7 @@
 
 .cat {
   display: inline-block;
-  width: 100px;
+  min-width: 94px;
+  opacity: 0.9;
 }
 </style>

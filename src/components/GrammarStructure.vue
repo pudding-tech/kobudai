@@ -191,7 +191,7 @@
             <template #title>
               <div class="info-title">
                 <div>Related</div>
-                <Button icon="pi pi-link" severity="secondary" @mouseenter="showAppearsInPopup($event)" @mouseleave="hideAppearsInPopup(150)" class="ripple-disabled" />
+                <Button icon="pi pi-link" severity="secondary" @mouseenter="showAppearsInPopup($event)" @mouseleave="hideAppearsInPopup(150)" class="appears-in-button ripple-disabled" />
               </div>
               <Popover ref="appearsIn" style="max-width: 280px;" @mouseenter="cancelHidePopup()" @mouseleave="hideAppearsInPopup(150)">
                 <div>This grammar point appears in the following resources:</div>
@@ -412,6 +412,10 @@
 
 .appears-in-list li:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.appears-in-button {
+  cursor: default;
 }
 
 .mobile {

@@ -78,8 +78,8 @@
           Another particle, <RouterLink :to="{ name: 'grammarLoader', params: { slug: he.slug } }" class="link">{{ he.title }}</RouterLink>,
           can also indicate direction or destination, but it focuses more on the general direction rather than a specific endpoint.
           <ul>
-            <li><ruby>京都<rt>きょうと</rt></ruby><span class="g">に</span>。。。→ emphasizes arrival in Kyoto ("I go to Kyoto")</li>
-            <li><ruby>京都<rt>きょうと</rt></ruby>へ。。。→ emphasizes the direction toward Kyoto ("I'm heading toward Kyoto"; arrival is not the focus)</li>
+            <li><ruby>京都<rt>きょうと</rt></ruby><span class="g">に</span>。。。→ emphasizes arrival in Kyoto ("I'm going to Kyoto")</li>
+            <li><ruby>京都<rt>きょうと</rt></ruby>へ。。。→ emphasizes the direction towards Kyoto ("I'm heading towards Kyoto"; arrival is not the focus)</li>
           </ul>
         </div>
       </div>
@@ -107,7 +107,7 @@
           <div class="note-title">Note:</div>
           <span class="g">に</span> is used with exact or clearly defined times. It is not used
           with general time expressions like "today", "tomorrow", "every day", "this week" etc.
-          It can however be used with the words くらい (about, around) and ごろ (around, approximately) to
+          It can however be used with the words くらい (about, around) and ごろ (around) to
           indicate an approximate time.
           <ul>
             <li><ruby>１０分<rt>じゅっぷん</rt></ruby>くらい<span class="g">に</span>。。。→ in about 10 minutes</li>

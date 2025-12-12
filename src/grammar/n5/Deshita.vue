@@ -85,7 +85,10 @@
           Unlike です, which can act as a general politeness marker after い-adjectives, <span class="g">でした</span> cannot be used this way.
           <span class="g">でした</span> is strictly a past-tense form, and because い-adjectives already conjugate to show tense,
           attaching <span class="g">でした</span> would result in double-marking the past. For that reason,
-          even when an い-adjective is in the past tense, you still follow it with です, not <span class="g">でした</span>.
+          even when an い-adjective is in the past tense, you still follow it with です, not <span class="g">でした</span>, e.g.:
+          <ul>
+            <li><ruby>楽<rt>たの</rt></ruby>しいかったです → was fun</li>
+          </ul>
         </div>
       </div>
     </template>
