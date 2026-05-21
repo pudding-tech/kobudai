@@ -18,11 +18,12 @@
   align-items: center;
   justify-content: center;
   height: 80px;
+  background-color: var(--footer-bg);
   border-top: 1px solid var(--footer-border);
 }
 
 .text {
-  color: #777777;
+  color: var(--footer-text-color);
   font-size: 14px;
   text-align: center;
 }

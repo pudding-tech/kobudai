@@ -109,24 +109,24 @@
     colorScheme: {
       light: {
         header: {
-          background: "{zinc.200}", //#f8f9fa
-          hoverBackground: "{zinc.200}",
-          activeBackground: "{zinc.200}",
-          activeHoverBackground: "{zinc.200}",
+          background: "var(--grammar-structure-header-mobile)",
+          hoverBackground: "var(--grammar-structure-header-mobile)",
+          activeBackground: "var(--grammar-structure-header-mobile)",
+          activeHoverBackground: "var(--grammar-structure-header-mobile)",
         },
         content: {
-          background: "#f7f7f7"
+          background: "var(--grammar-structure-bg-mobile)"
         }
       },
       dark: {
         header: {
-          background: "#212121",
-          hoverBackground: "#212121",
-          activeBackground: "#212121",
-          activeHoverBackground: "#212121",
+          background: "var(--grammar-structure-header-mobile)",
+          hoverBackground: "var(--grammar-structure-header-mobile)",
+          activeBackground: "var(--grammar-structure-header-mobile)",
+          activeHoverBackground: "var(--grammar-structure-header-mobile)",
         },
         content: {
-          background: "var(--p-accordion-content-background)"
+          background: "var(--grammar-structure-bg-mobile)"
         }
       }
     }

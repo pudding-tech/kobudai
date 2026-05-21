@@ -8,7 +8,7 @@ import router from "./router/router";
 import PrimeVue from "primevue/config";
 import Aura from "@primeuix/themes/aura";
 import { definePreset } from "@primeuix/themes";
-import { useThemeStore } from "@/stores/themeStore";
+import { useThemeStore, Theme } from "@/stores/themeStore";
 import { initLists } from "./stores/listStore";
 
 import Accordion from "primevue/accordion";
@@ -120,12 +120,12 @@ const customTheme = definePreset(Aura, {
       colorScheme: {
         light: {
           root: {
-            background: "{zinc.100}"
+            background: "var(--card-bg)"
           }
         },
         dark: {
           root: {
-            background: "#202020"
+            background: "var(--card-bg)"
           }
         }
       }
@@ -211,11 +211,10 @@ app.directive("tooltip", Tooltip);
 
 // Set default light/dark mode
 const themeStore = useThemeStore();
-
 const savedTheme = localStorage.getItem("theme");
 const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 if (savedTheme === "dark" || (!savedTheme && prefersDarkMode)) {
-  themeStore.setDarkMode(true, false);
+  themeStore.setTheme(Theme.DARK, false);
 }
 
 // Initialize lists

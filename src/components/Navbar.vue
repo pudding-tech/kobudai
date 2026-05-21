@@ -2,7 +2,7 @@
   import { computed, ref, watch } from "vue";
   import { getMainLists } from "@/lists";
   import { useListStore } from "@/stores/listStore";
-  import { useThemeStore } from "@/stores/themeStore";
+  import { useThemeStore, Theme } from "@/stores/themeStore";
   import { breakpointService } from "@/services/breakpointService";
   import { scrollService } from "@/services/scrollService";
   import { search } from "@/services/searchService";
@@ -34,13 +34,13 @@
     search(query ?? "");
   });
 
-  const toggleDarkMode = () => {
+  const toggleTheme = () => {
     const isDarkMode = document.documentElement.classList.contains("dark-mode");
     if (isDarkMode) {
-      themeStore.setDarkMode(false);
+      themeStore.setTheme(Theme.LIGHT);
     }
     else {
-      themeStore.setDarkMode(true);
+      themeStore.setTheme(Theme.DARK);
     }
   };
 
@@ -89,9 +89,9 @@
       <Select v-if="!breakpointService.isMobile()" v-model="selectedMainListValue" :options="mainListOptions" option-label="label" option-value="value" class="main-list-selector" />
     </template>
     <template #end>
-      <Button v-if="!breakpointService.isMobile()" :icon="themeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" class="mr-10" @click="toggleDarkMode()" />
+      <Button v-if="!breakpointService.isMobile()" :icon="themeStore.theme.value === Theme.DARK ? 'pi pi-moon' : 'pi pi-sun'" class="mr-10" @click="toggleTheme()" />
       <Button v-else icon="pi pi-bars" variant="text" severity="secondary" class="mr-10" @click="openSettings()" />
-      <!-- <ToggleSwitch v-model="darkModeStore.darkMode.value" class="theme-selector" @update:model-value="toggleDarkMode()">
+      <!-- <ToggleSwitch v-model="themeStore.theme.value" class="theme-selector" @update:model-value="toggleTheme()">
         <template #handle="{ checked }">
           <i :class="['!text-xs pi', { 'pi-moon': checked, 'pi-sun': !checked }]" />
         </template>
@@ -109,7 +109,7 @@
     <SearchResults :search-text="searchText" @goto-grammar="closeSearchComponent()" />
   </Popover>
   <!-- Mobile -->
-  <MobileSettings v-model:open="settingsOpen" v-model:selected-list-value="selectedMainListValue" :list-options="mainListOptions" @change-theme="toggleDarkMode()" />
+  <MobileSettings v-model:open="settingsOpen" v-model:selected-list-value="selectedMainListValue" :list-options="mainListOptions" @change-theme="toggleTheme()" />
   <Dialog v-model:visible="searchMobileOpen" modal :closable="false" dismissable-mask :showHeader="false" style="width: 90vw; height: 70vh" :pt="{ content: { style: { height: '100%' } } }">
     <div class="dialog">
       <div class="search-section">

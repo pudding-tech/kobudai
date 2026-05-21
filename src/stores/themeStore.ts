@@ -1,13 +1,17 @@
-import { ref } from "vue";
+import { ref, readonly } from "vue";
 
-const darkMode = ref(false);
+enum Theme {
+  LIGHT,
+  DARK
+};
 
-export const useThemeStore = () => {
+const theme = ref(Theme.LIGHT);
 
-  const setDarkMode = (dark: boolean, save: boolean = true) => {
-    darkMode.value = dark;
+const useThemeStore = () => {
+  const setTheme = (themeValue: Theme, save: boolean = true) => {
+    theme.value = themeValue;
 
-    if (dark) {
+    if (themeValue === Theme.DARK) {
       document.documentElement.classList.add("dark-mode");
     }
     else {
@@ -15,9 +19,14 @@ export const useThemeStore = () => {
     }
 
     if (save) {
-      localStorage.setItem("theme", dark ? "dark" : "light");
+      localStorage.setItem("theme", themeValue === Theme.DARK ? "dark" : "light");
     }
   };
 
-  return { darkMode, setDarkMode };
+  return {
+    theme: readonly(theme),
+    setTheme
+  };
 };
+
+export { useThemeStore, Theme };

@@ -167,7 +167,7 @@
           <div class="text" v-html="slotProps.data.suffix" />
         </template>
       </Column>
-      <Column v-if="props.showLinks && !breakpointService.isMobile()" field="grammarPoint" header="Grammar Points">
+      <Column v-if="props.showLinks && !breakpointService.isMobile()" field="grammarPoint" header="Related Grammar Points">
         <template #body="slotProps">
           <div v-for="(gp, index) in slotProps.data.grammarPoint" :key="index" :class="{ 'links': slotProps.data.grammarPoint.length > 1 }">
             <div :class="{ 'link-mt': slotProps.data.grammarPoint.length > 1 && index !== 0 }">
