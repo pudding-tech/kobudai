@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { useThemeStore } from "@/stores/themeStore";
+  import { useThemeStore, Theme } from "@/stores/themeStore";
 
   const open = defineModel<boolean>("open", { required: true });
   const selectedMainListValue = defineModel<string>("selectedListValue", { required: true });
@@ -18,6 +18,26 @@
   const changeTheme = () => {
     emit("changeTheme");
   };
+
+  const changeGlassEffectsSetting = (value: boolean) => {
+    if (value) {
+      themeStore.setGlassEffects(true);
+    }
+    else {
+      themeStore.setGlassEffects(false);
+    }
+  };
+
+  const buttonStyle = {
+    colorScheme: {
+      light: {
+        outlinedSecondaryBorderColor: "#b6babf"
+      },
+      dark: {
+        outlinedSecondaryBorderColor: "var(--p-surface-700)"
+      }
+    }
+  };
 </script>
 
 <template>
@@ -26,13 +46,31 @@
       <div class="close-section" v-ripple>
         <Button label="Close" variant="text" severity="secondary" size="small" class="close-button" @click="closeDrawer()" />
       </div>
-      <div class="list-item">
-        <label>Change resource:</label>
-        <Select v-model="selectedMainListValue" :options="props.listOptions" option-label="label" option-value="value" class="list-select" />
+      <div class="list-item top">
+        <label for="resource-select">Change resource:</label>
+        <Select
+          inputId="resource-select"
+          v-model="selectedMainListValue"
+          :options="props.listOptions"
+          option-label="label"
+          option-value="value"
+          class="list-select"
+        />
       </div>
       <div class="list-item">
         <label>Change theme:</label>
-        <Button :icon="themeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary" class="theme-select" @click="changeTheme()" />
+        <Button :icon="themeStore.theme.value === Theme.DARK ? 'pi pi-moon' : 'pi pi-sun'" variant="outlined" severity="secondary" :dt="buttonStyle" class="theme-select" @click="changeTheme()" />
+      </div>
+      <div class="list-item bottom">
+        <div>
+          <label for="glass-effects">Glass effects:</label>
+          <div class="glass-effects-note">May reduce performance on some devices</div>
+        </div>
+        <ToggleSwitch
+          inputId="glass-effects"
+          :model-value="themeStore.glassEffects.value"
+          @update:model-value="changeGlassEffectsSetting($event)"
+        />
       </div>
     </div>
   </Drawer>
@@ -47,7 +85,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 16px 0;
+
+  &.top {
+    padding-top: 20px;
+  }
+
+  &.bottom {
+    padding-bottom: 20px;
+  }
 }
 
 .list-select {
@@ -67,6 +113,12 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+.glass-effects-note {
+  margin-top: 6px;
+  font-size: 0.68rem;
+  opacity: 0.6;
 }
 </style>
 

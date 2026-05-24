@@ -132,6 +132,7 @@
       </Accordion>
     </div>
   </div>
+  <!-- Mobile -->
   <div v-else>
     <div class="list-section mobile sticky" :class="{ 'hide-sticky': scrollService.hideSticky() }">
       <span class="title">
@@ -177,20 +178,27 @@
   align-items: center;
 
   &.mobile {
+    --mobile-navbar-offset: 64px;
     padding-top: 20px;
-    background-color: var(--list-section-bg);
+    background: var(--mobile-simple-surface-bg);
     justify-content: space-between;
+
+    :global(:root[data-mobile-glass-effects="true"] &) {
+      background: var(--surface-glass-soft);
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+      backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+    }
 
     &.sticky {
       position: sticky;
       /* top: 0; */
-      top: 65px;
+      top: var(--mobile-navbar-offset);
       z-index: 999;
       transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     &.hide-sticky {
       transition: transform 0.3s;
-      transform: translateY(calc(-100% - 65px));
+      transform: translateY(calc(-100% - var(--mobile-navbar-offset)));
     }
 
     .title {
@@ -211,11 +219,7 @@
 
 .mobile-expand-section {
   display: flex;
-  /* justify-content: end;
-  padding: 0 12px 10px 0;
-  background-color: var(--list-section-bg); */
   padding: 6px 8px;
-  background-color: var(--accordion-color);
   border-bottom: 1px solid var(--line-color-soft);
 
   .expand-button {
@@ -235,10 +239,4 @@
 .last-panel {
   border-bottom: none;
 }
-</style>
-
-<style>
-/* .mobile-expand-section .p-button:hover {
-  background-color: #27272a !important;
-} */
 </style>

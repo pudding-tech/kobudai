@@ -43,7 +43,7 @@
   justify-content: center;
   margin-top: 10px;
   opacity: 0.8;
-  color: var(--grammar-exaple-note-color);
+  color: var(--grammar-example-note-color);
 
   .note-inner {
     max-width: 700px;

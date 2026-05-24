@@ -46,42 +46,15 @@ const customTheme = definePreset(Aura, {
       100: "{emerald.100}",
       200: "{emerald.200}",
       250: "#87c0a7",
-      300: "{emerald.300}",
-      400: "{emerald.400}",
-      500: "{emerald.500}",
-      600: "{emerald.600}",
+      300: "#a8e7d0",
+      400: "#88d8bb",
+      500: "#a4c3b2",
+      600: "#9abdaa",
       700: "{emerald.700}",
       800: "{emerald.800}",
       900: "{emerald.900}",
       950: "{emerald.950}"
-    },
-    // primary: {
-    //   50: "{violet.50}",
-    //   100: "{violet.100}",
-    //   200: "{violet.200}",
-    //   250: "rgb(188, 145, 229)",
-    //   300: "{violet.300}",
-    //   400: "{violet.400}",
-    //   500: "{violet.500}",
-    //   600: "{violet.600}",
-    //   700: "{violet.700}",
-    //   800: "{violet.800}",
-    //   900: "{violet.900}",
-    //   950: "{violet.950}"
-    // },
-    // primary: {
-    //   50: "#f5f7fa",
-    //   100: "#eaeef4",
-    //   200: "#d1dce6",
-    //   300: "#a9bed0",
-    //   400: "#7a9bb6",
-    //   500: "#597e9e",
-    //   600: "#466583",
-    //   700: "#39516b",
-    //   800: "#33475b",
-    //   900: "#2e3c4c",
-    //   950: "#1e2833"
-    // },
+    }
   },
   components: {
     accordion: {
@@ -216,6 +189,10 @@ const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matche
 if (savedTheme === "dark" || (!savedTheme && prefersDarkMode)) {
   themeStore.setTheme(Theme.DARK, false);
 }
+
+// Set default mobile glass effects setting
+const savedGlassEffects = localStorage.getItem("mobileGlassEffects");
+themeStore.setGlassEffects(savedGlassEffects !== "false", false);
 
 // Initialize lists
 initLists();
