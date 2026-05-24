@@ -18,11 +18,20 @@
   align-items: center;
   justify-content: center;
   height: 80px;
+  /* background: var(--footer-bg); */
   border-top: 1px solid var(--footer-border);
+  box-shadow: var(--surface-shadow-soft);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer {
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  }
 }
 
 .text {
-  color: #777777;
+  color: var(--footer-text-color);
   font-size: 14px;
   text-align: center;
 }

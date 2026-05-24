@@ -21,7 +21,7 @@
 <template>
   <div class="result-container" :class="{ 'mobile': props.mobile }">
     <template v-if="searchResults.length">
-      <div v-ripple v-for="result in searchResults" :key="result.title" class="search-result" :class="{ 'mobile': props.mobile }" @click="gotoGrammar(result.slug)">
+      <div v-ripple v-for="result in searchResults" :key="result.slug" class="search-result" :class="{ 'mobile': props.mobile }" @click="gotoGrammar(result.slug)">
         <div class="title" v-html="result.title" />
         <div class="subtitle">{{ result.subtitle }}</div>
       </div>
@@ -38,7 +38,6 @@
 <style scoped>
 .result-container {
   overflow-y: auto;
-  flex-grow: 1;
 
   &.mobile {
     border-bottom-left-radius: var(--p-dialog-border-radius);
@@ -47,12 +46,41 @@
 }
 
 .search-result {
+  --result-bg: var(--search-result-bg);
+  --result-bg-hover: var(--search-result-bg-hover);
+
+  &.mobile {
+    --result-bg: var(--search-result-bg-mobile);
+    --result-bg-hover: var(--search-result-bg-hover-mobile);
+  }
+
   padding: 10px 16px;
-  background-color: var(--search-result-bg);
   line-height: 1.4;
   word-break: keep-all;
   cursor: pointer;
-  transition: background-color 0.08s ease-in;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  &::before {
+    background: var(--result-bg);
+  }
+
+  &::after {
+    background: var(--result-bg-hover);
+    opacity: 0;
+    transition: opacity 0.08s ease-in;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 
   &:not(:last-child) {
     border-bottom: 1px solid var(--search-result-border-color);
@@ -63,7 +91,9 @@
   }
 
   &:hover {
-    background-color: var(--search-result-bg-hover);
+    &::after {
+      opacity: 1;
+    }
   }
 }
 

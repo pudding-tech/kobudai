@@ -44,9 +44,8 @@
   }
 
   &.selected {
-    background-color: #e9e9e9;
-    background-color: #88d8bb;
-    color: black;
+    background-color: var(--custom-select-button-selected-bg);
+    color: var(--custom-select-button-selected-text);
   }
 
   &:first-child {

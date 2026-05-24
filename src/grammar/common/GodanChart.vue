@@ -125,7 +125,7 @@
       if (!props.selectedRow) {
         return "";
       }
-      return data.rowNr === props.selectedRow ? "table-highlight-row" : "table-non-highlight-row";
+      return data.rowNr === props.selectedRow ? (breakpointService.isMobile() ? "table-highlight-row-mobile" : "table-highlight-row") : "table-non-highlight-row";
     };
   });
 </script>
@@ -140,7 +140,7 @@
           </div>
         </template>
       </SelectButton>
-      <span v-if="!breakpointService.isMobile()" style="margin-left: 10px; color: var(--p-primary-250)">Example words</span>
+      <span v-if="!breakpointService.isMobile()" style="margin-left: 10px; color: #87c0a7">Example words</span>
     </div>
     <DataTable :value="data" :showHeaders="true" :show-gridlines="true" :row-class="selectedRow" :class="{ 'table': !breakpointService.isMobile() }">
       <Column field="row" header="Kana Column">

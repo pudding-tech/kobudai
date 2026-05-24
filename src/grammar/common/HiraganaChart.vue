@@ -24,12 +24,12 @@
     colorScheme: {
       light: {
         row: {
-          background: "#f9f9f9"
+          background: "var(--table-row-bg)"
         }
       },
       dark: {
         row: {
-          background: "#161616"
+          background: "var(--table-row-bg)"
         }
       }
     }

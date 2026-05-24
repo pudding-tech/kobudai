@@ -109,34 +109,45 @@
     colorScheme: {
       light: {
         header: {
-          background: "{zinc.200}", //#f8f9fa
-          hoverBackground: "{zinc.200}",
-          activeBackground: "{zinc.200}",
-          activeHoverBackground: "{zinc.200}",
+          background: "var(--grammar-structure-section-header-mobile)",
+          hoverBackground: "var(--grammar-structure-section-header-mobile)",
+          activeBackground: "var(--grammar-structure-section-header-mobile)",
+          activeHoverBackground: "var(--grammar-structure-section-header-mobile)",
         },
         content: {
-          background: "#f7f7f7"
+          background: "var(--grammar-structure-bg-mobile)"
         }
       },
       dark: {
         header: {
-          background: "#212121",
-          hoverBackground: "#212121",
-          activeBackground: "#212121",
-          activeHoverBackground: "#212121",
+          background: "var(--grammar-structure-section-header-mobile)",
+          hoverBackground: "var(--grammar-structure-section-header-mobile)",
+          activeBackground: "var(--grammar-structure-section-header-mobile)",
+          activeHoverBackground: "var(--grammar-structure-section-header-mobile)",
         },
         content: {
-          background: "var(--p-accordion-content-background)"
+          background: "var(--grammar-structure-bg-mobile)"
+        },
+        panel: {
+          border: {
+            color: "#232327"
+          }
         }
       }
     }
   });
 
-  const mobileDialog = ref({
+  const mobileDialogDT = ref({
     content: {
       padding: "0 26px 22px"
     }
   });
+
+  const mobileDialogPT = {
+    mask: {
+      class: "blur-mask"
+    }
+  };
 </script>
 
 <template>
@@ -219,6 +230,7 @@
       </div>
     </div>
   </div>
+  <!-- Mobile -->
   <div v-else class="mobile">
     <div class="header-mobile">
       <div class="level">
@@ -263,7 +275,7 @@
             Related
             <Button icon="pi pi-link" severity="secondary" class="appears-button-mobile" @click="toggleAppearsInMobile($event)" />
           </div>
-          <Dialog v-model:visible="appearsInMobile" modal :dismissableMask="true" :closable="false" :dt="mobileDialog" style="width: 90vw; min-height: 54vw;">
+          <Dialog v-model:visible="appearsInMobile" modal :dismissableMask="true" :closable="false" :dt="mobileDialogDT" :pt="mobileDialogPT" style="width: 90vw; min-height: 54vw;">
             <div>This grammar point appears in the following resources:</div>
             <ul class="appears-in-list">
               <li v-for="list in appearances" :key="list.sublistValue">
@@ -298,6 +310,7 @@
   min-width: 1200px;
   max-width: 1200px;
   border-radius: var(--p-content-border-radius);
+  border: 1px solid var(--grammar-bg-border-color);
   overflow: hidden;
 }
 

@@ -123,7 +123,7 @@
       if (!props.selectedRow) {
         return "";
       }
-      return "table-highlight-row";
+      return breakpointService.isMobile() ? "table-highlight-row-mobile" : "table-highlight-row";
     };
   });
 </script>
@@ -138,7 +138,7 @@
           </div>
         </template>
       </SelectButton>
-      <span v-if="!breakpointService.isMobile()" style="margin-left: 10px; color: var(--p-primary-250)">Example words</span>
+      <span v-if="!breakpointService.isMobile()" style="margin-left: 10px; color: #87c0a7">Example words</span>
     </div>
     <DataTable :value="data" :showHeaders="true" :show-gridlines="true" :row-class="selectedRow" row-group-mode="rowspan" group-rows-by="row" :class="{ 'table': !breakpointService.isMobile() }">
       <Column field="row" header="Kana Column">
@@ -167,7 +167,7 @@
           <div class="text" v-html="slotProps.data.suffix" />
         </template>
       </Column>
-      <Column v-if="props.showLinks && !breakpointService.isMobile()" field="grammarPoint" header="Grammar Points">
+      <Column v-if="props.showLinks && !breakpointService.isMobile()" field="grammarPoint" header="Related Grammar Points">
         <template #body="slotProps">
           <div v-for="(gp, index) in slotProps.data.grammarPoint" :key="index" :class="{ 'links': slotProps.data.grammarPoint.length > 1 }">
             <div :class="{ 'link-mt': slotProps.data.grammarPoint.length > 1 && index !== 0 }">

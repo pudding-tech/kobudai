@@ -37,7 +37,7 @@
   top: 7px;
   right: 8px;
   cursor: pointer;
-  color: #5d5d5d;
+  color: var(--input-icon-color);
   transition: color 100ms;
 
   &.hidden {
@@ -45,7 +45,7 @@
   }
 
   &:hover {
-    color: #8a8a8a;
+    color: var(--input-icon-hover-color);
   }
 }
 </style>

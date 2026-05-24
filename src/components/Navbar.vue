@@ -2,7 +2,7 @@
   import { computed, ref, watch } from "vue";
   import { getMainLists } from "@/lists";
   import { useListStore } from "@/stores/listStore";
-  import { useThemeStore } from "@/stores/themeStore";
+  import { useThemeStore, Theme } from "@/stores/themeStore";
   import { breakpointService } from "@/services/breakpointService";
   import { scrollService } from "@/services/scrollService";
   import { search } from "@/services/searchService";
@@ -34,13 +34,13 @@
     search(query ?? "");
   });
 
-  const toggleDarkMode = () => {
+  const toggleTheme = () => {
     const isDarkMode = document.documentElement.classList.contains("dark-mode");
     if (isDarkMode) {
-      themeStore.setDarkMode(false);
+      themeStore.setTheme(Theme.LIGHT);
     }
     else {
-      themeStore.setDarkMode(true);
+      themeStore.setTheme(Theme.DARK);
     }
   };
 
@@ -69,14 +69,23 @@
   const resetSearch = () => {
     searchText.value = "";
   };
+
+  const mobileSearchPT = {
+    content: {
+      style: {
+        height: "100%"
+      }
+    }
+  };
 </script>
 
 <template>
   <Toolbar
+    class="navbar"
     :class="[
       breakpointService.isMobile() ?
         ['mobile-navbar', 'mobile-color', isList ? 'sticky' : '']
-        : 'navbar',
+        : 'desktop-navbar',
       { 'hide-sticky': scrollService.hideSticky() }
     ]"
   >
@@ -89,13 +98,8 @@
       <Select v-if="!breakpointService.isMobile()" v-model="selectedMainListValue" :options="mainListOptions" option-label="label" option-value="value" class="main-list-selector" />
     </template>
     <template #end>
-      <Button v-if="!breakpointService.isMobile()" :icon="themeStore.darkMode.value ? 'pi pi-moon' : 'pi pi-sun'" class="mr-10" @click="toggleDarkMode()" />
+      <Button v-if="!breakpointService.isMobile()" :icon="themeStore.theme.value === Theme.DARK ? 'pi pi-moon' : 'pi pi-sun'" class="mr-10" @click="toggleTheme()" />
       <Button v-else icon="pi pi-bars" variant="text" severity="secondary" class="mr-10" @click="openSettings()" />
-      <!-- <ToggleSwitch v-model="darkModeStore.darkMode.value" class="theme-selector" @update:model-value="toggleDarkMode()">
-        <template #handle="{ checked }">
-          <i :class="['!text-xs pi', { 'pi-moon': checked, 'pi-sun': !checked }]" />
-        </template>
-      </ToggleSwitch> -->
       <IconField v-if="!breakpointService.isMobile()">
         <InputIcon>
           <i class="pi pi-search" />
@@ -109,10 +113,10 @@
     <SearchResults :search-text="searchText" @goto-grammar="closeSearchComponent()" />
   </Popover>
   <!-- Mobile -->
-  <MobileSettings v-model:open="settingsOpen" v-model:selected-list-value="selectedMainListValue" :list-options="mainListOptions" @change-theme="toggleDarkMode()" />
-  <Dialog v-model:visible="searchMobileOpen" modal :closable="false" dismissable-mask :showHeader="false" style="width: 90vw; height: 70vh" :pt="{ content: { style: { height: '100%' } } }">
-    <div class="dialog">
-      <div class="search-section">
+  <MobileSettings v-model:open="settingsOpen" v-model:selected-list-value="selectedMainListValue" :list-options="mainListOptions" @change-theme="toggleTheme()" />
+  <Dialog v-model:visible="searchMobileOpen" modal :closable="false" dismissable-mask :showHeader="false" :pt="mobileSearchPT" style="width: 90vw; height: 70vh">
+    <div class="dialog-mobile">
+      <div class="search-section-mobile">
         <IconField>
           <InputIcon>
             <i class="pi pi-search" />
@@ -127,6 +131,14 @@
 
 <style scoped>
 .navbar {
+  background: var(--surface-glass-strong);
+  border: 1px solid var(--surface-border-strong);
+  box-shadow: var(--surface-shadow-soft);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+}
+
+.desktop-navbar {
   margin: 30px;
 }
 
@@ -138,6 +150,12 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+  }
+
+  :global(:root[data-mobile-glass-effects="false"] &) {
+    background: var(--mobile-simple-surface-bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 }
 
@@ -183,21 +201,23 @@
   width: 116px;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .kobudai:hover {
-    background-color: var(--navbar-hover-color);
-  }
-}
-
-.dialog {
+.dialog-mobile {
   display: flex;
   flex-direction: column;
   height: 100%;
 
-  .search-section {
+  .search-section-mobile {
     flex-shrink: 0;
     padding: 20px;
+    background: var(--mobile-simple-surface-muted-bg);
+    border-radius: var(--p-dialog-border-radius) var(--p-dialog-border-radius) 0 0;
     border-bottom: 1px solid var(--mobile-search-section-border-color);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .kobudai:hover {
+    background-color: var(--navbar-hover-color);
   }
 }
 </style>
@@ -206,6 +226,7 @@
 .search-popover {
   width: 500px;
   height: 600px;
+  border-radius: 20px;
 
   &::before {
     visibility: hidden;
