@@ -10,6 +10,7 @@ import Aura from "@primeuix/themes/aura";
 import { definePreset } from "@primeuix/themes";
 import { useThemeStore, Theme } from "@/stores/themeStore";
 import { initLists } from "./stores/listStore";
+import { initPanels } from "./stores/panelStore";
 
 import Accordion from "primevue/accordion";
 import AccordionContent from "primevue/accordioncontent";
@@ -194,8 +195,9 @@ if (savedTheme === "dark" || (!savedTheme && prefersDarkMode)) {
 const savedGlassEffects = localStorage.getItem("mobileGlassEffects");
 themeStore.setGlassEffects(savedGlassEffects !== "false", false);
 
-// Initialize lists
+// Initialize lists and mobile panel states
 initLists();
+initPanels();
 
 registerSW({
   immediate: true

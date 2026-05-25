@@ -54,3 +54,8 @@ export type AppearsInList = {
   mainlistValue: string;
   sublistValue: string;
 }
+
+export type PanelState = {
+  structure: boolean;
+  related: boolean;
+};
