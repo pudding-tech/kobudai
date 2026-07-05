@@ -158,6 +158,10 @@
         <div class="note">
           <div class="note-title">Note:</div>
           In modern Japanese, the <span class="g">ら</span> in <span class="g">られる</span> is often dropped for simplicity, especially in casual contexts.
+          <br><br>
+          You might notice that the potential form of ichidan verbs is identical to the
+          <RouterLink :to="{ name: 'grammarLoader', params: { slug: passiveVerbs.slug } }" class="link">passive form</RouterLink>,
+          as they both use the same ending <span class="g">られる</span>. Using <span class="g">れる</span> instead can also help to distinguish it from the passive form.
         </div>
         <GrammarExampleSentences>
           <div class="example">
@@ -252,6 +256,7 @@
             Potential form of exceptions
           </template>
         </GrammarExampleSentences>
+
         The polite versions follow the conjugation patterns of ichidan verbs.
         <GrammarExampleSentences>
           <div class="example">
@@ -270,6 +275,41 @@
             Polite potential form of exceptions
           </template>
         </GrammarExampleSentences>
+
+        <div class="note">
+          <div class="note-title">Note:</div>
+          Although the potential form of する would theoretically be される, Japanese instead uses the separate verb
+          <span class="g">できる</span> to express ability to do. This means <span class="g">できる</span> is not a conjugation of する,
+          but an independent verb that fulfills the same function.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="grammar-title">～ことができる to express ability</div>
+        In addition to using the potential form of a verb, Japanese can express ability with the structure:
+        <ul>
+          <li>Verb (dictionary form) + ことが<span class="g">できる</span></li>
+        </ul>
+        This pattern means "can do (verb)" and is grammatically equivalent in meaning to the potential form of the verb.
+          <GrammarExample>
+          <template #example>
+            <ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>すことが<span class="g">できる</span>
+          </template>
+          <template #translation>
+            I can speak Japanese
+          </template>
+        </GrammarExample>
+        こと nominalizes the verb, turning the action into a noun ("the act of doing X"). Because the verb is nominalized, <span class="g">できる</span> is used as
+        an independent verb meaning "to be possible". This construction is slightly more formal and explicit than the potential form,
+        and is common in written Japanese, formal speech, explanations and announcements.
+
+        <div class="note">
+          <div class="note-title">Note:</div>
+          For する-verbs, while ～することが<span class="g">できる</span> is grammatically possible, it is more common to express ability with "Noun + が + <span class="g">できる</span>".
+          <ul>
+            <li><ruby>勉強<rt>べんきょう</rt></ruby>が<span class="g">できる</span> – I can study</li>
+          </ul>
+        </div>
       </div>
     </template>
   </GrammarStructure>

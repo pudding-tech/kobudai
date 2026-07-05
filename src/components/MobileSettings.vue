@@ -97,7 +97,7 @@
 }
 
 .list-select {
-  width: 116px;
+  width: 126.64px;
 }
 
 .theme-select {

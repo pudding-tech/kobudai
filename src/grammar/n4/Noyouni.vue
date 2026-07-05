@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { noyouni as meta, youda } from "./metadataN4";
+  import { noyouni as meta, youda, youni } from "./metadataN4";
+  import { toori } from "../n3/metadataN3";
 </script>
 
 <script lang="ts">
@@ -18,7 +19,9 @@
     </template>
     <template #related>
       <div class="related-mb">See also:</div>
-      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: youda.slug } }" class="link">{{ youda.title }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: youni.slug } }" class="link">{{ youni.title }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: youda.slug } }" class="link">{{ youda.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: toori.slug } }" class="link">とおり</RouterLink></div>
     </template>
     <template #explanation>
       Both <span class="g">のように</span> and <span class="g">のような</span> are used to express similarity or likeness,
@@ -78,7 +81,7 @@
             サル<span class="g">のような</span><ruby>動物<rt>どうぶつ</rt></ruby>が<ruby>好<rt>す</rt></ruby>きです
           </template>
           <template #translation>
-            I like animals like monkeys
+            I like animals such as monkeys
           </template>
         </GrammarExample>
         <GrammarExample>

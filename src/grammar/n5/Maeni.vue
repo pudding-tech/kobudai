@@ -11,8 +11,8 @@
 <template>
   <GrammarStructure :meta="meta">
     <template #structure>
-      <div>Verb (dictionary form) + <span class="grammar-highlight">前に</span></div>
-      <div>Noun + <span class="grammar-highlight"><span class="h">の</span>前に</span></div>
+      <div>Verb (dictionary form) + <span class="grammar-highlight"><ruby>前<rt>まえ</rt></ruby>に</span></div>
+      <div>Noun + <span class="grammar-highlight"><span class="h">の</span><ruby>前<rt>まえ</rt></ruby>に</span></div>
     </template>
     <template #related>
       See also <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKara.slug } }" class="link">{{ teKara.title }}</RouterLink> for sequential actions

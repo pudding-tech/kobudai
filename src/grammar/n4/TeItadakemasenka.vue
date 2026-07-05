@@ -60,7 +60,7 @@
       <RouterLink :to="{ name: 'grammarLoader', params: { slug: teKudasai.slug } }" class="link">{{ teKudasai.title }}</RouterLink> form.
       <GrammarExample>
         <template #example>
-          <ruby>少<rt>すこ</rt></ruby>し<ruby>待<rt>ま</rt></ruby>っ<span class="g">ていただけませんか</span>？
+          <ruby>少々<rt>しょうしょう</rt></ruby><ruby>待<rt>ま</rt></ruby>っ<span class="g">ていただけませんか</span>？
         </template>
         <template #translation>
           Would you mind waiting a moment?

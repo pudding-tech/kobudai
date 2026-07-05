@@ -110,7 +110,7 @@
           <div class="note-title">Note:</div>
           Honorific language can be thought of as the opposite of
           <RouterLink :to="{ name: 'grammarLoader', params: { slug: kenjougo.slug } }" class="link">kenjōgo (humble language)</RouterLink>,
-          which lowers the speaker. Kenjōgo, on the other hand, elevates the subject to show respect.
+          which lowers the speaker. Sonkeigo, on the other hand, elevates the subject to show respect.
         </div>
       </div>
 

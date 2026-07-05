@@ -45,7 +45,7 @@
         </GrammarExample>
         <div class="note">
           <div class="note-title">Note:</div>
-          <span class="g">に</span> is used only with verbs of existence (いる／ある); for actions that take place at a location you would use
+          In this meaning, <span class="g">に</span> is used only with verbs of existence (いる／ある); for actions that take place at a location you would use
           <RouterLink :to="{ name: 'grammarLoader', params: { slug: de.slug } }" class="link">{{ de.title }}</RouterLink> instead.
           <ul>
             <li><ruby>家<rt>いえ</rt></ruby><span class="g">に</span>。。。→ implies that something exists at home (like "there is a cat at home")</li>

@@ -1,13 +1,15 @@
-import { genkiList } from "@/grammar/lists/genkiList";
 import { jlptList } from "@/grammar/lists/jlptList";
+import { genkiList } from "@/grammar/lists/genkiList";
+import { quartetList } from "@/grammar/lists/quartetList";
 import type { MainList } from "@/types/types";
 
-const mainLists: MainList[] = [jlptList, genkiList];
+const mainLists: MainList[] = [jlptList, genkiList, quartetList];
 const mainListsValue: string[] = mainLists.map(list => list.value);
 
 const sublists = {
   [jlptList.value]: jlptList.sublists.map(sublist => sublist.value),
-  [genkiList.value]: genkiList.sublists.map(sublist => sublist.value)
+  [genkiList.value]: genkiList.sublists.map(sublist => sublist.value),
+  [quartetList.value]: quartetList.sublists.map(sublist => sublist.value)
 };
 
 const defaultMainList = genkiList.value;

@@ -2,6 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { numberShika as meta, numberMo } from "./metadataN4";
+  import { counters } from "@/grammar/n5/metadataN5";
 </script>
 
 <script lang="ts">
@@ -14,7 +15,10 @@
       Noun + が／を + <span class="grammar-highlight">number</span> + <span class="grammar-highlight">しか</span> + <span class="grammar-highlight">verb (negative)</span>
     </template>
     <template #related>
-      Similarly, to say "as many as", see <RouterLink :to="{ name: 'grammarLoader', params: { slug: numberMo.slug } }" class="link">{{ numberMo.title }}</RouterLink>
+      <div class="related-mb">To say "as many as":</div>
+      <div style="margin-bottom: 15px">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: numberMo.slug } }" class="link">{{ numberMo.title }}</RouterLink></div>
+      <div class="related-mb">See also:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: counters.slug } }" class="link">{{ counters.title }}</RouterLink></div>
     </template>
     <template #explanation>
       The structure <span class="g">number</span> + <span class="g">しか</span> + <span class="g">～ない</span> is used

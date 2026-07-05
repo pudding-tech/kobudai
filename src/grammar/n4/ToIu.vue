@@ -11,7 +11,7 @@
 <template>
   <GrammarStructure :meta="meta">
     <template #structure>
-      "Name" + <span class="grammar-highlight">と言う</span> + (noun)
+      "Name" + <span class="grammar-highlight">と<ruby>言<rt>い</rt></ruby>う</span> + noun
     </template>
     <template #related>
       Can be used with informal quotation particle

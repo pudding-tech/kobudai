@@ -3,6 +3,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { kamoshirenai as meta } from "./metadataN4";
+  import { deshou } from "../n5/metadataN5";
 
   const isPolite = ref(false);
 </script>
@@ -15,15 +16,18 @@
   <GrammarStructure :meta="meta" :show-polite="true" @politeness-change="(value) => isPolite = value">
     <template #structure>
       <div>Verb (plain form) + <span class="grammar-highlight">かもしれ<span v-if="isPolite">ません</span><span v-else>ない</span></span></div>
-      <div>い-adjective + <span class="grammar-highlight">かもしれ<span v-if="isPolite">ません</span><span v-else>ない</span></span></div>
-      <div>な-adjective + <span class="grammar-highlight">かもしれ<span v-if="isPolite">ません</span><span v-else>ない</span></span></div>
+      <div>Adjective + <span class="grammar-highlight">かもしれ<span v-if="isPolite">ません</span><span v-else>ない</span></span></div>
       <div>Noun + <span class="grammar-highlight">かもしれ<span v-if="isPolite">ません</span><span v-else>ない</span></span></div>
+    </template>
+    <template #related>
+      <div class="related-mb">See also:</div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: deshou.slug } }" class="link">{{ deshou.title }}</RouterLink></div>
     </template>
     <template #explanation>
       The grammar pattern <span class="g">かもしれない</span> is used to express possibility or uncertainty — similar to saying "might", "maybe", or "perhaps" in English.
       It implies that something could be true, though the speaker isn't sure.
       <br><br>
-      <span class="g">かもしれない</span> attaches directly to the end of a verb or adjective (in plain form):
+      <span class="g">かもしれない</span> attaches directly to the end of a verb (in plain form), adjective, or a noun:
       <GrammarExample>
         <template #example>
           <ruby>食<rt>た</rt></ruby>べる<span class="g">かもしれない</span>

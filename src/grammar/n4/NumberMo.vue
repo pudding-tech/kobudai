@@ -2,7 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { numberMo as meta, numberShika } from "./metadataN4";
-  import { mo } from "@/grammar/n5/metadataN5";
+  import { counters, mo } from "@/grammar/n5/metadataN5";
 </script>
 
 <script lang="ts">
@@ -15,7 +15,11 @@
       Noun + が／を + <span class="grammar-highlight">number</span> + <span class="grammar-highlight">も</span> + verb
     </template>
     <template #related>
-      Similarly, to say "as few as", see <RouterLink :to="{ name: 'grammarLoader', params: { slug: numberShika.slug } }" class="link">{{ numberShika.title }}</RouterLink>
+      <div class="related-mb">To say "as few as":</div>
+      <div style="margin-bottom: 15px">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: numberShika.slug } }" class="link">{{ numberShika.title }}</RouterLink></div>
+      <div class="related-mb">See also:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: counters.slug } }" class="link">{{ counters.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: mo.slug } }" class="link">{{ mo.title }}</RouterLink></div>
     </template>
     <template #explanation>
       The particle <span class="g">も</span> is often used to emphasize a large number or unexpected quantity of something. When attached to a number, it means "as many as...",

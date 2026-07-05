@@ -56,6 +56,15 @@ export const deshita: GrammarPoint = {
   tags: ["past", "da", "desu", "copula"]
 };
 
+export const deshou: GrammarPoint = {
+  slug: "でしょう-だろう",
+  title: "でしょう・だろう",
+  subtitle: "Probably, I guess, Don't you think?",
+  titleRomaji: "deshou darou",
+  level: LEVEL,
+  tags: ["probably", "i guess", "don't you think", "right", "deshou", "darou", "でしょう", "だろう"]
+};
+
 export const desu: GrammarPoint = {
   slug: "です",
   title: "だ・です",

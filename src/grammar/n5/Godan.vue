@@ -93,8 +93,8 @@
           <li class="list">For the plain negative past form one adds なかった to the stem (e.g. 行かなかった, did not go).</li>
           <span class="h">*</span> Note that when the verb ends in <span class="h">う</span> it becomes <span class="h">わ</span>, not あ.
           See <RouterLink :to="{ name: 'grammarLoader', params: { slug: godanNegative.slug } }" class="link">{{ godanNegative.title }}</RouterLink> for more information.
-          <li class="list">For the passive form one adds られる to the stem (e.g. 行かれる, to be gone).</li>
-          <li class="list">For the causative form one adds させる to the stem (e.g. 行かせる, to make someone go).</li>
+          <li class="list">For the passive form one adds ～れる to the stem (e.g. 行かれる, to be gone).</li>
+          <li class="list">For the causative form one adds ～せる to the stem (e.g. 行かせる, to make someone go).</li>
         </ul>
         <li class="list"><b>Continuative, Polite form:</b> The verb stem changes to end in a <span class="h">い</span> sound.</li>
         <div v-if="breakpointService.isMobile()">
@@ -106,7 +106,7 @@
         <ul>
           <li class="list">The continuative form is often called "the stem form" as it's used for many different conjugations, perhaps most notably the polite form.</li>
           <li class="list">The polite form is used in formal situations, such as speaking with strangers or people of higher social status. In polite conjugations one adds some variation of ます to the stem (e.g. 行きます, to go).</li>
-          <li class="list">Within the polite form the are multiple conjugations that correspond to the plain forms, just with a polite tone, such as polite negative, polite past, and polite volitional.</li>
+          <li class="list">Within the polite form there are multiple conjugations that correspond to the plain forms, just with a polite tone, such as polite negative, polite past, and polite volitional.</li>
           <li class="list">
             This form is also the basis for the plain past and て-form conjugations, but in modern Japanese these conjugations have gone through a sound change.
             For more information about this, see

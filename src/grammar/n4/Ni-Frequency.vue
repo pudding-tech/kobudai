@@ -2,6 +2,7 @@
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
   import { niFrequency as meta } from "../n4/metadataN4";
+  import { counters } from "../n5/metadataN5";
 </script>
 
 <script lang="ts">
@@ -12,6 +13,10 @@
   <GrammarStructure :meta="meta">
     <template #structure>
       Period of time + <span class="grammar-highlight">に</span> + number of times
+    </template>
+    <template #related>
+      <div class="related-mb">See also:</div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: counters.slug } }" class="link">{{ counters.title }}</RouterLink></div>      
     </template>
     <template #explanation>
       The particle <span class="g">に</span> is commonly used with expressions of time to indicate how often something happens over a specific period.

@@ -537,3 +537,12 @@ export const youda: GrammarPoint = {
   level: LEVEL,
   tags: ["seems", "looks like", "youda", "appearance", "resemblance", "speculation"]
 };
+
+export const youni: GrammarPoint = {
+  slug: "ように-ような",
+  title: "ように・ような",
+  subtitle: "As if, As though, In the way that",
+  titleRomaji: "youni youna",
+  level: LEVEL,
+  tags: ["like", "similar to", "comparison", "simile", "resemblance"]
+};
