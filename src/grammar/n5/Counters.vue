@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import GrammarStructure from "@/components/GrammarStructure.vue";
   import GrammarExample from "@/components/GrammarExample.vue";
-  import { counters as meta } from "./metadataN5";
+  import { counters as meta, gaAruIru } from "./metadataN5";
+  import { niFrequency, numberMo, numberShika } from "../n4/metadataN4";
 </script>
 
 <script lang="ts">
@@ -18,7 +19,7 @@
       <div>
         <div class="kanji-mb"><span class="grammar-highlight">〜つ</span> - General counter</div>
         <div class="kanji-mb"><span class="grammar-highlight">〜<ruby>人<rt>にん</rt></ruby></span> - People</div>
-        <div class="kanji-mb"><span class="grammar-highlight">〜<ruby>個<rt>こ</rt></ruby></span> - Small round objects (apples, eggs)</div>
+        <div class="kanji-mb"><span class="grammar-highlight">〜<ruby>個<rt>こ</rt></ruby></span> - Small, compact objects (apples, eggs)</div>
         <div class="kanji-mb"><span class="grammar-highlight">〜<ruby>枚<rt>まい</rt></ruby></span> - Flat objects (paper, plates, shirts)</div>
         <div class="kanji-mb"><span class="grammar-highlight">〜<ruby>本<rt>ほん</rt></ruby></span> - Long cylindrical objects (bottles, pens, trees)</div>
         <div class="kanji-mb"><span class="grammar-highlight">〜<ruby>冊<rt>さつ</rt></ruby></span> - Bound objects (books, magazines)</div>
@@ -27,7 +28,11 @@
       </div>
     </template>
     <template #related>
-      
+      <div class="related-mb">See also:</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: gaAruIru.slug } }" class="link">{{ gaAruIru.titlePlain }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: numberMo.slug } }" class="link">{{ numberMo.title }}</RouterLink></div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: numberShika.slug } }" class="link">{{ numberShika.title }}</RouterLink></div>
+      <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: niFrequency.slug } }" class="link">{{ niFrequency.title }}</RouterLink></div>
     </template>
     <template #explanation>
       In Japanese, nouns cannot usually be counted directly with numbers. Instead, you attach a counter — a specific
@@ -46,7 +51,7 @@
         However, when stating existence or quantity with a verb, the counter normally comes after the noun (Xが<span class="g">～つ</span>),
         which is the opposite of English.
       </div>
-      Below are some of the most common counters used in everyday Japanese. Counter words that use a non-regular reading
+      Below are some of the most common counters used in everyday Japanese. Counter words that use an irregular reading
       for certain numbers will be colored <span class="h">like this</span>.
 
       Also, counters in Japanese can use both kanji and arabic numerals, so
@@ -83,17 +88,25 @@
             Two ideas
           </template>
         </GrammarExample>
+        <GrammarExample>
+          <template #example>
+            コーヒーを<span class="g"><ruby>二<rt>ふた</rt></ruby>つ</span>ください
+          </template>
+          <template #translation>
+            Two coffees please
+          </template>
+        </GrammarExample>
       </div>
 
       <div class="section">
         <div class="grammar-subtitle">People counter</div>
         The people counter <span class="g">〜人</span> (<span class="g">にん</span>) is used specifically for counting people.
-        This counter uses the regular Japanese numbers, with the exception of 1 and 2 people, which have special readings.
+        This counter uses the regular Japanese numbers, with the exception of 1, 2, and 3 people, which have special readings.
         <ul>
           <li>1... → <span class="g">一人</span> - <span class="h">ひとり</span></li>
           <li>2... → <span class="g">二人</span> - <span class="h">ふたり</span></li>
           <li>3... → <span class="g">三人</span> - <span class="g">さんにん</span></li>
-          <li>4... → <span class="g">四人</span> - <span class="g">よにん</span></li>
+          <li>4... → <span class="g">四人</span> - <span class="h">よにん</span></li>
           <li>5... → <span class="g">五人</span> -  <span class="g">ごにん</span></li>
           <li>6... → <span class="g">六人</span> - <span class="g">ろくにん</span></li>
           <li>7... → <span class="g">七人</span> - <span class="g">ななにん</span></li>
@@ -104,7 +117,15 @@
         </ul>
         <GrammarExample>
           <template #example>
-            <ruby>家族<rt>かぞく</rt></ruby>は<span class="g"><ruby>四人<rt>よにん</rt></ruby></span>です
+            <span class="g"><ruby>７人<rt>ななにん</rt></ruby></span>の<ruby>学生<rt>がくせい</rt></ruby>
+          </template>
+          <template #translation>
+            Seven students
+          </template>
+        </GrammarExample>
+        <GrammarExample>
+          <template #example>
+            <ruby>家族<rt>かぞく</rt></ruby>は<span class="g"><ruby>四<rt>よ</rt></ruby><ruby>人<rt>にん</rt></ruby></span>です
           </template>
           <template #translation>
             There are four people in my family
@@ -113,8 +134,8 @@
       </div>
 
       <div class="section">
-        <div class="grammar-subtitle">Counter for small, round, compact items</div>
-        The <span class="g">個</span> (<span class="g">こ</span>) counter is used specifically for counting small, round, compact items,
+        <div class="grammar-subtitle">Counter for small, compact items</div>
+        The <span class="g">個</span> (<span class="g">こ</span>) counter is used for counting small, compact items,
         like apples, balls, and eggs. This counter uses the regular Japanese numbers,
         with some slight difference in readings for 1, 6, 8, and 10.
         <ul>
@@ -130,6 +151,16 @@
           <li>10... → <span class="g">１０個</span> - <span class="h">じゅっこ</span></li>
           <li>More than 10... → Number + <span class="g">こ</span></li>
         </ul>
+        A great number of everyday objects can be counted with this counter, which makes it a rather general-purpose one.
+        The most important characteristic is that the objects being counted need to have volume; meaning they are three-dimensional, not flat.
+        <GrammarExample>
+          <template #example>
+            <span class="g"><ruby>3<rt>さん</rt></ruby><ruby>個<rt>こ</rt></ruby></span>のケーキ
+          </template>
+          <template #translation>
+            Three cakes
+          </template>
+        </GrammarExample>
         <GrammarExample>
           <template #example>
             <ruby>今日<rt>きょう</rt></ruby>、りんごを<span class="g"><ruby>一個<rt>いっこ</rt></ruby></span><ruby>食<rt>た</rt></ruby>べた
@@ -160,6 +191,14 @@
         </ul>
         <GrammarExample>
           <template #example>
+            <span class="g"><ruby>２<rt>に</rt></ruby><ruby>枚<rt>まい</rt></ruby></span>のタオル
+          </template>
+          <template #translation>
+            Two towels
+          </template>
+        </GrammarExample>
+        <GrammarExample>
+          <template #example>
             <ruby>紙<rt>かみ</rt></ruby>を<span class="g"><ruby>三枚<rt>さんまい</rt></ruby></span><ruby>落<rt>お</rt></ruby>とした
           </template>
           <template #translation>
@@ -186,6 +225,14 @@
           <li>10...  → <span class="g">１０本</span> - <span class="h">じゅっぽん</span></li>
           <li>More than 10...  → Number + <span class="g">ほん</span></li>
         </ul>
+        <GrammarExample>
+          <template #example>
+            <span class="g"><ruby>９本<rt>きゅうほん</rt></ruby></span>の<ruby>傘<rt>かさ</rt></ruby>
+          </template>
+          <template #translation>
+            Nine umbrellas
+          </template>
+        </GrammarExample>
         <GrammarExample>
           <template #example>
             <ruby>ペン<rt></rt></ruby>を<span class="g"><ruby>六本<rt>ろっぽん</rt></ruby></span>ください
@@ -216,6 +263,14 @@
         </ul>
         <GrammarExample>
           <template #example>
+            <span class="g"><ruby>五<rt>ご</rt></ruby><ruby>冊<rt>さつ</rt></ruby></span>の<ruby>辞書<rt>じしょ</rt></ruby>
+          </template>
+          <template #translation>
+            5 dictionaries
+          </template>
+        </GrammarExample>
+        <GrammarExample>
+          <template #example>
             <ruby>古<rt>ふる</rt></ruby>い<ruby>雑誌<rt>ざっし</rt></ruby>を<span class="g"><ruby>８冊<rt>はっさつ</rt></ruby></span><ruby>読<rt>よ</rt></ruby>みました
           </template>
           <template #translation>
@@ -244,13 +299,21 @@
         </ul>
         <GrammarExample>
           <template #example>
-            いもうとが<ruby>猫<rt>ねこ</rt></ruby>を<span class="g"><ruby>四匹<rt>よんひき</rt></ruby></span><ruby>飼<rt>か</rt></ruby>っています
+            <span class="g"><ruby>四匹<rt>よんひき</rt></ruby></span>の<ruby>リス<rt></rt></ruby>
           </template>
           <template #translation>
-            My sister has 4 cats
+            4 squirrels
           </template>
           <template #note>
             The kanji for ひき (匹) looks very similar to the kanji for 4 (四), so be careful not to confuse them
+          </template>
+        </GrammarExample>
+        <GrammarExample>
+          <template #example>
+            <ruby>妹<rt>いもうと</rt></ruby>が<ruby>猫<rt>ねこ</rt></ruby>を<span class="g"><ruby>１匹<rt>いっぴき</rt></ruby></span><ruby>飼<rt>か</rt></ruby>っています
+          </template>
+          <template #translation>
+            My sister has 1 cat
           </template>
         </GrammarExample>
       </div>
@@ -273,6 +336,14 @@
           <li>10... → <span class="g">１０台</span> - <span class="g">じゅうだい</span></li>
           <li>More than 10... → Number + <span class="g">だい</span></li>
         </ul>
+        <GrammarExample>
+          <template #example>
+            <span class="g"><ruby>六台<rt>ろくだい</rt></ruby></span>の<ruby>冷蔵庫<rt>れいぞうこ</rt></ruby>
+          </template>
+          <template #translation>
+            Six refrigerators
+          </template>
+        </GrammarExample>
         <GrammarExample>
           <template #example>
             <ruby>新<rt>あたら</rt></ruby>しい<ruby>車<rt>くるま</rt></ruby>を<span class="g"><ruby>３台<rt>さんだい</rt></ruby></span><ruby>買<rt>か</rt></ruby>いました

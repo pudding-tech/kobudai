@@ -119,14 +119,14 @@ ruby rt {
   padding: 2px 4px;
   margin: 0 2px;
   white-space: nowrap;
-  color: var(--back-to-home-color);
+  color: var(--link-color);
   border: 1px solid var(--link-border-color);
   border-radius: 4px;
   transition: color 200ms ease-out, border 200ms ease-out;
 
   &:hover {
-    color: var(--back-to-home-hover-color);
-    border: 1px solid color-mix(in srgb, var(--back-to-home-hover-color) 50%, transparent);
+    color: var(--link-hover-color);
+    border: 1px solid color-mix(in srgb, var(--link-hover-color) 50%, transparent);
   }
 }
 
@@ -260,7 +260,7 @@ ruby rt {
   --surface-glass-strong: linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(250, 245, 235, 0.72));
   --surface-glass-soft: linear-gradient(135deg, rgba(255, 255, 255, 0.66), rgba(246, 239, 228, 0.48));
   --surface-glass-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(252, 247, 239, 0.82));
-  --surface-border: rgba(255, 255, 255, 0.62);
+  --surface-border: rgba(219, 219, 219, 0.62);
   --surface-border-strong: rgba(109, 141, 133, 0.22);
   --surface-shadow: 0 18px 45px rgba(84, 108, 112, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.52);
   --surface-shadow-soft: 0 12px 30px rgba(84, 108, 112, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.44);
@@ -272,7 +272,8 @@ ruby rt {
   --footer-bg: var(--surface-glass-soft);
   --footer-border: var(--surface-border-strong);
   --footer-text-color: #6a645a;
-  --grammar-highlight: #047857;
+  /* --grammar-highlight: #047857; */
+  --grammar-highlight: #bc487b;
   --grammar-highlight-bg: rgba(220, 223, 222, 0.72);
   --grammar-highlight-bg-mobile: rgba(229, 229, 229, 0.78);
   --kanji-highlight: #9a4f38;
@@ -303,8 +304,8 @@ ruby rt {
   /* GRAMMAR STRUCTURE */
   --grammar-structure-bg: rgba(239, 244, 244, 0.5);
   --grammar-structure-bg-mobile: rgba(244, 249, 248, 0.64);
-  --grammar-structure-header: rgba(239, 231, 228, 0.72);
-  --grammar-structure-header-mobile: rgba(243, 238, 236, 0.72);
+  --grammar-structure-header: rgba(255, 244, 239, 0.72);
+  --grammar-structure-header-mobile: rgba(255, 244, 239, 0.72);
   --grammar-structure-section-header-mobile: rgba(224, 224, 224, 0.72);
   --grammar-card-border: rgba(84, 91, 88, 0.28);
   --grammar-level-color: #6a7169;
@@ -339,8 +340,10 @@ ruby rt {
   --custom-select-button-selected-text: #18382f;
 
   /* NOTFOUND */
-  --back-to-home-color: #047857;
-  --back-to-home-hover-color: #559e86;
+  --link-color: #047857;
+  --link-hover-color: #559e86;
+  --link-color: #a3597a;
+  --link-hover-color: #db79a5;
 
   /* CHART */
   --selected-row-color: rgba(251, 248, 238, 0.86);
@@ -448,8 +451,8 @@ ruby rt {
   --custom-select-button-selected-text: #000000;
 
   /* NOTFOUND */
-  --back-to-home-color: #87c0a7;
-  --back-to-home-hover-color: #a8e7d0;
+  --link-color: #87c0a7;
+  --link-hover-color: #a8e7d0;
 
   /* CHART */
   --selected-row-color: rgba(17, 19, 21, 0.94);

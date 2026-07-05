@@ -2,6 +2,7 @@ import type { Component } from "vue";
 import type { GrammarComponent } from "@/types/types";
 import * as n5 from "./n5/metadataN5";
 import * as n4 from "./n4/metadataN4";
+import * as n3 from "./n3/metadataN3";
 
 const processImport = (mod: { default: Component, title: string }) => {
   return { component: mod.default, meta: { title: mod.title }};
@@ -17,6 +18,7 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n5.counters.slug]: () => import("./n5/Counters.vue").then(processImport),
   [n5.de.slug]: () => import("./n5/De.vue").then(processImport),
   [n5.deshita.slug]: () => import("./n5/Deshita.vue").then(processImport),
+  [n5.deshou.slug]: () => import("./n5/Deshou.vue").then(processImport),
   [n5.desu.slug]: () => import("./n5/Desu.vue").then(processImport),
   [n5.gaAruIru.slug]: () => import("./n5/GaAruIru.vue").then(processImport),
   [n5.godan.slug]: () => import("./n5/Godan.vue").then(processImport),
@@ -122,5 +124,11 @@ export const grammarIndex: Record<string, () => Promise<GrammarComponent>> = {
   [n4.volitionalVerbs.slug]: () => import("./n4/VolitionalVerbs.vue").then(processImport),
   [n4.volitionalToOmou.slug]: () => import("./n4/VolitionalToOmou.vue").then(processImport),
   [n4.yasuiNikui.slug]: () => import("./n4/YasuiNikui.vue").then(processImport),
-  [n4.youda.slug]: () => import("./n4/Youda.vue").then(processImport)
+  [n4.youda.slug]: () => import("./n4/Youda.vue").then(processImport),
+  [n4.youni.slug]: () => import("./n4/Youni.vue").then(processImport),
+  /* -- */
+  /* N3 */
+  /* -- */
+  [n3.toieba.slug]: () => import("./n3/Toieba.vue").then(processImport),
+  [n3.toori.slug]: () => import("./n3/Toori.vue").then(processImport)
 };

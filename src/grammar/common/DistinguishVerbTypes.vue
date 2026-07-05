@@ -15,7 +15,7 @@
   While most verbs ending in <span :class="setStyle()">iru</span> or <span :class="setStyle()">eru</span> are ichidan verbs, there is no foolproof way to determine if a verb is ichidan solely based on its ending.
   However, there are a couple helpful pointers that can help suggest whether a verb is likely ichidan or godan.
   <br><br>
-  Many <span :class="setStyle()">iru/eru</span> verbs have the <i>i</i> or <i>e</i> sound as part of the kanji rather than the okurigana, which is often a sign that the verb may actually be a godan verb.
+  Many verbs ending in <span :class="setStyle()">iru/eru</span> have the <i>i</i> or <i>e</i> sound as part of the kanji rather than the okurigana, which is often a sign that the verb may actually be a godan verb.
   For example, 帰<span class="g">る</span> (かえる, “to return”) and 走<span class="g">る</span> (はしる, “to run”) are godan verbs, even though they end in <span :class="setStyle()">eru</span> and <span :class="setStyle()">iru</span> respectively.
   <br><br>
   Similarly, if the <i>i</i> or <i>e</i> sound appears within the okurigana (such as in the ending 〜べる), the verb is more likely to be ichidan.

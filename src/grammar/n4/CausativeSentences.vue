@@ -20,7 +20,7 @@
       <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: causativePassiveSentences.slug } }" class="link">{{ causativePassiveSentences.title }}</RouterLink></div>
     </template>
     <template #explanation>
-      Causative sentences express making or letting someone do something. They show that the subject is not doing the action willingly,
+      Causative sentences express making or letting someone do something. They show that the subject is not doing the action strictly by their own accord,
       but rather because someone else caused or allowed them to do it. The nuance depends on context and verb choice.
       <div class="note">
         <div class="note-title">Note:</div>
@@ -86,7 +86,7 @@
       <div class="section">
         <div class="grammar-title">To Make or to Let?</div>
         The meaning of a causative sentence — whether it means "to make" or "to let" someone do something — depends largely on context and the type of verb used.
-        If the verb naturally implies control, obligation, or authority (such as 勉強させる, "to make someone study"), the sentence likely expresses making someone do something.
+        If the verb naturally implies control, obligation, or authority (such as <span class="g">勉強させる</span>, "to make someone study"), the sentence likely expresses making someone do something.
         <div class="note">
           <div class="note-title">Note:</div>
           However, there's a useful grammatical hint when the causative verb is formed from an intransitive verb (a verb that does not take a direct object). In these cases:

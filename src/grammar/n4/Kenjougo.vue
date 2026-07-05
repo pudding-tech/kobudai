@@ -39,6 +39,9 @@
       <div class="kanji-mb">
         <ruby>食<rt>た</rt></ruby>べる / <ruby>飲<rt>の</rt></ruby>む → <span class="grammar-highlight">いただ<span v-if="isPolite">きます</span><span v-else>く</span></span>
       </div>
+      <div class="structure-title">
+        Humble constructions
+      </div>
       <div class="kanji-mb">
         ～ている → <span class="grammar-highlight">～てお<span v-if="isPolite">ります</span><span v-else>る</span></span>
       </div>

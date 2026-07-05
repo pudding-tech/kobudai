@@ -11,5 +11,5 @@
     <li><span class="g">する</span> (to do): This is one of the most common verbs in Japanese, often used in expressions and compound verbs.</li>
     <li><span class="g"><ruby>来<rt>く</rt></ruby>る</span> (to come): This verb has unique forms across all conjugations.</li>
   </ul>
-  See each specific grammar point for details on conjugating these irregular verbs, including any exceptions for particular conjugations.
+  See each specific grammar point for details on conjugating these irregular verbs, as well as any exceptions for particular conjugations in other verbs.
 </template>

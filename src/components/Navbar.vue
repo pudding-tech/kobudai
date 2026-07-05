@@ -198,7 +198,7 @@
 
 .main-list-selector {
   margin-left: 180px;
-  width: 116px;
+  width: 126.64px;
 }
 
 .dialog-mobile {

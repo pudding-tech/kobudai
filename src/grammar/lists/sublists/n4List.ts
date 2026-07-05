@@ -134,6 +134,7 @@ export const n4List: Sublist = {
         n4.nasai,
         n4.noni,
         n4.youda,
+        n4.youni,
         n4.noyouni
       ]
     }

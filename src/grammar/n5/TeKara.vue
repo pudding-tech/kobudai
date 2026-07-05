@@ -15,7 +15,7 @@
     </template>
     <template #related>
       <div class="related-mb">- Based on the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink></div>
-      <div>- See also <RouterLink :to="{ name: 'grammarLoader', params: { slug: maeni.slug } }" class="link">{{ maeni.title }}</RouterLink> for doing something before another action</div>
+      <div>- See also <RouterLink :to="{ name: 'grammarLoader', params: { slug: maeni.slug } }" class="link">{{ maeni.titlePlain }}</RouterLink> for doing something before another action</div>
     </template>
     <template #explanation>
       The grammar pattern <span class="g">～てから</span> is used to express that one action takes place after another.

@@ -103,6 +103,13 @@ export const genki1List: Sublist = {
         n5.tai,
         n5.ya
       ]
+    },
+    {
+      title: "CHAPTER 12",
+      value: 12,
+      grammarPoints: [
+        n5.deshou
+      ]
     }
   ]
 };

@@ -149,7 +149,7 @@
             <ruby>面白<rt>おもしろ</rt></ruby>い → <ruby>面白<rt>おもしろ</rt></ruby><span class="g">かった</span>
           </div>
           <div class="translation">
-            interesting → not interesting
+            interesting → was interesting
           </div>
         </GrammarExampleSentences>
         <GrammarExample>

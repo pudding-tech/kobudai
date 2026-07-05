@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
   import { useRouter } from "vue-router";
-  import { lastRoute } from "@/router/router";
   import { usePanelStore } from "@/stores/panelStore";
   import { breakpointService } from "@/services/breakpointService";
   import { getSublistsForGrammarPoint } from "@/utils/getSublistsForGrammarPoint";
@@ -88,12 +87,7 @@
   };
 
   const goHome = () => {
-    if (lastRoute?.name === "home" || lastRoute?.name === "list") {
-      router.back();
-    }
-    else {
-      router.push({ name: "home" });
-    }
+    router.push({ name: "home" });
   };
 
   const headerMobile = ref({
@@ -137,6 +131,23 @@
     }
   });
 
+  const buttonDT = {
+    colorScheme: {
+      light: {
+        textSecondary: {
+          hoverBackground: "rgba(181, 177, 125, 0.14)",
+          activeBackground: "rgba(181, 177, 125, 0.14)"
+        }
+      },
+      dark: {
+        textSecondary: {
+          hoverBackground: "rgba(107, 121, 115, 0.2)",
+          activeBackground: "rgba(107, 121, 115, 0.2)"
+        }
+      }
+    }
+  };
+
   const mobileDialogDT = ref({
     content: {
       padding: "0 26px 22px"
@@ -154,7 +165,7 @@
   <div v-if="!breakpointService.isMobile()" class="container">
     <div class="bg">
       <div class="corner-left">
-        <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" v-ripple @click="goHome()" />
+        <Button icon="pi pi-arrow-left" text rounded severity="secondary" size="large" v-ripple :dt="buttonDT" @click="goHome()" />
       </div>
       <div class="corner-right">
         <!-- prefer slot if provided; otherwise use meta.level -->

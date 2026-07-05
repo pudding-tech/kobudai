@@ -17,10 +17,7 @@
   const selectedMainListValue = listStore.getMainList;
   const selectedSublistValue = computed({
     get: () => listStore.getSublist.value,
-    set: (value: string) => {
-      listStore.setSublist(value);
-      expandAll();
-    }
+    set: (value: string) => listStore.setSublist(value)
   });
 
   const selectedMainList = computed<MainList | undefined>(() => {
@@ -67,6 +64,8 @@
     if (route.params.mainlist !== main || route.params.sublist !== sub) {
       router.replace({ name: "list", params: { mainlist: main, sublist: sub } });
     }
+
+    expandAll();
   });
 
   const toggleCollapseAll = () => {

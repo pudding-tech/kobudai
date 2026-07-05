@@ -99,7 +99,8 @@ export const n5List: Sublist = {
         n5.imperativeVerbs,
         n5.tai,
         n5.temoii,
-        n5.teHaIkenai
+        n5.teHaIkenai,
+        n5.deshou
       ]
     }
   ]

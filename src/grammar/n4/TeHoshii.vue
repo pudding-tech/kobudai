@@ -18,7 +18,7 @@
     <template #related>
       <div style="margin-bottom: 20px">Based on the <RouterLink :to="{ name: 'grammarLoader', params: { slug: teVerb.slug } }" class="link">{{ teVerb.title }}</RouterLink></div>
       <div class="related-mb">See also:</div>
-      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: tai.slug } }" class="link">{{ tai.title }}</RouterLink> (for what you want to do yourself)</div>
+      <div class="related-mb">- <RouterLink :to="{ name: 'grammarLoader', params: { slug: tai.slug } }" class="link">{{ tai.title }}</RouterLink> (for what you want to do)</div>
       <div>- <RouterLink :to="{ name: 'grammarLoader', params: { slug: gaHoshii.slug } }" class="link">{{ gaHoshii.title }}</RouterLink> (for what you want to have)</div>
     </template>
     <template #explanation>
